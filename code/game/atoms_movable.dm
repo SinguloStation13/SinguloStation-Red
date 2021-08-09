@@ -53,6 +53,12 @@
 	var/list/important_recursive_contents
 
 
+	///Lazylist to keep track on the sources of illumination.
+	var/list/affected_dynamic_lights
+	///Highest-intensity light affecting us, which determines our visibility.
+	var/affecting_dynamic_lumi = 0
+
+
 /atom/movable/Initialize(mapload)
 	. = ..()
 	switch(blocks_emissive)
@@ -65,16 +71,25 @@
 		if(EMISSIVE_BLOCK_UNIQUE)
 			render_target = ref(src)
 			em_block = new(src, render_target)
-			add_overlay(list(em_block))
+			vis_contents += em_block
+	if(opacity)
+		AddElement(/datum/element/light_blocking)
+	switch(light_system)
+		if(MOVABLE_LIGHT)
+			AddComponent(/datum/component/overlay_lighting)
+		if(MOVABLE_LIGHT_DIRECTIONAL)
+			AddComponent(/datum/component/overlay_lighting, is_directional = TRUE)
 
-/atom/movable/Destroy()
+/atom/movable/Destroy(force)
+	QDEL_NULL(proximity_monitor)
+	QDEL_NULL(language_holder)
 	QDEL_NULL(em_block)
-<<<<<<< HEAD
-	return ..()
-=======
+
 
 	if(pulling)
 		stop_pulling()
+
+
 
 	unbuckle_all_mobs(force = TRUE)
 
@@ -105,7 +120,6 @@
 	LAZYCLEARLIST(client_mobs_in_contents)
 
 	moveToNullspace()
->>>>>>> 6fc78a38c6... EVEN MORE HARDDEL FIXES (#60228) (#4958)
 
 /atom/movable/proc/update_emissive_block()
 	if(!blocks_emissive)
