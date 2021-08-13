@@ -1,4 +1,0 @@
-author: Terra1
-delete-after: true
-changes:
-  - tweak: IPCs are no longer an exception from from foreigner quirk.
