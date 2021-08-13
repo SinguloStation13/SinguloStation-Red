@@ -1,4 +1,0 @@
-author: Terra1
-delete-after: true
-changes:
-  - refactor: Heretics can now only spawn on dynamic.
