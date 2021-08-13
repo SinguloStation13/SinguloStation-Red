@@ -1,0 +1,4 @@
+author: KubeRoot
+delete-after: true
+changes:
+  - bugfix: Changelogs are back. Hooray.
