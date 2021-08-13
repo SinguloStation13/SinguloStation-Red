@@ -1,0 +1,5 @@
+author: Terra1
+delete-after: true
+changes:
+  - balance: Welders now burn through one unit of fuel per nine seconds, down from
+      twenty-four.
