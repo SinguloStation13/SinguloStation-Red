@@ -1,0 +1,4 @@
+author: SinguloBot
+delete-after: true
+changes:
+  - bugfix: another important recursive contents fix
