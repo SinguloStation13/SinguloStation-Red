@@ -1,0 +1,4 @@
+author: SinguloBot
+delete-after: true
+changes:
+  - tweak: Syndicate Balloons no longer appear in surplus crates.
