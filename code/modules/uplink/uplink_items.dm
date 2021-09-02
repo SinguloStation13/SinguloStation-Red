@@ -2312,6 +2312,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	cost = 20
 	cant_discount = TRUE
 	illegal_tech = FALSE
+	surplus = 0
 
 /datum/uplink_item/badass/syndiebeer
 	name = "Syndicate Beer"
