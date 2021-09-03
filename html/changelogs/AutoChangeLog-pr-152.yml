@@ -1,0 +1,5 @@
+author: KubeRoot, Urumasi and Terrariola
+delete-after: true
+changes:
+  - imageadd: Add SinguloStation branded title screen
+  - imagedel: Remove BeeStation branded title screens
