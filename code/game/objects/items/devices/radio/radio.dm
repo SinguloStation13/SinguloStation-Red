@@ -77,6 +77,7 @@
 	keyslot = new /obj/item/encryptionkey/syndicate
 	syndie = 1
 	recalculateChannels()
+	ui_update()
 
 /obj/item/radio/Destroy()
 	remove_radio_all(src) //Just to be sure
@@ -207,7 +208,6 @@
 				else
 					recalculateChannels()
 				. = TRUE
-	ui_update()
 
 /obj/item/radio/talk_into(atom/movable/M, message, channel, list/spans, datum/language/language, list/message_mods)
 	if(!spans)
@@ -421,6 +421,7 @@
 					keyslot = null
 
 			recalculateChannels()
+			ui_update()
 			to_chat(user, "<span class='notice'>You pop out the encryption key in the radio.</span>")
 
 		else
@@ -437,6 +438,7 @@
 			keyslot = W
 
 		recalculateChannels()
+		ui_update()
 
 
 /obj/item/radio/off	// Station bounced radios, their only difference is spawning with the speakers off, this was made to help the lag.
