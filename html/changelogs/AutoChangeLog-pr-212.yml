@@ -1,4 +1,0 @@
-author: SinguloBot
-delete-after: true
-changes:
-  - bugfix: bone axe now properly switches in hand sprites
