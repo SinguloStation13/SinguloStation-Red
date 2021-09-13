@@ -1,0 +1,4 @@
+author: SinguloBot
+delete-after: true
+changes:
+  - bugfix: Fixes QM headset having exploration access.
