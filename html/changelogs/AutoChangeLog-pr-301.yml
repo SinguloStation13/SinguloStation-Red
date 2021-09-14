@@ -1,0 +1,4 @@
+author: SinguloBot
+delete-after: true
+changes:
+  - tweak: Custom shuttles and rooms can be made on asteriods.
