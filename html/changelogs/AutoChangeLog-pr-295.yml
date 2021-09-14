@@ -1,0 +1,4 @@
+author: SinguloBot
+delete-after: true
+changes:
+  - admin: Fixes the FLW link in some logging.
