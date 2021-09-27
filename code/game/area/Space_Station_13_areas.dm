@@ -692,7 +692,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	area_flags = BLOBS_ALLOWED | UNIQUE_AREA
 	sound_environment = SOUND_AREA_LARGE_ENCLOSED
 
-/area/engine/engine_room //donut station specific
+/area/engine/engine_room //donut station/endo station/zulu station specific specific
 	name = "Engine Room"
 	icon_state = "atmos_engine"
 
@@ -750,7 +750,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/solar/aft
 	name = "Aft Solar Array"
-	icon_state = "yellow"
+	icon_state = "panelsAFT"
 
 /area/solar/aux/port
 	name = "Port Bow Auxiliary Solar Array"
@@ -795,6 +795,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/maintenance/solars/port
 	name = "Port Solar Maintenance"
 	icon_state = "SolarcontrolP"
+
+/area/maintenance/solars/aft
+	name = "Aft Solar Maintenance"
+	icon_state = "SolarcontrolAFT"
 
 /area/maintenance/solars/port/aft
 	name = "Port Quarter Solar Maintenance"
@@ -1056,6 +1060,14 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/security/checkpoint/customs/auxiliary
 	icon_state = "customs_point_aux"
+
+/area/security/checkpoint/bridge_port //endo station specific
+	name = "Security Post - Bridge Port"
+	icon_state = "checkpoint_bridge_port"
+
+/area/security/checkpoint/bridge_star //endo station specific
+	name = "Security Post - Bridge Star"
+	icon_state = "checkpoint_bridge_star"
 
 
 //Service

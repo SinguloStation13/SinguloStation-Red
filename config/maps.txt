@@ -16,6 +16,10 @@ endmap
 
 #Active Rotation
 
+map endostation
+	votable
+endmap
+
 map corgstation
 	minplayers 15
 	votable

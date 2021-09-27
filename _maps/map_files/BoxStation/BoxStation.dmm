@@ -9145,6 +9145,9 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/hangover,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 9
+	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness)
 "azh" = (
