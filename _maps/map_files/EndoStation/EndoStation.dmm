@@ -566,7 +566,7 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
 /area/crew_quarters/bar,
-/area/engine/engine_room)
+/area/crew_quarters/bar)
 "aid" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/item/kirbyplants/random,
@@ -7259,7 +7259,7 @@
 /obj/machinery/holopad,
 /turf/open/floor/plasteel,
 /area/crew_quarters/bar,
-/area/engine/engine_room)
+/area/crew_quarters/bar)
 "bYs" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 8
@@ -56688,7 +56688,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/bar,
-/area/engine/engine_room)
+/area/crew_quarters/bar)
 "pmH" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -80873,7 +80873,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/bar,
-/area/engine/engine_room)
+/area/crew_quarters/bar)
 "vXF" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer3{
@@ -82969,7 +82969,7 @@
 "wBH" = (
 /turf/open/floor/plasteel,
 /area/crew_quarters/bar,
-/area/engine/engine_room)
+/area/crew_quarters/bar)
 "wBP" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
