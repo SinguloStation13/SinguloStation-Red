@@ -3420,7 +3420,7 @@
 	name = "CondiMaster Neo"
 	},
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "aWT" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -6802,7 +6802,7 @@
 	location = "Kitchen"
 	},
 /turf/open/floor/plasteel,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "bTK" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
@@ -9240,7 +9240,7 @@
 "cAl" = (
 /obj/structure/reagent_dispensers/cooking_oil,
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "cAC" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -9475,7 +9475,7 @@
 	},
 /obj/machinery/gibber,
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "cEx" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -10460,7 +10460,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
 /area/science/test_area)
 "cTw" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
@@ -12542,7 +12545,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "dzk" = (
 /turf/open/floor/plasteel/cult,
 /area/library)
@@ -14997,7 +15000,7 @@
 "eil" = (
 /obj/machinery/vending/wardrobe/chef_wardrobe,
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "eiz" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -15668,7 +15671,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "erI" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -16649,7 +16652,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
 /area/science/test_area)
 "eFT" = (
 /obj/effect/turf_decal/tile/yellow{
@@ -16672,7 +16678,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "eGj" = (
 /obj/machinery/airalarm/kitchen_cold_room{
 	dir = 1;
@@ -16683,7 +16689,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "eGt" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -16741,7 +16747,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
 /area/science/test_area)
 "eHq" = (
 /obj/machinery/light{
@@ -17979,7 +17988,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "eZO" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -19505,7 +19514,10 @@
 	},
 /area/maintenance/fore)
 "fuL" = (
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
 /area/science/test_area)
 "fuN" = (
 /obj/effect/turf_decal/tile/red{
@@ -20193,7 +20205,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
 /area/science/test_area)
 "fFl" = (
 /obj/machinery/iv_drip,
@@ -23690,7 +23705,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "gAa" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/structure/cable/yellow{
@@ -28730,7 +28745,7 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "hSI" = (
 /obj/structure/chair/stool/bar,
 /obj/effect/turf_decal/tile/yellow{
@@ -35052,7 +35067,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "jFS" = (
 /obj/machinery/light,
 /obj/effect/turf_decal/tile/brown{
@@ -35752,7 +35767,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
 /area/science/test_area)
 "jSs" = (
 /obj/effect/turf_decal/tile/yellow,
@@ -39575,7 +39593,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "kQQ" = (
 /obj/structure/rack,
 /obj/item/book/manual/wiki/engineering_hacking{
@@ -42591,7 +42609,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
 /area/science/test_area)
 "lGh" = (
 /obj/structure/table,
@@ -46157,7 +46178,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "mEb" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
@@ -46283,6 +46304,13 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
+"mHi" = (
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
+/area/science/test_area)
 "mHu" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -46579,7 +46607,7 @@
 /area/hallway/primary/fore)
 "mLs" = (
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "mMk" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
 /turf/open/floor/plating,
@@ -49696,7 +49724,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "nyL" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -52182,7 +52210,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
 /area/science/test_area)
 "odD" = (
 /obj/structure/table/reinforced,
@@ -56945,8 +56976,9 @@
 /turf/open/floor/plasteel,
 /area/medical/virology)
 "poA" = (
-/turf/closed/wall,
-/area/crew_quarters/kitchen/coldroom)
+/obj/machinery/holopad,
+/turf/open/floor/plasteel,
+/area/crew_quarters/bar)
 "poQ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
@@ -57396,7 +57428,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
 /area/science/test_area)
 "pwg" = (
 /obj/docking_port/stationary{
@@ -60093,7 +60128,7 @@
 	pixel_x = 26
 	},
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "qhQ" = (
 /turf/open/floor/plasteel/chapel,
 /area/chapel/main)
@@ -60194,7 +60229,10 @@
 /area/maintenance/port/aft)
 "qjb" = (
 /obj/item/beacon,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
 /area/science/test_area)
 "qjq" = (
 /obj/structure/frame/computer{
@@ -62197,7 +62235,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
 /area/science/test_area)
 "qMM" = (
 /obj/effect/turf_decal/tile/blue,
@@ -68752,11 +68793,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/plating{
-	initial_gas_mix = "o2=0.01;n2=0.01";
-	luminosity = 2;
-	temperature = 2.7
-	},
+/turf/open/floor/plating,
 /area/security/processing)
 "sIA" = (
 /obj/structure/cable/yellow{
@@ -75561,11 +75598,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 10
 	},
-/turf/open/floor/plating{
-	initial_gas_mix = "o2=0.01;n2=0.01";
-	luminosity = 2;
-	temperature = 2.7
-	},
+/turf/open/floor/plating,
 /area/security/processing)
 "uyv" = (
 /obj/machinery/computer/arcade,
@@ -76279,10 +76312,6 @@
 	},
 /turf/open/floor/engine,
 /area/engine/engine_room)
-"uII" = (
-/obj/machinery/holopad,
-/turf/open/floor/plasteel,
-/area/crew_quarters/bar)
 "uIZ" = (
 /obj/machinery/ntnet_relay,
 /turf/open/floor/circuit/telecomms/mainframe,
@@ -77296,7 +77325,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
 /area/science/test_area)
 "uXz" = (
 /obj/machinery/door/airlock/public/glass{
@@ -79996,7 +80028,7 @@
 "vKP" = (
 /obj/machinery/icecream_vat,
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "vKQ" = (
 /obj/machinery/portable_atmospherics/canister/bz,
 /turf/open/floor/plasteel,
@@ -85285,7 +85317,7 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "xew" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -87864,7 +87896,7 @@
 "xMk" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/open/floor/plasteel/freezer,
-/area/crew_quarters/kitchen/coldroom)
+/area/crew_quarters/kitchen)
 "xMm" = (
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
@@ -88564,6 +88596,15 @@
 /obj/item/hand_labeler,
 /turf/open/floor/plasteel/white,
 /area/medical/chemistry)
+"xUS" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plating{
+	initial_gas_mix = "o2=0.01;n2=0.01";
+	luminosity = 2
+	},
+/area/science/test_area)
 "xVd" = (
 /obj/item/ammo_casing,
 /obj/effect/decal/cleanable/dirt,
@@ -89063,11 +89104,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
-/turf/open/floor/plating{
-	initial_gas_mix = "o2=0.01;n2=0.01";
-	luminosity = 2;
-	temperature = 2.7
-	},
+/turf/open/floor/plating,
 /area/security/processing)
 "ycO" = (
 /obj/item/radio/intercom{
@@ -110593,7 +110630,7 @@ cAl
 mLs
 mDV
 kQI
-poA
+lsC
 ddj
 jXT
 qQU
@@ -110850,7 +110887,7 @@ cAl
 mLs
 mLs
 eGj
-poA
+lsC
 xay
 jNY
 jNY
@@ -111107,7 +111144,7 @@ eil
 mLs
 nyI
 cEt
-poA
+lsC
 xay
 jNY
 fYA
@@ -111621,7 +111658,7 @@ xMk
 eFZ
 mLs
 aWE
-poA
+lsC
 uQJ
 jNY
 fYA
@@ -113921,7 +113958,7 @@ nht
 wBH
 wBH
 bOx
-uII
+poA
 gnp
 avl
 avl
@@ -142274,11 +142311,11 @@ tfJ
 tfJ
 jkO
 fxv
-jkO
+xUS
 fuL
 qjb
 fuL
-fxv
+mHi
 btX
 wes
 eMs
