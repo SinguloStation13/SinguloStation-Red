@@ -188,6 +188,8 @@ SUBSYSTEM_DEF(throwing)
 		if(T && thrownthing.has_gravity(T))
 			T.zFall(thrownthing)
 
+	thrownthing.movement_type &= ~THROWN
+
 	qdel(src)
 
 /datum/thrownthing/proc/hit_atom(atom/A)
