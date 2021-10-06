@@ -1066,7 +1066,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "checkpoint_bridge_port"
 
 /area/security/checkpoint/bridge_star //endo station specific
-	name = "Security Post - Bridge Star"
+	name = "Security Post - Bridge Starboard"
 	icon_state = "checkpoint_bridge_star"
 
 
