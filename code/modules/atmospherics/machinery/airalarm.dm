@@ -104,25 +104,10 @@
 		GAS_PLUOXIUM			= new/datum/tlv(-1, -1, 5, 6), // Unlike oxygen, pluoxium does not fuel plasma/tritium fires
 	)
 
-/obj/machinery/airalarm/plasma // ignores plasma good for plasman rooms.
-    TLV = list(
-        "pressure"                    = new/datum/tlv/no_checks,
-        "temperature"                = new/datum/tlv/no_checks,
-        /datum/gas/oxygen            = new/datum/tlv/no_checks,
-        /datum/gas/nitrogen            = new/datum/tlv/no_checks,
-        /datum/gas/carbon_dioxide    = new/datum/tlv/no_checks,
-        /datum/gas/miasma            = new/datum/tlv/no_checks,
-        /datum/gas/plasma            = new/datum/tlv(16, 19, 135, 140),
-        /datum/gas/nitrous_oxide    = new/datum/tlv/no_checks,
-        /datum/gas/bz                = new/datum/tlv/no_checks,
-        /datum/gas/hypernoblium        = new/datum/tlv/no_checks,
-        /datum/gas/water_vapor        = new/datum/tlv/no_checks,
-        /datum/gas/tritium            = new/datum/tlv/no_checks,
-        /datum/gas/stimulum            = new/datum/tlv/no_checks,
-        /datum/gas/nitryl            = new/datum/tlv/no_checks,
-        /datum/gas/pluoxium            = new/datum/tlv/no_checks
-    )
-
+/obj/machinery/airalarm/plasma/Initialize() // ignores plasma good for plasman rooms.
+	TLV[GAS_O2] = new/datum/tlv/no_checks // ignore low oxy
+	TLV[GAS_PLASMA] = new/datum/tlv/no_checks
+	. = ..()
 
 /obj/machinery/airalarm/server // No checks here.
 	TLV = list(
