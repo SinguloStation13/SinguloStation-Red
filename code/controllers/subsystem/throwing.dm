@@ -200,4 +200,11 @@ SUBSYSTEM_DEF(throwing)
 		if(T && thrownthing.has_gravity(T))
 			T.zFall(thrownthing)
 
+<<<<<<< HEAD
+=======
+	if(thrownthing)
+		SEND_SIGNAL(thrownthing, COMSIG_MOVABLE_THROW_LANDED, src)
+		thrownthing.movement_type &= ~THROWN
+
+>>>>>>> 414d02b87d... modernized datum ais & jps pathfinding (#5422)
 	qdel(src)
