@@ -1,6 +1,0 @@
-author: SinguloBot
-delete-after: true
-changes:
-  - rscadd: Added hotkey to toggle walking/running.
-  - rscadd: 'Ability to rebind locking movement hotkey. NOTE: You have to manually
-      bind Ctrl+W/A/S/D for looking in a certain direction now.'

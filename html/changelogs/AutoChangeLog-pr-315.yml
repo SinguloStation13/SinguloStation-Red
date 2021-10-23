@@ -1,5 +1,0 @@
-author: SinguloBot
-delete-after: true
-changes:
-  - rscadd: Humans now display a chat bubble when typing, as an effort to move us
-      closer to Baystation
