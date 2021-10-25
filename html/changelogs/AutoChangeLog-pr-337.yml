@@ -1,0 +1,4 @@
+author: SinguloBot
+delete-after: true
+changes:
+  - spellcheck: Fixed artifact supercruise message.
