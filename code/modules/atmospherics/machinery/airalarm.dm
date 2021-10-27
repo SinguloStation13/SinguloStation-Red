@@ -105,8 +105,8 @@
 	)
 
 /obj/machinery/airalarm/plasma/Initialize() // ignores plasma good for plasman rooms.
-	TLV[GAS_O2] = new/datum/tlv/no_checks // ignore low oxy
-	TLV[GAS_PLASMA] = new/datum/tlv/no_checks
+	TLV[GAS_O2] = new /datum/tlv/no_checks() // ignore low oxy
+	TLV[GAS_PLASMA] = new /datum/tlv/no_checks()
 	. = ..()
 
 /obj/machinery/airalarm/server // No checks here.
