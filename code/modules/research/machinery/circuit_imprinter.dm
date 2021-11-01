@@ -20,6 +20,10 @@
 								)
 	production_animation = "circuit_imprinter_ani"
 	allowed_buildtypes = IMPRINTER
+<<<<<<< HEAD
+=======
+	consoleless_interface = TRUE
+>>>>>>> 0df5bf9dad... Fix production machines being unusable (#5675)
 
 /obj/machinery/rnd/production/circuit_imprinter/disconnect_console()
 	linked_console.linked_imprinter = null
