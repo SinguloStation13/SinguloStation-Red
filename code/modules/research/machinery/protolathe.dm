@@ -20,6 +20,11 @@
 								)
 	production_animation = "protolathe_n"
 	allowed_buildtypes = PROTOLATHE
+<<<<<<< HEAD
+=======
+	consoleless_interface = TRUE
+	requires_console = FALSE
+>>>>>>> 08f4aed11c... Add `requires_console = FALSE` to protolathes and circuit imprinters (#5700)
 
 /obj/machinery/rnd/production/protolathe/disconnect_console()
 	linked_console.linked_lathe = null
