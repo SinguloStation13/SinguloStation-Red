@@ -3355,7 +3355,14 @@
 #include "code\modules\wiremod\components\list\get_column.dm"
 #include "code\modules\wiremod\components\list\index.dm"
 #include "code\modules\wiremod\components\list\index_table.dm"
+<<<<<<< HEAD
+=======
+#include "code\modules\wiremod\components\list\list_constructor.dm"
+#include "code\modules\wiremod\components\list\list_length_constructor.dm"
+#include "code\modules\wiremod\components\list\pop.dm"
+>>>>>>> 12fe5f03eb... bee (#5662)
 #include "code\modules\wiremod\components\list\select.dm"
+#include "code\modules\wiremod\components\list\write.dm"
 #include "code\modules\wiremod\components\math\arithmetic.dm"
 #include "code\modules\wiremod\components\math\bitflag.dm"
 #include "code\modules\wiremod\components\math\bitwise.dm"
