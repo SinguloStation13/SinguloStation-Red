@@ -1,0 +1,4 @@
+author: SinguloBot
+delete-after: true
+changes:
+  - admin: Added ratvarsmall and narsiesmaller span classes.
