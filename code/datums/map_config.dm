@@ -32,7 +32,15 @@
 		"whiteship" = "whiteship_box",
 		"emergency" = "emergency_box")
 
+<<<<<<< HEAD
 /proc/load_map_config(filename = "data/next_map.json", default_to_box, delete_after, error_if_missing = TRUE)
+=======
+/proc/load_map_config(filename = "next_map", foldername = DATA_DIRECTORY, default_to_box, delete_after, error_if_missing = TRUE)
+	if(IsAdminAdvancedProcCall())
+		return
+
+	filename = "[foldername]/[filename].json"
+>>>>>>> 9630078d3a... Fixes maps again (#5724)
 	var/datum/map_config/config = new
 	if (default_to_box)
 		return config
