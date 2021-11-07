@@ -77,6 +77,33 @@
 
 #define GIB_TYPE_HUMAN "human"
 #define GIB_TYPE_ROBOTIC "robotic"
+<<<<<<< HEAD
+=======
+//Species ID defines
+#define SPECIES_HUMAN			"human"
+#define SPECIES_IPC 			"ipc"
+#define SPECIES_ETHEREAL 		"ethereal"
+#define SPECIES_PLASMAMAN 		"plasmaman"
+#define SPECIES_APID 			"apid"
+#define SPECIES_MOTH			"moth"
+#define SPECIES_LIZARD			"lizard"
+#define SPECIES_FELINID			"felinid"
+#define SPECIES_OOZELING		"oozeling"
+#define SPECIES_FLY 			"fly"
+
+//Species bitflags, used for species_restricted. If this somehow ever gets above 23 Bee has larger problems.
+#define FLAG_HUMAN			(1<<0)
+#define FLAG_IPC			(1<<1)
+#define FLAG_ETHEREAL		(1<<2)
+#define FLAG_PLASMAMAN		(1<<3)
+#define	FLAG_APID			(1<<4)
+#define FLAG_MOTH			(1<<5)
+#define FLAG_LIZARD			(1<<6)
+#define FLAG_FELINID		(1<<7)
+#define FLAG_OOZELING		(1<<8)
+#define FLAG_FLY			(1<<9)
+#define FLAG_DEBUG_SPECIES	(1<<10)
+>>>>>>> 9ddaaacf34... Removes Squidpeople from the codebase (#5734)
 
 //Reagent Metabolization flags, defines the type of reagents that affect this mob
 #define PROCESS_ORGANIC 1		//Only processes reagents with "ORGANIC" or "ORGANIC | SYNTHETIC"
