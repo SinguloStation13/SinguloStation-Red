@@ -24,6 +24,14 @@
 	display_order = JOB_DISPLAY_ORDER_MEDICAL_DOCTOR
 	departments = DEPARTMENT_MEDICAL
 
+<<<<<<< HEAD
+=======
+	species_outfits = list(
+		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/emt
+	)
+	biohazard = 25//deal with sick like MDS, but also muck around in maint and get into the thick of it
+
+>>>>>>> 8c04cb1df6... virology gameplay tweaks and rebalances (again) (#5567)
 /datum/outfit/job/emt
 	name = "Paramedic"
 	jobtype = /datum/job/emt

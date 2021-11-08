@@ -23,6 +23,14 @@
 	display_order = JOB_DISPLAY_ORDER_BRIG_PHYS
 	departments = DEPARTMENT_MEDICAL | DEPARTMENT_SECURITY
 
+<<<<<<< HEAD
+=======
+	species_outfits = list(
+		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/secmed
+	)
+	biohazard = 15 //still deals with the sick and injured, just less than a medical doctor
+
+>>>>>>> 8c04cb1df6... virology gameplay tweaks and rebalances (again) (#5567)
 /datum/outfit/job/brig_phys
 	name = "Brig Physician"
 	jobtype = /datum/job/brig_phys

@@ -19,6 +19,8 @@
 
 	display_order = JOB_DISPLAY_ORDER_JANITOR
 	departments = DEPARTMENT_SERVICE
+	
+	biohazard = 20//cleaning up hazardous messes puts janitors at extra risk
 
 /datum/outfit/job/janitor
 	name = "Janitor"

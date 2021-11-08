@@ -150,7 +150,11 @@
 	. = ..()
 	icon_state += "-old"
 	if(prob(95))//vomit is much more likely to be diseased than blood is
+<<<<<<< HEAD
 		var/datum/disease/advance/R = new /datum/disease/advance/random(rand(3, 6), 9, 4)
+=======
+		var/datum/disease/advance/R = new /datum/disease/advance/random(rand(2, 5), rand(7, 9), 4, infected = src)
+>>>>>>> 8c04cb1df6... virology gameplay tweaks and rebalances (again) (#5567)
 		disease += R
 
 /obj/effect/decal/cleanable/vomit/old/extrapolator_act(mob/user, var/obj/item/extrapolator/E, scan = TRUE)

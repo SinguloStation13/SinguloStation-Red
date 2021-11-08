@@ -22,6 +22,14 @@
 	display_order = JOB_DISPLAY_ORDER_GENETICIST
 	departments = DEPARTMENT_MEDICAL
 
+<<<<<<< HEAD
+=======
+	species_outfits = list(
+		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/genetics
+	)
+	biohazard = 15
+
+>>>>>>> 8c04cb1df6... virology gameplay tweaks and rebalances (again) (#5567)
 /datum/outfit/job/geneticist
 	name = "Geneticist"
 	jobtype = /datum/job/geneticist

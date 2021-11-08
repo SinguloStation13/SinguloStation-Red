@@ -20,6 +20,14 @@
 	display_order = JOB_DISPLAY_ORDER_EXPLORATION
 	departments = DEPARTMENT_SCIENCE
 
+<<<<<<< HEAD
+=======
+	species_outfits = list(
+		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/exploration
+	)
+	biohazard = 20//who knows what you'll find out there that could have nasties on it...
+
+>>>>>>> 8c04cb1df6... virology gameplay tweaks and rebalances (again) (#5567)
 /datum/job/exploration/equip(mob/living/carbon/human/H, visualsOnly, announce, latejoin, datum/outfit/outfit_override, client/preference_source)
 	if(outfit_override)
 		return ..()
