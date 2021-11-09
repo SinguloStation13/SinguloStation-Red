@@ -42239,6 +42239,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/table/wood/poker,
 /obj/item/clothing/mask/cigarette/cigar,
+/obj/item/clothing/mask/cigarette/pipe,
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
 "bDK" = (
@@ -45518,8 +45519,7 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = -29
 	},
-/obj/item/clothing/mask/cigarette/pipe,
-/obj/structure/table/wood,
+/obj/machinery/vending/classicbeats,
 /turf/open/floor/carpet,
 /area/crew_quarters/bar)
 "bKo" = (

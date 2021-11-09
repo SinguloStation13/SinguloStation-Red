@@ -25570,14 +25570,13 @@
 	dir = 1;
 	pixel_y = 27
 	},
-/obj/structure/chair,
-/obj/item/clothing/mask/cigarette,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/machinery/vending/classicbeats,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "bgy" = (

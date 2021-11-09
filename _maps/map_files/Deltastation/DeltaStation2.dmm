@@ -28310,7 +28310,6 @@
 /obj/machinery/newscaster{
 	pixel_x = -32
 	},
-/obj/item/kirbyplants/random,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
@@ -28321,6 +28320,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+/obj/machinery/vending/classicbeats,
 /turf/open/floor/plasteel,
 /area/crew_quarters/bar/atrium)
 "baE" = (

@@ -46743,6 +46743,13 @@
 	},
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/aisat/hallway)
+"eDs" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/vending/classicbeats,
+/turf/open/floor/wood,
+/area/crew_quarters/theatre)
 "eEb" = (
 /obj/machinery/atmospherics/pipe/layer_manifold,
 /turf/open/floor/plasteel,
@@ -97520,7 +97527,7 @@ aCt
 aGz
 anf
 aCr
-aKN
+eDs
 aKN
 aNH
 aOJ
