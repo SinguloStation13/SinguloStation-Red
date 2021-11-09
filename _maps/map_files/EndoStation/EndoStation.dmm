@@ -5759,10 +5759,6 @@
 /obj/item/bedsheet/dorms,
 /turf/open/floor/wood,
 /area/crew_quarters/dorms)
-"bDw" = (
-/obj/machinery/vending/classicbeats,
-/turf/open/floor/wood,
-/area/crew_quarters/theatre)
 "bDz" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
@@ -43410,20 +43406,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/bar)
-"lOt" = (
-/obj/effect/turf_decal/tile/green{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/red{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/red,
-/obj/machinery/vending/classicbeats,
-/turf/open/floor/plasteel,
-/area/crew_quarters/bar)
 "lOB" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible,
 /turf/open/floor/plasteel,
@@ -75438,10 +75420,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
-"urb" = (
-/obj/machinery/vending/citadelplush,
-/turf/open/floor/carpet/royalblue,
-/area/crew_quarters/dorms)
 "urg" = (
 /obj/structure/disposaloutlet{
 	dir = 8
@@ -86883,10 +86861,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/mineral/titanium/white,
 /area/medical/medbay/central)
-"xsV" = (
-/obj/machinery/vending/citadelplush,
-/turf/open/floor/wood,
-/area/crew_quarters/theatre)
 "xtk" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable/yellow{
@@ -111123,7 +111097,7 @@ qws
 vZi
 dKg
 oHl
-urb
+uPA
 tFw
 rmZ
 uPA
@@ -115227,7 +115201,7 @@ eWd
 eWd
 nYH
 eWd
-lOt
+hfC
 avl
 kDI
 dCo
@@ -115255,7 +115229,7 @@ cnH
 wae
 dfm
 hwL
-bDw
+wzT
 ebO
 kbf
 hwL
@@ -116026,7 +116000,7 @@ nyA
 kVs
 jBV
 hwL
-xsV
+wzT
 wzT
 rCL
 hwL

@@ -598,9 +598,3 @@
 	desc = "You feel like this could have prevented World War 3 in a pararel timeline."
 	icon_state = "upaplush"
 
-/obj/item/toy/plush/qwerty
-	name = "\improper Qwerty plushie"
-	desc = "The grandfather of Beecode."
-	icon_state = "qwerty"
-	attack_verb = list("coded")
-	squeak_override = list('sound/magic/demon_attack1.ogg'=1)
