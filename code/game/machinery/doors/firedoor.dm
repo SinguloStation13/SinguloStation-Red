@@ -303,6 +303,15 @@
 	CanAtmosPass = ATMOS_PASS_PROC
 	assemblytype = /obj/structure/firelock_frame/border
 
+/obj/machinery/door/firedoor/border_only/Initialize()
+	. = ..()
+
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_EXIT = .proc/on_exit,
+	)
+
+	AddElement(/datum/element/connect_loc, loc_connections)
+
 /obj/machinery/door/firedoor/border_only/Destroy()
 	density = FALSE
 	air_update_turf(1)
@@ -373,6 +382,7 @@
 	else
 		return TRUE
 
+<<<<<<< HEAD
 /obj/machinery/door/firedoor/border_only/CheckExit(atom/movable/mover as mob|obj, turf/target)
 	if(istype(mover) && (mover.pass_flags & PASSGLASS))
 		return TRUE
@@ -380,6 +390,14 @@
 		return !density
 	else
 		return TRUE
+=======
+/obj/machinery/door/firedoor/border_only/proc/on_exit(datum/source, atom/movable/leaving, direction)
+	SIGNAL_HANDLER
+
+	if(direction == dir && density)
+		leaving.Bump(src)
+		return COMPONENT_ATOM_BLOCK_EXIT
+>>>>>>> 803c12f013... Ports removal of crossed() and uncrossed(), also checkexit() (#5725)
 
 /obj/machinery/door/firedoor/border_only/CanAtmosPass(turf/T)
 	if(get_dir(loc, T) == dir)
