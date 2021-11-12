@@ -124,15 +124,27 @@
 	QDEL_LIST(A.symptoms)
 	for(var/datum/symptom/S in symptoms)
 		A.symptoms += S.Copy()
+<<<<<<< HEAD
+=======
+	A.dormant = dormant
+	A.mutable = mutable
+	A.initial = initial
+	A.faltered = faltered
+>>>>>>> 8a95330c56... wtf (#5770)
 	A.resistance = resistance
 	A.stealth = stealth
 	A.stage_rate = stage_rate
 	A.transmission = transmission
 	A.severity = severity
 	A.speed = speed
+<<<<<<< HEAD
 	A.id = id
 	A.mutable = mutable
 	A.faltered = faltered
+=======
+	A.keepid = keepid
+	A.id = id
+>>>>>>> 8a95330c56... wtf (#5770)
 	//this is a new disease starting over at stage 1, so processing is not copied
 	return A
 
@@ -504,3 +516,129 @@
 			name_symptoms += S.name
 		message_admins("[key_name_admin(user)] has triggered a custom virus outbreak of [D.admin_details()]")
 		log_virus("[key_name(user)] has triggered a custom virus outbreak of [D.admin_details()]!")
+<<<<<<< HEAD
+=======
+
+/datum/disease/advance/infect(var/mob/living/infectee, make_copy = TRUE)
+	var/datum/disease/advance/A = make_copy ? Copy() : src
+	if(!initial && A.mutable && (spread_flags & DISEASE_SPREAD_CONTACT_FLUIDS))
+		var/minimum = 1
+		if(prob(CLAMP(35-(A.resistance + A.stealth), 0, 50) * (A.mutability)))//stealthy/resistant diseases are less likely to mutate. this means diseases used to farm mutations should be easier to cure. hypothetically.
+			if(infectee.job == "clown" || infectee.job == "mime" || prob(1))//infecting a clown or mime can evolve l0 symptoms/. they can also appear very rarely
+				minimum = 0
+			else
+				minimum = CLAMP(A.severity - 3, 1, 6)
+			A.Evolve(minimum, CLAMP(A.severity + 4, minimum, 9))
+			A.id = GetDiseaseID()
+			A.keepid = TRUE//this is really janky, but basically mutated diseases count as the original disease
+				//if you want to evolve a higher level symptom you need to test and spread a deadly virus among test subjects. 
+				//this is to give monkey testing a use, and add a bit more of a roleplay element to virology- testing deadly diseases on and curing/vaccinating monkeys
+				//this also adds the risk of disease escape if strict biohazard protocol is not followed, however
+				//the immutability of resistant diseases discourages this with hard-to-cure diseases.
+				//if players intentionally grief/cant seem to get biohazard protocol down, this can be changed to not use severity. 
+	else
+		A.initial = FALSE //diseases *only* mutate when spreading. they wont mutate from any other kind of injection
+	infectee.diseases += A
+	A.affected_mob = infectee
+	SSdisease.active_diseases += A //Add it to the active diseases list, now that it's actually in a mob and being processed.
+
+	A.after_add()
+	infectee.med_hud_set_status()
+
+	var/turf/source_turf = get_turf(infectee)
+	log_virus("[key_name(infectee)] was infected by virus: [src.admin_details()] at [loc_name(source_turf)]")
+
+
+/datum/disease/advance/proc/random_disease_name(var/atom/diseasesource)//generates a name for a disease depending on its symptoms and where it comes from
+	var/list/prefixes = list("Spacer's ", "Space ", "Infectious ","Viral ", "The ", "[pick(GLOB.first_names)]'s ", "[pick(GLOB.last_names)]'s ", "Acute ")//prefixes that arent tacked to the body need spaces after the word
+	var/list/bodies = list(pick("[pick(GLOB.first_names)]", "[pick(GLOB.last_names)]"), "Space", "Disease", "Noun", "Cold", "Germ", "Virus")
+	var/list/suffixes = list("ism", "itis", "osis", "itosis", " #[rand(1,10000)]", "-[rand(1,100)]", "s", "y", " ovirus", " Bug", " Infection", " Disease", " Complex", " Syndrome", " Sickness") //suffixes that arent tacked directly on need spaces before the word
+	if(stealth >=2)
+		prefixes += "Crypto "
+	switch(max(resistance - (symptoms.len / 2), 1))
+		if(1)
+			suffixes += "-alpha"
+		if(2)
+			suffixes += "-beta"
+		if(3)
+			suffixes += "-gamma"
+		if(4)
+			suffixes += "-delta"
+		if(5)
+			suffixes += "-epsilon"
+		if(6)
+			suffixes += pick("-zeta", "-eta", "-theta", "-iota")
+		if(7)
+			suffixes += pick("-kappa", "-lambda")
+		if(8)
+			suffixes += pick("-mu", "-nu", "-xi", "-omicron")
+		if(9)
+			suffixes += pick("-pi", "-rho", "-sigma", "-tau")
+		if(10)
+			suffixes += pick("-upsilon", "-phi", "-chi", "-psi")
+		if(11 to INFINITY)
+			suffixes += "-omega"
+			prefixes += "Robust "
+	switch(transmission - symptoms.len)
+		if(-INFINITY to 2)
+			prefixes += "Bloodborne "
+		if(3)
+			prefixes += list("Mucous ", "Kissing ")
+		if(4)
+			prefixes += "Contact "
+			suffixes += " Flu"
+		if(5 to INFINITY)
+			prefixes += "Airborne "
+			suffixes += " Plague"
+	switch(severity)
+		if(-INFINITY to 0)
+			prefixes += "Altruistic "
+		if(1 to 2)
+			prefixes += "Benign "
+		if(3 to 4)
+			prefixes += "Malignant "
+		if(5)
+			prefixes += "Terminal "
+			bodies += "Death"
+		if(6 to INFINITY)
+			prefixes += "Deadly "
+			bodies += "Death"
+	if(diseasesource)
+		if(ishuman(diseasesource))
+			var/mob/living/carbon/human/H = diseasesource
+			prefixes += pick("[H.first_name()]'s", "[H.name]'s", "[H.job]'s", "[H.dna.species]'s")
+			bodies += pick("[H.first_name()]", "[H.job]", "[H.dna.species]")
+			if(islizard(H) || iscatperson(H))//add rat-origin prefixes to races that eat rats
+				prefixes += list("Vermin ", "Zoo", "Maintenance ") 
+				bodies += list("Rat", "Maint")
+		else switch(diseasesource.type)
+			if(/mob/living/simple_animal/pet/hamster/vector)
+				prefixes += list("Vector's ", "Hamster ")
+				bodies += list("Freebie")
+			if(/obj/effect/decal/cleanable)
+				prefixes += list("Bloody ", "Maintenance ") 
+				bodies += list("Maint")
+			if(/mob/living/simple_animal/mouse)
+				prefixes += list("Vermin ", "Zoo", "Maintenance ") 
+				bodies += list("Rat", "Maint")
+			if(/obj/item/reagent_containers/syringe)
+				prefixes += list("Junkie ", "Maintenance ") 
+				bodies += list("Needle", "Maint")
+			if(/obj/item/fugu_gland)
+				prefixes += "Wumbo"
+			if(/obj/item/organ/lungs)
+				prefixes += "Miasmic "
+				bodies += list("Stench", "Lung")
+	for(var/datum/symptom/Symptom as() in symptoms)
+		if(!Symptom.neutered)
+			prefixes += Symptom.prefixes
+			bodies += Symptom.bodies
+			suffixes += Symptom.suffixes
+	switch(rand(1, 3))
+		if(1)
+			return "[pick(prefixes)][pick(bodies)]"
+		if(2)
+			return "[pick(prefixes)][pick(bodies)][pick(suffixes)]"
+		if(3)
+			return "[pick(bodies)][pick(suffixes)]"
+>>>>>>> 8a95330c56... wtf (#5770)
