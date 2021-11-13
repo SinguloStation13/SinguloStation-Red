@@ -1,4 +1,0 @@
-author: KubeRoot
-delete-after: true
-changes:
-  - code_imp: Stale PRs will no longer be automatically closed.
