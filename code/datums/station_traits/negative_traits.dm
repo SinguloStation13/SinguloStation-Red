@@ -51,6 +51,17 @@
 /datum/station_trait/hangover/New()
 	. = ..()
 	RegisterSignal(SSdcs, COMSIG_GLOB_JOB_AFTER_SPAWN, .proc/on_job_after_spawn)
+<<<<<<< HEAD
+=======
+	RegisterSignal(SSmapping, COMSIG_SUBSYSTEM_POST_INITIALIZE, .proc/create_spawners)
+
+/datum/station_trait/hangover/proc/create_spawners()
+	var/list/turf/turfs = get_safe_random_station_turfs(typesof(/area/hallway), rand(200, 300))
+	for(var/turf/T as() in turfs)
+		new /obj/effect/spawner/hangover_spawn(T)
+	UnregisterSignal(SSmapping, COMSIG_SUBSYSTEM_POST_INITIALIZE)
+
+>>>>>>> 2c7d3b28ec... e (#5779)
 
 /datum/station_trait/hangover/proc/on_job_after_spawn(datum/source, datum/job/job, mob/living/living_mob, mob/spawned_mob, joined_late)
 	SIGNAL_HANDLER
@@ -62,6 +73,23 @@
 		hat = new hat(spawned_mob)
 		spawned_mob.equip_to_slot(hat, ITEM_SLOT_HEAD)
 
+<<<<<<< HEAD
+=======
+/obj/effect/spawner/hangover_spawn
+	name = "hangover spawner"
+
+/obj/effect/spawner/hangover_spawn/Initialize()
+	if(prob(60))
+		new /obj/effect/decal/cleanable/vomit(get_turf(src))
+	if(prob(70))
+		var/bottle_count = pick(10;1, 5;2, 2;3)
+		for(var/index in 1 to bottle_count)
+			var/obj/item/reagent_containers/food/drinks/beer/almost_empty/B = new(get_turf(src))
+			B.pixel_x += rand(-6, 6)
+			B.pixel_y += rand(-6, 6)
+	return INITIALIZE_HINT_QDEL
+
+>>>>>>> 2c7d3b28ec... e (#5779)
 /datum/station_trait/blackout
 	name = "Blackout"
 	trait_type = STATION_TRAIT_NEGATIVE
