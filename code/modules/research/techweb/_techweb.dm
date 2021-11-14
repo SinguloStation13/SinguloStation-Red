@@ -101,8 +101,12 @@
 	recalculate_tiers()
 	for(var/v in consoles_accessing)
 		var/obj/machinery/computer/rdconsole/V = v
+<<<<<<< HEAD
 		V.rescan_views()
 		V.updateUsrDialog()
+=======
+		V.ui_update()
+>>>>>>> 80e956d115... Further tgui R&D console fixes (#5735)
 
 /datum/techweb/proc/recalculate_tiers()
 	for(var/id in researched_nodes)
@@ -168,6 +172,7 @@
 			CHECK_TICK
 			if(!hidden_nodes[i])
 				receiver.hidden_nodes -= i		//We can see it so let them see it too.
+				receiver.update_node_status(SSresearch.techweb_node_by_id(i), autoupdate_consoles=FALSE)
 	receiver.recalculate_nodes()
 
 /datum/techweb/proc/copy()
@@ -341,8 +346,12 @@
 	if(autoupdate_consoles)
 		for(var/v in consoles_accessing)
 			var/obj/machinery/computer/rdconsole/V = v
+<<<<<<< HEAD
 			V.rescan_views()
 			V.updateUsrDialog()
+=======
+			V.ui_update()
+>>>>>>> 80e956d115... Further tgui R&D console fixes (#5735)
 
 //Laggy procs to do specific checks, just in case. Don't use them if you can just use the vars that already store all this!
 /datum/techweb/proc/designHasReqs(datum/design/D)
