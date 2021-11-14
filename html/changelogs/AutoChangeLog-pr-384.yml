@@ -1,0 +1,4 @@
+author: SinguloBot
+delete-after: true
+changes:
+  - rscadd: random diseases now have better random names
