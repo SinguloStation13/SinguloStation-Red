@@ -35,6 +35,14 @@
 	display_order = JOB_DISPLAY_ORDER_RESEARCH_DIRECTOR
 	departments = DEPARTMENT_SCIENCE | DEPARTMENT_COMMAND
 
+<<<<<<< HEAD
+=======
+	species_outfits = list(
+		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/rd
+	)
+	biohazard = 20
+
+>>>>>>> 8c04cb1df6... virology gameplay tweaks and rebalances (again) (#5567)
 /datum/outfit/job/rd
 	name = "Research Director"
 	jobtype = /datum/job/rd

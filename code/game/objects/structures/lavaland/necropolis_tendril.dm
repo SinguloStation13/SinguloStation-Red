@@ -17,7 +17,6 @@
 
 	var/gps = null
 	var/obj/effect/light_emitter/tendril/emitted_light
-	var/list/necroseed = list()
 
 
 /obj/structure/spawner/lavaland/goliath
@@ -34,6 +33,7 @@ GLOBAL_LIST_INIT(tendrils, list())
 		M.ScrapeAway(null, CHANGETURF_IGNORE_AIR)
 	AddComponent(/datum/component/gps, "Eerie Signal")
 	GLOB.tendrils += src
+<<<<<<< HEAD
 	var/datum/disease/advance/random/necropolis/R = new
 	necroseed += R
 
@@ -45,6 +45,8 @@ GLOBAL_LIST_INIT(tendrils, list())
 	else
 		E.extrapolate(src, necroseed, user)
 	return TRUE
+=======
+>>>>>>> 8c04cb1df6... virology gameplay tweaks and rebalances (again) (#5567)
 
 /obj/structure/spawner/lavaland/deconstruct(disassembled)
 	new /obj/effect/collapse(loc)

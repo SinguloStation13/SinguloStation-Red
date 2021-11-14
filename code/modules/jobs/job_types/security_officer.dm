@@ -28,6 +28,14 @@
 	display_order = JOB_DISPLAY_ORDER_SECURITY_OFFICER
 	departments = DEPARTMENT_SECURITY
 
+<<<<<<< HEAD
+=======
+	species_outfits = list(
+		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/security
+	)
+	biohazard = 15 //clean your baton, man
+
+>>>>>>> 8c04cb1df6... virology gameplay tweaks and rebalances (again) (#5567)
 /datum/job/officer/get_access()
 	var/list/L = list()
 	L |= ..() | check_config_for_sec_maint()

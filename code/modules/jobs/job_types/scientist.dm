@@ -24,6 +24,14 @@
 	display_order = JOB_DISPLAY_ORDER_SCIENTIST
 	departments = DEPARTMENT_SCIENCE
 
+<<<<<<< HEAD
+=======
+	species_outfits = list(
+		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/science
+	)
+	biohazard = 15
+
+>>>>>>> 8c04cb1df6... virology gameplay tweaks and rebalances (again) (#5567)
 /datum/outfit/job/scientist
 	name = "Scientist"
 	jobtype = /datum/job/scientist
