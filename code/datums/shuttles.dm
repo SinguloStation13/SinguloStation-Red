@@ -673,3 +673,9 @@
 /datum/map_template/shuttle/tram/corg
 	suffix = "corg"
 	name = "corgstation transport shuttle"
+
+/datum/map_template/shuttle/emergency/endo
+	suffix = "endo"
+	name = "Endostation Emergency Shuttle"
+	credit_cost = 2000
+	description = "For when the station has met its Endo."
