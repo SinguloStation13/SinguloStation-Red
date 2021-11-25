@@ -884,6 +884,7 @@
 	. = ..()
 	AddComponent(/datum/component/caltrop, force)
 
+<<<<<<< HEAD
 /obj/item/light/Crossed(mob/living/L)
 	. = ..()
 	if(istype(L) && has_gravity(loc))
@@ -893,6 +894,20 @@
 			playsound(loc, 'sound/effects/glass_step.ogg', 50, 1)
 		if(status == LIGHT_BURNED || status == LIGHT_OK)
 			shatter()
+=======
+/obj/item/light/proc/on_entered(datum/source, atom/movable/L)
+	SIGNAL_HANDLER
+
+	if(!istype(L, /mob/living) || !has_gravity(loc))
+		return
+	
+	if(HAS_TRAIT(L, TRAIT_LIGHT_STEP))
+		playsound(loc, 'sound/effects/glass_step.ogg', 30, 1)
+	else
+		playsound(loc, 'sound/effects/glass_step.ogg', 50, 1)
+	if(status == LIGHT_BURNED || status == LIGHT_OK)
+		shatter()
+>>>>>>> c7967e177c... Light items no longer break when anything not living moves onto it (#5850)
 
 // attack bulb/tube with object
 // if a syringe, can inject plasma to make it explode
