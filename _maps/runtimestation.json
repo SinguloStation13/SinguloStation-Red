@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
     "map_name": "Runtime Station",
     "map_path": "map_files/debug",
     "map_file": "runtimestation.dmm",
+=======
+	"map_name": "Runtime Station",
+	"map_link": "None",
+	"map_path": "map_files/debug",
+	"map_file": "runtimestation.dmm",
+>>>>>>> b1178c83c7... standardize all the indents in map json files (#5852)
 	"shuttles": {
-	    "cargo": "cargo_delta"
-    }
+		"cargo": "cargo_delta"
+	}
 }
