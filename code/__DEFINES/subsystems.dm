@@ -20,7 +20,7 @@
   *
   * make sure you add an update to the schema_version stable in the db changelog
   */
-#define DB_MINOR_VERSION 8
+#define DB_MINOR_VERSION 9
 
 
 //! ## Timing subsystem
@@ -111,6 +111,7 @@
 #define INIT_ORDER_INPUT			85
 #define INIT_ORDER_TOPIC			83
 #define INIT_ORDER_VIS				80
+#define INIT_ORDER_ACHIEVEMENTS 77
 #define INIT_ORDER_MATERIALS		76
 #define INIT_ORDER_RESEARCH			75
 #define INIT_ORDER_ORBITS			74 //Other things use the orbital map, so it needs to be made early on.
