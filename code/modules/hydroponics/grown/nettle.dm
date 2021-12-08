@@ -88,8 +88,14 @@
 	name = "deathnettle"
 	desc = "The <span class='danger'>glowing</span> nettle incites <span class='boldannounce'>rage</span> in you just from looking at it!"
 	icon_state = "deathnettle"
+<<<<<<< HEAD
 	force = 30
 	throwforce = 15
+=======
+	force = 25
+	throwforce = 12
+	discovery_points = 300
+>>>>>>> 8728b40383... Adds discovery points to mutated plants (#5838)
 
 /obj/item/reagent_containers/food/snacks/grown/nettle/death/add_juice()
 	..()
