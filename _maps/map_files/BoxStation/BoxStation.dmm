@@ -26387,7 +26387,11 @@
 "byh" = (
 /obj/machinery/door/airlock/command{
 	name = "Server Room";
+<<<<<<< HEAD
 	req_access_txt = "30"
+=======
+	req_one_access_txt = "30;70"
+>>>>>>> e4c2b562df... Fixed Server room access (#5927)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -27443,7 +27447,11 @@
 "bAB" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Server Room";
+<<<<<<< HEAD
 	req_access_txt = "30"
+=======
+	req_one_access_txt = "30;70"
+>>>>>>> e4c2b562df... Fixed Server room access (#5927)
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
