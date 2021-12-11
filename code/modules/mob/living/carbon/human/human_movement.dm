@@ -43,8 +43,11 @@
 
 /mob/living/carbon/human/Move(NewLoc, direct)
 	. = ..()
+<<<<<<< HEAD
 	for(var/datum/mutation/human/HM in dna.mutations)
 		HM.on_move(NewLoc)
+=======
+>>>>>>> 3b77b577af... Mutations now use a signal for on_move instead of being placed directly in human/Move() (#5884)
 
 	if(shoes)
 		if(mobility_flags & MOBILITY_STAND)
