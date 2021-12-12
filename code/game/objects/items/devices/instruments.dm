@@ -275,3 +275,18 @@
 			var/atom/A = V
 			instruments[initial(A.name)] = A
 	return instruments
+<<<<<<< HEAD:code/game/objects/items/devices/instruments.dm
+=======
+
+/obj/item/instrument/musicalmoth
+	name = "musical moth"
+	desc = "Despite its popularity, this controversial musical toy was eventually banned due to its unethically sampled sounds of moths screaming in agony."
+	icon_state = "mothsician"
+	allowed_instrument_ids = "mothscream"
+	attack_verb = list("flutter", "flap")
+	w_class = WEIGHT_CLASS_TINY
+	force = 0
+	hitsound = 'sound/voice/moth/scream_moth.ogg'
+	custom_price = 237
+	custom_premium_price = 237
+>>>>>>> 4735b96ee4... Adds trailing newlines to all DM files and linting for it (#5639):code/modules/instruments/items.dm
