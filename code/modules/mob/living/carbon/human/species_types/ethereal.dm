@@ -99,12 +99,15 @@
 	handle_emag(H)
 	addtimer(CALLBACK(src, .proc/stop_emag, H), 30 SECONDS) //Disco mode for 30 seconds! This doesn't affect the ethereal at all besides either annoying some players, or making someone look badass.
 
+<<<<<<< HEAD
 
 /datum/species/ethereal/spec_life(mob/living/carbon/human/H)
 	.=..()
 	handle_charge(H)
 
 
+=======
+>>>>>>> 9c03e25023... IPCs can now charge off of Ethereals (#5915)
 /datum/species/ethereal/proc/stop_emp(mob/living/carbon/human/H)
 	EMPeffect = FALSE
 	spec_updatehealth(H)
@@ -124,6 +127,7 @@
 	H.visible_message("<span class='danger'>[H] stops flickering and goes back to their normal state!</span>")
 
 /datum/species/ethereal/handle_charge(mob/living/carbon/human/H)
+	. = ..()
 	brutemod = 1.25
 	if(HAS_TRAIT(H, TRAIT_NOHUNGER))
 		return
