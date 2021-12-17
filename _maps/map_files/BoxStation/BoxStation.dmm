@@ -26387,7 +26387,7 @@
 "byh" = (
 /obj/machinery/door/airlock/command{
 	name = "Server Room";
-	req_access_txt = "30"
+	req_access_txt = "30;70"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -27443,7 +27443,7 @@
 "bAB" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Server Room";
-	req_access_txt = "30"
+	req_access_txt = "30;70"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
@@ -38185,12 +38185,6 @@
 	dir = 5
 	},
 /turf/open/floor/plasteel,
-/area/engine/engineering)
-"cjb" = (
-/obj/effect/turf_decal/delivery,
-/turf/open/floor/plasteel{
-	name = "floor"
-	},
 /area/engine/engineering)
 "cjc" = (
 /obj/effect/turf_decal/stripes/line{
@@ -54187,6 +54181,7 @@
 	},
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/aisat_interior)
+<<<<<<< HEAD
 "oKe" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -54206,6 +54201,14 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
+=======
+"oJY" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plasteel{
+	name = "floor"
+	},
+/area/engine/engineering)
+>>>>>>> 4bcd03e654... Splitting the RD's Office access and Server Access (also removes the Unused Apothecary access) (#5917)
 "oKo" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -88245,8 +88248,8 @@ bVJ
 cay
 ccw
 cig
-cjb
-cjb
+oJY
+oJY
 cig
 cig
 cmG

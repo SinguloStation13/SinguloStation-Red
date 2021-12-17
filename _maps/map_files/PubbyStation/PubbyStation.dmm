@@ -28386,7 +28386,7 @@
 "bnU" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Server Room";
-	req_access_txt = "30"
+	req_access_txt = "30;70"
 	},
 /obj/machinery/atmospherics/pipe/simple/general/visible,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -30827,7 +30827,7 @@
 "btf" = (
 /obj/machinery/door/airlock/command{
 	name = "Server Room";
-	req_access_txt = "30"
+	req_access_txt = "30;70"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -35700,6 +35700,7 @@
 	},
 /turf/open/floor/engine,
 /area/science/xenobiology)
+<<<<<<< HEAD
 "bDf" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -35715,6 +35716,8 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/engine)
+=======
+>>>>>>> 4bcd03e654... Splitting the RD's Office access and Server Access (also removes the Unused Apothecary access) (#5917)
 "bDh" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/plating,
@@ -38503,12 +38506,6 @@
 	},
 /turf/open/floor/engine,
 /area/science/storage)
-"bIK" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 2
-	},
-/turf/closed/wall/r_wall,
-/area/science/mixing/chamber)
 "bIL" = (
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/research/glass/incinerator/toxmix_interior,
@@ -59715,6 +59712,20 @@
 	},
 /turf/open/floor/engine,
 /area/science/xenobiology)
+<<<<<<< HEAD
+=======
+"pci" = (
+/obj/machinery/atmospherics/components/unary/tank/air{
+	dir = 2
+	},
+/turf/open/floor/plating,
+/area/maintenance/department/engine)
+"pdF" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/simple/general/visible,
+/turf/open/floor/plating,
+/area/science/mixing)
+>>>>>>> 4bcd03e654... Splitting the RD's Office access and Server Access (also removes the Unused Apothecary access) (#5917)
 "pdW" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -61371,6 +61382,7 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/exit/departure_lounge)
+<<<<<<< HEAD
 "sgw" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -61385,6 +61397,14 @@
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden,
 /turf/closed/wall,
 /area/maintenance/department/security/brig)
+=======
+"sgI" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 2
+	},
+/turf/closed/wall/r_wall,
+/area/science/mixing/chamber)
+>>>>>>> 4bcd03e654... Splitting the RD's Office access and Server Access (also removes the Unused Apothecary access) (#5917)
 "slE" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -85682,8 +85702,13 @@ bxY
 bzz
 bAK
 bBX
+<<<<<<< HEAD
 bDg
 bEj
+=======
+pci
+ljA
+>>>>>>> 4bcd03e654... Splitting the RD's Office access and Server Access (also removes the Unused Apothecary access) (#5917)
 bFF
 bva
 bDi
@@ -85939,7 +85964,7 @@ bxZ
 bzA
 bAK
 bBX
-bDg
+pci
 bEk
 bDi
 bva
@@ -106760,9 +106785,9 @@ bEb
 bFn
 bGt
 bHz
-bIK
+sgI
 bJQ
-bIK
+sgI
 bMl
 bNp
 bOt
