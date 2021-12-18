@@ -561,9 +561,14 @@
 	name = "disco light"
 	desc = "Groovy..."
 	icon_state = null
+<<<<<<< HEAD
 	light_color = null
 	brightness_on = 0
 	light_range = 0
+=======
+	light_system = STATIC_LIGHT
+	light_range = 4
+>>>>>>> a826742c5f... Fix update_light() Runtime in disco light (#5986)
 	light_power = 10
 	alpha = 0
 	layer = 0
