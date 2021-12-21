@@ -18,7 +18,15 @@ GLOBAL_VAR(string_filename_current_key)
 	else
 		CRASH("strings list not found: [directory]/[filename], index=[key]")
 
+<<<<<<< HEAD
 /proc/strings(filename as text, key as text, directory = "strings")
+=======
+/proc/strings(filename as text, key as text, directory = STRING_DIRECTORY)
+	if(IsAdminAdvancedProcCall())
+		return
+
+	filename = SANITIZE_FILENAME(filename)
+>>>>>>> ab3093c507... Fixes loading admin nicknames (#5805)
 	load_strings_file(filename, directory)
 	if((filename in GLOB.string_cache) && (key in GLOB.string_cache[filename]))
 		return GLOB.string_cache[filename][key]
@@ -28,7 +36,14 @@ GLOBAL_VAR(string_filename_current_key)
 /proc/strings_subkey_lookup(match, group1)
 	return pick_list(GLOB.string_filename_current_key, group1)
 
+<<<<<<< HEAD
 /proc/load_strings_file(filename, directory = "strings")
+=======
+/proc/load_strings_file(filename, directory = STRING_DIRECTORY)
+	if(IsAdminAdvancedProcCall())
+		return
+
+>>>>>>> ab3093c507... Fixes loading admin nicknames (#5805)
 	GLOB.string_filename_current_key = filename
 	if(filename in GLOB.string_cache)
 		return //no work to do
