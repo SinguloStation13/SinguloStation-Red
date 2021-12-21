@@ -303,7 +303,11 @@
 
 		switch (command)
 			if ("map")
+<<<<<<< HEAD
 				currentmap = load_map_config("_maps/[data].json")
+=======
+				currentmap = load_map_config("[data]", MAP_DIRECTORY)
+>>>>>>> 9630078d3a... Fixes maps again (#5724)
 				if(currentmap.defaulted)
 					log_config("Failed to load map config for [data]!")
 					currentmap = null

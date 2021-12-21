@@ -5,3 +5,8 @@
 #define WXH_TO_HEIGHT(x) text2num(copytext(x, findtextEx(x, "x") + 1))
 
 #define CENTER(text) {"<center>[##text]</center>"}
+<<<<<<< HEAD
+=======
+
+#define SANITIZE_FILENAME(text) (GLOB.filename_forbidden_chars.Replace(text, ""))
+>>>>>>> 9630078d3a... Fixes maps again (#5724)
