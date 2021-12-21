@@ -101,6 +101,7 @@
 			user.Paralyze(100)
 			to_chat(user, "<span class='userdanger'>You are stunned by [src] as you try picking it up!</span>")
 
+<<<<<<< HEAD
 /obj/item/reagent_containers/food/snacks/grown/nettle/death/attack(mob/living/carbon/M, mob/user)
 	if(!..())
 		return
@@ -113,3 +114,11 @@
 			M.Unconscious(force / 0.3)
 			M.Paralyze(force / 0.75)
 		M.drop_all_held_items()
+=======
+/obj/item/reagent_containers/food/snacks/grown/nettle/death/attack(mob/living/M, mob/user)
+	if(!M.can_inject(user) && user.a_intent == INTENT_HARM)
+		to_chat(user, "<span class='warning'>The [src] harmlessly bounces off of [M]! They're protected from its needles!</span>")
+		return FALSE
+	else
+		return ..()
+>>>>>>> 4735b96ee4... Adds trailing newlines to all DM files and linting for it (#5639)
