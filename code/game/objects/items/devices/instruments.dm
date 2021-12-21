@@ -8,9 +8,16 @@
 	lefthand_file = 'icons/mob/inhands/equipment/instruments_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/instruments_righthand.dmi'
 	var/datum/song/handheld/song
+<<<<<<< HEAD:code/game/objects/items/devices/instruments.dm
 	var/instrumentId = "generic"
 	var/instrumentExt = "mid"
 	block_upgrade_walk = 1
+=======
+	/// Our allowed list of instrument ids. This is nulled on initialize.
+	var/list/allowed_instrument_ids
+	/// How far away our song datum can be heard.
+	var/instrument_range = 15
+>>>>>>> bf4234403d... nerfs directional blocking (#5836):code/modules/instruments/items.dm
 
 /obj/item/instrument/Initialize()
 	. = ..()
