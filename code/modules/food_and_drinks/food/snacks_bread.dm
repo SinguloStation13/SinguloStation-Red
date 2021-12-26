@@ -257,8 +257,14 @@
 	. = ..()
 
 /obj/item/reagent_containers/food/snacks/deepfryholder/On_Consume(mob/living/eater)
+<<<<<<< HEAD
 	if(contents)
 		QDEL_LIST(contents)
+=======
+	if(length(contents) && !reagents.total_volume)
+		for(var/atom/movable/A in contents)
+			A.forceMove(eater.loc)
+>>>>>>> 6bdca89f96... remove incorrect usage of LAZYLEN (#6044)
 	..()
 
 /obj/item/reagent_containers/food/snacks/deepfryholder/proc/fry(cook_time = 30)
