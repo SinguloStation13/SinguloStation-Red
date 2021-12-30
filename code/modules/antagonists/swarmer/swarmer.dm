@@ -666,10 +666,23 @@
 		to_chat(src, "<span class='info'>We successfully repaired ourselves.</span>")
 
 /mob/living/simple_animal/hostile/swarmer/proc/ToggleLight()
+<<<<<<< HEAD
 	if(!light_range)
 		set_light(3)
 	else
 		set_light(0)
+=======
+	if(swarmer_flags & SWARMER_LIGHT_ON)
+		swarmer_flags = ~SWARMER_LIGHT_ON
+		set_light_on(FALSE)
+		if(!mind)
+			return
+		return
+	swarmer_flags |= SWARMER_LIGHT_ON
+	set_light_on(TRUE)
+	if(!mind)
+		return
+>>>>>>> 08762d3f7e... Overlay Lighting Fixes Part 2 (#5965)
 
 /mob/living/simple_animal/hostile/swarmer/proc/swarmer_chat(msg)
 	var/rendered = "<B>Swarm communication - [src]</b> [say_quote(msg)]"
