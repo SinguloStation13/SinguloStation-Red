@@ -1,4 +1,0 @@
-author: SinguloBot
-delete-after: true
-changes:
-  - balance: Unintentional spins and flips no longer cause confusion.

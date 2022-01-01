@@ -1,4 +1,0 @@
-author: SinguloBot
-delete-after: true
-changes:
-  - bugfix: Spin and flip confusion now properly checks for intent.
