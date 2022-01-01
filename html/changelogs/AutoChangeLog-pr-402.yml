@@ -1,0 +1,4 @@
+author: SinguloBot
+delete-after: true
+changes:
+  - rscadd: The *spin and *flip emotes now cause a small amount of confusion.
