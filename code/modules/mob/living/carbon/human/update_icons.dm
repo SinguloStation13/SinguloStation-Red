@@ -131,6 +131,11 @@ There are several things that need to be remembered:
 			if(G == "f" && U.fitted != NO_FEMALE_UNIFORM)
 				uniform_overlay = U.build_worn_icon(state = "[t_color]", default_layer = UNIFORM_LAYER, default_icon_file = 'icons/mob/uniform.dmi', isinhands = FALSE, femaleuniform = U.fitted)
 
+<<<<<<< HEAD
+=======
+		//Change check_adjustable_clothing.dm if you change this
+		var/icon_file = 'icons/mob/uniform.dmi'
+>>>>>>> 5f90618346... Fixes #6023 - Adds in an adjustable uniform icon state unit test (#6088)
 		if(!uniform_overlay)
 			uniform_overlay = U.build_worn_icon(state = "[t_color]", default_layer = UNIFORM_LAYER, default_icon_file = 'icons/mob/uniform.dmi', isinhands = FALSE)
 
