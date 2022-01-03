@@ -32,6 +32,7 @@
 	light_color = LIGHT_COLOR_FIRE
 	var/progress_flash_divisor = 10
 	var/burned_fuel_for = 0	//when fuel was last removed
+	var/light_intensity = 2
 	heat = 3800
 	tool_behaviour = TOOL_WELDER
 	toolspeed = 1
@@ -335,6 +336,11 @@
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "welder"
 	toolspeed = 0.1
+<<<<<<< HEAD
+=======
+	light_system = NO_LIGHT_SUPPORT
+	light_range = 0
+>>>>>>> 1fae9ccc8d... Fixes #5998 - Sunglasses not providing protection from welding tools is now intentional. (#6091)
 	light_intensity = 0
 	change_icons = 0
 
@@ -371,7 +377,7 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	icon_state = "brasswelder"
 	item_state = "brasswelder"
-
+	light_intensity = 1
 
 /obj/item/weldingtool/experimental/process(delta_time)
 	..()
