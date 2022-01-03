@@ -55,7 +55,7 @@
 	var/mob/living/M = AM
 	if(!istype(M))
 		return FALSE
-	var/amc = M.anti_magic_check()
+	var/amc = M.anti_magic_check(holy = TRUE)
 	if(amc)
 		return FALSE
 	return TRUE
