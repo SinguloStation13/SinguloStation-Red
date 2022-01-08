@@ -118497,10 +118497,17 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "fhk" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /obj/machinery/mineral/ore_redemption,
+=======
+/obj/machinery/mineral/ore_redemption{
+	input_dir = 4;
+	output_dir = 8
+	},
+>>>>>>> a3789dc062... fixes the delta ORM (#6150)
 /obj/effect/turf_decal/stripes/box,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
