@@ -6,6 +6,13 @@
 	item_state = "eng_helm"
 	max_integrity = 300
 	armor = list("melee" = 10, "bullet" = 5, "laser" = 10, "energy" = 15, "bomb" = 10, "bio" = 100, "rad" = 75, "fire" = 50, "acid" = 75, "stamina" = 20)
+<<<<<<< HEAD
+=======
+	light_system = MOVABLE_LIGHT
+	light_range = 4
+	light_power = 1
+	light_on = FALSE
+>>>>>>> 914d25cae8... how did i not see that (#6153)
 	var/basestate = "hardsuit"
 	var/brightness_on = 4 //luminosity when on
 	var/on = FALSE
