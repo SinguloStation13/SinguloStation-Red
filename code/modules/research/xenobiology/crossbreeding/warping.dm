@@ -37,6 +37,20 @@ put up a rune with bluespace effects, lots of those runes are fluff or act as a 
 	var/turf/rune_turf
 	var/remove_on_activation = TRUE
 
+<<<<<<< HEAD
+=======
+/obj/effect/warped_rune/Initialize()
+	. = ..()
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
+
+/obj/effect/warped_rune/Moved(atom/OldLoc, Dir)
+	. = ..()
+	rune_turf = get_turf(src)
+
+>>>>>>> 8005787a3f... The turf reference is now set before rune activation or other teleports (#6208)
 /obj/item/slimecross/warping/examine()
 	. = ..()
 	. += "It has [warp_charge] charge left"
