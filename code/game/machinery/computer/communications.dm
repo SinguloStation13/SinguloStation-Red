@@ -484,6 +484,7 @@
 						dat += "<BR>\[ <A HREF='?src=[REF(src)];operation=MessageSyndicate'>Send Message to \[UNKNOWN\]</A> \]"
 						dat += "<BR>\[ <A HREF='?src=[REF(src)];operation=RestoreBackup'>Restore Backup Routing Data</A> \]"
 			else
+<<<<<<< HEAD
 				dat += "<BR>\[ <A HREF='?src=[REF(src)];operation=login'>Log In</A> \]"
 		if(STATE_CALLSHUTTLE)
 			dat += get_call_shuttle_form()
@@ -508,6 +509,139 @@
 					var/answered = currmsg.possible_answers[currmsg.answered]
 					dat += "<br> Archived Answer : [answered]"
 				dat += "<BR><BR>\[ <A HREF='?src=[REF(src)];operation=delmessage'>Delete</A> \]"
+=======
+				message_centcom(message, usr)
+				to_chat(usr, "<span class='notice'>Message transmitted to Central Command.</span>")
+
+			var/associates = emagged ? "the Syndicate": "CentCom"
+			usr.log_talk(message, LOG_SAY, tag = "message to [associates]")
+			deadchat_broadcast("<span class='deadsay'><span class='name'>[usr.real_name]</span> has messaged [associates], \"[message]\" at <span class='name'>[get_area_name(usr, TRUE)]</span>.</span>", usr)
+			COOLDOWN_START(src, important_action_cooldown, IMPORTANT_ACTION_COOLDOWN)
+			. = TRUE
+		if ("purchaseShuttle")
+			var/can_buy_shuttles_or_fail_reason = can_buy_shuttles(usr)
+			if (can_buy_shuttles_or_fail_reason != TRUE)
+				if (can_buy_shuttles_or_fail_reason != FALSE)
+					to_chat(usr, "<span class='alert'>[can_buy_shuttles_or_fail_reason]</span>")
+				return
+			var/list/shuttles = flatten_list(SSmapping.shuttle_templates)
+			var/datum/map_template/shuttle/shuttle = locate(params["shuttle"]) in shuttles
+			if (!istype(shuttle))
+				return
+			if (!can_purchase_this_shuttle(shuttle))
+				return
+			if (!shuttle.prerequisites_met())
+				to_chat(usr, "<span class='alert'>You have not met the requirements for purchasing this shuttle.</span>")
+				return
+			var/datum/bank_account/bank_account = SSeconomy.get_dep_account(ACCOUNT_CAR)
+			if (bank_account.account_balance < shuttle.credit_cost)
+				return
+			SSshuttle.shuttle_purchased = TRUE
+			SSshuttle.unload_preview()
+			SSshuttle.existing_shuttle = SSshuttle.emergency
+			SSshuttle.action_load(shuttle)
+			bank_account.adjust_money(-shuttle.credit_cost)
+			minor_announce("[shuttle.name] has been purchased for [shuttle.credit_cost] credits! Purchase authorized by [authorize_name] [shuttle.extra_desc ? " [shuttle.extra_desc]" : ""]" , "Shuttle Purchase")
+			message_admins("[ADMIN_LOOKUPFLW(usr)] purchased [shuttle.name].")
+			log_game("[key_name(usr)] has purchased [shuttle.name].")
+			SSblackbox.record_feedback("text", "shuttle_purchase", 1, shuttle.name)
+			//state = STATE_MAIN
+			. = TRUE
+		if ("recallShuttle")
+			// AIs cannot recall the shuttle
+			if (!authenticated(usr) || issilicon(usr))
+				return
+			. = SSshuttle.cancelEvac(usr)
+		if ("requestNukeCodes")
+			if (!authenticated_as_non_silicon_captain(usr))
+				return
+			if (!COOLDOWN_FINISHED(src, important_action_cooldown))
+				return
+			var/reason = trim(html_encode(params["reason"]), MAX_MESSAGE_LEN)
+			nuke_request(reason, usr)
+			to_chat(usr, "<span class='notice'>Request sent.</span>")
+			usr.log_message("has requested the nuclear codes from CentCom with reason \"[reason]\"", LOG_SAY)
+			priority_announce("The codes for the on-station nuclear self-destruct have been requested by [usr]. Confirmation or denial of this request will be sent shortly.", "Nuclear Self-Destruct Codes Requested", SSstation.announcer.get_rand_report_sound())
+			playsound(src, 'sound/machines/terminal_prompt.ogg', 50, FALSE)
+			COOLDOWN_START(src, important_action_cooldown, IMPORTANT_ACTION_COOLDOWN)
+			. = TRUE
+		if ("restoreBackupRoutingData")
+			if (!authenticated_as_non_silicon_captain(usr))
+				return
+			if (!(obj_flags & EMAGGED))
+				return
+			to_chat(usr, "<span class='notice'>Backup routing data restored.</span>")
+			playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
+			obj_flags &= ~EMAGGED
+			. = TRUE
+		if ("sendToOtherSector")
+			if (!authenticated_as_non_silicon_captain(usr))
+				return
+			if (!can_send_messages_to_other_sectors(usr))
+				return
+			if (!COOLDOWN_FINISHED(src, important_action_cooldown))
+				return
+
+			var/message = trim(html_encode(params["message"]), MAX_MESSAGE_LEN)
+			if (!message)
+				return
+
+			playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
+
+			SStopic.crosscomms_send("comms_console", message, station_name())
+			minor_announce(message, title = "Outgoing message to allied station", html_encode = FALSE)
+			usr.log_talk(message, LOG_SAY, tag="message to the other server")
+			message_admins("[ADMIN_LOOKUPFLW(usr)] has sent a message to the other server.")
+			deadchat_broadcast("<span class='deadsay bold'>[usr.real_name] has sent an outgoing message to the other station(s).</span>", usr)
+
+			COOLDOWN_START(src, important_action_cooldown, IMPORTANT_ACTION_COOLDOWN)
+			. = TRUE
+		if ("setState")
+			if (!authenticated(usr))
+				return
+			if (!(params["state"] in approved_states))
+				return
+			var/newState = params["state"]
+			if (newState == STATE_BUYING_SHUTTLE && can_buy_shuttles(usr) != TRUE)
+				return
+			set_state(usr, newState)
+			playsound(src, "terminal_type", 50, FALSE)
+			. = TRUE
+		if ("setStatusMessage")
+			if (!authenticated(usr))
+				return
+			var/line_one = reject_bad_text(params["lineOne"] || "", MAX_STATUS_LINE_LENGTH)
+			var/line_two = reject_bad_text(params["lineTwo"] || "", MAX_STATUS_LINE_LENGTH)
+			post_status("alert", "blank")
+			post_status("message", line_one, line_two)
+			last_status_display = list(line_one, line_two)
+			playsound(src, "terminal_type", 50, FALSE)
+			. = TRUE
+		if ("setStatusPicture")
+			if (!authenticated(usr))
+				return
+			var/picture = params["picture"]
+			if (!(picture in approved_status_pictures))
+				return
+			post_status("alert", picture)
+			playsound(src, "terminal_type", 50, FALSE)
+			. = TRUE
+		if ("toggleAuthentication")
+			// Log out if we're logged in
+			if (authorize_name)
+				authenticated = FALSE
+				authorize_access = null
+				authorize_name = null
+				playsound(src, 'sound/machines/terminal_off.ogg', 50, FALSE)
+				return TRUE
+
+			if (obj_flags & EMAGGED)
+				authenticated = TRUE
+				authorize_access = get_all_accesses()
+				authorize_name = "Unknown"
+				to_chat(usr, "<span class='warning'>[src] lets out a quiet alarm as its login is overridden.</span>")
+				playsound(src, 'sound/machines/terminal_alert.ogg', 25, FALSE)
+>>>>>>> 1260c0faa1... TGUI Communications Console fixes (#6183)
 			else
 				aistate = STATE_MESSAGELIST
 				attack_hand(user)
@@ -516,6 +650,7 @@
 			if (currmsg)
 				dat += "Are you sure you want to delete this message? \[ <A HREF='?src=[REF(src)];operation=delmessage2'>OK</A> | <A HREF='?src=[REF(src)];operation=viewmessage'>Cancel</A> \]"
 			else
+<<<<<<< HEAD
 				state = STATE_MESSAGELIST
 				attack_hand(user)
 				return
@@ -700,6 +835,166 @@
 			else
 				dat += "<b>Emergency Maintenance Access is currently <font color='green'>DISABLED</font></b>"
 				dat += "<BR>Lift access restrictions on maintenance and external airlocks? <BR>\[ <A HREF='?src=[REF(src)];operation=ai-enableemergency'>OK</A> | <A HREF='?src=[REF(src)];operation=ai-viewmessage'>Cancel</A> \]"
+=======
+				make_maint_all_access()
+				log_game("[key_name(usr)] enabled emergency maintenance access.")
+				message_admins("[ADMIN_LOOKUPFLW(usr)] enabled emergency maintenance access.")
+				deadchat_broadcast("<span class='deadsay'><span class='name'>[usr.real_name]</span> enabled emergency maintenance access at <span class='name'>[get_area_name(usr, TRUE)]</span>.</span>", usr)
+
+/obj/machinery/computer/communications/ui_data(mob/user)
+	var/list/data = list(
+		"authenticated" = FALSE,
+		"emagged" = FALSE,
+		"hasConnection" = has_communication(),
+	)
+
+	var/ui_state = issilicon(user) ? cyborg_state : state
+
+	if (authenticated || issilicon(user))
+		data["authenticated"] = TRUE
+		data["canLogOut"] = !issilicon(user)
+		data["page"] = ui_state
+
+		if (obj_flags & EMAGGED)
+			data["emagged"] = TRUE
+
+		//Main section is always visible when authenticated
+		data["canBuyShuttles"] = can_buy_shuttles(user)
+		data["canMakeAnnouncement"] = FALSE
+		data["canMessageAssociates"] = FALSE
+		data["canRecallShuttles"] = !issilicon(user)
+		data["canRequestNuke"] = FALSE
+		data["canSendToSectors"] = FALSE
+		data["canSetAlertLevel"] = FALSE
+		data["canToggleEmergencyAccess"] = FALSE
+		data["importantActionReady"] = COOLDOWN_FINISHED(src, important_action_cooldown)
+		data["shuttleCalled"] = FALSE
+		data["shuttleLastCalled"] = FALSE
+
+		data["alertLevel"] = get_security_level()
+		data["authorizeName"] = authorize_name
+		data["canLogOut"] = !issilicon(user)
+		data["shuttleCanEvacOrFailReason"] = SSshuttle.canEvac(user)
+
+		if (authenticated_as_non_silicon_captain(user))
+			data["canMessageAssociates"] = TRUE
+			data["canRequestNuke"] = TRUE
+
+		if (can_send_messages_to_other_sectors(user))
+			data["canSendToSectors"] = TRUE
+
+		if (authenticated_as_silicon_or_captain(user))
+			data["canToggleEmergencyAccess"] = TRUE
+			data["emergencyAccess"] = GLOB.emergency_access
+
+			data["alertLevelTick"] = alert_level_tick
+			data["canMakeAnnouncement"] = TRUE
+			data["canSetAlertLevel"] = issilicon(user) ? "NO_SWIPE_NEEDED" : "SWIPE_NEEDED"
+
+		if (SSshuttle.emergency.mode != SHUTTLE_IDLE && SSshuttle.emergency.mode != SHUTTLE_RECALL)
+			data["shuttleCalled"] = TRUE
+			data["shuttleRecallable"] = SSshuttle.canRecall()
+
+		if (SSshuttle.emergencyCallAmount)
+			data["shuttleCalledPreviously"] = TRUE
+			if (SSshuttle.emergencyLastCallLoc)
+				data["shuttleLastCalled"] = format_text(SSshuttle.emergencyLastCallLoc.name)
+
+		switch (ui_state)
+			if (STATE_MESSAGES)
+				data["messages"] = list()
+
+				if (messages)
+					for (var/_message in messages)
+						var/datum/comm_message/message = _message
+						data["messages"] += list(list(
+							"answered" = message.answered,
+							"content" = message.content,
+							"title" = message.title,
+							"possibleAnswers" = message.possible_answers,
+						))
+			if (STATE_BUYING_SHUTTLE)
+				var/datum/bank_account/bank_account = SSeconomy.get_dep_account(ACCOUNT_CAR)
+				var/list/shuttles = list()
+
+				for (var/shuttle_id in SSmapping.shuttle_templates)
+					var/datum/map_template/shuttle/shuttle_template = SSmapping.shuttle_templates[shuttle_id]
+					if (shuttle_template.credit_cost == INFINITY)
+						continue
+					if (!can_purchase_this_shuttle(shuttle_template))
+						continue
+					shuttles += list(list(
+						"name" = shuttle_template.name,
+						"description" = shuttle_template.description,
+						"creditCost" = shuttle_template.credit_cost,
+						"illegal" = shuttle_template.illegal_shuttle,
+						"prerequisites" = shuttle_template.prerequisites,
+						"ref" = REF(shuttle_template),
+					))
+
+				data["budget"] = bank_account.account_balance
+				data["shuttles"] = shuttles
+			if (STATE_CHANGING_STATUS)
+				data["lineOne"] = last_status_display ? last_status_display[1] : ""
+				data["lineTwo"] = last_status_display ? last_status_display[2] : ""
+
+	return data
+
+/obj/machinery/computer/communications/ui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if (!ui)
+		ui = new(user, src, "CommunicationsConsole")
+		ui.open()
+
+/obj/machinery/computer/communications/ui_static_data(mob/user)
+	return list(
+		"callShuttleReasonMinLength" = CALL_SHUTTLE_REASON_LENGTH,
+		"maxStatusLineLength" = MAX_STATUS_LINE_LENGTH,
+		"maxMessageLength" = MAX_MESSAGE_LEN,
+	)
+
+/// Returns whether or not the communications console can communicate with the station
+/obj/machinery/computer/communications/proc/has_communication()
+	var/turf/current_turf = get_turf(src)
+	var/z_level = current_turf.z
+	return is_station_level(z_level) || is_centcom_level(z_level)
+
+/obj/machinery/computer/communications/proc/set_state(mob/user, new_state)
+	if (issilicon(user))
+		cyborg_state = new_state
+	else
+		state = new_state
+
+/// Returns TRUE if the user can buy shuttles.
+/// If they cannot, returns FALSE or a string detailing why.
+/obj/machinery/computer/communications/proc/can_buy_shuttles(mob/user)
+	if (!SSmapping.config.allow_custom_shuttles)
+		return FALSE
+	if (!authenticated_as_non_silicon_captain(user))
+		return FALSE
+	if (SSshuttle.emergency.mode != SHUTTLE_RECALL && SSshuttle.emergency.mode != SHUTTLE_IDLE)
+		return "The shuttle is already in transit."
+	if (SSshuttle.shuttle_purchased)
+		return "A replacement shuttle has already been purchased."
+	return TRUE
+
+/// Returns whether we are authorized to buy this specific shuttle.
+/// Does not handle prerequisite checks, as those should still *show*.
+/obj/machinery/computer/communications/proc/can_purchase_this_shuttle(datum/map_template/shuttle/shuttle_template)
+	if(shuttle_template.credit_cost == INFINITY)
+		return FALSE
+	var/obj/item/circuitboard/computer/communications/CM = circuit
+	if(shuttle_template.illegal_shuttle && !((obj_flags & EMAGGED) || CM.insecure))
+		return FALSE
+	if(!shuttle_template.can_be_bought && !shuttle_template.illegal_shuttle)
+		return FALSE
+
+	return TRUE
+
+/obj/machinery/computer/communications/proc/can_send_messages_to_other_sectors(mob/user)
+	if (!authenticated_as_non_silicon_captain(user))
+		return
+>>>>>>> 1260c0faa1... TGUI Communications Console fixes (#6183)
 
 	dat += "<BR><BR>\[ [(aistate != STATE_DEFAULT) ? "<A HREF='?src=[REF(src)];operation=ai-main'>Main Menu</A> | " : ""]<A HREF='?src=[REF(user)];mach_close=communications'>Close</A> \]"
 	return dat
