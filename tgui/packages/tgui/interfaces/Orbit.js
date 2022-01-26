@@ -1,5 +1,10 @@
 import { createSearch } from 'common/string';
+<<<<<<< HEAD
 import { Box, Button, Input, Section } from '../components';
+=======
+import { resolveAsset } from '../assets';
+import { Box, Button, Input, Icon, Section, Flex } from '../components';
+>>>>>>> 3143e00acb... Fixes the orbit menu ghost icon (#6252)
 import { Window } from '../layouts';
 import { useBackend, useLocalState } from '../backend';
 
@@ -67,7 +72,7 @@ const OrbitedButton = (props, context) => {
           {"("}{thing.orbiters}{" "}
           <Box
             as="img"
-            src="ghost.png"
+            src={resolveAsset('ghost.png')}
             opacity={0.7} />
           {")"}
         </Box>
