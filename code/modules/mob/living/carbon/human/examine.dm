@@ -298,8 +298,21 @@
 			else if(!client)
 				msg += "[t_He] [t_has] a blank, absent-minded stare and appears completely unresponsive to anything. [t_He] may snap out of it soon.\n"
 
+<<<<<<< HEAD
 		if(HAS_TRAIT(src, TRAIT_DIGICAMO))
 			msg += "[t_He] [t_is] moving [t_his] body in an unnatural and blatantly inhuman manner.\n"
+=======
+	//handcuffed?
+	if(handcuffed)
+		if(istype(handcuffed, /obj/item/restraints/handcuffs/cable))
+			. += "<span class='warning'>[t_He] [t_is] restrained with cable!</span>"
+		else
+			. += "<span class='warning'>[t_He] [t_is] handcuffed with [handcuffed]!</span>"
+
+	//legcuffed?
+	if(legcuffed)
+		. += "<span class='warning'>[t_He] [t_is] legcuffed with [legcuffed]!</span>"
+>>>>>>> 043cf10208... Digital Camo Refactor (#6132)
 
 	if (length(msg))
 		. += "<span class='warning'>[msg.Join("")]</span>"
