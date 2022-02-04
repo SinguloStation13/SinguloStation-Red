@@ -43,10 +43,13 @@
 	*/
 	var/list/cooldowns
 
-
-#ifdef TESTING
+#ifdef REFERENCE_TRACKING
 	var/running_find_references
 	var/last_find_references = 0
+	#ifdef REFERENCE_TRACKING_DEBUG
+	///Stores info about where refs are found, used for sanity checks and testing
+	var/list/found_refs
+	#endif
 #endif
 
 #ifdef DATUMVAR_DEBUGGING_MODE
@@ -90,9 +93,18 @@
 			continue
 		qdel(timer)
 
+<<<<<<< HEAD
 	//BEGIN: ECS SHIT
 	signal_enabled = FALSE
+=======
+	#ifdef REFERENCE_TRACKING
+	#ifdef REFERENCE_TRACKING_DEBUG
+	found_refs = null
+	#endif
+	#endif
+>>>>>>> 402a7e98c2... Port improved reference tracking and harddel testing from tg. (#6274)
 
+	//BEGIN: ECS SHIT
 	var/list/dc = datum_components
 	if(dc)
 		var/all_components = dc[/datum/component]
