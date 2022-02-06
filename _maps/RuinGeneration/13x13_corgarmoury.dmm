@@ -13,10 +13,13 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+<<<<<<< HEAD:_maps/RuinGeneration/13x13_corgarmoury.dmm
 /obj/machinery/door/poddoor/preopen{
 	id = "armourydoors";
 	name = "Blast Doors"
 	},
+=======
+>>>>>>> f3d68d16c4... Exploration Expansion Pack: New Targets, New Rooms, And Revisited Old Favorites (#6251):_maps/RuinGeneration/13x13_corgarmory.dmm
 /obj/effect/abstract/doorway_marker,
 /turf/open/floor/plasteel/dark,
 /area/ruin/unpowered)
@@ -107,9 +110,6 @@
 /obj/effect/turf_decal/delivery,
 /obj/structure/sign/poster/official/ian{
 	pixel_y = 32
-	},
-/obj/machinery/camera/motion{
-	c_tag = "Armory Motion Sensor"
 	},
 /obj/item/rack_parts,
 /turf/open/floor/plasteel,
@@ -286,10 +286,13 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+<<<<<<< HEAD:_maps/RuinGeneration/13x13_corgarmoury.dmm
 /obj/machinery/door/poddoor/preopen{
 	id = "armourydoors";
 	name = "Blast Doors"
 	},
+=======
+>>>>>>> f3d68d16c4... Exploration Expansion Pack: New Targets, New Rooms, And Revisited Old Favorites (#6251):_maps/RuinGeneration/13x13_corgarmory.dmm
 /turf/open/floor/plasteel/dark,
 /area/ruin/unpowered)
 
