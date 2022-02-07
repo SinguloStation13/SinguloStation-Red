@@ -243,7 +243,11 @@
 	data["map_name"] = SSmapping.config?.map_name || "Loading..."
 
 	data["security_level"] = get_security_level()
+<<<<<<< HEAD
 	data["round_duration"] = SSticker ? round((world.time-SSticker.round_start_time)/10) : 0
+=======
+	data["round_duration"] = SSticker?.round_start_timeofday ? round((world.timeofday - SSticker.round_start_timeofday)/10) : 0
+>>>>>>> 022e02636e... Fixes round duration API (#6309)
 	// Amount of world's ticks in seconds, useful for calculating round duration
 
 	//Time dilation stats.
