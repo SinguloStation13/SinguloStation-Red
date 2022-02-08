@@ -1,6 +1,12 @@
 /datum/species/fly
+<<<<<<< HEAD
 	name = "Flyperson"
 	id = "fly"
+=======
+	name = "\improper Flyperson"
+	id = SPECIES_FLY
+	bodyflag = FLAG_FLY
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 	say_mod = "buzzes"
 	species_traits = list(NOEYESPRITES, NO_UNDERWEAR, TRAIT_BEEFRIEND)
 	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID, MOB_BUG)
@@ -18,6 +24,13 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	species_language_holder = /datum/language_holder/fly
 
+	species_chest = /obj/item/bodypart/chest/fly
+	species_head = /obj/item/bodypart/head/fly
+	species_l_arm = /obj/item/bodypart/l_arm/fly
+	species_r_arm = /obj/item/bodypart/r_arm/fly
+	species_l_leg = /obj/item/bodypart/l_leg/fly
+	species_r_leg = /obj/item/bodypart/r_leg/fly
+
 /datum/species/fly/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
 	if(chem.type == /datum/reagent/toxin/pestkiller)
 		H.adjustToxLoss(3)
@@ -34,15 +47,6 @@
 		return TRUE
 
 	..()
-
-// Change body types
-/datum/species/fly/on_species_gain(mob/living/carbon/C)
-	. = ..()
-	for(var/obj/item/bodypart/O in C.bodyparts)
-		O.render_like_organic = TRUE // Makes limbs render like organic limbs instead of augmented limbs, check bodyparts.dm
-		var/species = C.dna.features["insect_type"]
-		var/datum/sprite_accessory/insect_type/player_species = GLOB.insect_type_list[species]
-		C.dna.species.limbs_id = player_species.limbs_id
 
 /datum/species/fly/check_species_weakness(obj/item/weapon, mob/living/attacker)
 	if(istype(weapon, /obj/item/melee/flyswatter))

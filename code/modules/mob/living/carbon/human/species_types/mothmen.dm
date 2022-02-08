@@ -1,6 +1,12 @@
 /datum/species/moth
+<<<<<<< HEAD
 	name = "Mothman"
 	id = "moth"
+=======
+	name = "\improper Mothman"
+	id = SPECIES_MOTH
+	bodyflag = FLAG_MOTH
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 	say_mod = "flutters"
 	default_color = "00FF00"
 	species_traits = list(LIPS, NOEYESPRITES)
@@ -18,6 +24,13 @@
 	mutantwings = /obj/item/organ/wings/moth
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	species_language_holder = /datum/language_holder/moth
+
+	species_chest = /obj/item/bodypart/chest/moth
+	species_head = /obj/item/bodypart/head/moth
+	species_l_arm = /obj/item/bodypart/l_arm/moth
+	species_r_arm = /obj/item/bodypart/r_arm/moth
+	species_l_leg = /obj/item/bodypart/l_leg/moth
+	species_r_leg = /obj/item/bodypart/r_leg/moth
 
 /datum/species/moth/random_name(gender,unique,lastname)
 	if(unique)

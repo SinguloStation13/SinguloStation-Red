@@ -1,6 +1,11 @@
 /datum/species/human
+<<<<<<< HEAD
 	name = "Human"
 	id = "human"
+=======
+	name = "\improper Human"
+	id = SPECIES_HUMAN
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS)
 	default_features = list("mcolor" = "FFF", "wings" = "None")

@@ -1,6 +1,12 @@
 /datum/species/plasmaman
+<<<<<<< HEAD
 	name = "Plasmaman"
 	id = "plasmaman"
+=======
+	name = "\improper Plasmaman"
+	id = SPECIES_PLASMAMAN
+	bodyflag = FLAG_PLASMAMAN
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 	say_mod = "rattles"
 	sexes = 0
 	meat = /obj/item/stack/sheet/mineral/plasma
@@ -22,6 +28,13 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC
 	outfit_important_for_life = /datum/outfit/plasmaman
 	species_language_holder = /datum/language_holder/skeleton
+
+	species_chest = /obj/item/bodypart/chest/plasmaman
+	species_head = /obj/item/bodypart/head/plasmaman
+	species_l_arm = /obj/item/bodypart/l_arm/plasmaman
+	species_r_arm = /obj/item/bodypart/r_arm/plasmaman
+	species_l_leg = /obj/item/bodypart/l_leg/plasmaman
+	species_r_leg = /obj/item/bodypart/r_leg/plasmaman
 
 /datum/species/plasmaman/spec_life(mob/living/carbon/human/H)
 	var/atmos_sealed = FALSE

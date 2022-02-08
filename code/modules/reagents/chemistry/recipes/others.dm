@@ -729,6 +729,7 @@
 	results = list(/datum/reagent/mutationtoxin/abductor = 5)
 	required_reagents  = list(/datum/reagent/mutationtoxin/unstable = 5, /datum/reagent/medicine/morphine = 10, /datum/reagent/toxin/mutetoxin = 10)
 
+<<<<<<< HEAD
 /datum/chemical_reaction/mutationtoxin/squid
 	name = /datum/reagent/mutationtoxin/squid
 	id = /datum/reagent/mutationtoxin/squid
@@ -741,6 +742,8 @@
 	results = list(/datum/reagent/mutationtoxin/ipc = 5)
 	required_reagents  = list(/datum/reagent/mutationtoxin/unstable = 5, /datum/reagent/teslium = 20)
 	
+=======
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 /datum/chemical_reaction/mutationtoxin/ethereal
 	name = /datum/reagent/mutationtoxin/ethereal
 	id = /datum/reagent/mutationtoxin/ethereal

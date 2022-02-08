@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /datum/species/ipc // im fucking lazy mk2 and cant get sprites to normally work
 	name = "IPC" //inherited from the real species, for health scanners and things
 	id = "ipc"
@@ -5,6 +6,16 @@
 	sexes = 0
 	species_traits = list(NOTRANSSTING,NOEYESPRITES,NO_DNA_COPY,NOBLOOD,ROBOTIC_LIMBS,NOZOMBIE,MUTCOLORS,REVIVESBYHEALING,NOHUSK,NOMOUTH) //all of these + whatever we inherit from the real species
 	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_NOBREATH,TRAIT_RADIMMUNE,TRAIT_LIMBATTACHMENT,TRAIT_NOCRITDAMAGE,TRAIT_EASYDISMEMBER,TRAIT_POWERHUNGRY,TRAIT_XENO_IMMUNE)
+=======
+/datum/species/ipc
+	name = "\improper Integrated Positronic Chassis"
+	id = SPECIES_IPC
+	bodyflag = FLAG_IPC
+	say_mod = "states"
+	sexes = FALSE
+	species_traits = list(NOTRANSSTING,NOEYESPRITES,NO_DNA_COPY,NOZOMBIE,MUTCOLORS,REVIVESBYHEALING,NOHUSK,NOMOUTH, MUTCOLORS, NO_UNDERWEAR)
+	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_NOBREATH,TRAIT_RADIMMUNE,TRAIT_LIMBATTACHMENT,TRAIT_NOCRITDAMAGE,TRAIT_EASYDISMEMBER,TRAIT_POWERHUNGRY,TRAIT_XENO_IMMUNE, TRAIT_TOXIMMUNE)
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 	inherent_biotypes = list(MOB_ROBOTIC, MOB_HUMANOID)
 	mutant_brain = /obj/item/organ/brain/positron
 	mutanteyes = /obj/item/organ/eyes/robotic
@@ -19,7 +30,6 @@
 	skinned_type = /obj/item/stack/sheet/iron{amount = 10}
 	exotic_blood = "oil"
 	damage_overlay_type = "synth"
-	limbs_id = "synth"
 	mutant_bodyparts = list("ipc_screen", "ipc_antenna", "ipc_chassis")
 	default_features = list("ipc_screen" = "BSOD", "ipc_antenna" = "None")
 	burnmod = 2
@@ -41,6 +51,17 @@
 	species_language_holder = /datum/language_holder/synthetic
 	special_step_sounds = list('sound/effects/servostep.ogg')
 
+<<<<<<< HEAD
+=======
+	species_chest = /obj/item/bodypart/chest/ipc
+	species_head = /obj/item/bodypart/head/ipc
+	species_l_arm = /obj/item/bodypart/l_arm/ipc
+	species_r_arm = /obj/item/bodypart/r_arm/ipc
+	species_l_leg = /obj/item/bodypart/l_leg/ipc
+	species_r_leg = /obj/item/bodypart/r_leg/ipc
+
+	var/saved_screen //for saving the screen when they die
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 	var/datum/action/innate/change_screen/change_screen
 
 /datum/species/ipc/random_name(unique)
@@ -52,6 +73,7 @@
 	if(ishuman(C) && !change_screen)
 		change_screen = new
 		change_screen.Grant(C)
+<<<<<<< HEAD
 	for(var/obj/item/bodypart/O in C.bodyparts)
 		O.render_like_organic = TRUE // Makes limbs render like organic limbs instead of augmented limbs, check bodyparts.dm
 		var/chassis = C.dna.features["ipc_chassis"]
@@ -61,6 +83,12 @@
 			C.dna.species.species_traits += MUTCOLORS
 		else if(MUTCOLORS in C.dna.species.species_traits)
 			C.dna.species.species_traits -= MUTCOLORS
+=======
+
+	if(ishuman(C))
+		var/mob/living/carbon/human/H = C
+		H.physiology.bleed_mod *= 0.1
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 
 /datum/species/ipc/on_species_loss(mob/living/carbon/C)
 	. = ..()
@@ -156,7 +184,7 @@
 /datum/species/ipc/spec_life(mob/living/carbon/human/H)
 	. = ..()
 	if(H.health <= UNCONSCIOUS && H.stat != DEAD) // So they die eventually instead of being stuck in crit limbo.
-		H.adjustFireLoss(6) // After bodypart_robotic resistance this is ~2/second
+		H.adjustFireLoss(6) // After BODYTYPE_ROBOTIC resistance this is ~2/second
 		if(prob(5))
 			to_chat(H, "<span class='warning'>Alert: Internal temperature regulation systems offline; thermal damage sustained. Shutdown imminent.</span>")
 			H.visible_message("[H]'s cooling system fans stutter and stall. There is a faint, yet rapid beeping coming from inside their chassis.")
@@ -182,3 +210,24 @@
 	H.dna.features["ipc_screen"] = saved_screen
 	H.update_body()
 	return
+<<<<<<< HEAD
+=======
+
+/datum/species/ipc/get_harm_descriptors()
+	return list("bleed" = "leaking", "brute" = "denting", "burn" = "burns")
+
+/datum/species/ipc/replace_body(mob/living/carbon/C, datum/species/new_species)
+	..()
+
+	var/datum/sprite_accessory/ipc_chassis/chassis_of_choice = GLOB.ipc_chassis_list[C.dna.features["ipc_chassis"]]
+
+	for(var/obj/item/bodypart/BP as() in C.bodyparts) //Override bodypart data as necessary
+		BP.uses_mutcolor = chassis_of_choice.color_src ? TRUE : FALSE
+		if(BP.uses_mutcolor)
+			BP.should_draw_greyscale = TRUE
+			BP.species_color = C.dna?.features["mcolor"]
+
+		BP.limb_id = chassis_of_choice.limbs_id
+		BP.name = "\improper[chassis_of_choice.name] [parse_zone(BP.body_zone)]"
+		BP.update_limb()
+>>>>>>> b318aa81a8... BetterLimbs (#5611)

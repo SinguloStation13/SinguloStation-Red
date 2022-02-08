@@ -56,6 +56,7 @@ Bonus
 			Flesheat(M, A)
 
 /datum/symptom/flesh_eating/proc/Flesheat(mob/living/M, datum/disease/advance/A)
+<<<<<<< HEAD
 	var/get_damage = rand(15,25) * power
 	M.take_overall_damage(brute = get_damage, required_status = BODYPART_ORGANIC)
 	if(pain)
@@ -65,6 +66,34 @@ Bonus
 			var/mob/living/carbon/human/H = M
 			H.bleed_rate += 5 * power
 	return 1
+=======
+	if(damage)
+		M.take_overall_damage(brute = rand(15,25), required_status = BODYTYPE_ORGANIC)
+	if(!ishuman(M))
+		return
+	var/mob/living/carbon/human/H = M
+	H.bleed_rate += 2 * power //bleeding is quite strong. this is more than enough
+	H.bleed(max(10*power, H.bleed_rate))//having power actually up the bleed rate on this puts it into a pretty dangerous territory. this should be more managable
+	H.add_splatter_floor(H.loc)
+	if(bleed) // this is really, really messy
+		var/geysers = rand(2, 6)
+		var/bloodsplatters = transmission
+		var/list/geyserdirs = GLOB.alldirs.Copy()
+		var/turf/T = H.loc
+		playsound(T, 'sound/effects/splat.ogg', 50, 1)
+		H.visible_message("<span class='danger'>Blood bursts from [H]'s flesh!</span>", \
+  "<span class='userdanger'>Blood spews forth from your flesh! It hurts!</span>")
+		for(var/i in 0 to geysers)
+			var/geyserdir = pick_n_take(geyserdirs)
+			var/geyserdist = rand(1, max(1,bloodsplatters))
+			bloodsplatters -= geyserdist
+			new /obj/effect/temp_visual/dir_setting/bloodsplatter(T, geyserdir)
+			for(var/a in 0 to geyserdist)
+				T = get_step(T, geyserdir)
+				H.add_splatter_floor(T)
+			T = H.loc
+	return TRUE
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 
 /*
 //////////////////////////////////////
@@ -147,7 +176,7 @@ Bonus
 			else if(prob(base_message_chance))
 				to_chat(M, "<span class='warning'>Your body slowly decays... luckily, you're already dead!</span>")
 		return //this symptom wont work on the undead.
-	M.take_overall_damage(brute = get_damage, required_status = BODYPART_ORGANIC)
+	M.take_overall_damage(brute = get_damage, required_status = BODYTYPE_ORGANIC)
 	if(chems)
 		M.reagents.add_reagent_list(list(/datum/reagent/toxin/heparin = 2, /datum/reagent/toxin/lipolicide = 2))
 	if(zombie)
