@@ -265,8 +265,16 @@
 		if(LH.target && LH.target.stat == DEAD)
 			to_chat(carbon_user,"<span class='danger'>Your patrons accepts your offer..</span>")
 			var/mob/living/carbon/human/H = LH.target
+<<<<<<< HEAD
 			H.gib()
 			LH.target = null
+=======
+			var/obj/item/bodypart/chest/chest = H.get_bodypart(BODY_ZONE_CHEST)
+			chest.dismember()
+			H.visible_message("<span class='danger'>[H.name] Is quickly surrounded by invisible claws; lacerating their chest open, spilling their organs out!</span>", \
+								"<span class='danger'>You feel claws tear your chest open; spilling your organs out onto the floor!</span>", ignored_mobs=H)
+			LH.set_target(null)
+>>>>>>> e09fbc36e9... Cryopods use signals to handle objectives and other objective improvements (#5774)
 			var/datum/antagonist/heretic/EC = carbon_user.mind.has_antag_datum(/datum/antagonist/heretic)
 
 			EC.total_sacrifices++
@@ -282,16 +290,16 @@
 			A.owner = user.mind
 			var/list/targets = list()
 			for(var/i in 1 to 3)
-				var/datum/mind/targeted = A.find_target()//easy way, i dont feel like copy pasting that entire block of code
+				var/datum/mind/targeted = A.find_target(dupe_search_range=list(),blacklist=targets)//easy way, i dont feel like copy pasting that entire block of code, empty dupe search range so assassinate targets can be sacrificed
 				if(!targeted)
 					break
-				targets[targeted.current.real_name] = targeted.current
-			LH.target = targets[input(user,"Choose your next target","Target") in targets]
+				targets[targeted.current.real_name] = targeted
+			LH.set_target(targets[input(user,"Choose your next target","Target") in targets])
 			qdel(A)
 			if(LH.target)
 				to_chat(user,"<span class='warning'>Your new target has been selected, go and sacrifice [LH.target.real_name]!</span>")
 			else
-				to_chat(user,"<span class='warning'>target could not be found for living heart.</span>")
+				to_chat(user,"<span class='warning'>No target could be found for living heart.</span>")
 
 /datum/eldritch_knowledge/spell/basic/cleanup_atoms(list/atoms)
 	return
