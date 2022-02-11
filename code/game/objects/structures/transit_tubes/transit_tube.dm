@@ -13,6 +13,7 @@
 	var/exit_delay = 1
 	var/enter_delay = 0
 
+<<<<<<< HEAD
 /obj/structure/transit_tube/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && (mover.pass_flags & PASSGLASS))
 		return 1
@@ -20,6 +21,10 @@
 
 /obj/structure/transit_tube/New(loc, newdirection)
 	..(loc)
+=======
+/obj/structure/transit_tube/Initialize(mapload, newdirection)
+	. = ..()
+>>>>>>> a170055473... Ports some New() -> Init() conversions and init profiling (#6297)
 	if(newdirection)
 		setDir(newdirection)
 	init_tube_dirs()
