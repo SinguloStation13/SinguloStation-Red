@@ -47,8 +47,14 @@
 	uniform = /obj/item/clothing/under/rank/engineering/chief_engineer
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	head = /obj/item/clothing/head/hardhat/white
+<<<<<<< HEAD
 	gloves = /obj/item/clothing/gloves/color/black/ce
 	backpack_contents = list(/obj/item/melee/classic_baton/police/telescopic=1, /obj/item/modular_computer/tablet/preset/advanced=1)
+=======
+	gloves = /obj/item/clothing/gloves/color/black
+	backpack_contents = list(/obj/item/melee/classic_baton/police/telescopic=1,
+		/obj/item/modular_computer/tablet/preset/advanced/command=1)
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 	backpack = /obj/item/storage/backpack/industrial
 	satchel = /obj/item/storage/backpack/satchel/eng

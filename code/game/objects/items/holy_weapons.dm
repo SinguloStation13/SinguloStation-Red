@@ -175,7 +175,11 @@
 	desc = "A shirt and some leather pants in poor condition."
 	icon_state = "graverobber_under"
 	item_state = "graverobber_under"
+<<<<<<< HEAD
 	item_color = "graverobber_under"
+=======
+	can_adjust = FALSE
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/storage/box/holy/adept
 	name = "Divine Adept Kit"

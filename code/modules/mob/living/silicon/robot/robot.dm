@@ -662,7 +662,11 @@
 		else
 			add_overlay("ov-opencover -c")
 	if(hat)
+<<<<<<< HEAD
 		var/mutable_appearance/head_overlay = hat.build_worn_icon(state = hat.icon_state, default_layer = 20, default_icon_file = 'icons/mob/head.dmi')
+=======
+		var/mutable_appearance/head_overlay = hat.build_worn_icon(default_layer = 20, default_icon_file = 'icons/mob/clothing/head.dmi')
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 		head_overlay.pixel_y += hat_offset
 		add_overlay(head_overlay)
 	update_fire()

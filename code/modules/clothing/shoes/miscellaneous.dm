@@ -38,7 +38,17 @@
 /obj/item/clothing/shoes/sandal/marisa
 	desc = "A pair of magic black shoes."
 	name = "magic shoes"
+<<<<<<< HEAD
 	icon_state = "black"
+=======
+	worn_icon_state = "marisa"
+	greyscale_colors = "#545454#ffffff"
+	greyscale_config = /datum/greyscale_config/sneakers_marisa
+	greyscale_config_worn = null
+	strip_delay = 5
+	equip_delay_other = 50
+	permeability_coefficient = 0.9
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 	resistance_flags = FIRE_PROOF |  ACID_PROOF
 
 /obj/item/clothing/shoes/sandal/magic
@@ -75,7 +85,6 @@
 	icon_state = "clown"
 	item_state = "clown_shoes"
 	slowdown = SHOES_SLOWDOWN+1
-	item_color = "clown"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes/clown
 	var/datum/component/waddle
 	var/enabled_waddle = TRUE
@@ -123,7 +132,6 @@
 	item_state = "jackboots"
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
-	item_color = "hosred"
 	strip_delay = 30
 	equip_delay_other = 50
 	resistance_flags = NONE
@@ -168,7 +176,6 @@
 	desc = "A pair of boots worn by the followers of Nar'Sie."
 	icon_state = "cult"
 	item_state = "cult"
-	item_color = "cult"
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
 	heat_protection = FEET
@@ -217,7 +224,6 @@
 	desc = "A specialized pair of combat boots with a built-in propulsion system for rapid foward movement."
 	icon_state = "jetboots"
 	item_state = "jetboots"
-	item_color = "hosred"
 	resistance_flags = FIRE_PROOF
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
 	actions_types = list(/datum/action/item_action/bhop)

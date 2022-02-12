@@ -85,8 +85,13 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	/// Flags for clicking the item with your hand. See _DEFINES/interaction_flags.dm
 	var/interaction_flags_item = INTERACT_ITEM_ATTACK_HAND_PICKUP
 
+<<<<<<< HEAD
 	/// Used in picking icon_states based on the string color here. Also used for cables or something. This could probably do with being deprecated.
 	var/item_color = null
+=======
+	///Icon state for the belt overlay, if null the normal icon_state will be used.
+	var/belt_icon_state
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 	/// The body parts this item covers when worn. Used mostly for armor. See _DEFINES/setup.dm
 	var/body_parts_covered = 0
@@ -179,6 +184,13 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 
 	/// Seemingly used only for guns so I'm not sure why it's here. Basically used to see whether you are able to pull the gun trigger. See _DEFINES/combat.dm
 	var/trigger_guard = TRIGGER_GUARD_NONE
+
+	///Used as the dye color source in the washing machine only (at the moment). Can be a hex color or a key corresponding to a registry entry, see washing_machine.dm
+	var/dye_color
+	///Whether the item is unaffected by standard dying.
+	var/undyeable = FALSE
+	///What dye registry should be looked at when dying this item; see washing_machine.dm
+	var/dying_key
 
 	//Grinder vars
 	/// A reagent list containing the reagents this item produces when ground up in a grinder - this can be an empty list to allow for reagent transferring only

@@ -217,7 +217,23 @@
 	target.desc = initial(picked_item.desc)
 	target.icon_state = initial(picked_item.icon_state)
 	if(isitem(target))
+<<<<<<< HEAD
 		var/obj/item/I = target
+=======
+		var/obj/item/clothing/I = target
+		I.worn_icon = initial(picked_item.worn_icon)
+		I.lefthand_file = initial(picked_item.lefthand_file)
+		I.righthand_file = initial(picked_item.righthand_file)
+		if(initial(picked_item.greyscale_colors))
+			I.greyscale_colors = initial(picked_item.greyscale_colors)
+			if(initial(picked_item.greyscale_config_worn))
+				I.worn_icon = SSgreyscale.GetColoredIconByType(initial(picked_item.greyscale_config_worn), initial(picked_item.greyscale_colors))
+			if(initial(picked_item.greyscale_config_inhand_left))
+				I.lefthand_file = SSgreyscale.GetColoredIconByType(initial(picked_item.greyscale_config_inhand_left), initial(picked_item.greyscale_colors))
+			if(initial(picked_item.greyscale_config_inhand_right))
+				I.righthand_file = SSgreyscale.GetColoredIconByType(initial(picked_item.greyscale_config_inhand_right), initial(picked_item.greyscale_colors))
+		I.worn_icon_state = initial(picked_item.worn_icon_state)
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 		I.item_state = initial(picked_item.item_state)
 		I.item_color = initial(picked_item.item_color)
 		if(isclothing(I) && isclothing(initial(picked_item)))
@@ -266,7 +282,6 @@
 	desc = "A special containment suit that allows plasma-based lifeforms to exist safely in an oxygenated environment, and automatically extinguishes them in a crisis. Despite being airtight, it's not spaceworthy. It has a small dial on the wrist."
 	icon_state = "plasmaman"
 	item_state = "plasmaman"
-	item_color = "plasmaman"
 	resistance_flags = FIRE_PROOF
 	envirosealed = TRUE
 
@@ -275,14 +290,21 @@
 	desc = "A tough jumpsuit woven from alloy threads. It can take on the appearance of other jumpsuits."
 	icon_state = "engine"
 	item_state = "engi_suit"
+<<<<<<< HEAD
 	item_color = "engine"
+=======
+	greyscale_colors = null
+	greyscale_config = null
+	greyscale_config_inhand_left = null
+	greyscale_config_inhand_right = null
+	greyscale_config_worn = null
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/clothing/under/chameleon/envirosuit/ratvar
 	name = "ratvarian engineer's envirosuit"
 	desc = "A tough envirosuit woven from alloy threads. It can take on the appearance of other jumpsuits."
 	icon_state = "engineer_envirosuit"
 	item_state = "engineer_envirosuit"
-	item_color = "engineer_envirosuit"
 
 /obj/item/clothing/under/chameleon/Initialize()
 	. = ..()
@@ -414,7 +436,6 @@
 	desc = "It's a baseball hat in a tasteful grey colour."
 	clothing_flags = SNUG_FIT
 	icon_state = "greysoft"
-	item_color = "grey"
 
 	resistance_flags = NONE
 	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "stamina" = 10)
