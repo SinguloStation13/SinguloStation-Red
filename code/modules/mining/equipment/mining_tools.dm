@@ -67,7 +67,7 @@
 	desc = "An integrated electric mining drill."
 	flags_1 = NONE
 
-/obj/item/pickaxe/drill/cyborg/Initialize()
+/obj/item/pickaxe/drill/cyborg/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CYBORG_ITEM_TRAIT)
 
@@ -112,7 +112,7 @@
 	attack_verb = list("bashed", "bludgeoned", "thrashed", "whacked")
 	sharpness = IS_SHARP
 
-/obj/item/shovel/Initialize()
+/obj/item/shovel/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/butchering, 150, 40) //it's sharp, so it works, but barely.
 

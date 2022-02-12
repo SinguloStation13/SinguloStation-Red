@@ -18,7 +18,7 @@
 	var/units_per_tick = 1.5
 	var/initial_inject = 5
 
-/obj/item/reagent_containers/syringe/Initialize()
+/obj/item/reagent_containers/syringe/Initialize(mapload)
 	. = ..()
 	if(list_reagents) //syringe starts in inject mode if its already got something inside
 		mode = SYRINGE_INJECT
@@ -215,7 +215,7 @@
 	desc = "A syringe that can hold up to 15 units. This one is old, and it's probably a bad idea to use it"
 
 
-/obj/item/reagent_containers/syringe/used/Initialize()
+/obj/item/reagent_containers/syringe/used/Initialize(mapload)
 	. = ..()
 	if(prob(75))
 		var/datum/disease/advance/R = new /datum/disease/advance/random(rand(3, 6), 9, rand(3,4), infected = src)

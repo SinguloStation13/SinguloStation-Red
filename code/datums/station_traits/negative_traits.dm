@@ -83,8 +83,12 @@
 /obj/effect/spawner/hangover_spawn
 	name = "hangover spawner"
 
+<<<<<<< HEAD
 /obj/effect/spawner/hangover_spawn/Initialize()
 	. = ..()
+=======
+/obj/effect/spawner/hangover_spawn/Initialize(mapload)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	if(prob(60))
 		new /obj/effect/decal/cleanable/vomit(get_turf(src))
 	if(prob(70))

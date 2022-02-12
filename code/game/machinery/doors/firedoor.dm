@@ -32,7 +32,7 @@
 	var/boltslocked = TRUE
 	var/list/affecting_areas
 
-/obj/machinery/door/firedoor/Initialize()
+/obj/machinery/door/firedoor/Initialize(mapload)
 	. = ..()
 	CalculateAffectingAreas()
 
@@ -303,6 +303,18 @@
 	CanAtmosPass = ATMOS_PASS_PROC
 	assemblytype = /obj/structure/firelock_frame/border
 
+<<<<<<< HEAD
+=======
+/obj/machinery/door/firedoor/border_only/Initialize(mapload)
+	. = ..()
+
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_EXIT = .proc/on_exit,
+	)
+
+	AddElement(/datum/element/connect_loc, loc_connections)
+
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 /obj/machinery/door/firedoor/border_only/Destroy()
 	density = FALSE
 	air_update_turf(1)

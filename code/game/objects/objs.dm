@@ -57,7 +57,7 @@
 				return FALSE
 	return ..()
 
-/obj/Initialize()
+/obj/Initialize(mapload)
 	. = ..()
 	if (islist(armor))
 		armor = getArmor(arglist(armor))

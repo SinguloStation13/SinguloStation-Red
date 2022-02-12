@@ -29,7 +29,7 @@
 	3. Biological resources will be harvested at a later date; do not harm them.
 	"}
 
-/obj/effect/mob_spawn/swarmer/Initialize()
+/obj/effect/mob_spawn/swarmer/Initialize(mapload)
 	. = ..()
 	var/area/A = get_area(src)
 	if(A)
@@ -105,7 +105,7 @@
 	var/max_resources = 100
 	discovery_points = 1000
 
-/mob/living/simple_animal/hostile/swarmer/Initialize()
+/mob/living/simple_animal/hostile/swarmer/Initialize(mapload)
 	. = ..()
 	remove_verb(/mob/living/verb/pulled)
 	for(var/datum/atom_hud/data/diagnostic/diag_hud in GLOB.huds)
@@ -536,7 +536,7 @@
 	icon_state = "disintegrate"
 	duration = 10
 
-/obj/effect/temp_visual/swarmer/disintegration/Initialize()
+/obj/effect/temp_visual/swarmer/disintegration/Initialize(mapload)
 	. = ..()
 	playsound(loc, "sparks", 100, 1)
 

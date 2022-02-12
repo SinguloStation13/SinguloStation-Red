@@ -4,7 +4,7 @@
 	layer = TURF_PLATING_DECAL_LAYER
 	alpha = 110
 
-/obj/effect/turf_decal/tile/Initialize()
+/obj/effect/turf_decal/tile/Initialize(mapload)
 	if(SSevents.holidays && SSevents.holidays[APRIL_FOOLS])
 		color = "#[random_short_color()]"
 	. = ..()
@@ -47,7 +47,23 @@
 	name = "colorful corner"
 	color = "#E300FF" //bright pink as default for mapping
 
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/random/Initialize()
+=======
+/obj/effect/turf_decal/tile/random/tile_marquee
+	name = "colorful marquee"
+	icon_state = "tile_marquee"
+
+/obj/effect/turf_decal/tile/random/tile_side
+	name = "colorful side"
+	icon_state = "tile_side"
+
+/obj/effect/turf_decal/tile/random/tile_full
+	name = "colorful tile"
+	icon_state = "tile_full"
+
+/obj/effect/turf_decal/tile/random/Initialize(mapload)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	color = "#[random_short_color()]"
 	. = ..()
 
@@ -57,7 +73,7 @@
 	alpha = 110
 	icon_state = "trimline_box"
 
-/obj/effect/turf_decal/trimline/Initialize()
+/obj/effect/turf_decal/trimline/Initialize(mapload)
 	if(SSevents.holidays && SSevents.holidays[APRIL_FOOLS])
 		color = "#[random_short_color()]"
 	. = ..()

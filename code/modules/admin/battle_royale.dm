@@ -398,7 +398,11 @@ GLOBAL_DATUM(battle_royale, /datum/battle_royale_controller)
 	icon = 'icons/effects/fields.dmi'
 	icon_state = "projectile_dampen_generic"
 
+<<<<<<< HEAD
 /obj/effect/death_wall/Crossed(atom/movable/AM, oldloc)
+=======
+/obj/effect/death_wall/Initialize(mapload)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	. = ..()
 	//lol u died
 	if(isliving(AM))

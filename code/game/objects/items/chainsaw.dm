@@ -26,7 +26,7 @@
 	tool_behaviour = TOOL_SAW
 	toolspeed = 0.5
 
-/obj/item/chainsaw/Initialize()
+/obj/item/chainsaw/Initialize(mapload)
 	. = ..()
 
 /obj/item/chainsaw/ComponentInitialize()

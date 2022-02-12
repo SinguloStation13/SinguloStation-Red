@@ -80,7 +80,7 @@
 	var/datum/component/waddle
 	var/enabled_waddle = TRUE
 
-/obj/item/clothing/shoes/clown_shoes/Initialize()
+/obj/item/clothing/shoes/clown_shoes/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/squeak, list('sound/effects/clownstep1.ogg'=1,'sound/effects/clownstep2.ogg'=1), 50)
 
@@ -181,7 +181,7 @@
 /obj/item/clothing/shoes/cult/alt/ghost
 	item_flags = DROPDEL
 
-/obj/item/clothing/shoes/cult/alt/ghost/Initialize()
+/obj/item/clothing/shoes/cult/alt/ghost/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CULT_TRAIT)
 
@@ -263,7 +263,7 @@
 	icon = 'icons/obj/clothing/clockwork_garb.dmi'
 	icon_state = "clockwork_treads"
 
-/obj/item/clothing/shoes/bronze/Initialize()
+/obj/item/clothing/shoes/bronze/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/squeak, list('sound/machines/clockcult/integration_cog_install.ogg' = 1, 'sound/magic/clockwork/fellowship_armory.ogg' = 1), 50)
 
@@ -276,7 +276,7 @@
 	var/wheelToggle = FALSE //False means wheels are not popped out
 	var/obj/vehicle/ridden/scooter/wheelys/W
 
-/obj/item/clothing/shoes/wheelys/Initialize()
+/obj/item/clothing/shoes/wheelys/Initialize(mapload)
 	. = ..()
 	W = new /obj/vehicle/ridden/scooter/wheelys(null)
 

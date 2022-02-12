@@ -15,7 +15,7 @@ Reproductive extracts:
 	var/cooldown = 30 // 3 seconds.
 	var/static/list/typecache_to_take
 
-/obj/item/slimecross/reproductive/Initialize()
+/obj/item/slimecross/reproductive/Initialize(mapload)
 	. = ..()
 	if(!typecache_to_take)
 		typecache_to_take = typecacheof(/obj/item/reagent_containers/food/snacks/monkeycube)

@@ -166,7 +166,7 @@
 /obj/structure/bonfire/dense/askwalker
 	needs_oxygen = FALSE
 
-/obj/structure/bonfire/prelit/Initialize()
+/obj/structure/bonfire/prelit/Initialize(mapload)
 	. = ..()
 	StartBurning()
 
@@ -177,6 +177,16 @@
 		return TRUE
 	return ..()
 
+<<<<<<< HEAD
+=======
+/obj/structure/bonfire/Initialize(mapload)
+	. = ..()
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+	)
+	AddComponent(/datum/element/connect_loc, loc_connections)
+
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 /obj/structure/bonfire/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/stack/rods) && !can_buckle && !grill)
 		var/obj/item/stack/rods/R = W

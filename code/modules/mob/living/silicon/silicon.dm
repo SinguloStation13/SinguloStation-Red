@@ -49,7 +49,7 @@
 
 	mobchatspan = "centcom"
 
-/mob/living/silicon/Initialize()
+/mob/living/silicon/Initialize(mapload)
 	. = ..()
 	GLOB.silicon_mobs += src
 	faction += "silicon"

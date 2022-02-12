@@ -165,7 +165,21 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	/// cooldown tracker for accent sounds,
 	var/last_accent_sound = 0
 
+<<<<<<< HEAD
 /obj/machinery/power/supermatter_crystal/Initialize()
+=======
+	//For making hugbox supermatters
+	///Disables all methods of taking damage
+	var/takes_damage = TRUE
+	///Disables the production of gas, and pretty much any handling of it we do.
+	var/produces_gas = TRUE
+	///Disables power changes
+	var/power_changes = TRUE
+	///Disables the sm's proccessing totally.
+	var/processes = TRUE
+
+/obj/machinery/power/supermatter_crystal/Initialize(mapload)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	. = ..()
 	uid = gl_uid++
 	SSair.atmos_air_machinery += src

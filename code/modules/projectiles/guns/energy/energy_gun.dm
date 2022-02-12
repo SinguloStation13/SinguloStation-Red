@@ -26,8 +26,13 @@
 	can_flashlight = FALSE // Can't attach or detach the flashlight, and override it's icon update
 	weapon_weight = WEAPON_LIGHT
 
+<<<<<<< HEAD
 /obj/item/gun/energy/e_gun/mini/Initialize()
 	gun_light = new /obj/item/flashlight/seclite(src)
+=======
+/obj/item/gun/energy/e_gun/mini/Initialize(mapload)
+	set_gun_light(new /obj/item/flashlight/seclite(src))
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	return ..()
 
 /obj/item/gun/energy/e_gun/mini/update_icon()

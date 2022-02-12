@@ -33,6 +33,7 @@ Everything else should be handled for you. Good luck soldier.
 			autofire_component?.default_fire_delay = (10 / var_value)
 			return
 
+<<<<<<< HEAD
 //Place any guns that you want to be fully automatic here (for record-keeping and so NSV can avoid conflicts please and thank.)
 /obj/item/gun/ballistic/automatic/l6_saw
 	full_auto = TRUE
@@ -53,6 +54,9 @@ Everything else should be handled for you. Good luck soldier.
 	full_auto = TRUE
 
 /obj/item/gun/Initialize()
+=======
+/obj/item/gun/Initialize(mapload)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	. = ..()
 	if(full_auto)
 		canMouseDown = TRUE

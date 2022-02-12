@@ -28,6 +28,16 @@
 	del_on_death = TRUE
 	chat_color = "#BC7658"
 
+<<<<<<< HEAD
+=======
+/mob/living/simple_animal/cockroach/Initialize(mapload)
+	. = ..()
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
+
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 /mob/living/simple_animal/cockroach/death(gibbed)
 	if(SSticker.mode && SSticker.mode.station_was_nuked) //If the nuke is going off, then cockroaches are invincible. Keeps the nuke from killing them, cause cockroaches are immune to nukes.
 		return

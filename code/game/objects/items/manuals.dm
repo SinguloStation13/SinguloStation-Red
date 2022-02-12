@@ -246,10 +246,15 @@
 	var/page_link = ""
 	window_size = "970x710"
 
+<<<<<<< HEAD
 /obj/item/book/manual/wiki/attack_self()
 	if(!dat)
 		initialize_wikibook()
 	return ..()
+=======
+/obj/item/book/manual/wiki/Initialize(mapload)
+	. = ..()
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 
 /obj/item/book/manual/wiki/proc/initialize_wikibook()
 	var/wikiurl = CONFIG_GET(string/wikiurl)

@@ -83,7 +83,7 @@
 	var/turfverb = "uproot"
 	tiled_dirt = FALSE
 
-/turf/open/floor/grass/Initialize()
+/turf/open/floor/grass/Initialize(mapload)
 	. = ..()
 	update_icon()
 
@@ -96,6 +96,67 @@
 	if(..())
 		return
 
+<<<<<<< HEAD
+=======
+/turf/open/floor/grass/fairy //like grass but fae-er
+	name = "fairygrass patch"
+	desc = "Something about this grass makes you want to frolic. Or get high."
+	icon_state = "fairygrass"
+	floor_tile = /obj/item/stack/tile/fairygrass
+	light_range = 2
+	light_power = 0.80
+	light_color = "#33CCFF"
+	color = "#33CCFF"
+
+/turf/open/floor/grass/fairy/white
+	name = "white fairygrass patch"
+	floor_tile = /obj/item/stack/tile/fairygrass/white
+	light_color = "#FFFFFF"
+	color = "#FFFFFF"
+
+/turf/open/floor/grass/fairy/red
+	name = "red fairygrass patch"
+	floor_tile = /obj/item/stack/tile/fairygrass/red
+	light_color = "#FF3333"
+	color = "#FF3333"
+
+/turf/open/floor/grass/fairy/yellow
+	name = "yellow fairygrass patch"
+	floor_tile = /obj/item/stack/tile/fairygrass/yellow
+	light_color = "#FFFF66"
+	color = "#FFFF66"
+
+/turf/open/floor/grass/fairy/green
+	name = "green fairygrass patch"
+	floor_tile = /obj/item/stack/tile/fairygrass/green
+	light_color = "#99FF99"
+	color = "#99FF99"
+
+/turf/open/floor/grass/fairy/blue
+	floor_tile = /obj/item/stack/tile/fairygrass/blue
+	name = "blue fairygrass patch"
+
+/turf/open/floor/grass/fairy/purple
+	name = "purple fairygrass patch"
+	floor_tile = /obj/item/stack/tile/fairygrass/purple
+	light_color = "#D966FF"
+	color = "#D966FF"
+
+/turf/open/floor/grass/fairy/pink
+	name = "pink fairygrass patch"
+	floor_tile = /obj/item/stack/tile/fairygrass/pink
+	light_color = "#FFB3DA"
+	color = "#FFB3DA"
+
+/turf/open/floor/grass/fairy/dark
+	name = "dark fairygrass patch"
+	floor_tile = /obj/item/stack/tile/fairygrass/dark
+	light_power = -0.15
+	light_range = 2
+	light_color = "#AAD84B"
+	color = "#53003f"
+
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 /turf/open/floor/grass/snow
 	gender = PLURAL
 	name = "snow"
@@ -128,7 +189,7 @@
 	initial_gas_mix = OPENTURF_LOW_PRESSURE
 	slowdown = 0
 
-/turf/open/floor/grass/snow/basalt/Initialize()
+/turf/open/floor/grass/snow/basalt/Initialize(mapload)
 	. = ..()
 	if(prob(15))
 		icon_state = "basalt[rand(0, 12)]"
@@ -153,7 +214,7 @@
 	clawfootstep = FOOTSTEP_SAND
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-/turf/open/floor/grass/fakebasalt/Initialize()
+/turf/open/floor/grass/fakebasalt/Initialize(mapload)
 	. = ..()
 	if(prob(15))
 		icon_state = "basalt[rand(0, 12)]"
@@ -181,7 +242,7 @@
 	. = ..()
 	. += "<span class='notice'>There's a <b>small crack</b> on the edge of it.</span>"
 
-/turf/open/floor/carpet/Initialize()
+/turf/open/floor/carpet/Initialize(mapload)
 	. = ..()
 	update_icon()
 
@@ -290,7 +351,7 @@
 	plane = PLANE_SPACE
 	tiled_dirt = FALSE
 
-/turf/open/floor/fakespace/Initialize()
+/turf/open/floor/fakespace/Initialize(mapload)
 	. = ..()
 	icon_state = SPACE_ICON_STATE
 

@@ -14,11 +14,15 @@
 	density = FALSE
 	climbable = FALSE
 
+<<<<<<< HEAD
 /obj/structure/railing/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/simple_rotation,ROTATION_ALTCLICK | ROTATION_CLOCKWISE | ROTATION_COUNTERCLOCKWISE | ROTATION_VERBS ,null,CALLBACK(src, .proc/can_be_rotated),CALLBACK(src,.proc/after_rotation))
 
 /obj/structure/railing/Initialize()
+=======
+/obj/structure/railing/Initialize(mapload)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	. = ..()
 	ini_dir = dir
 
