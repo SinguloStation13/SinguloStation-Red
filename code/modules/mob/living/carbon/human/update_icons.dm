@@ -132,8 +132,19 @@ There are several things that need to be remembered:
 				uniform_overlay = U.build_worn_icon(state = "[t_color]", default_layer = UNIFORM_LAYER, default_icon_file = 'icons/mob/uniform.dmi', isinhands = FALSE, femaleuniform = U.fitted)
 
 		if(!uniform_overlay)
+<<<<<<< HEAD
 			uniform_overlay = U.build_worn_icon(state = "[t_color]", default_layer = UNIFORM_LAYER, default_icon_file = 'icons/mob/uniform.dmi', isinhands = FALSE)
 
+=======
+			if(U.sprite_sheets & (dna?.species.bodyflag))
+				icon_file = dna.species.get_custom_icons("uniform")
+			//Currently doesn't work with GAGS
+			//if((dna?.species.bodytype & BODYTYPE_DIGITIGRADE) && (U.supports_variations & DIGITIGRADE_VARIATION))
+			//	icon_file = 'icons/mob/species/misc/digitigrade.dmi'
+			uniform_overlay = U.build_worn_icon(default_layer = UNIFORM_LAYER, default_icon_file = icon_file, isinhands = FALSE, override_state = target_overlay)
+
+			
+>>>>>>> b9d6ab7c47... Fixes alt states of suits (#6350)
 
 		if(OFFSET_UNIFORM in dna.species.offset_features)
 			uniform_overlay.pixel_x += dna.species.offset_features[OFFSET_UNIFORM][1]
