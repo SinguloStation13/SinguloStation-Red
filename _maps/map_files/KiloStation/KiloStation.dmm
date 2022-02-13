@@ -6537,8 +6537,25 @@
 /turf/open/floor/plasteel/airless/solarpanel,
 /area/solar/starboard/fore)
 "aks" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall/rust,
+=======
+/obj/machinery/door/airlock/external{
+	name = "Atmospherics External Airlock";
+	req_access_txt = "24"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
+	},
+/turf/open/floor/plating/airless,
+>>>>>>> 68447f9c82... fixes a missing floor tile in atmos (#6370)
 /area/engine/atmos)
 "akt" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
