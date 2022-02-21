@@ -97,7 +97,7 @@
 		bombassembly.Move()
 
 /obj/item/onetankbomb/dropped()
-	. = ..()
+	..()
 	if(bombassembly)
 		bombassembly.dropped()
 

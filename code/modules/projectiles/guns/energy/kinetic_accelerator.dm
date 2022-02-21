@@ -95,7 +95,7 @@
 		attempt_reload()
 
 /obj/item/gun/energy/kinetic_accelerator/dropped()
-	. = ..()
+	..()
 	if(!QDELING(src) && !holds_charge)
 		// Put it on a delay because moving item from slot to hand
 		// calls dropped().

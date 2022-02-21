@@ -71,7 +71,6 @@
 		if(!user.dropItemToGround(src))
 			return
 	anchored = FALSE
-	pickup(user)
 	if(!user.put_in_active_hand(src))
 		dropped(user)
 		return
@@ -395,7 +394,7 @@
 	mag_type = /obj/item/ammo_box/magazine/m50/ctf
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/ctf/dropped()
-	. = ..()
+	..()
 	addtimer(CALLBACK(src, .proc/floor_vanish), 1)
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/ctf/proc/floor_vanish()
@@ -422,7 +421,7 @@
 	force = 50
 
 /obj/item/gun/ballistic/automatic/laser/ctf/dropped()
-	. = ..()
+	..()
 	addtimer(CALLBACK(src, .proc/floor_vanish), 1)
 
 /obj/item/gun/ballistic/automatic/laser/ctf/proc/floor_vanish()
@@ -433,7 +432,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/laser/ctf
 
 /obj/item/ammo_box/magazine/recharge/ctf/dropped()
-	. = ..()
+	..()
 	addtimer(CALLBACK(src, .proc/floor_vanish), 1)
 
 /obj/item/ammo_box/magazine/recharge/ctf/proc/floor_vanish()

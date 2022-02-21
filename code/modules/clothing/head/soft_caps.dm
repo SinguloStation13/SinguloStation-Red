@@ -10,9 +10,15 @@
 	var/flipped = 0
 
 /obj/item/clothing/head/soft/dropped()
+<<<<<<< HEAD
 	src.icon_state = "[item_color]soft"
 	src.flipped=0
 	..()
+=======
+	..()
+	icon_state = "[soft_type]soft"
+	flipped=0
+>>>>>>> 1738b33401... Fixes some pickup behaviours (#6036)
 
 /obj/item/clothing/head/soft/verb/flipcap()
 	set category = "Object"
