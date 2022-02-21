@@ -139,7 +139,11 @@
 				return
 			bolt_locked = FALSE
 		if(BOLT_TYPE_PUMP)
+<<<<<<< HEAD
 			if(user?.get_inactive_held_item() && !istype(user.get_inactive_held_item(), /obj/item/offhand))
+=======
+			if(!is_wielded)
+>>>>>>> cb647c688b... Re-adds the gun wield icon, merges the good parts of both PRs (#6028)
 				to_chat(user, "<span class='warning'>You require your other hand to be free to rack the [bolt_wording] of \the [src]!</span>")
 				return
 	if(user)
