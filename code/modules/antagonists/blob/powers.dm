@@ -323,7 +323,11 @@
 	for(var/mob/living/simple_animal/hostile/blob/blobspore/BS in blob_mobs)
 		if(!BS.key && isturf(BS.loc) && get_dist(BS, T) <= 35)
 			BS.LoseTarget()
+<<<<<<< HEAD
 			BS.Goto(pick(surrounding_turfs), BS.move_to_delay)
+=======
+			INVOKE_ASYNC(BS, /mob/living/simple_animal/hostile/proc/Goto, pick(surrounding_turfs), BS.move_to_delay, 0, TRUE)
+>>>>>>> 5ba84b8fc1... actually fixes blob spore pathfinding (#6055)
 
 /mob/camera/blob/verb/blob_broadcast()
 	set category = "Blob"
