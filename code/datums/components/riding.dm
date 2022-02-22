@@ -362,7 +362,11 @@
 
 /obj/item/riding_offhand/dropped()
 	selfdeleting = TRUE
+<<<<<<< HEAD
 	. = ..()
+=======
+	..()
+>>>>>>> 97c688c1aa... a (#6413)
 
 /obj/item/riding_offhand/equipped()
 	if(loc != rider && loc != parent)
