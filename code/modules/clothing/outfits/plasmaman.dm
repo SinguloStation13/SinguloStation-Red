@@ -15,11 +15,16 @@
 	head = /obj/item/clothing/head/helmet/space/plasmaman/gold
 	uniform = /obj/item/clothing/under/plasmaman/gold
 
+<<<<<<< HEAD
 /datum/outfit/plasmaman/hobo
 	name = "Hobo Plasmaman"
 
 	head = /obj/item/clothing/head/foilhat/plasmaman
 	uniform = /obj/item/clothing/under/plasmaman
+=======
+	helmet_variants = list(HELMET_MK2 = null,
+							HELMET_PROTECTIVE = null)
+>>>>>>> 3684f5b581... goodbye (#6101)
 
 /datum/outfit/plasmaman/chef
 	name = "Chef Plasmaman"
