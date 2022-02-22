@@ -2015,7 +2015,11 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "Bottle of Mystery Pills"
 	desc = "We found these lying around Warehouse R1O-GN, which was decommissioned years ago. We were going to throw them out but we heard you might be interested in them."
 	item = /obj/item/storage/pill_bottle/floorpill/full
+<<<<<<< HEAD
 	restricted_roles = list("Assistant", "Debtor")
+=======
+	restricted_roles = list("Assistant")
+>>>>>>> 04b275266f... Fixes uplinks aaaa (#6402)
 	cost = 2
 
 /datum/uplink_item/role_restricted/clown_bomb
