@@ -54,17 +54,26 @@
 	RegisterSignal(SSmapping, COMSIG_SUBSYSTEM_POST_INITIALIZE, .proc/create_spawners)
 
 /datum/station_trait/hangover/proc/create_spawners()
+<<<<<<< HEAD
 	var/list/turf/turfs = get_safe_random_station_turfs(typesof(/area/hallway), rand(200, 300))
 	for(var/turf/T as() in turfs)
 		new /obj/effect/spawner/hangover_spawn(T)
+=======
+	SIGNAL_HANDLER
 
+	INVOKE_ASYNC(src, .proc/pick_turfs_and_spawn)
+	UnregisterSignal(SSmapping, COMSIG_SUBSYSTEM_POST_INITIALIZE)
+>>>>>>> 043ada3c01... e (#6378)
+
+/datum/station_trait/hangover/proc/pick_turfs_and_spawn()
+	var/list/turf/turfs = get_safe_random_station_turfs(typesof(/area/hallway) | typesof(/area/crew_quarters/bar) | typesof(/area/crew_quarters/dorms), rand(200, 300))
+	for(var/turf/T as() in turfs)
+		new /obj/effect/spawner/hangover_spawn(T)
 
 /datum/station_trait/hangover/proc/on_job_after_spawn(datum/source, datum/job/job, mob/living/living_mob, mob/spawned_mob, joined_late)
 	SIGNAL_HANDLER
 
-	if(joined_late)
-		return
-	if(!iscarbon(living_mob))
+	if(joined_late || !iscarbon(living_mob))
 		return
 
 	var/mob/living/carbon/spawned_carbon = living_mob
@@ -80,6 +89,7 @@
 		hat = new hat(spawned_mob)
 		spawned_mob.equip_to_slot(hat, ITEM_SLOT_HEAD)
 
+<<<<<<< HEAD
 /obj/effect/spawner/hangover_spawn
 	name = "hangover spawner"
 
@@ -92,6 +102,8 @@
 		for(var/index in 1 to bottle_count)
 			new /obj/item/reagent_containers/food/drinks/beer/almost_empty(get_turf(src))
 
+=======
+>>>>>>> 043ada3c01... e (#6378)
 /datum/station_trait/blackout
 	name = "Blackout"
 	trait_type = STATION_TRAIT_NEGATIVE

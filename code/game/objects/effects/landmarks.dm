@@ -478,3 +478,31 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	GLOB.ruin_landmarks -= src
 	ruin_template = null
 	. = ..()
+<<<<<<< HEAD
+=======
+
+/// Marks the bottom left of the testing zone.
+/// In landmarks.dm and not unit_test.dm so it is always active in the mapping tools.
+/obj/effect/landmark/unit_test_bottom_left
+	name = "unit test zone bottom left"
+
+/// Marks the top right of the testing zone.
+/// In landmarks.dm and not unit_test.dm so it is always active in the mapping tools.
+/obj/effect/landmark/unit_test_top_right
+	name = "unit test zone top right"
+
+/obj/effect/spawner/hangover_spawn
+	name = "hangover spawner"
+
+/obj/effect/spawner/hangover_spawn/Initialize(mapload)
+	..()
+	if(prob(60))
+		new /obj/effect/decal/cleanable/vomit(get_turf(src))
+	if(prob(70))
+		var/bottle_count = pick(10;1, 5;2, 2;3)
+		for(var/index in 1 to bottle_count)
+			var/obj/item/reagent_containers/food/drinks/beer/almost_empty/B = new(get_turf(src))
+			B.pixel_x += rand(-6, 6)
+			B.pixel_y += rand(-6, 6)
+	return INITIALIZE_HINT_QDEL
+>>>>>>> 043ada3c01... e (#6378)
