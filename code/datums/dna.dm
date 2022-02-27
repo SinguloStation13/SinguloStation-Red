@@ -272,6 +272,23 @@
 	return
 
 /////////////////////////// DNA MOB-PROCS //////////////////////
+<<<<<<< HEAD
+=======
+/datum/dna/proc/update_body_size()
+	if(!holder || !features["body_size"])
+		return
+
+	var/desired_size = GLOB.body_sizes[features["body_size"]]
+
+	if(desired_size == current_body_size)
+		return
+
+	var/change_multiplier = desired_size / current_body_size
+	var/translate = ((change_multiplier-1) * 32) * 0.5
+	holder.transform = holder.transform.Scale(change_multiplier)
+	holder.transform = holder.transform.Translate(0, translate)
+	current_body_size = desired_size
+>>>>>>> ef953ea714... probably fixes body size runtime (#6411)
 
 /mob/proc/set_species(datum/species/mrace, icon_update = 1)
 	return
