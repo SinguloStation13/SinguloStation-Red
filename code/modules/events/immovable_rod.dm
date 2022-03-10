@@ -78,6 +78,14 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 		walk_towards(src, destination, 1)
 		previous_distance = get_dist(src, destination)
 
+<<<<<<< HEAD
+=======
+/obj/effect/immovablerod/Destroy()
+	GLOB.poi_list -= src
+	SSaugury.unregister_doom(src)
+	. = ..()
+
+>>>>>>> 231a734b0e... Makes Destroy() call parent & misc cleanup (#6353)
 /obj/effect/immovablerod/Topic(href, href_list)
 	if(href_list["orbit"])
 		var/mob/dead/observer/ghost = usr
