@@ -119656,12 +119656,24 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/white,
 /area/science/shuttledock)
 "jfu" = (
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
+=======
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
+"gFA" = (
+/obj/machinery/door/airlock/science{
+	name = "exploration preparation room";
+	req_access_txt = "49"
+>>>>>>> f5fff894f5... Fixes typo in exploration room (#6489)
 	},
 /turf/open/floor/plasteel/white/corner{
 	dir = 1
