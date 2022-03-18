@@ -4,7 +4,11 @@
 
 
 #define UPLOAD_LIMIT		10485760	//Restricts client uploads to the server to 1MB //Could probably do with being lower.
+<<<<<<< HEAD
 #define MAX_RECOMMENDED_CLIENT 1568
+=======
+#define MAX_RECOMMENDED_CLIENT 1582
+>>>>>>> a2a21619ad... Bump the client version to 1582 (#6498)
 
 GLOBAL_LIST_INIT(blacklisted_builds, list(
 	"1407" = "bug preventing client display overrides from working leads to clients being able to see things/mobs they shouldn't be able to see",
