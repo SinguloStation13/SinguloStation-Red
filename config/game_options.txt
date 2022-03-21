@@ -407,8 +407,11 @@ DEFAULT_LAWS 1
 ## standard-ish laws. These are fairly ok to run
 RANDOM_LAWS asimov
 RANDOM_LAWS asimovpp
+<<<<<<< HEAD
 RANDOM_LAWS paladin
 RANDOM_LAWS robocop
+=======
+>>>>>>> 9afec45ea4... No More Crewsimov (#6461)
 RANDOM_LAWS corporate
 
 ## Quirky laws. Shouldn't cause too much harm
