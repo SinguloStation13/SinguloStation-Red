@@ -18,6 +18,13 @@ GLOBAL_VAR(restart_counter)
 	GLOB.config_error_log = GLOB.world_manifest_log = GLOB.world_pda_log = GLOB.world_job_debug_log = GLOB.sql_error_log = GLOB.world_href_log = GLOB.world_runtime_log = GLOB.world_attack_log = GLOB.world_game_log = "data/logs/config_error.[GUID()].log" //temporary file used to record errors with loading config, moved to log directory once logging is set bl
 
 	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER])
+<<<<<<< HEAD
+=======
+
+	#ifdef REFERENCE_DOING_IT_LIVE
+	GLOB.harddel_log = GLOB.world_game_log
+	#endif
+>>>>>>> 632aec58f2... fix exploit (#6540)
 
 	GLOB.revdata = new
 
@@ -186,12 +193,12 @@ GLOBAL_VAR(restart_counter)
 		response["response"] = "Bad Request - No endpoint specified"
 		return json_encode(response)
 
-	if(!LAZYACCESS(GLOB.topic_tokens[auth], query))
+	if(!LAZYACCESS(GLOB.topic_tokens["[auth]"], "[query]"))
 		response["statuscode"] = 401
 		response["response"] = "Unauthorized - Bad auth"
 		return json_encode(response)
 
-	var/datum/world_topic/command = GLOB.topic_commands[query]
+	var/datum/world_topic/command = GLOB.topic_commands["[query]"]
 	if(!command)
 		response["statuscode"] = 501
 		response["response"] = "Not Implemented"
