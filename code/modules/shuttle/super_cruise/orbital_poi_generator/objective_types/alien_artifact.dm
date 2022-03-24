@@ -17,8 +17,13 @@
 		valid_turfs += F
 	//Shuffle the list
 	shuffle_inplace(valid_turfs)
+<<<<<<< HEAD
 	for(var/i in rand(6, 15))
 		if(valid_turfs.len < i)
+=======
+	for(var/i in 1 to rand(4, 10))
+		if(i > valid_turfs.len)
+>>>>>>> 1fdd309ab0... Artifact Enemy Rebalance (#6537)
 			message_admins("Ran out of valid turfs to create artifact defenses on.")
 			return
 		var/turf/selected_turf = valid_turfs[i]
