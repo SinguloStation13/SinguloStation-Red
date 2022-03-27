@@ -5,7 +5,11 @@
 
 # byond version
 export BYOND_MAJOR=514
+<<<<<<< HEAD
 export BYOND_MINOR=1568
+=======
+export BYOND_MINOR=1583
+>>>>>>> f1ae734ff2... Bumps byond to 1583 (#6556)
 
 #rust version
 export RUST_VERSION=1.54.0
