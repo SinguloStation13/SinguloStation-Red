@@ -365,7 +365,11 @@
 		SSblackbox.record_feedback("tally", "handcuffs", 1, type)
 		to_chat(C, "<span class='userdanger'>\The [src] ensnares you!</span>")
 		if(knockdown)
+<<<<<<< HEAD
 			C.Paralyze(knockdown)	
+=======
+			C.Knockdown(knockdown)
+>>>>>>> 0bd8fe9c07... Reinforced and nar'sien bolas now knockdown instead (#6126)
 		playsound(src, 'sound/effects/snap.ogg', 50, TRUE)
 
 /obj/item/restraints/legcuffs/bola/tactical//traitor variant
