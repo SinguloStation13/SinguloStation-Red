@@ -169,6 +169,8 @@
 
 /obj/item/grenade/barrier/prime(mob/living/lanced_by)
 	. = ..()
+	if(!.)
+		return
 	new /obj/structure/barricade/security(get_turf(src.loc))
 	switch(mode)
 		if(VERTICAL)
