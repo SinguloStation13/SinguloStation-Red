@@ -24,4 +24,9 @@
 	movement_type = FLYING
 
 	faction = list("spooky")
+<<<<<<< HEAD
 	del_on_death = TRUE
+=======
+	del_on_death = TRUE
+	random_color = FALSE
+>>>>>>> cc01052c71... le fishe update (carp gags and Cayenne can carry nuke disk) (#6580)
