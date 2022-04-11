@@ -1943,6 +1943,7 @@
 #include "code\modules\events\anomaly_vortex.dm"
 #include "code\modules\events\asteroid_impact.dm"
 #include "code\modules\events\aurora_caelus.dm"
+#include "code\modules\events\beer_clog.dm"
 #include "code\modules\events\blob.dm"
 #include "code\modules\events\brain_trauma.dm"
 #include "code\modules\events\brand_intelligence.dm"
@@ -1983,7 +1984,11 @@
 #include "code\modules\events\special_antag_event.dm"
 #include "code\modules\events\spider_infestation.dm"
 #include "code\modules\events\spontaneous_appendicitis.dm"
+<<<<<<< HEAD
 #include "code\modules\events\vent_clog.dm"
+=======
+#include "code\modules\events\supermatter_surge.dm"
+>>>>>>> 02bda5c4ea... cancer (#6477)
 #include "code\modules\events\wormholes.dm"
 #include "code\modules\events\holiday\halloween.dm"
 #include "code\modules\events\holiday\vday.dm"
