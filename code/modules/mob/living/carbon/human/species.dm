@@ -120,22 +120,33 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		return TRUE
 	return FALSE
 
+<<<<<<< HEAD
 /datum/species/proc/random_name(gender,unique,lastname)
 	if(unique)
 		return random_unique_name(gender)
+=======
+/datum/species/proc/check_no_hard_check()
+	if(id in (CONFIG_GET(keyed_list/roundstart_no_hard_check)))
+		return TRUE
+	return FALSE
 
-	var/randname
+/datum/species/proc/random_name(gender, unique, lastname, attempts)
+>>>>>>> 363fc9dad3... Random Name refactor (#6335)
+
 	if(gender == MALE)
-		randname = pick(GLOB.first_names_male)
+		. = pick(GLOB.first_names_male)
 	else
-		randname = pick(GLOB.first_names_female)
+		. = pick(GLOB.first_names_female)
 
 	if(lastname)
-		randname += " [lastname]"
+		. += " [lastname]"
 	else
-		randname += " [pick(GLOB.last_names)]"
+		. += " [pick(GLOB.last_names)]"
 
-	return randname
+	if(unique && attempts < 10)
+		. = .(gender, TRUE, lastname, ++attempts)
+
+
 
 //Called when cloning, copies some vars that should be kept
 /datum/species/proc/copy_properties_from(datum/species/old_species)

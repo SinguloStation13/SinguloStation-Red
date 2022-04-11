@@ -21,16 +21,16 @@
 	toxic_food = NONE
 	disliked_food = NONE
 
-/datum/species/oozeling/random_name(gender,unique,lastname)
-	if(unique)
-		return random_unique_ooze_name()
-
-	var/randname = ooze_name()
-
+/datum/species/oozeling/random_name(gender, unique, lastname, attempts)
+	. = "[pick(GLOB.oozeling_first_names)]"
 	if(lastname)
-		randname += " [lastname]"
+		. += " [lastname]"
+	else
+		. += " [pick(GLOB.oozeling_last_names)]"
 
-	return randname
+	if(unique && attempts < 10)
+		if(findname(.))
+			. = .(gender, TRUE, lastname, ++attempts)
 
 /datum/species/oozeling/on_species_loss(mob/living/carbon/C)
 	if(regenerate_limbs)

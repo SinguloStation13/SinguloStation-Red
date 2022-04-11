@@ -54,13 +54,14 @@
 	UnregisterSignal(C, COMSIG_ATOM_EMAG_ACT)
 	UnregisterSignal(C, COMSIG_ATOM_EMP_ACT)
 
-/datum/species/ethereal/random_name(gender,unique,lastname)
-	if(unique)
-		return random_unique_ethereal_name()
+/datum/species/ethereal/random_name(gender, unique, lastname, attempts)
+	. = "[pick(GLOB.ethereal_names)] [random_capital_letter()]"
+	if(prob(65))
+		. += "[random_capital_letter()]"
 
-	var/randname = ethereal_name()
-
-	return randname
+	if(unique && attempts < 10)
+		if(findname(.))
+			. = .(gender, TRUE, lastname, ++attempts)
 
 /datum/species/ethereal/spec_updatehealth(mob/living/carbon/human/H)
 	.=..()
