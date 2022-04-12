@@ -130,7 +130,26 @@
 
 	return ..()
 
+<<<<<<< HEAD
 /obj/machinery/door/firedoor/try_to_activate_door(mob/user)
+=======
+/obj/machinery/door/firedoor/try_to_activate_door(obj/item/I, mob/user)
+	if(!density || welded)
+		return
+
+	if(isidcard(I))
+		if((check_safety(user) == TRUE) || check_access(I))
+			log_opening(I, user, check_safety(user))
+			playsound(src, 'sound/machines/beep.ogg', 50, 1)
+			open()
+			return
+		else
+			log_opening(I, user, -1)
+			to_chat(user, "<span class='danger'>Access Denied, User not authorized to override alarms or pressure checks.</span>")
+			playsound(src, 'sound/machines/terminal_error.ogg', 50, 1)
+			return
+	to_chat("<span class='warning'>You try to pull the card reader. Nothing happens.</span>")
+>>>>>>> 1350b7620f... Welded firelocks can no longer be opened by IDs (#6657)
 	return
 
 /obj/machinery/door/firedoor/try_to_weld(obj/item/weldingtool/W, mob/user)
@@ -145,7 +164,7 @@
 /obj/machinery/door/firedoor/try_to_crowbar(obj/item/I, mob/user)
 	if(welded || operating)
 		return
-
+	
 	if(density)
 		if(is_holding_pressure())
 			// tell the user that this is a bad idea, and have a do_after as well
