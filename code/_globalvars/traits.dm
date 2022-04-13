@@ -110,7 +110,13 @@ GLOBAL_LIST_INIT(traits_by_type, list(
 		"TRAIT_DIGICAMO" = TRAIT_DIGICAMO,
 		"TRAIT_DIGINVIS" = TRAIT_DIGINVIS,
 		"TRAIT_NICE_SHOT" = TRAIT_NICE_SHOT,
+<<<<<<< HEAD
 		"TRAIT_ALWAYS_STUBS" = TRAIT_ALWAYS_STUBS
+=======
+		"TRAIT_ALWAYS_STUBS" = TRAIT_ALWAYS_STUBS,
+		"TRAIT_NAIVE" = TRAIT_NAIVE,
+		"TRAIT_DROPS_ITEMS_ON_DEATH" = TRAIT_DROPS_ITEMS_ON_DEATH
+>>>>>>> 71a9ab2bd8... You drop your items on death in battle royale, drop items on death trait (#6659)
 	),
 	/obj/item/bodypart = list(
 		"TRAIT_PARALYSIS" = TRAIT_PARALYSIS
