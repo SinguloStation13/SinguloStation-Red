@@ -36,6 +36,7 @@
 #define TRAIT_SOURCE_UNIT_TESTS "unit_tests"
 
 #include "anchored_mobs.dm"
+#include "check_adjustable_clothing.dm"
 #include "component_tests.dm"
 #include "dynamic_ruleset_sanity.dm"
 #include "reagent_id_typos.dm"
