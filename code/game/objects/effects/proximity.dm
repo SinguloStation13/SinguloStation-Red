@@ -109,7 +109,7 @@
 		return INITIALIZE_HINT_QDEL
 
 /obj/effect/abstract/proximity_checker/Destroy()
-	if(monitor.checkers)
+	if(monitor?.checkers)
 		monitor.checkers -= src
 	monitor = null
 	return ..()
