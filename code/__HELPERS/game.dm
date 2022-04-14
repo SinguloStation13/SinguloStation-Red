@@ -248,15 +248,25 @@
 
 	return found_mobs
 
-/// Returns a list of hearers in view(view_radius) from source (ignoring luminosity). uses important_recursive_contents[RECURSIVE_CONTENTS_HEARING_SENSITIVE]
-/proc/get_hearers_in_view(view_radius, atom/source)
+/**
+ * Returns a list of hearers in view(view_radius) from source (ignoring luminosity). uses important_recursive_contents[RECURSIVE_CONTENTS_HEARING_SENSITIVE]
+ * vars:
+ * * view_radius is distance we look for potential hearers
+ * * source is obviously the source attom from where we start looking
+ * * invis_flags is for if we want to include invisible mobs or even ghosts etc the default value 0 means only visible mobs are included SEE_INVISIBLE_OBSERVER would also include ghosts.
+ */
+/proc/get_hearers_in_view(view_radius, atom/source, invis_flags = 0)
 	var/turf/center_turf = get_turf(source)
 	. = list()
 	if(!center_turf)
 		return
+<<<<<<< HEAD
 	var/lum = center_turf.luminosity
 	center_turf.luminosity = 6 // This is the maximum luminosity
 	for(var/atom/movable/movable in view(view_radius, center_turf))
+=======
+	for(var/atom/movable/movable in dview(view_radius, center_turf, invis_flags))
+>>>>>>> 87d1d4c2e0... Fixes some small issues with get_hearers_in_view regarding invisible mobs (#6587)
 		var/list/recursive_contents = LAZYACCESS(movable.important_recursive_contents, RECURSIVE_CONTENTS_HEARING_SENSITIVE)
 		if(recursive_contents)
 			. += recursive_contents
