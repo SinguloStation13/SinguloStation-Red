@@ -26,6 +26,9 @@
 	dir = 4;
 	initialize_directions = 4
 	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/exploration)
 "f" = (
@@ -185,6 +188,9 @@
 /obj/machinery/door/airlock/external/glass,
 /obj/machinery/atmospherics/pipe/simple/dark/hidden{
 	dir = 10
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/exploration)

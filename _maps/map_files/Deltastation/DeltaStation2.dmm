@@ -2158,9 +2158,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel,
-/area/medical/genetics{
-	name = "Cryogenic Storage"
-	})
+/area/maintenance/starboard)
 "adM" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -118701,8 +118699,48 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red{
 	dir = 4
+=======
+/turf/open/floor/plasteel,
+/area/engine/break_room)
+"fFV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
+"fGx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/turf/open/floor/plating,
+/area/maintenance/starboard)
+"fHx" = (
+/obj/structure/table/reinforced,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/purple,
+/obj/effect/turf_decal/tile/purple{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/purple{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/medical/genetics)
+"fLc" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+>>>>>>> 208efb7e27... Fix "Cryogenic Storage" area on Delta, and Delta exploration shuttle's airlocks (#6295)
 	},
 /obj/structure/table/reinforced,
 /obj/item/storage/fancy/donut_box,
@@ -121028,8 +121066,38 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/crew_quarters/fitness/recreation)
 "mTY" = (
+=======
+/area/hallway/primary/central)
+"udO" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/purple,
+/obj/effect/turf_decal/tile/purple{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/purple{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/medical/genetics)
+"ueK" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/turf/open/floor/plating,
+/area/maintenance/port)
+"ufm" = (
+/obj/machinery/door/poddoor{
+	id = "engstorage";
+	name = "Engineering Secure Storage Lockdown"
+	},
+>>>>>>> 208efb7e27... Fix "Cryogenic Storage" area on Delta, and Delta exploration shuttle's airlocks (#6295)
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -163994,8 +164062,8 @@ inw
 dvc
 dwG
 dvc
-din
-dgR
+udO
+fHx
 dCy
 dCy
 dCy
