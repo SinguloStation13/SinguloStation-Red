@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 /// Rewarded when you complete all your objectives as a traitor
 #define METACOIN_GREENTEXT_REWARD        200
 /// Rewarded when you earn a medal
 #define METACOIN_MEDAL_REWARD            100
+=======
+>>>>>>> 34ed4e39b6... Adjustable Achievement Coins (#5948)
 /// Rewarded when you complete a crew objective
 #define METACOIN_CO_REWARD				40
 /// Rewarded when you escape on the shuttle
