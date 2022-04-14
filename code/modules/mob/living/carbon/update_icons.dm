@@ -147,7 +147,11 @@
 		inv.update_icon()
 
 	if(back)
+<<<<<<< HEAD
 		overlays_standing[BACK_LAYER] = back.build_worn_icon(state = back.icon_state, default_layer = BACK_LAYER, default_icon_file = 'icons/mob/back.dmi')
+=======
+		overlays_standing[BACK_LAYER] = back.build_worn_icon(default_layer = BACK_LAYER, default_icon_file = 'icons/mob/clothing/back.dmi')
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 		update_hud_back(back)
 
 	apply_overlay(BACK_LAYER)
@@ -163,7 +167,11 @@
 		inv.update_icon()
 
 	if(head)
+<<<<<<< HEAD
 		overlays_standing[HEAD_LAYER] = head.build_worn_icon(state = head.icon_state, default_layer = HEAD_LAYER, default_icon_file = 'icons/mob/head.dmi')
+=======
+		overlays_standing[HEAD_LAYER] = head.build_worn_icon(default_layer = HEAD_LAYER, default_icon_file = 'icons/mob/clothing/head.dmi')
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 		update_hud_head(head)
 
 	apply_overlay(HEAD_LAYER)

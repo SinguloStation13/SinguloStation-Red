@@ -659,7 +659,12 @@
 	desc = "A dorky fannypack for keeping small items in."
 	icon_state = "fannypack_leather"
 	item_state = "fannypack_leather"
+<<<<<<< HEAD
 	item_color = "fannypackleather"
+=======
+	worn_icon_state = "fannypack_leather"
+	dying_key = DYE_REGISTRY_FANNYPACK
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 	custom_price = 15
 
 /obj/item/storage/belt/fannypack/ComponentInitialize()
@@ -672,68 +677,112 @@
 	name = "black fannypack"
 	icon_state = "fannypack_black"
 	item_state = "fannypack_black"
+<<<<<<< HEAD
 	item_color = "black"
+=======
+	worn_icon_state = "fannypack_black"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/storage/belt/fannypack/red
 	name = "red fannypack"
 	icon_state = "fannypack_red"
 	item_state = "fannypack_red"
+<<<<<<< HEAD
 	item_color = "red"
+=======
+	worn_icon_state = "fannypack_red"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/storage/belt/fannypack/purple
 	name = "purple fannypack"
 	icon_state = "fannypack_purple"
 	item_state = "fannypack_purple"
+<<<<<<< HEAD
 	item_color = "purple"
+=======
+	worn_icon_state = "fannypack_purple"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/storage/belt/fannypack/blue
 	name = "blue fannypack"
 	icon_state = "fannypack_blue"
 	item_state = "fannypack_blue"
+<<<<<<< HEAD
 	item_color = "blue"
+=======
+	worn_icon_state = "fannypack_blue"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/storage/belt/fannypack/orange
 	name = "orange fannypack"
 	icon_state = "fannypack_orange"
 	item_state = "fannypack_orange"
+<<<<<<< HEAD
 	item_color = "orange"
+=======
+	worn_icon_state = "fannypack_orange"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/storage/belt/fannypack/white
 	name = "white fannypack"
 	icon_state = "fannypack_white"
 	item_state = "fannypack_white"
+<<<<<<< HEAD
 	item_color = "white"
+=======
+	worn_icon_state = "fannypack_white"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/storage/belt/fannypack/green
 	name = "green fannypack"
 	icon_state = "fannypack_green"
 	item_state = "fannypack_green"
+<<<<<<< HEAD
 	item_color = "green"
+=======
+	worn_icon_state = "fannypack_green"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/storage/belt/fannypack/pink
 	name = "pink fannypack"
 	icon_state = "fannypack_pink"
 	item_state = "fannypack_pink"
+<<<<<<< HEAD
 	item_color = "pink"
+=======
+	worn_icon_state = "fannypack_pink"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/storage/belt/fannypack/cyan
 	name = "cyan fannypack"
 	icon_state = "fannypack_cyan"
 	item_state = "fannypack_cyan"
+<<<<<<< HEAD
 	item_color = "cyan"
+=======
+	worn_icon_state = "fannypack_cyan"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/storage/belt/fannypack/yellow
 	name = "yellow fannypack"
 	icon_state = "fannypack_yellow"
 	item_state = "fannypack_yellow"
+<<<<<<< HEAD
 	item_color = "yellow"
+=======
+	worn_icon_state = "fannypack_yellow"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/storage/belt/fannypack/bustin
 	name = "exterminator's belt"
 	desc = " "
 	icon_state = "bustinbelt"
 	item_state = "bustinbelt"
+<<<<<<< HEAD
 	item_color = "bustinbelt"
+=======
+	worn_icon_state = "bustinbelt"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/storage/belt/sabre
 	name = "sabre sheath"

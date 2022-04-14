@@ -2,8 +2,11 @@
 
 /obj/item/clothing/shoes/sneakers/black
 	name = "black shoes"
+<<<<<<< HEAD:code/modules/clothing/shoes/colour.dm
 	icon_state = "black"
 	item_color = "black"
+=======
+>>>>>>> 6fce5c00a6... Removes item_color (#6349):code/modules/clothing/shoes/color.dm
 	desc = "A pair of black shoes."
 	custom_price = 20
 
@@ -12,35 +15,19 @@
 	heat_protection = FEET
 	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
 
-/obj/item/clothing/shoes/sneakers/black/redcoat
-	item_color = "redcoat"	//Exists for washing machines. Is not different from black shoes in any way.
-
 /obj/item/clothing/shoes/sneakers/brown
 	name = "brown shoes"
 	desc = "A pair of brown shoes."
+<<<<<<< HEAD:code/modules/clothing/shoes/colour.dm
 	icon_state = "brown"
 	item_color = "brown"
-
-/obj/item/clothing/shoes/sneakers/brown/captain
-	item_color = "captain"	//Exists for washing machines. Is not different from brown shoes in any way.
-
-/obj/item/clothing/shoes/sneakers/brown/hop
-	item_color = "hop"		//Exists for washing machines. Is not different from brown shoes in any way.
-
-/obj/item/clothing/shoes/sneakers/brown/ce
-	item_color = "chief"		//Exists for washing machines. Is not different from brown shoes in any way.
-
-/obj/item/clothing/shoes/sneakers/brown/rd
-	item_color = "director"	//Exists for washing machines. Is not different from brown shoes in any way.
-
-/obj/item/clothing/shoes/sneakers/brown/cmo
-	item_color = "medical"	//Exists for washing machines. Is not different from brown shoes in any way.
-
-/obj/item/clothing/shoes/sneakers/brown/qm
-	item_color = "cargo"		//Exists for washing machines. Is not different from brown shoes in any way.
+=======
+	greyscale_colors = "#814112#ffffff"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349):code/modules/clothing/shoes/color.dm
 
 /obj/item/clothing/shoes/sneakers/blue
 	name = "blue shoes"
+<<<<<<< HEAD:code/modules/clothing/shoes/colour.dm
 	icon_state = "blue"
 	item_color = "blue"
 
@@ -58,6 +45,21 @@
 	name = "purple shoes"
 	icon_state = "purple"
 	item_color = "purple"
+=======
+	greyscale_colors = "#16a9eb#ffffff"
+
+/obj/item/clothing/shoes/sneakers/green
+	name = "green shoes"
+	greyscale_colors = "#54eb16#ffffff"
+
+/obj/item/clothing/shoes/sneakers/yellow
+	name = "yellow shoes"
+	greyscale_colors = "#ebe216#ffffff"
+
+/obj/item/clothing/shoes/sneakers/purple
+	name = "purple shoes"
+	greyscale_colors = "#ad16eb#ffffff"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349):code/modules/clothing/shoes/color.dm
 
 /obj/item/clothing/shoes/sneakers/brown
 	name = "brown shoes"
@@ -67,25 +69,42 @@
 /obj/item/clothing/shoes/sneakers/red
 	name = "red shoes"
 	desc = "Stylish red shoes."
+<<<<<<< HEAD:code/modules/clothing/shoes/colour.dm
 	icon_state = "red"
 	item_color = "red"
+=======
+	greyscale_colors = "#ff2626#ffffff"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349):code/modules/clothing/shoes/color.dm
 
 /obj/item/clothing/shoes/sneakers/white
 	name = "white shoes"
 	icon_state = "white"
 	permeability_coefficient = 0.01
-	item_color = "white"
 
 /obj/item/clothing/shoes/sneakers/rainbow
 	name = "rainbow shoes"
 	desc = "Very gay shoes."
 	icon_state = "rain_bow"
+<<<<<<< HEAD:code/modules/clothing/shoes/colour.dm
 	item_color = "rainbow"
 
 /obj/item/clothing/shoes/sneakers/orange
 	name = "orange shoes"
 	icon_state = "orange"
 	item_color = "orange"
+=======
+	greyscale_colors = null
+	greyscale_config = null
+	greyscale_config_inhand_left = null
+	greyscale_config_inhand_right = null
+	greyscale_config_worn = null
+
+/obj/item/clothing/shoes/sneakers/orange
+	name = "orange shoes"
+	greyscale_colors = "#eb7016#ffffff"
+	greyscale_config = /datum/greyscale_config/sneakers_orange
+	greyscale_config_worn = /datum/greyscale_config/sneakers_orange_worn
+>>>>>>> 6fce5c00a6... Removes item_color (#6349):code/modules/clothing/shoes/color.dm
 
 /obj/item/clothing/shoes/sneakers/orange/attack_self(mob/user)
 	if (src.chained)
@@ -104,7 +123,7 @@
 		src.slowdown = 15
 		src.icon_state = "orange1"
 	return
-	
+
 /obj/item/clothing/shoes/sneakers/orange/allow_attack_hand_drop(mob/user)
 	if(ishuman(user))
 		var/mob/living/carbon/human/hummie = user
@@ -119,7 +138,7 @@
 	if(ishuman(m))
 		var/mob/living/carbon/human/hummie = m
 		if(hummie.shoes == src && chained)
-			to_chat(hummie, "<span class='warning'>You start taking off your [src]!</span>")			
+			to_chat(hummie, "<span class='warning'>You start taking off your [src]!</span>")
 			if(!do_after(hummie,15 SECONDS, src))
 				return FALSE
 	return ..()

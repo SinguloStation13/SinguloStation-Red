@@ -126,11 +126,20 @@ There are several things that need to be remembered:
 
 		var/mutable_appearance/uniform_overlay
 
+<<<<<<< HEAD
 		if(dna && dna.species.sexes)
 			var/G = (gender == FEMALE) ? "f" : "m"
 			if(G == "f" && U.fitted != NO_FEMALE_UNIFORM)
 				uniform_overlay = U.build_worn_icon(state = "[t_color]", default_layer = UNIFORM_LAYER, default_icon_file = 'icons/mob/uniform.dmi', isinhands = FALSE, femaleuniform = U.fitted)
 
+=======
+		if(dna?.species.sexes)
+			if(gender == FEMALE && U.fitted != NO_FEMALE_UNIFORM)
+				uniform_overlay = U.build_worn_icon(default_layer = UNIFORM_LAYER, default_icon_file = 'icons/mob/clothing/uniform.dmi', isinhands = FALSE, femaleuniform = U.fitted, override_state = target_overlay)
+
+		//Change check_adjustable_clothing.dm if you change this
+		var/icon_file = 'icons/mob/clothing/uniform.dmi'
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 		if(!uniform_overlay)
 			uniform_overlay = U.build_worn_icon(state = "[t_color]", default_layer = UNIFORM_LAYER, default_icon_file = 'icons/mob/uniform.dmi', isinhands = FALSE)
 
@@ -188,6 +197,14 @@ There are several things that need to be remembered:
 
 	var/mutable_appearance/gloves_overlay = overlays_standing[GLOVES_LAYER]
 	if(gloves)
+<<<<<<< HEAD
+=======
+		var/icon_file = 'icons/mob/clothing/hands.dmi'
+		if(istype(gloves, /obj/item/clothing/gloves))
+			var/obj/item/clothing/gloves/G = gloves
+			if(G.sprite_sheets & (dna?.species.bodyflag))
+				icon_file = dna.species.get_custom_icons("gloves")
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 		gloves.screen_loc = ui_gloves
 		if(client && hud_used && hud_used.hud_shown)
 			if(hud_used.inventory_shown)
@@ -300,7 +317,7 @@ There are several things that need to be remembered:
 		var/t_state = s_store.item_state
 		if(!t_state)
 			t_state = s_store.icon_state
-		overlays_standing[SUIT_STORE_LAYER]	= mutable_appearance('icons/mob/belt_mirror.dmi', t_state, -SUIT_STORE_LAYER)
+		overlays_standing[SUIT_STORE_LAYER]	= mutable_appearance('icons/mob/clothing/belt_mirror.dmi', t_state, -SUIT_STORE_LAYER)
 		var/mutable_appearance/s_store_overlay = overlays_standing[SUIT_STORE_LAYER]
 		if(OFFSET_S_STORE in dna.species.offset_features)
 			s_store_overlay.pixel_x += dna.species.offset_features[OFFSET_S_STORE][1]
@@ -312,6 +329,17 @@ There are several things that need to be remembered:
 /mob/living/carbon/human/update_inv_head()
 	..()
 	update_mutant_bodyparts()
+<<<<<<< HEAD
+=======
+	if(head)
+		update_hud_head(head)
+		var/icon_file = 'icons/mob/clothing/head.dmi'
+		if(istype(head, /obj/item/clothing/head))
+			var/obj/item/clothing/head/HE = head
+			if(HE.sprite_sheets & (dna?.species.bodyflag))
+				icon_file = dna.species.get_custom_icons("head")
+		overlays_standing[HEAD_LAYER] = head.build_worn_icon(default_layer = HEAD_LAYER, default_icon_file = icon_file)
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 	var/mutable_appearance/head_overlay = overlays_standing[HEAD_LAYER]
 	if(head_overlay)
 		remove_overlay(HEAD_LAYER)
@@ -329,6 +357,14 @@ There are several things that need to be remembered:
 		inv.update_icon()
 
 	if(belt)
+<<<<<<< HEAD
+=======
+		var/icon_file = 'icons/mob/clothing/belt.dmi'
+		if(istype(belt, /obj/item/storage/belt))
+			var/obj/item/storage/belt/B = belt
+			if(B.sprite_sheets & (dna?.species.bodyflag))
+				icon_file = dna.species.get_custom_icons("belt")
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 		belt.screen_loc = ui_belt
 		if(client && hud_used && hud_used.hud_shown)
 			client.screen += belt
@@ -357,6 +393,18 @@ There are several things that need to be remembered:
 		inv.update_icon()
 
 	if(istype(wear_suit, /obj/item/clothing/suit))
+<<<<<<< HEAD
+=======
+		var/icon_file = 'icons/mob/clothing/suit.dmi'
+		var/obj/item/clothing/suit/S = wear_suit
+		if(S.sprite_sheets & (dna?.species.bodyflag))
+			icon_file = dna.species.get_custom_icons("suit")
+
+		if(dna?.species.bodytype & BODYTYPE_DIGITIGRADE)
+			if(S.supports_variations & DIGITIGRADE_VARIATION)
+				icon_file = 'icons/mob/species/misc/digitigrade_suits.dmi'
+
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 		wear_suit.screen_loc = ui_oclothing
 		if(client && hud_used && hud_used.hud_shown)
 			if(hud_used.inventory_shown)
@@ -411,6 +459,7 @@ There are several things that need to be remembered:
 	update_mutant_bodyparts() //e.g. upgate needed because mask now hides lizard snout
 
 /mob/living/carbon/human/update_inv_back()
+<<<<<<< HEAD
 	..()
 	var/mutable_appearance/back_overlay = overlays_standing[BACK_LAYER]
 	if(back_overlay)
@@ -418,6 +467,29 @@ There are several things that need to be remembered:
 		if(OFFSET_BACK in dna.species.offset_features)
 			back_overlay.pixel_x += dna.species.offset_features[OFFSET_BACK][1]
 			back_overlay.pixel_y += dna.species.offset_features[OFFSET_BACK][2]
+=======
+	remove_overlay(BACK_LAYER)
+
+	if(client && hud_used && hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_BACK) + 1])
+		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_BACK) + 1]
+		inv.update_icon()
+
+	if(back)
+		update_hud_back(back)
+		var/icon_file = 'icons/mob/clothing/back.dmi'
+		if(istype(back, /obj/item))
+			var/obj/item/I = back
+			if(I.sprite_sheets & dna?.species.bodyflag)
+				icon_file = dna.species.get_custom_icons("back")
+
+		overlays_standing[BACK_LAYER] = back.build_worn_icon(default_layer = BACK_LAYER, default_icon_file = icon_file)
+		var/mutable_appearance/back_overlay = overlays_standing[BACK_LAYER]
+		if(back_overlay)
+			remove_overlay(BACK_LAYER)
+			if(OFFSET_BACK in dna.species.offset_features)
+				back_overlay.pixel_x += dna.species.offset_features[OFFSET_BACK][1]
+				back_overlay.pixel_y += dna.species.offset_features[OFFSET_BACK][2]
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 			overlays_standing[BACK_LAYER] = back_overlay
 		apply_overlay(BACK_LAYER)
 

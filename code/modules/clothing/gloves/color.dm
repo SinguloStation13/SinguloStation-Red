@@ -1,3 +1,6 @@
+/obj/item/clothing/gloves/color
+	dying_key = DYE_REGISTRY_GLOVES
+
 /obj/item/clothing/gloves/color/yellow
 	desc = "These gloves provide protection against electric shock."
 	name = "insulated gloves"
@@ -5,7 +8,6 @@
 	item_state = "ygloves"
 	siemens_coefficient = 0
 	permeability_coefficient = 0.05
-	item_color="yellow"
 	resistance_flags = NONE
 	cut_type = /obj/item/clothing/gloves/cut
 
@@ -18,12 +20,6 @@
 	. = ..()
 	if(user.mind?.assigned_role in GLOB.security_positions)
 		SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "sec_black_gloves")
-
-/obj/item/clothing/gloves/color/black/hos
-	item_color = "hosred"	//Exists for washing machines. Is not different from black gloves in any way.
-
-/obj/item/clothing/gloves/color/black/ce
-	item_color = "chief"		//Exists for washing machines. Is not different from black gloves in any way.
 
 /obj/item/clothing/gloves/color/yellow/equipped(mob/user, slot)
 	. = ..()
@@ -48,7 +44,6 @@
 	item_state = "ygloves"
 	siemens_coefficient = 1			//Set to a default of 1, gets overridden in Initialize()
 	permeability_coefficient = 0.05
-	item_color = "yellow"
 	resistance_flags = NONE
 	cut_type = /obj/item/clothing/gloves/cut
 
@@ -103,7 +98,11 @@
 	desc = "A pair of gloves, they don't look special in any way."
 	icon_state = "orange"
 	item_state = "orangegloves"
+<<<<<<< HEAD
 	item_color="orange"
+=======
+	worn_icon_state = "orangegloves"
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 
 /obj/item/clothing/gloves/color/red
 	name = "red gloves"
@@ -126,9 +125,6 @@
 	icon_state = "rainbow"
 	item_state = "rainbowgloves"
 	item_color = "rainbow"
-
-/obj/item/clothing/gloves/color/rainbow/clown
-	item_color = "clown"
 
 /obj/item/clothing/gloves/color/blue
 	name = "blue gloves"
@@ -158,12 +154,6 @@
 	item_state = "graygloves"
 	item_color="grey"
 
-/obj/item/clothing/gloves/color/grey/rd
-	item_color = "director"			//Exists for washing machines. Is not different from gray gloves in any way.
-
-/obj/item/clothing/gloves/color/grey/hop
-	item_color = "hop"				//Exists for washing machines. Is not different from gray gloves in any way.
-
 /obj/item/clothing/gloves/color/light_brown
 	name = "light brown gloves"
 	desc = "A pair of gloves, they don't look special in any way."
@@ -177,9 +167,6 @@
 	icon_state = "brown"
 	item_state = "browngloves"
 	item_color="brown"
-
-/obj/item/clothing/gloves/color/brown/cargo
-	item_color = "cargo"					//Exists for washing machines. Is not different from brown gloves in any way.
 
 /obj/item/clothing/gloves/color/captain
 	desc = "Regal blue gloves, with a nice gold trim, a diamond anti-shock coating, and an integrated thermal barrier. Swanky."
@@ -237,9 +224,6 @@
 	icon_state = "white"
 	item_state = "wgloves"
 	item_color="white"
-
-/obj/item/clothing/gloves/color/white/redcoat
-	item_color = "redcoat"		//Exists for washing machines. Is not different from white gloves in any way.
 
 /obj/effect/spawner/lootdrop/gloves
 	name = "random gloves"

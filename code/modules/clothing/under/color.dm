@@ -1,7 +1,24 @@
 /obj/item/clothing/under/color
 	desc = "A standard issue colored jumpsuit. Variety is the spice of life!"
+<<<<<<< HEAD
 
 /obj/item/clothing/under/skirt/color
+=======
+	greyscale_colors = "#3f3f3f"
+	greyscale_config = /datum/greyscale_config/jumpsuit
+	greyscale_config_inhand_left = /datum/greyscale_config/jumpsuit_inhand_left
+	greyscale_config_inhand_right = /datum/greyscale_config/jumpsuit_inhand_right
+	greyscale_config_worn = /datum/greyscale_config/jumpsuit_worn
+	icon_state = "jumpsuit"
+	item_state = "jumpsuit"
+	worn_icon_state = "jumpsuit"
+	worn_icon = 'icons/mob/clothing/uniform.dmi'
+	supports_variations = DIGITIGRADE_VARIATION
+	dying_key = DYE_REGISTRY_UNDER
+
+/obj/item/clothing/under/color/jumpskirt
+	supports_variations = DIGITIGRADE_VARIATION_NO_NEW_ICON //Doesn't require a new icon.
+>>>>>>> 6fce5c00a6... Removes item_color (#6349)
 	body_parts_covered = CHEST|GROIN|ARMS
 	can_adjust = FALSE
 	fitted = FEMALE_UNIFORM_TOP
