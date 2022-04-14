@@ -1,9 +1,17 @@
 //Subtype of human
 /datum/species/human/felinid
+<<<<<<< HEAD
 	name = "Felinid"
 	id = "felinid"
 	limbs_id = "human"
+=======
+	name = "\improper Felinid"
+	id = SPECIES_FELINID
+	bodyflag = FLAG_FELINID
+	examine_limb_id = SPECIES_HUMAN
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 	say_mod = "meows"
+
 
 	disliked_food = VEGETABLES | SUGAR
 	liked_food = DAIRY | MEAT

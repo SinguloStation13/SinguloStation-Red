@@ -1,6 +1,12 @@
 /datum/species/oozeling
+<<<<<<< HEAD
 	name = "Oozeling"
 	id = "oozeling"
+=======
+	name = "\improper Oozeling"
+	id = SPECIES_OOZELING
+	bodyflag = FLAG_OOZELING
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 	default_color = "00FF90"
 	say_mod = "blorbles"
 	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR)
@@ -16,10 +22,16 @@
 	heatmod = 0.5 // = 1/4x heat damage
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	species_language_holder = /datum/language_holder/oozeling
-	limbs_id = "ooze"
 	swimming_component = /datum/component/swimming/dissolve
 	toxic_food = NONE
 	disliked_food = NONE
+
+	species_chest = /obj/item/bodypart/chest/oozeling
+	species_head = /obj/item/bodypart/head/oozeling
+	species_l_arm = /obj/item/bodypart/l_arm/oozeling
+	species_r_arm = /obj/item/bodypart/r_arm/oozeling
+	species_l_leg = /obj/item/bodypart/l_leg/oozeling
+	species_r_leg = /obj/item/bodypart/r_leg/oozeling
 
 /datum/species/oozeling/random_name(gender,unique,lastname)
 	if(unique)

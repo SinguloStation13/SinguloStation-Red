@@ -1206,6 +1206,19 @@ GLOBAL_DATUM_INIT(dummySave, /savefile, new("tmp/dummySave.sav")) //Cache of ico
 				SSassets.transport.send_assets(thing2, name)
 			return "<img class='icon icon-misc' src='[SSassets.transport.get_asset_url(name)]'>"
 		var/atom/A = thing
+<<<<<<< HEAD
+=======
+
+		I = A.icon
+		if (isnull(icon_state))
+			icon_state = A.icon_state
+
+			if (!(icon_state in icon_states(I, 1)))
+				icon_state = initial(A.icon_state)
+				if (isnull(dir))
+					dir = initial(A.dir)
+
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 		if (isnull(dir))
 			dir = A.dir
 		if (isnull(icon_state))
@@ -1272,4 +1285,14 @@ GLOBAL_DATUM_INIT(dummySave, /savefile, new("tmp/dummySave.sav")) //Cache of ico
 		return icon2html(thing, target)
 
 	var/icon/I = getFlatIcon(thing)
+<<<<<<< HEAD
 	return icon2html(I, target)
+=======
+	return icon2html(I, target, sourceonly = sourceonly)
+
+//Returns TRUE if the given iconstate is located in the given file, otherwise returns false.
+/proc/icon_exists(file, state)
+	var/list/states = icon_states(file)
+	if(states.Find(state))
+		return TRUE
+>>>>>>> b318aa81a8... BetterLimbs (#5611)

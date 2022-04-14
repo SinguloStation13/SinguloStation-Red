@@ -9,15 +9,25 @@
 	var/t_es = p_es()
 	var/obscure_name
 
+	var/obscured = check_obscured_slots()
+	var/skipface = ((wear_mask?.flags_inv & HIDEFACE) || (head?.flags_inv & HIDEFACE))
+
 	if(isliving(user))
 		var/mob/living/L = user
 		if(HAS_TRAIT(L, TRAIT_PROSOPAGNOSIA))
 			obscure_name = TRUE
 
+<<<<<<< HEAD
 	. = list("<span class='info'>*---------*\nThis is <EM>[!obscure_name ? name : "Unknown"]</EM>!")
 
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
+=======
+	var/apparent_species
+	if(dna?.species && !skipface)
+		apparent_species = ", \an [dna.species.name]"
+	. = list("<span class='info'>*---------*\nThis is <EM>[!obscure_name ? name : "Unknown"][apparent_species]</EM>!")
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 
 	//uniform
 	if(w_uniform && !(ITEM_SLOT_ICLOTHING in obscured))
@@ -132,8 +142,7 @@
 	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_R_ARM, BODY_ZONE_L_ARM, BODY_ZONE_R_LEG, BODY_ZONE_L_LEG)
 	var/list/disabled = list()
 
-	for(var/X in bodyparts)
-		var/obj/item/bodypart/BP = X
+	for(var/obj/item/bodypart/BP as() in bodyparts)
 		if(BP.disabled)
 			disabled += BP
 		missing -= BP.body_zone
@@ -173,6 +182,23 @@
 	else if(l_limbs_missing >= 2 && r_limbs_missing >= 2)
 		msg += "[t_He] [p_do()]n't seem all there.\n"
 
+<<<<<<< HEAD
+=======
+
+	for(var/obj/item/bodypart/BP as() in bodyparts)
+		if(BP.limb_id != (dna.species.examine_limb_id ? dna.species.examine_limb_id : dna.species.id))
+			msg += "<span class='info'>[t_He] has \an [BP.name].</span>\n"
+
+	var/list/harm_descriptors = dna?.species.get_harm_descriptors()
+	var/brute_msg = harm_descriptors?["brute"]
+	var/burn_msg = harm_descriptors?["burn"]
+	var/bleed_msg = harm_descriptors?["bleed"]
+
+	brute_msg = brute_msg ? brute_msg : "bruising"
+	burn_msg = burn_msg ? burn_msg : "burns"
+	bleed_msg = bleed_msg ? bleed_msg : "bleeding"
+
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 	if(!(user == src && src.hal_screwyhud == SCREWYHUD_HEALTHY)) //fake healthy
 		if(temp)
 			if(temp < 25)

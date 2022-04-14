@@ -158,7 +158,7 @@
 					return TRUE
 	if(replacebody)
 		for(var/obj/item/bodypart/O in H.bodyparts)
-			if(O.status == BODYPART_ROBOTIC)
+			if(!IS_ORGANIC_LIMB(O))
 				if(robustbits && O.brute_reduction < 3 || O.burn_reduction < 2)
 					O.burn_reduction = max(2, O.burn_reduction)
 					O.brute_reduction = max(3, O.brute_reduction)
@@ -225,6 +225,16 @@
 		return
 	var/mob/living/carbon/human/H = A.affected_mob
 	REMOVE_TRAIT(H, TRAIT_NANITECOMPATIBLE, DISEASE_TRAIT)
+<<<<<<< HEAD
+=======
+	if(A.stage >= 5 && (replaceorgans || replacebody)) //sorry. no disease quartets allowed
+		to_chat(H, "<span class='userdanger'>You feel lighter and springier as your innards lose their clockwork facade.</span>")
+		H.dna.species.regenerate_organs(H, replace_current = TRUE)
+		for(var/obj/item/bodypart/O in H.bodyparts)
+			if(!IS_ORGANIC_LIMB(O))
+				O.burn_reduction = initial(O.burn_reduction)
+				O.brute_reduction = initial(O.brute_reduction)
+>>>>>>> b318aa81a8... BetterLimbs (#5611)
 
 /datum/symptom/robotic_adaptation/OnRemove(datum/disease/advance/A)
 	A.infectable_biotypes -= MOB_ROBOTIC
