@@ -78,6 +78,7 @@
 	backpack_contents = list(/obj/item/choice_beacon/magic=1)
 	can_be_admin_equipped = TRUE
 
+<<<<<<< HEAD
 /datum/job/gimmick/hobo
 	title = "Debtor"
 	flag = HOBO
@@ -116,6 +117,8 @@
 	ADD_TRAIT(H, TRAIT_APPRAISAL, JOB_TRAIT)
 
 
+=======
+>>>>>>> 3684f5b581... goodbye (#6101)
 /datum/job/gimmick/shrink
 	title = "Psychiatrist"
 	flag = SHRINK
