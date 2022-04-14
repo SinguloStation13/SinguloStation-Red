@@ -35,6 +35,17 @@
 	var/static/b2 = 149
 	//this is shit but how do i fix it? no clue.
 	var/drain_time = 0 //used to keep ethereals from spam draining power sources
+<<<<<<< HEAD
+=======
+	inert_mutation = OVERLOAD
+	var/obj/effect/dummy/lighting_obj/ethereal_light
+
+
+/datum/species/ethereal/Destroy(force)
+	if(ethereal_light)
+		QDEL_NULL(ethereal_light)
+	return ..()
+>>>>>>> 90f79dfca0... Locks Fire Breath to Lizards, adds Species Specific Mutations (#5814)
 
 /datum/species/ethereal/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
 	.=..()
