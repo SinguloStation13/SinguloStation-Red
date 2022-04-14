@@ -14115,6 +14115,29 @@
 /turf/open/floor/plating/airless,
 /area/centcom/evac)
 "KL" = (
+<<<<<<< HEAD
+=======
+/obj/structure/chair/comfy/lime{
+	dir = 4
+	},
+/turf/open/floor/mineral/titanium/blue,
+/area/centcom/evac)
+"KM" = (
+/obj/effect/spawner/structure/window/shuttle,
+/turf/open/floor/plating,
+/area/centcom/evac)
+"KN" = (
+/obj/docking_port/stationary{
+	dwidth = 2;
+	height = 7;
+	id = "pod_away";
+	name = "recovery ship";
+	width = 5
+	},
+/turf/open/space/basic,
+/area/space)
+"KP" = (
+>>>>>>> 4473a55123... Hotfixes pubby pod (#6156)
 /obj/docking_port/stationary{
 	dir = 1;
 	dwidth = 1;
