@@ -68045,7 +68045,11 @@
 "cHZ" = (
 /obj/machinery/door/airlock/command{
 	name = "Research Division Server Room";
+<<<<<<< HEAD
 	req_access_txt = "30"
+=======
+	req_one_access_txt = "30;70"
+>>>>>>> e4c2b562df... Fixed Server room access (#5927)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -68518,7 +68522,11 @@
 "cIX" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Server Access";
+<<<<<<< HEAD
 	req_access_txt = "30"
+=======
+	req_one_access_txt = "30;70"
+>>>>>>> e4c2b562df... Fixed Server room access (#5927)
 	},
 /obj/machinery/atmospherics/pipe/simple{
 	dir = 4
