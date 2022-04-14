@@ -41,7 +41,11 @@
 	icon_dead = "mouse_[body_color]_dead"
 	held_state = "mouse_[body_color]"
 	if(prob(75))
+<<<<<<< HEAD
 		var/datum/disease/advance/R = new /datum/disease/advance/random(rand(3, 6), 9, rand(3,4), infected = src)
+=======
+		var/datum/disease/advance/R = new /datum/disease/advance/random(rand(1, 6), 9, 1, infected = src)
+>>>>>>> 135d14ae8a... a (#5976)
 		ratdisease += R
 
 /mob/living/simple_animal/mouse/extrapolator_act(mob/user, var/obj/item/extrapolator/E, scan = TRUE)

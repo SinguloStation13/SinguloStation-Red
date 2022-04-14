@@ -26,7 +26,11 @@
 	. = ..()
 	icon_state = "[icon_state]-old" //change from the normal blood icon selected from random_icon_states in the parent's Initialize to the old dried up blood.
 	if(prob(75))
+<<<<<<< HEAD
 		var/datum/disease/advance/R = new /datum/disease/advance/random(rand(3, 6), 9, 4)
+=======
+		var/datum/disease/advance/R = new /datum/disease/advance/random(rand(1, 4), rand(7, 9), 4)
+>>>>>>> 135d14ae8a... a (#5976)
 		disease += R
 
 /obj/effect/decal/cleanable/blood/old/extrapolator_act(mob/user, var/obj/item/extrapolator/E, scan = TRUE)
