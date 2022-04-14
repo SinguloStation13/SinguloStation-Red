@@ -1074,6 +1074,8 @@
 					/obj/structure/particle_accelerator/power_box,
 					/obj/structure/particle_accelerator/end_cap)
 	crate_name = "particle accelerator crate"
+	crate_type = /obj/structure/closet/crate/secure/engineering
+	dangerous = TRUE
 
 /datum/supply_pack/engine/collector
 	name = "Radiation Collector Crate"
@@ -1090,6 +1092,8 @@
 	cost = 4700
 	contains = list(/obj/machinery/the_singularitygen)
 	crate_name = "singularity generator crate"
+	crate_type = /obj/structure/closet/crate/secure/engineering
+	dangerous = TRUE
 
 /datum/supply_pack/engine/solar
 	name = "Solar Panel Crate"
@@ -1149,6 +1153,8 @@
 	cost = 5000
 	contains = list(/obj/machinery/the_singularitygen/tesla)
 	crate_name = "tesla generator crate"
+	crate_type = /obj/structure/closet/crate/secure/engineering
+	dangerous = TRUE
 
 //////////////////////////////////////////////////////////////////////////////
 /////////////////////// Canisters & Materials ////////////////////////////////
@@ -1701,7 +1707,12 @@
 /datum/supply_pack/service/cargo_supples
 	name = "Cargo Supplies Crate"
 	desc = "Sold everything that wasn't bolted down? You can get right back to work with this crate containing stamps, an export scanner, destination tagger, hand labeler and some package wrapping."
+<<<<<<< HEAD
 	cost = 700    
+=======
+	cost = 700
+	access_budget = ACCESS_CARGO
+>>>>>>> 16e32aee7a... Hopefully prevents some grief (#6224)
 	contains = list(/obj/item/stamp,
 					/obj/item/stamp/denied,
 					/obj/item/export_scanner,
@@ -2051,7 +2062,12 @@
 /datum/supply_pack/organic/hydroponics
 	name = "Hydroponics Crate"
 	desc = "Supplies for growing a great garden! Contains two bottles of ammonia, two Plant-B-Gone spray bottles, a hatchet, cultivator, plant analyzer, as well as a pair of leather gloves and a botanist's apron."
+<<<<<<< HEAD
 	cost = 800 
+=======
+	cost = 800
+	access_budget = ACCESS_HYDROPONICS
+>>>>>>> 16e32aee7a... Hopefully prevents some grief (#6224)
 	contains = list(/obj/item/reagent_containers/spray/plantbgone,
 					/obj/item/reagent_containers/spray/plantbgone,
 					/obj/item/reagent_containers/glass/bottle/ammonia,
@@ -2685,7 +2701,12 @@
 /datum/supply_pack/costumes_toys/wardrobes/cargo
 	name = "Cargo Wardrobe Supply Crate"
 	desc = "This crate contains a refill for the CargoDrobe."
+<<<<<<< HEAD
 	cost = 800 
+=======
+	cost = 800
+	access_budget = ACCESS_CARGO
+>>>>>>> 16e32aee7a... Hopefully prevents some grief (#6224)
 	contains = list(/obj/item/vending_refill/wardrobe/cargo_wardrobe)
 	crate_name = "cargo department supply crate"
 
@@ -2699,7 +2720,12 @@
 /datum/supply_pack/costumes_toys/wardrobes/engineering
 	name = "Engineering Wardrobe Supply Crate"
 	desc = "This crate contains refills for the EngiDrobe and AtmosDrobe."
+<<<<<<< HEAD
 	cost = 800 
+=======
+	cost = 800
+	access_budget = ACCESS_ENGINE
+>>>>>>> 16e32aee7a... Hopefully prevents some grief (#6224)
 	contains = list(/obj/item/vending_refill/wardrobe/engi_wardrobe,
 					/obj/item/vending_refill/wardrobe/atmos_wardrobe)
 	crate_name = "engineering department wardrobe supply crate"
