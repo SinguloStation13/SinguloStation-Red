@@ -1039,23 +1039,26 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 /datum/species/proc/after_equip_job(datum/job/J, mob/living/carbon/human/H)
 	H.update_mutant_bodyparts()
 
+// Do species-specific reagent handling here
+// Return 1 if it should do normal processing too
+// Return 0 if it shouldn't deplete and do its normal effect
+// Other return values will cause weird badness
+
 /datum/species/proc/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
 	if(chem.type == exotic_blood)
 		H.blood_volume = min(H.blood_volume + round(chem.volume, 0.1), BLOOD_VOLUME_MAXIMUM)
 		H.reagents.del_reagent(chem.type)
 		return TRUE
+	//This handles dumping unprocessable reagents.
+	var/dump_reagent = TRUE
+	if((chem.process_flags & SYNTHETIC) && (H.dna.species.reagent_tag & PROCESS_SYNTHETIC))		//SYNTHETIC-oriented reagents require PROCESS_SYNTHETIC
+		dump_reagent = FALSE
+	if((chem.process_flags & ORGANIC) && (H.dna.species.reagent_tag & PROCESS_ORGANIC))		//ORGANIC-oriented reagents require PROCESS_ORGANIC
+		dump_reagent = FALSE
+	if(dump_reagent)
+		chem.holder.remove_reagent(chem.type, chem.metabolization_rate)
+		return TRUE
 	return FALSE
-
-// Do species-specific reagent handling here
-// Return 1 if it should do normal processing too
-// Return 0 if it shouldn't deplete and do its normal effect
-// Other return values will cause weird badness
-/datum/species/proc/handle_reagents(mob/living/carbon/human/H, datum/reagent/R)
-	if(R.type == exotic_blood)
-		H.blood_volume = min(H.blood_volume + round(R.volume, 0.1), BLOOD_VOLUME_NORMAL)
-		H.reagents.del_reagent(R.type)
-		return FALSE
-	return TRUE
 
 /datum/species/proc/check_species_weakness(obj/item, mob/living/attacker)
 	return 0 //This is not a boolean, it's the multiplier for the damage that the user takes from the item.It is added onto the check_weakness value of the mob, and then the force of the item is multiplied by this value
@@ -2010,3 +2013,44 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(isturf(H.loc))
 			var/turf/T = H.loc
 			T.Entered(H)
+<<<<<<< HEAD
+=======
+
+///Calls the DMI data for a custom icon for a given bodypart from the Species Datum.
+/datum/species/proc/get_custom_icons(var/part)
+	return
+/*Here's what a species that has a unique icon for every slot would look like. If your species doesnt have any custom icons for a given part, return null.
+/datum/species/teshari/get_custom_icons(var/part)
+	switch(part)
+		if("uniform")
+			return 'icons/mob/species/teshari/tesh_uniforms.dmi'
+		if("gloves")
+			return 'icons/mob/species/teshari/tesh_gloves.dmi'
+		if("glasses")
+			return 'icons/mob/species/teshari/tesh_glasses.dmi'
+		if("ears")
+			return 'icons/mob/species/teshari/tesh_ears.dmi'
+		if("shoes")
+			return 'icons/mob/species/teshari/tesh_shoes.dmi'
+		if("head")
+			return 'icons/mob/species/teshari/tesh_head.dmi'
+		if("belt")
+			return 'icons/mob/species/teshari/tesh_belts.dmi'
+		if("suit")
+			return 'icons/mob/species/teshari/tesh_suits.dmi'
+		if("mask")
+			return 'icons/mob/species/teshari/tesh_masks.dmi'
+		if("back")
+			return 'icons/mob/species/teshari/tesh_back.dmi'
+		if("generic")
+			return 'icons/mob/species/teshari/tesh_generic.dmi'
+		else
+			return
+*/
+
+/datum/species/proc/get_item_offsets_for_index(i)
+	return
+
+/datum/species/proc/get_harm_descriptors()
+	return
+>>>>>>> f5e5a57b75... IPC Rework Pt1: Bugfixes (#5597)
