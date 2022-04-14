@@ -901,9 +901,17 @@
 /turf/closed/wall/r_wall,
 /area/ai_monitored/turret_protected/AIsatextAS)
 "acV" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall/r_wall,
 /area/ai_monitored/turret_protected/AIsatextAS)
+=======
+/obj/machinery/atmospherics/pipe/simple/orange/visible{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "acW" = (
 /obj/machinery/computer/station_alert,
 /turf/open/floor/plating,
@@ -998,9 +1006,16 @@
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAS)
 "adh" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAP)
+=======
+/obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/simple/green/visible,
+/turf/open/space,
+/area/space/nearstation)
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "adi" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -1008,9 +1023,18 @@
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAP)
 "adj" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAP)
+=======
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/simple/cyan/visible{
+	dir = 9
+	},
+/turf/open/floor/plating,
+/area/engine/atmos)
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "adk" = (
 /obj/structure/table,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -1072,6 +1096,7 @@
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAS)
 "adr" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAS)
@@ -1079,6 +1104,23 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAP)
+=======
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/yellow/visible{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"ads" = (
+/obj/machinery/atmospherics/components/binary/pump{
+	dir = 4;
+	name = "Air to Mix"
+	},
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "adt" = (
 /obj/machinery/camera{
 	c_tag = "MiniSat Maintenance Port Fore";
@@ -1088,11 +1130,17 @@
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAP)
 "adu" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAP)
+=======
+/obj/machinery/atmospherics/pipe/simple/orange/hidden,
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "adv" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "MiniSat Maintenance";
@@ -1163,10 +1211,13 @@
 	},
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAS)
+<<<<<<< HEAD
 "adC" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAS)
+=======
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "adD" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	dir = 4;
@@ -1180,6 +1231,7 @@
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAS)
 "adE" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -1192,6 +1244,13 @@
 	},
 /turf/closed/wall/r_wall,
 /area/ai_monitored/turret_protected/AIsatextAS)
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/turf/closed/wall/r_wall,
+/area/maintenance/disposal/incinerator)
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "adG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
@@ -36017,7 +36076,7 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-4"
+	icon_state = "4-8"
 	},
 /turf/open/floor/engine,
 /area/science/storage)
@@ -36836,8 +36895,13 @@
 /turf/open/floor/engine,
 /area/science/storage)
 "bFd" = (
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
+	dir = 1
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	},
 /turf/open/floor/engine,
 /area/science/storage)
@@ -37309,9 +37373,6 @@
 /turf/open/floor/engine,
 /area/science/storage)
 "bGi" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
 /obj/machinery/camera{
 	c_tag = "Toxins Storage";
 	dir = 8;
@@ -38487,7 +38548,7 @@
 /area/science/storage)
 "bII" = (
 /obj/structure/cable/yellow{
-	icon_state = "4-8"
+	icon_state = "1-8"
 	},
 /obj/structure/sign/warning/nosmoking{
 	pixel_y = -32
@@ -38498,6 +38559,7 @@
 /turf/open/floor/engine,
 /area/science/storage)
 "bIJ" = (
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
@@ -38509,6 +38571,12 @@
 	},
 /turf/closed/wall/r_wall,
 /area/science/mixing/chamber)
+=======
+/obj/machinery/atmospherics/pipe/simple/cyan/visible,
+/obj/machinery/meter/atmos/distro_loop,
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "bIL" = (
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/airlock/research/glass/incinerator/toxmix_interior,
@@ -39760,9 +39828,10 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bMe" = (
-/obj/machinery/atmospherics/pipe/manifold/yellow/visible{
+/obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bMf" = (
@@ -40148,18 +40217,28 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bNk" = (
-/obj/machinery/atmospherics/pipe/manifold/green/visible{
+/obj/effect/turf_decal/tile/yellow,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/white/line{
 	dir = 1
+	},
+/obj/machinery/atmospherics/components/trinary/filter/atmos/o2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bNl" = (
-/obj/machinery/atmospherics/pipe/simple/green/visible{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/green/visible{
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
@@ -40514,12 +40593,20 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bOq" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 4
 	},
 /obj/machinery/atmospherics/components/binary/pump/on{
+=======
+/obj/effect/turf_decal/tile/yellow,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/trinary/filter/atmos/n2o{
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	dir = 1;
-	name = "Unfiltered to Mix"
+	on = 1
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
@@ -40682,6 +40769,10 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+/obj/machinery/atmospherics/components/binary/pump/on{
+	dir = 1;
+	name = "Unfiltered to Mix"
+	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bOR" = (
@@ -40802,13 +40893,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
-"bPd" = (
-/obj/machinery/atmospherics/pipe/simple/green/visible,
-/obj/machinery/atmospherics/pipe/simple/yellow/visible{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/engine/atmos)
 "bPe" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8;
@@ -40818,6 +40902,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bPf" = (
@@ -41073,10 +41158,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
-"bPW" = (
-/obj/machinery/atmospherics/pipe/simple/green/visible,
-/turf/open/floor/plasteel,
-/area/engine/atmos)
 "bPX" = (
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
@@ -41085,6 +41166,7 @@
 /obj/machinery/computer/atmos_control/tank/nitrous_tank{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bPY" = (
@@ -41491,9 +41573,12 @@
 	},
 /area/engine/atmos)
 "bQN" = (
-/obj/machinery/atmospherics/components/trinary/filter/atmos/n2o{
-	dir = 1;
-	on = 1
+/obj/effect/turf_decal/tile/yellow,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/trinary/filter/atmos/co2{
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
@@ -41852,6 +41937,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bRC" = (
@@ -42159,6 +42245,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bSi" = (
@@ -42459,6 +42546,7 @@
 /obj/machinery/computer/atmos_control/tank/toxin_tank{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bSW" = (
@@ -42935,12 +43023,11 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bTU" = (
-/obj/machinery/atmospherics/components/trinary/filter/atmos/plasma{
-	dir = 1;
-	on = 1
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel,
-/area/engine/atmos)
+/turf/open/floor/engine,
+/area/science/storage)
 "bTV" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/toxin_input{
 	dir = 8
@@ -43106,9 +43193,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
 	dir = 6
 	},
-/obj/machinery/atmospherics/pipe/simple/orange/visible/layer3{
-	dir = 6
-	},
 /obj/machinery/shower{
 	dir = 4
 	},
@@ -43119,6 +43203,7 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/visible{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/orange/visible/layer3{
 	dir = 4
 	},
@@ -43129,6 +43214,11 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/orange/visible/layer3{
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/effect/turf_decal/stripes/white/line{
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -43140,10 +43230,15 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bUt" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/orange/visible/layer3{
+=======
+/obj/machinery/atmospherics/pipe/simple/cyan/visible,
+/obj/machinery/atmospherics/pipe/simple/orange/visible{
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -43170,22 +43265,20 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bUx" = (
-/obj/machinery/atmospherics/pipe/simple/green/visible,
 /obj/machinery/atmospherics/pipe/simple/purple/visible{
-	dir = 4
+	dir = 10
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bUy" = (
-/obj/machinery/atmospherics/pipe/simple/purple/visible{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+<<<<<<< HEAD
 "bUz" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
@@ -43201,6 +43294,8 @@
 	},
 /turf/open/space,
 /area/space/nearstation)
+=======
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "bUC" = (
 /obj/structure/flora/ausbushes/fernybush,
 /turf/open/floor/plating/asteroid,
@@ -43493,9 +43588,16 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
+=======
+/obj/machinery/atmospherics/pipe/manifold4w/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/orange/hidden{
+	dir = 6
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	},
 /turf/open/floor/goonplaque,
 /area/engine/break_room)
@@ -43507,6 +43609,9 @@
 	dir = 9
 	},
 /obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -43522,8 +43627,17 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/firedoor,
+=======
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/orange/hidden{
+	dir = 4
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bVd" = (
@@ -43543,17 +43657,43 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/orange/hidden{
+	dir = 4
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bVe" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
 /obj/machinery/atmospherics/pipe/simple/orange/visible/layer3,
+=======
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/orange/visible{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/white/line,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bVf" = (
@@ -43568,6 +43708,9 @@
 /area/engine/atmos)
 "bVg" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -43588,7 +43731,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/manifold/yellow/visible,
+/obj/machinery/atmospherics/pipe/manifold/yellow/visible{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bVk" = (
@@ -43600,8 +43745,10 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+<<<<<<< HEAD
 "bVl" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
@@ -43618,6 +43765,8 @@
 /obj/machinery/atmospherics/pipe/simple/purple/visible,
 /turf/open/space,
 /area/space/nearstation)
+=======
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "bVn" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/carbon_output{
 	dir = 8
@@ -43869,7 +44018,11 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/stripes/line,
+=======
+/obj/machinery/atmospherics/pipe/simple/orange/hidden,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/break_room)
 "bVU" = (
@@ -43890,6 +44043,7 @@
 /obj/machinery/atmospherics/components/binary/pump{
 	name = "Waste to Space"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/orange/visible/layer3,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
@@ -43897,6 +44051,8 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
 	},
+=======
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bVX" = (
@@ -43906,28 +44062,26 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bVY" = (
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
+/obj/machinery/atmospherics/components/trinary/mixer/airmix{
 	dir = 4
-	},
-/obj/machinery/atmospherics/components/binary/pump{
-	dir = 1;
-	name = "O2 to Pure"
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bVZ" = (
-/obj/machinery/atmospherics/pipe/manifold/cyan/visible{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/cyan/visible{
+	dir = 10
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bWa" = (
-/obj/machinery/atmospherics/components/binary/pump{
-	dir = 4;
-	name = "N2 to Pure"
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/tile/yellow,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/orange/hidden,
 /turf/open/floor/plasteel,
-/area/engine/atmos)
+/area/engine/engineering)
 "bWb" = (
 /obj/machinery/computer/atmos_control/tank/carbon_tank{
 	dir = 8
@@ -43936,6 +44090,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bWc" = (
@@ -43944,10 +44099,18 @@
 /turf/open/floor/plating,
 /area/engine/atmos)
 "bWd" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/purple/visible,
-/turf/open/space,
-/area/space/nearstation)
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/orange/visible,
+/turf/open/floor/engine,
+/area/engine/engineering)
 "bWe" = (
 /obj/machinery/air_sensor/atmos/carbon_tank,
 /turf/open/floor/engine/co2,
@@ -44247,6 +44410,12 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/firedoor,
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/orange/hidden,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "bWG" = (
@@ -44270,19 +44439,24 @@
 "bWI" = (
 /obj/machinery/portable_atmospherics/scrubber,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/orange/visible/layer3,
+=======
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bWJ" = (
 /obj/machinery/portable_atmospherics/pump,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
-	dir = 5
-	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bWK" = (
-/obj/machinery/atmospherics/components/trinary/filter/atmos/o2{
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/effect/turf_decal/stripes/white/line{
 	dir = 4
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
@@ -44292,20 +44466,19 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
-"bWM" = (
-/obj/machinery/atmospherics/pipe/simple/green/visible{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/cyan/visible,
-/turf/open/floor/plasteel,
-/area/engine/atmos)
 "bWN" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 10
+=======
+/obj/machinery/atmospherics/pipe/simple/cyan/visible{
+	dir = 5
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bWO" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
@@ -44319,6 +44492,15 @@
 "bWQ" = (
 /obj/machinery/atmospherics/components/trinary/filter/atmos/co2{
 	dir = 1
+=======
+/obj/machinery/atmospherics/pipe/layer_manifold,
+/turf/closed/wall/r_wall,
+/area/maintenance/disposal/incinerator)
+"bWP" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/visible,
+/obj/machinery/atmospherics/pipe/manifold/cyan/visible{
+	dir = 8
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
@@ -44331,13 +44513,9 @@
 /turf/open/floor/plating,
 /area/engine/atmos)
 "bWS" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/green/visible{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/purple/visible,
-/turf/open/space,
-/area/space/nearstation)
+/turf/open/floor/plasteel,
+/area/engine/atmos)
 "bWT" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/carbon_input{
 	dir = 8
@@ -44521,6 +44699,12 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/orange/hidden,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "bXq" = (
@@ -44534,7 +44718,10 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/orange/visible/layer3,
+=======
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXs" = (
@@ -44543,14 +44730,25 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
+	dir = 5
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXt" = (
-/obj/machinery/atmospherics/pipe/simple/green/visible,
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/components/trinary/filter/atmos/n2{
+	dir = 4
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXu" = (
@@ -44561,14 +44759,29 @@
 /obj/machinery/computer/atmos_control/tank/nitrogen_tank{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 5
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/white/corner{
+	dir = 4
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXv" = (
-/obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXw" = (
@@ -44577,6 +44790,22 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+=======
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/binary/pump{
+	dir = 1;
+	name = "N2 To Airmix";
+	on = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXx" = (
@@ -44587,34 +44816,68 @@
 /obj/machinery/computer/atmos_control/tank/oxygen_tank{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXy" = (
 /obj/machinery/atmospherics/pipe/manifold/cyan/visible{
-	dir = 8
+=======
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
 	},
-/obj/effect/turf_decal/tile/yellow,
-/obj/effect/turf_decal/tile/yellow{
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXz" = (
-/obj/machinery/atmospherics/pipe/simple/green/visible,
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
-	dir = 4
-	},
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"bXz" = (
+/obj/machinery/atmospherics/pipe/simple/green/visible,
+/obj/machinery/atmospherics/pipe/simple/cyan/visible{
+=======
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/binary/pump{
+	dir = 1;
+	on = 1;
+	name = "O2 To Airmix"
+	},
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXA" = (
-/obj/machinery/atmospherics/components/trinary/mixer/airmix,
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
+<<<<<<< HEAD
 	dir = 8
+=======
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/trinary/filter/atmos/plasma{
+	dir = 1;
+	on = 1
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
@@ -44626,18 +44889,38 @@
 /obj/machinery/computer/atmos_control/tank/air_tank{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXC" = (
 /obj/machinery/light,
-/obj/machinery/atmospherics/components/binary/pump/on{
-	dir = 4;
-	name = "Air Outlet Pump"
-	},
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXD" = (
@@ -44651,6 +44934,18 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXE" = (
@@ -44665,6 +44960,19 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/purple/visible,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXF" = (
@@ -44678,6 +44986,12 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 9
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "bXG" = (
@@ -44872,6 +45186,12 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/orange/hidden,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "bYo" = (
@@ -44924,6 +45244,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/purple/visible,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel/dark,
 /area/maintenance/disposal/incinerator)
 "bYv" = (
@@ -45319,6 +45644,18 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/orange/hidden{
+	dir = 6
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "bYZ" = (
@@ -45332,6 +45669,9 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/orange/hidden{
+	dir = 4
+	},
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "bZa" = (
@@ -45342,6 +45682,9 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 9
 	},
 /turf/open/floor/plasteel,
@@ -45366,10 +45709,12 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "bZd" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/green/visible,
-/turf/open/space,
-/area/space/nearstation)
+/obj/machinery/atmospherics/pipe/simple/yellow/visible,
+/obj/machinery/atmospherics/pipe/simple/cyan/visible{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/engine/atmos)
 "bZe" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
@@ -45386,7 +45731,7 @@
 	pixel_y = 22
 	},
 /obj/structure/cable/yellow{
-	icon_state = "0-4"
+	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
@@ -45397,15 +45742,19 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plasteel/dark,
 /area/maintenance/disposal/incinerator)
 "bZg" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
+	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
@@ -45423,11 +45772,20 @@
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+=======
+/obj/machinery/atmospherics/pipe/simple/purple/visible,
+/turf/open/floor/plasteel/dark,
+/area/maintenance/disposal/incinerator)
+"bZh" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	},
 /turf/open/floor/plasteel/dark,
 /area/maintenance/disposal/incinerator)
 "bZi" = (
 /obj/machinery/meter,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/purple/visible,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -45437,6 +45795,10 @@
 "bZj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	},
 /turf/closed/wall/r_wall,
 /area/maintenance/disposal/incinerator)
@@ -45603,7 +45965,6 @@
 /obj/machinery/atmospherics/components/unary/outlet_injector/on{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/orange/visible/layer3,
 /turf/open/floor/plating/airless,
 /area/engine/atmos)
 "bZL" = (
@@ -45629,6 +45990,7 @@
 /turf/closed/wall/r_wall,
 /area/engine/atmos)
 "bZO" = (
+<<<<<<< HEAD
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -27
 	},
@@ -45638,20 +46000,34 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
+=======
+/obj/machinery/power/smes,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /obj/effect/turf_decal/tile/yellow{
-	dir = 8
+	dir = 4
 	},
+/obj/effect/turf_decal/tile/yellow,
+/obj/structure/cable/yellow,
 /turf/open/floor/plasteel/dark,
 /area/maintenance/disposal/incinerator)
 "bZP" = (
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "2-8"
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 4
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel/dark,
 /area/maintenance/disposal/incinerator)
 "bZR" = (
 /obj/machinery/atmospherics/pipe/simple/purple/visible{
-	dir = 5
+	dir = 4
 	},
 /turf/closed/wall/r_wall,
 /area/maintenance/disposal/incinerator)
@@ -45666,6 +46042,7 @@
 /obj/machinery/airlock_sensor/incinerator_atmos{
 	pixel_y = 22
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/engine,
 /area/maintenance/disposal/incinerator)
 "bZT" = (
@@ -45818,7 +46195,11 @@
 "caw" = (
 /obj/structure/table,
 /obj/item/rcl/pre_loaded,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+=======
+/obj/machinery/atmospherics/pipe/simple/orange/hidden,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cax" = (
@@ -45927,8 +46308,15 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/incinerator_atmos{
 	dir = 2
+=======
+/obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/incinerator_toxmix{
+	piping_layer = 1;
+	id = "atmos_incinerator_airlock_pump";
+	icon_state = "dpvent_map-1"
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	},
 /turf/open/floor/engine,
 /area/maintenance/disposal/incinerator)
@@ -46104,7 +46492,11 @@
 "cbn" = (
 /obj/structure/table,
 /obj/item/storage/belt/utility,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+=======
+/obj/machinery/atmospherics/pipe/simple/orange/hidden,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cbo" = (
@@ -46362,7 +46754,11 @@
 /obj/item/storage/toolbox/mechanical{
 	pixel_x = -2
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+=======
+/obj/machinery/atmospherics/pipe/simple/orange/hidden,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "cck" = (
@@ -46556,6 +46952,9 @@
 	},
 /obj/machinery/advanced_airlock_controller{
 	pixel_y = -26
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 5
 	},
 /turf/open/floor/plating,
 /area/maintenance/disposal/incinerator)
@@ -47157,11 +47556,17 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/orange/visible{
-	dir = 6
-	},
 /obj/structure/disposalpipe/segment,
+<<<<<<< HEAD
 /obj/machinery/meter,
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/engine,
 /area/engine/engineering)
 "cfk" = (
@@ -52960,12 +53365,37 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/shuttledock)
+<<<<<<< HEAD
 "cXz" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/door/firedoor/window,
 /turf/open/floor/plating,
 /area/science/shuttledock)
+=======
+"cVG" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/orange/visible{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/white/line,
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"cVH" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
+	dir = 4
+	},
+/turf/open/floor/plasteel/showroomfloor,
+/area/security/main)
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "cXW" = (
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -54197,6 +54627,7 @@
 	},
 /turf/open/floor/wood,
 /area/lawoffice)
+<<<<<<< HEAD
 "fuR" = (
 /obj/machinery/atmospherics/components/trinary/filter/atmos/n2{
 	dir = 4
@@ -54218,6 +54649,8 @@
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
+=======
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "fwi" = (
 /obj/machinery/camera/emp_proof{
 	c_tag = "Engine Containment Starboard Fore";
@@ -54275,8 +54708,13 @@
 /area/engine/engineering)
 "fBp" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/orange/visible/layer3,
 /turf/closed/wall/r_wall,
+=======
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /area/engine/atmos)
 "fBt" = (
 /obj/machinery/door/airlock/public/glass{
@@ -54315,6 +54753,7 @@
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
 "fBJ" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/orange/visible,
 /turf/open/space/basic,
 /area/space)
@@ -54325,12 +54764,42 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/cargo)
+=======
+/obj/machinery/light,
+/obj/effect/turf_decal/tile/yellow,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/binary/pump{
+	dir = 1;
+	name = "N2 To Pure"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"fDb" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
+/turf/open/floor/plasteel/dark,
+/area/chapel/main/monastery)
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "fDm" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8
 	},
 /obj/machinery/light/small,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
+=======
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/engine,
 /area/maintenance/disposal/incinerator)
 "fFo" = (
@@ -55672,10 +56141,49 @@
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/engine/engineering)
+<<<<<<< HEAD
 "hUq" = (
 /obj/structure/chair/stool,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plating,
+=======
+"hTs" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 9
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-8"
+	},
+/turf/open/floor/plating/airless,
+/area/space/nearstation)
+"hTv" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/white/corner,
+/obj/effect/turf_decal/stripes/white/corner{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"hUf" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/turf/open/floor/plating{
+	icon_state = "platingdmg3"
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /area/maintenance/department/engine)
 "hUt" = (
 /obj/structure/lattice,
@@ -55708,6 +56216,9 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/yellow,
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/maintenance/disposal/incinerator)
 "hVx" = (
@@ -56045,10 +56556,18 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "iBq" = (
-/obj/machinery/atmospherics/pipe/layer_manifold,
-/obj/structure/lattice,
-/turf/open/space/basic,
-/area/space)
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/white/line,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/engine/atmos)
 "iBJ" = (
 /obj/machinery/camera{
 	c_tag = "Telecomms External Fore";
@@ -56736,8 +57255,22 @@
 	},
 /turf/open/floor/carpet,
 /area/library/lounge)
+<<<<<<< HEAD
 "jGo" = (
 /obj/effect/turf_decal/stripes/line{
+=======
+"jHn" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/yellow/visible{
+	dir = 9
+	},
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"jIf" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -57115,6 +57648,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/orange/visible,
 /turf/open/floor/plating,
 /area/engine/engineering)
 "kvj" = (
@@ -57524,7 +58058,11 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
+=======
+/obj/machinery/atmospherics/pipe/layer_manifold{
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -57667,16 +58205,21 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/aft)
 "ltl" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/orange/visible{
+/obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/space,
 /area/space/nearstation)
 "ltu" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
 /turf/closed/wall/r_wall,
 /area/maintenance/disposal/incinerator)
+=======
+/obj/machinery/atmospherics/pipe/simple/purple/visible,
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "ltK" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -57936,7 +58479,14 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -58458,14 +59008,57 @@
 /turf/closed/wall/r_wall,
 /area/engine/engineering)
 "ndP" = (
-/obj/machinery/atmospherics/pipe/simple/orange/visible{
-	dir = 9
+/obj/effect/turf_decal/tile/yellow,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/space/basic,
 /area/space)
 "nev" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
+=======
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/binary/pump{
+	dir = 1;
+	name = "O2 To Pure"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"ndV" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/bar)
+"neh" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
+	dir = 4
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/science)
@@ -58939,10 +59532,11 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "nUq" = (
-/obj/machinery/atmospherics/pipe/layer_manifold/visible{
-	dir = 4
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/manifold/cyan/visible{
+	dir = 8
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plating,
 /area/engine/atmos)
 "nVg" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -59484,7 +60078,22 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/hallway/secondary/exit/departure_lounge)
 "oMk" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+=======
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
+	dir = 8
+	},
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 5
+	},
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel/dark,
 /area/maintenance/disposal/incinerator)
 "oNo" = (
@@ -59648,7 +60257,6 @@
 "oXQ" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/machinery/atmospherics/pipe/simple/orange/visible/layer3,
 /turf/open/space,
 /area/space/nearstation)
 "oXU" = (
@@ -60409,12 +61017,15 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
 	},
+=======
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/engine,
 /area/engine/engineering)
 "qsx" = (
@@ -60719,9 +61330,11 @@
 /turf/open/floor/plating,
 /area/maintenance/department/engine)
 "qXu" = (
-/obj/machinery/atmospherics/pipe/simple/purple/visible,
-/turf/closed/wall/r_wall,
-/area/maintenance/disposal/incinerator)
+/obj/machinery/atmospherics/pipe/simple/orange/visible{
+	dir = 9
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "qXH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -62107,10 +62720,13 @@
 /turf/open/floor/plasteel/white,
 /area/science/shuttledock)
 "tJe" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 4
 	},
 /obj/machinery/atmospherics/components/binary/dp_vent_pump,
+=======
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /obj/machinery/advanced_airlock_controller{
 	pixel_y = 26
 	},
@@ -62158,10 +62774,11 @@
 /turf/open/floor/plasteel/white,
 /area/science/shuttledock)
 "tUf" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/orange/visible/layer3,
-/turf/open/space,
-/area/space/nearstation)
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 10
+	},
+/turf/closed/wall/r_wall,
+/area/maintenance/disposal/incinerator)
 "tWc" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -62381,8 +62998,8 @@
 /turf/closed/wall,
 /area/security/execution/transfer)
 "urG" = (
-/obj/machinery/atmospherics/pipe/simple/orange/visible/layer3{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/orange/visible{
+	dir = 6
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
@@ -62596,17 +63213,28 @@
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "uPu" = (
+<<<<<<< HEAD
 /obj/machinery/power/smes,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+=======
+/obj/effect/turf_decal/tile/yellow,
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
 	},
-/obj/effect/turf_decal/tile/yellow,
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
+/obj/machinery/atmospherics/pipe/simple/cyan/visible,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/maintenance/disposal/incinerator)
 "uPQ" = (
@@ -62620,6 +63248,8 @@
 /obj/machinery/atmospherics/pipe/simple/orange/visible/layer3{
 	dir = 4
 	},
+=======
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "uRk" = (
@@ -64282,6 +64912,18 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/freezer,
 /area/storage/emergency/port)
+<<<<<<< HEAD
+=======
+"xQF" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/turf/open/floor/engine,
+/area/science/storage)
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "xSX" = (
 /obj/machinery/airalarm/unlocked{
 	pixel_y = 23
@@ -64378,6 +65020,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/aft)
+<<<<<<< HEAD
+=======
+"ydI" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 "ydZ" = (
 /obj/machinery/hydroponics/constructable,
 /obj/machinery/light{
@@ -97278,9 +97932,15 @@ cci
 cam
 ogX
 hKQ
+<<<<<<< HEAD
 fwi
 tno
 dAq
+=======
+lNk
+otV
+ulY
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 ulY
 jmB
 ulY
@@ -97528,6 +98188,7 @@ bWD
 bWD
 bTE
 bYY
+<<<<<<< HEAD
 bZD
 caw
 cbn
@@ -97539,6 +98200,19 @@ cff
 otV
 nOy
 nIX
+=======
+adu
+caw
+cbn
+ccj
+adu
+bWa
+ktM
+bWd
+qXu
+ulY
+ulY
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 xjo
 nIX
 nIX
@@ -98820,7 +99494,11 @@ bXk
 bXk
 bXk
 bXk
+<<<<<<< HEAD
 ltl
+=======
+abI
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 abI
 aht
 nmx
@@ -99071,13 +99749,13 @@ bXr
 fBp
 oXQ
 bZK
-tUf
-tUf
-tUf
-tUf
-iBq
-fBJ
-ndP
+abI
+abI
+abI
+abI
+oex
+aaa
+aaa
 adR
 aaa
 nmx
@@ -99578,12 +100256,16 @@ bSd
 bLW
 bTJ
 urG
+<<<<<<< HEAD
 bUs
+=======
+cVG
 bMf
-fuR
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
+bMf
 bXt
 bYp
-bZd
+adh
 bZL
 caz
 cbs
@@ -99834,10 +100516,17 @@ bJN
 bJN
 bJN
 bTK
+<<<<<<< HEAD
 bUr
 bVg
 bVW
 bWL
+=======
+acV
+hTv
+bWK
+bWK
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 bXu
 bLW
 abI
@@ -100091,12 +100780,16 @@ bRv
 bSe
 bPQ
 bTL
+<<<<<<< HEAD
 uRj
+=======
+acV
+iBq
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 bMf
 bVX
-bWM
 bXv
-bWc
+nUq
 bZe
 bZL
 caB
@@ -100348,12 +101041,21 @@ bQI
 bQI
 bQI
 bTM
+<<<<<<< HEAD
 uRj
 bMf
 bOk
 bWL
 bXw
 bLW
+=======
+acV
+rkJ
+bVh
+bZd
+fBJ
+adj
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 abI
 bJP
 bJP
@@ -100602,16 +101304,27 @@ bOU
 bPS
 bPS
 bRw
+<<<<<<< HEAD
 bMf
 bMf
 bTN
 bUt
 bMf
+=======
+bRw
+bRw
+bRw
+bRw
+bIJ
+bTN
+bUt
+bWN
+bKX
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 bOk
-bWK
-bXt
+bNk
 bYp
-bZd
+adh
 bZL
 caC
 cbu
@@ -100862,10 +101575,17 @@ bRx
 bQJ
 bPQ
 bTO
+<<<<<<< HEAD
 urG
 bMf
 bOk
 bWL
+=======
+acV
+bOk
+bKX
+bOk
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 bXx
 bLW
 abI
@@ -101119,12 +101839,21 @@ bPQ
 bPQ
 bPQ
 bTP
+<<<<<<< HEAD
 urG
 bVh
 bVY
 bWM
 bXy
 bWc
+=======
+acV
+bOk
+bKX
+bVY
+bXz
+nUq
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 bZe
 bZL
 caE
@@ -101376,12 +102105,21 @@ bQK
 bQK
 bPQ
 bTQ
+<<<<<<< HEAD
 urG
 bKX
 bOk
 bWN
 bXz
 bYq
+=======
+acV
+bOk
+bVi
+bZd
+ndP
+adj
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 abI
 bJP
 bJP
@@ -101632,6 +102370,7 @@ bQL
 bRy
 bSf
 bSR
+<<<<<<< HEAD
 bTM
 nUq
 bKX
@@ -101639,6 +102378,15 @@ bVZ
 bWO
 bXA
 bQO
+=======
+acN
+acV
+bOk
+bKX
+bVZ
+uPu
+bWc
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 bZe
 bZM
 caF
@@ -101891,8 +102639,12 @@ bMf
 bSS
 bTR
 gbu
+bOk
 bKX
+<<<<<<< HEAD
 bWa
+=======
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 bMf
 bXB
 bNm
@@ -102148,11 +102900,16 @@ bOY
 bST
 bTS
 bUu
-bVi
+bVZ
 bMe
 bWP
+<<<<<<< HEAD
 bXy
 bQO
+=======
+uPu
+adG
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 bZe
 bZN
 caH
@@ -102405,9 +103162,13 @@ bQM
 bSU
 bTT
 bUv
+bMf
+<<<<<<< HEAD
+bMf
+=======
 bKX
-bMf
-bMf
+ads
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 bXC
 bYs
 bYw
@@ -102663,8 +103424,13 @@ bPV
 bPV
 bUw
 bVj
+<<<<<<< HEAD
 bMg
 bMg
+=======
+adr
+jHn
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 bXD
 bYt
 bZf
@@ -102909,19 +103675,19 @@ bIH
 bHw
 cqG
 bMf
-bNk
-bOq
-bPd
-bPW
-bQN
-bPW
-bPd
-bPW
-bTU
+bWL
+bMf
+bKX
+bMf
+bMf
+bMf
+bKX
+bMf
+bMf
 bUx
-bPd
-bPW
-bWQ
+ltl
+bWS
+bWS
 bXE
 bYu
 bZg
@@ -103158,10 +103924,17 @@ byV
 bAA
 bBF
 bCR
+<<<<<<< HEAD
 bDO
 bCR
 bCR
 bCR
+=======
+xQF
+bTU
+bTU
+bHv
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 bII
 bHw
 bKY
@@ -103170,15 +103943,15 @@ bNl
 bOi
 bPe
 bPX
-bNl
+bOq
 bRB
 bSh
 bSV
-bNl
+bXA
 bUy
 bVk
 bWb
-bNl
+bQN
 bXF
 bYv
 bZh
@@ -103418,12 +104191,13 @@ bCR
 bDP
 bFd
 bGi
-bHv
-bIJ
+bHw
+bHw
 bHw
 bKZ
 bLW
 bNm
+<<<<<<< HEAD
 bOr
 bPf
 bPY
@@ -103435,10 +104209,23 @@ bQO
 bUz
 bVl
 bWc
+=======
+bLW
+bKZ
+bLW
+bWR
+bLW
+bKZ
+bLW
+bWR
+bLW
+bKZ
+bLW
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 bWR
 bXG
 bYw
-uPu
+adE
 hUX
 cYq
 mOH
@@ -103676,11 +104463,7 @@ bDQ
 bCS
 bAA
 bHw
-bHw
-bHw
-bLa
 abI
-bNn
 abI
 bLa
 abI
@@ -103689,12 +104472,16 @@ abI
 bLa
 abI
 bNn
-bUA
-bVm
-bWd
-bWS
-bWd
-qXu
+abI
+bLa
+abI
+bNn
+abI
+bLa
+abI
+bNn
+abI
+aht
 bZi
 bZR
 caL
@@ -103951,12 +104738,21 @@ bLb
 bMi
 bLb
 bJP
+<<<<<<< HEAD
 oex
 bZj
 bZS
 caM
 fDm
 ltu
+=======
+aht
+tUf
+bZS
+caM
+fDm
+bWO
+>>>>>>> ed15d75bf2... PubbyStation Atmosia changes [First PR] (#6400)
 cdl
 paI
 pIh
@@ -104190,7 +104986,7 @@ bDS
 bwb
 bGk
 buz
-abI
+mZE
 bJP
 bLc
 bMj
@@ -104704,7 +105500,7 @@ bDU
 bCV
 bAF
 bHy
-aaa
+abI
 bJP
 bLe
 bMk
@@ -104722,7 +105518,7 @@ bVo
 bWg
 bVo
 bJP
-oex
+aht
 bYw
 bYw
 caP
