@@ -20,6 +20,11 @@
 								)
 	production_animation = "circuit_imprinter_ani"
 	allowed_buildtypes = IMPRINTER
+<<<<<<< HEAD
+=======
+	consoleless_interface = TRUE
+	requires_console = FALSE
+>>>>>>> 08f4aed11c... Add `requires_console = FALSE` to protolathes and circuit imprinters (#5700)
 
 /obj/machinery/rnd/production/circuit_imprinter/disconnect_console()
 	linked_console.linked_imprinter = null
