@@ -128,8 +128,97 @@
 	..(gibbed)
 	regenerate_icons()
 
+<<<<<<< HEAD
 /mob/living/simple_animal/pet/dog/corgi/show_inv(mob/user)
 	if(!user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
+=======
+GLOBAL_LIST_INIT(strippable_corgi_items, create_strippable_list(list(
+	/datum/strippable_item/corgi_head,
+	/datum/strippable_item/corgi_back,
+	/datum/strippable_item/corgi_collar
+)))
+
+/datum/strippable_item/corgi_head
+	key = STRIPPABLE_ITEM_HEAD
+
+/datum/strippable_item/corgi_head/get_item(atom/source)
+	var/mob/living/simple_animal/pet/dog/corgi/corgi_source = source
+	if(!istype(corgi_source))
+		return
+	return corgi_source.inventory_head
+
+
+/datum/strippable_item/corgi_head/finish_equip(atom/source, obj/item/equipping, mob/user)
+	var/mob/living/simple_animal/pet/dog/corgi/corgi_source = source
+	if(!istype(corgi_source))
+		return
+
+	corgi_source.place_on_head(equipping, user)
+
+/datum/strippable_item/corgi_head/finish_unequip(atom/source, mob/user)
+	var/mob/living/simple_animal/pet/dog/corgi/corgi_source = source
+	if(!istype(corgi_source))
+		return
+
+	user.put_in_hands(corgi_source.inventory_head)
+	corgi_source.inventory_head = null
+	corgi_source.update_corgi_fluff()
+	corgi_source.regenerate_icons()
+
+/datum/strippable_item/corgi_back
+	key = STRIPPABLE_ITEM_BACK
+
+/datum/strippable_item/corgi_back/get_item(atom/source)
+	var/mob/living/simple_animal/pet/dog/corgi/corgi_source = source
+	if(!istype(corgi_source))
+		return
+
+	return corgi_source.inventory_back
+
+/datum/strippable_item/corgi_back/try_equip(atom/source, obj/item/equipping, mob/user)
+	. = ..()
+	if(!.)
+		return FALSE
+
+	if(!ispath(equipping.dog_fashion, /datum/dog_fashion/back))
+		to_chat(user, "<span class='warning'>You set [equipping] on [source]'s back, but it falls off!</span>")
+		equipping.forceMove(source.drop_location())
+		if(prob(25))
+			step_rand(equipping)
+		var/mob/M = source
+		M.emote("spin")
+
+		return FALSE
+
+	return TRUE
+
+/datum/strippable_item/corgi_back/finish_equip(atom/source, obj/item/equipping, mob/user)
+	var/mob/living/simple_animal/pet/dog/corgi/corgi_source = source
+	if(!istype(corgi_source))
+		return
+
+	equipping.forceMove(corgi_source)
+	corgi_source.inventory_back = equipping
+	corgi_source.update_corgi_fluff()
+	corgi_source.regenerate_icons()
+
+/datum/strippable_item/corgi_back/finish_unequip(atom/source, mob/user)
+	var/mob/living/simple_animal/pet/dog/corgi/corgi_source = source
+	if(!istype(corgi_source))
+		return
+
+	user.put_in_hands(corgi_source.inventory_back)
+	corgi_source.inventory_back = null
+	corgi_source.update_corgi_fluff()
+	corgi_source.regenerate_icons()
+
+/datum/strippable_item/corgi_collar
+	key = STRIPPABLE_ITEM_CORGI_COLLAR
+
+/datum/strippable_item/corgi_collar/get_item(atom/source)
+	var/mob/living/simple_animal/pet/dog/corgi/corgi_source = source
+	if(!istype(corgi_source))
+>>>>>>> b1575e5ea0... Remove erroneous proc argument (#6280)
 		return
 	user.set_machine(src)
 
