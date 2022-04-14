@@ -177,10 +177,6 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 		/obj/item/documents,
 		/obj/item/nuke_core_container
 	)
-	// These items will NOT be preserved
-	var/static/list/do_not_preserve_items = list (
-		/obj/item/mmi/posibrain
-	)
 
 /obj/machinery/cryopod/Initialize()
 	..()
@@ -257,6 +253,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 
 			despawn_occupant()
 
+<<<<<<< HEAD
 /obj/machinery/cryopod/proc/handle_objectives()
 	var/mob/living/mob_occupant = occupant
 	//Update any existing objectives involving this mob.
@@ -297,6 +294,8 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 					to_chat(own.current, "<BR><span class='userdanger'>You get the feeling your target is no longer within reach. Time for Plan [pick("A","B","C","D","X","Y","Z")]. Objectives updated!</span>")
 					own.announce_objectives()
 
+=======
+>>>>>>> e09fbc36e9... Cryopods use signals to handle objectives and other objective improvements (#5774)
 // This function can not be undone; do not call this unless you are sure
 /obj/machinery/cryopod/proc/despawn_occupant()
 	var/mob/living/mob_occupant = occupant
@@ -305,9 +304,6 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 		//Handle job slot/tater cleanup.
 		var/job = mob_occupant.mind.assigned_role
 		SSjob.FreeRole(job)
-		if(LAZYLEN(mob_occupant.mind.objectives))
-			mob_occupant.mind.objectives.Cut()
-			mob_occupant.mind.special_role = null
 
 	// Delete them from datacore.
 
@@ -370,7 +366,8 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 			mob_occupant.ghostize(FALSE,SENTIENCE_ERASE) // Players despawned too early may not re-enter the game
 		else
 			mob_occupant.ghostize(TRUE,SENTIENCE_ERASE)
-	handle_objectives()
+	if(mob_occupant.mind)
+		SEND_SIGNAL(mob_occupant.mind, COMSIG_MIND_CRYOED)
 	QDEL_NULL(occupant)
 	open_machine()
 	name = initial(name)
