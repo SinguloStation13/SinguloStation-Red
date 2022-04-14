@@ -85,8 +85,12 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/enchanted/arcane_barrage
 
 /obj/item/gun/ballistic/rifle/boltaction/enchanted/dropped()
+<<<<<<< HEAD
 	. = ..()
+=======
+>>>>>>> 97c688c1aa... a (#6413)
 	guns_left = 0
+	..()
 
 /obj/item/gun/ballistic/rifle/boltaction/enchanted/proc/discard_gun(mob/living/user)
 	user.throw_item(pick(oview(7,get_turf(user))))

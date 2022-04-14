@@ -614,7 +614,11 @@ Congratulations! You are now trained for invasive xenobiology research!"}
 	var/datum/effect_system/spark_spread/S = new
 	S.set_up(4,0,user.loc)
 	S.start()
+<<<<<<< HEAD
 	. = ..()
+=======
+	..()
+>>>>>>> 97c688c1aa... a (#6413)
 
 /obj/item/abductor/baton/examine(mob/user)
 	. = ..()
