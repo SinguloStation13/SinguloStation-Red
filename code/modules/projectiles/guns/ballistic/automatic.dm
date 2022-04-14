@@ -73,7 +73,11 @@
 	mag_display = TRUE
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
+<<<<<<< HEAD
 	block_upgrade_walk = 1
+=======
+	full_auto = TRUE
+>>>>>>> 6fddbbf8ea... Moves the full auto var to the guns themselves (#6084)
 
 /obj/item/gun/ballistic/automatic/c20r/unrestricted
 	pin = /obj/item/firing_pin
@@ -99,6 +103,7 @@
 	fire_rate = 3
 	block_upgrade_walk = 1
 	w_class = WEIGHT_CLASS_BULKY
+	full_auto = TRUE
 
 /obj/item/gun/ballistic/automatic/wt550/rubber_loaded
 	mag_type = /obj/item/ammo_box/magazine/wt550m9/rubber
@@ -237,7 +242,11 @@
 	tac_reloads = FALSE
 	fire_sound = 'sound/weapons/rifleshot.ogg'
 	rack_sound = 'sound/weapons/chunkyrack.ogg'
+<<<<<<< HEAD
 	block_upgrade_walk = 1
+=======
+	full_auto = TRUE
+>>>>>>> 6fddbbf8ea... Moves the full auto var to the guns themselves (#6084)
 
 /obj/item/gun/ballistic/automatic/l6_saw/unrestricted
 	pin = /obj/item/firing_pin
