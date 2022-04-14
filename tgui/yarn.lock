@@ -6037,12 +6037,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "marked@npm:2.0.3"
+"marked@npm:^4.0.10":
+  version: 4.0.10
+  resolution: "marked@npm:4.0.10"
   bin:
+<<<<<<< HEAD
     marked: bin/marked
   checksum: 18940065203f4eacf84538d57478cdab170ca024c01e8cb992871f48fedb8a534bb69a908edd5b2c4d0468fb751ed4da52996cda5a45f063e71e433bbb7f04f7
+=======
+    marked: bin/marked.js
+  checksum: 46cd8ef1a7cfcf5e461727c7f3e16dd4244369ef58f60485e75d3f5df9d53a8249b9609e96a336521eaa5c88d9531cbd296509a148718056e9375e69609f4442
+>>>>>>> ce10ea197d... Bump marked from 2.0.3 to 4.0.10 in /tgui (#6186)
   languageName: node
   linkType: hard
 
@@ -8377,7 +8382,7 @@ resolve@^2.0.0-next.3:
     dompurify: ^2.2.7
     inferno: ^7.4.8
     inferno-vnode-flags: ^7.4.8
-    marked: ^2.0.3
+    marked: ^4.0.10
     tgui-dev-server: "workspace:*"
     tgui-polyfill: "workspace:*"
   languageName: unknown
