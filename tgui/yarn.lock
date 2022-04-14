@@ -2157,7 +2157,11 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "ajv@npm:^6.10.0, ajv@npm:^6.12.3, ajv@npm:^6.12.4, ajv@npm:^6.12.5":
+=======
+"ajv@npm:^6.12.3":
+>>>>>>> bc0b8b925d... Sets ajv's resolution to use the minimally safe version (#6379)
   version: 6.12.6
   resolution: "ajv@npm:6.12.6"
   dependencies:
@@ -2169,6 +2173,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "ajv@npm:^7.0.2":
   version: 7.1.1
   resolution: "ajv@npm:7.1.1"
@@ -2181,6 +2186,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> bc0b8b925d... Sets ajv's resolution to use the minimally safe version (#6379)
 "ansi-colors@npm:^4.1.1":
   version: 4.1.1
   resolution: "ansi-colors@npm:4.1.1"
@@ -5761,6 +5768,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "json-schema-traverse@npm:^1.0.0":
   version: 1.0.0
   resolution: "json-schema-traverse@npm:1.0.0"
@@ -5775,6 +5783,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> bc0b8b925d... Sets ajv's resolution to use the minimally safe version (#6379)
 "json-stable-stringify-without-jsonify@npm:^1.0.1":
   version: 1.0.1
   resolution: "json-stable-stringify-without-jsonify@npm:1.0.1"
@@ -7272,6 +7282,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "require-from-string@npm:^2.0.2":
   version: 2.0.2
   resolution: "require-from-string@npm:2.0.2"
@@ -7286,6 +7297,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> bc0b8b925d... Sets ajv's resolution to use the minimally safe version (#6379)
 "resolve-cwd@npm:^3.0.0":
   version: 3.0.0
   resolution: "resolve-cwd@npm:3.0.0"
