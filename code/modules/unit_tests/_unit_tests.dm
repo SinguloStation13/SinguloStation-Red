@@ -35,6 +35,7 @@
 /// A trait source when adding traits through unit tests
 #define TRAIT_SOURCE_UNIT_TESTS "unit_tests"
 
+#include "achievement_validation.dm"
 #include "anchored_mobs.dm"
 #include "component_tests.dm"
 #include "dynamic_ruleset_sanity.dm"
