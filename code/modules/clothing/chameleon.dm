@@ -219,8 +219,12 @@
 	if(isitem(target))
 		var/obj/item/I = target
 		I.item_state = initial(picked_item.item_state)
+<<<<<<< HEAD
 		I.item_color = initial(picked_item.item_color)
 		if(isclothing(I) && isclothing(initial(picked_item)))
+=======
+		if(isclothing(I) && ispath(picked_item, /obj/item/clothing))
+>>>>>>> 69c00c497e... Remove a pointless `initial()` call (#6324)
 			var/obj/item/clothing/CL = I
 			var/obj/item/clothing/PCL = picked_item
 			CL.flags_cover = initial(PCL.flags_cover)
