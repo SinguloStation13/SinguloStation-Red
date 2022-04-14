@@ -30,6 +30,10 @@
 	desc = "These tactical gloves are fireproof and shock resistant."
 	icon_state = "cgloves"
 	item_state = "combatgloves"
+<<<<<<< HEAD
+=======
+	worn_icon_state = "combatgloves"
+>>>>>>> 4536e1be22... Fixes combat gloves worn icon (#6329)
 	siemens_coefficient = 0
 	permeability_coefficient = 0.05
 	strip_delay = 80
