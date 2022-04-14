@@ -18,7 +18,12 @@
 
 	area_type = /area
 	protected_areas = list(/area/maintenance, /area/ai_monitored/turret_protected/ai_upload, /area/ai_monitored/turret_protected/ai_upload_foyer,
+<<<<<<< HEAD
 	/area/ai_monitored/turret_protected/ai, /area/storage/emergency/starboard, /area/storage/emergency/port, /area/shuttle)
+=======
+	/area/ai_monitored/turret_protected/ai, /area/storage/emergency/starboard, /area/storage/emergency/port, /area/shuttle, /area/security/prison/asteroid/shielded,
+	/area/security/prison/asteroid/service, /area/space/nearstation)
+>>>>>>> d4735aba0f... Updates Kilo Station and re-adds it to rotation (#5755)
 	target_trait = ZTRAIT_STATION
 
 	immunity_type = "rad"
