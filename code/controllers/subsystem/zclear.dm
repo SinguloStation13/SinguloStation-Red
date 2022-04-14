@@ -91,6 +91,12 @@ SUBSYSTEM_DEF(zclear)
 		living_levels["[docking_level]"] = TRUE
 
 	for(var/datum/space_level/level as() in autowipe)
+<<<<<<< HEAD
+=======
+		if(!level)
+			autowipe -= level
+
+>>>>>>> 69e03d0f2b... Update zclear.dm (#6636)
 		//Check if free
 		if(active_levels["[level.z_value]"])
 			if(!living_levels["[level.z_value]"] && mob_levels["[level.z_value]"] && !announced_zombie_levels["[level.z_value]"])
@@ -293,6 +299,10 @@ SUBSYSTEM_DEF(zclear)
 	for(var/datum/space_level/D as() in SSmapping.z_list)
 		if (D.linkage == CROSSLINKED)
 			possible_transtitons += D.z_value
+
+	if(!possible_transtitons)
+		possible_transtitons = list(SSmapping.empty_space)
+
 	var/_z = pick(possible_transtitons)
 
 	//now select coordinates for a border turf
