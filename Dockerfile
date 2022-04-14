@@ -1,5 +1,9 @@
 # syntax=docker/dockerfile:1
+<<<<<<< HEAD
 FROM beestation/byond:514.1568 as base
+=======
+FROM beestation/byond:514.1583 as base
+>>>>>>> f1ae734ff2... Bumps byond to 1583 (#6556)
 
 # Install the tools needed to compile our rust dependencies
 FROM base as rust-build
