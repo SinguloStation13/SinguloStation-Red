@@ -145,7 +145,7 @@
 	listeningTo = user
 
 /obj/item/storage/bag/ore/dropped()
-	. = ..()
+	..()
 	if(listeningTo)
 		UnregisterSignal(listeningTo, COMSIG_MOVABLE_MOVED)
 		listeningTo = null
@@ -405,6 +405,14 @@
 	STR.insert_preposition = "in"
 	STR.can_hold = typecacheof(list(/obj/item/slime_extract, /obj/item/reagent_containers/syringe, /obj/item/reagent_containers/dropper, /obj/item/reagent_containers/glass/beaker, /obj/item/reagent_containers/glass/bottle, /obj/item/reagent_containers/blood, /obj/item/reagent_containers/hypospray/medipen, /obj/item/reagent_containers/food/snacks/deadmouse, /obj/item/reagent_containers/food/snacks/monkeycube, /obj/item/organ, /obj/item/bodypart))
 
+<<<<<<< HEAD
+=======
+/obj/item/storage/bag/bio/pre_attack(atom/A, mob/living/user, params)
+	if(istype(A, /obj/item/slimecross/reproductive))
+		return TRUE
+	return ..()
+
+>>>>>>> 1738b33401... Fixes some pickup behaviours (#6036)
 /obj/item/storage/bag/construction
 	name = "construction bag"
 	icon = 'icons/obj/tools.dmi'

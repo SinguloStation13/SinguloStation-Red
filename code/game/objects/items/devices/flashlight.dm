@@ -477,7 +477,7 @@
 		cut_overlays()
 
 /obj/item/flashlight/glowstick/pickup(mob/user)
-	. = ..()
+	..()
 	if(burn_pickup && on)
 		burn_pickup = FALSE
 		START_PROCESSING(SSobj, src)
