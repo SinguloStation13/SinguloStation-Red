@@ -258,6 +258,35 @@ There are several things that need to be remembered:
 		overlays_standing[EARS_LAYER] = ears_overlay
 	apply_overlay(EARS_LAYER)
 
+<<<<<<< HEAD
+=======
+/mob/living/carbon/human/update_inv_neck()
+	remove_overlay(NECK_LAYER)
+
+	if(client && hud_used)
+		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_NECK) + 1]
+		inv.update_icon()
+
+	if(wear_neck)
+		wear_neck.screen_loc = ui_neck
+		if(client && hud_used && hud_used.hud_shown)
+			if(hud_used.inventory_shown)			//if the inventory is open
+				client.screen += wear_neck					//add it to the client's screen
+		update_observer_view(wear_neck,1)
+		if(!(check_obscured_slots() & ITEM_SLOT_NECK))
+			var/icon_file = 'icons/mob/neck.dmi'
+			if(istype(wear_neck, /obj/item))
+				var/obj/item/N = wear_neck
+				if(N.sprite_sheets & dna?.species.bodyflag)
+					icon_file = dna.species.get_custom_icons("neck")
+			overlays_standing[NECK_LAYER] = wear_neck.build_worn_icon(state = wear_neck.icon_state, default_layer = NECK_LAYER, default_icon_file = icon_file)
+			var/mutable_appearance/neck_overlay = overlays_standing[NECK_LAYER]
+			if(OFFSET_NECK in dna.species.offset_features)
+				neck_overlay.pixel_x += dna.species.offset_features[OFFSET_NECK][1]
+				neck_overlay.pixel_y += dna.species.offset_features[OFFSET_NECK][2]
+			overlays_standing[NECK_LAYER] = neck_overlay
+	apply_overlay(NECK_LAYER)
+>>>>>>> bf2a281fc8... fix obscured slots (#6313)
 
 /mob/living/carbon/human/update_inv_shoes()
 	remove_overlay(SHOES_LAYER)
