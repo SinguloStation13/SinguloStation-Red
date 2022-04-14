@@ -14,7 +14,11 @@
 	var/obj/pipe_type = /obj/structure/disposalpipe/segment
 	var/pipename
 
+<<<<<<< HEAD
 /obj/structure/disposalconstruct/Initialize(loc, _pipe_type, _dir = SOUTH, flip = FALSE, obj/make_from)
+=======
+/obj/structure/disposalconstruct/Initialize(mapload, _pipe_type, _dir = SOUTH, flip = FALSE, obj/make_from)
+>>>>>>> cdb8bc8c29... fixes disposal pipe icon (#6484)
 	. = ..()
 
 	if(make_from)
