@@ -35,6 +35,7 @@
 
 	var/calculated_cogs = 0
 	var/cogs = 0
+	var/obj/item/radio/borg/eminence/internal_radio
 
 	var/mob/living/selected_mob = null
 
@@ -86,6 +87,7 @@
 	AddSpell(trigger_event)
 	//Wooooo, you are a ghost
 	AddComponent(/datum/component/tracking_beacon, "ghost", null, null, TRUE, "#9e4d91", TRUE, TRUE)
+	internal_radio = new(src)
 	cog_change()
 
 /mob/living/simple_animal/eminence/Destroy()
@@ -127,6 +129,14 @@
 	E.preRunEvent()
 	E.runEvent()
 	SSevents.reschedule()
+
+/mob/living/simple_animal/eminence/get_stat_tab_status()
+	var/list/tab_data = ..()
+	tab_data["Cogs Available"] = GENERATE_STAT_TEXT("[cogs] Cogs")
+	return tab_data
+
+/mob/living/simple_animal/eminence/update_health_hud()
+	return
 
 //Eminence abilities
 
@@ -290,8 +300,7 @@
 		"False Alarm",
 		"Grid Check",
 		"Mass Hallucination",
-		"Processor Overload",
-		"Radiation Storm"
+		"Processor Overload"
 	)
 	if(!can_cast(user))
 		return
@@ -309,3 +318,12 @@
 			consume_cogs(user)
 			return
 	revert_cast(user)
+
+//Internal Radio
+/obj/item/radio/borg/eminence
+	name = "eminence internal listener"
+	desc = "if you can see this, call a coder"
+	canhear_range = 0
+	radio_silent = TRUE
+	prison_radio = TRUE
+	broadcasting = TRUE
