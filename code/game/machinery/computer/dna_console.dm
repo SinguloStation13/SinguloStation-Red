@@ -114,6 +114,9 @@
 	/// State of tgui view, i.e. which tab is currently active, or which genome we're currently looking at.
 	var/list/list/tgui_view_state = list()
 
+	/// List of all valid genecodes that can be sent via topic/tgui, used for sanitization.
+	var/static/list/genecodes = list("A", "T", "C", "G", "J", "X", "Y")
+
 /obj/machinery/computer/scan_consolenew/process()
 	. = ..()
 
@@ -494,6 +497,12 @@
 			var/sequence = GET_GENE_STRING(path, scanner_occupant.dna)
 
 			var/newgene = params["gene"]
+<<<<<<< HEAD
+=======
+			if(length(newgene) > 1 || !(newgene in genecodes))
+				log_href_exploit(usr)
+				return
+>>>>>>> 89ac5e0ec6... Properly sanitizes gene codes (#6487)
 			var/genepos = text2num(params["pos"])
 
 			// If the new gene is J, this means we're dealing with a JOKER
