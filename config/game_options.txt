@@ -479,8 +479,12 @@ ROUNDSTART_RACES human
 ROUNDSTART_RACES lizard
 ROUNDSTART_RACES fly
 ROUNDSTART_RACES moth
+<<<<<<< HEAD
 ROUNDSTART_RACES felinid
 ROUNDSTART_RACES squid
+=======
+#ROUNDSTART_RACES fly
+>>>>>>> 9ddaaacf34... Removes Squidpeople from the codebase (#5734)
 
 
 ## Races that are better than humans in some ways, but worse in others
