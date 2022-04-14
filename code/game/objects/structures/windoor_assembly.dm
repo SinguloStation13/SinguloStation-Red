@@ -29,8 +29,13 @@
 	var/state = "01"	//How far the door assembly has progressed
 	CanAtmosPass = ATMOS_PASS_PROC
 
+<<<<<<< HEAD
 /obj/structure/windoor_assembly/New(loc, set_dir)
 	..()
+=======
+/obj/structure/windoor_assembly/Initialize(mapload, loc, set_dir)
+	. = ..()
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	if(set_dir)
 		setDir(set_dir)
 	ini_dir = dir

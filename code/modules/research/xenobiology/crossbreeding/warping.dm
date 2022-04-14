@@ -37,6 +37,20 @@ put up a rune with bluespace effects, lots of those runes are fluff or act as a 
 	var/turf/rune_turf
 	var/remove_on_activation = TRUE
 
+<<<<<<< HEAD
+=======
+/obj/effect/warped_rune/Initialize(mapload)
+	. = ..()
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
+
+/obj/effect/warped_rune/Moved(atom/OldLoc, Dir)
+	. = ..()
+	rune_turf = get_turf(src)
+
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 /obj/item/slimecross/warping/examine()
 	. = ..()
 	. += "It has [warp_charge] charge left"
@@ -62,7 +76,7 @@ put up a rune with bluespace effects, lots of those runes are fluff or act as a 
 
 
 ///nearly all runes use their turf in some way so we set rune_turf to their turf automatically, the rune also start on cooldown if it uses one.
-/obj/effect/warped_rune/Initialize()
+/obj/effect/warped_rune/Initialize(mapload)
 	. = ..()
 	add_overlay("blank", TRUE)
 	rune_turf = get_turf(src)
@@ -498,7 +512,7 @@ GLOBAL_DATUM(blue_storage, /obj/item/storage/backpack/holding/bluespace)
 	remove_on_activation = FALSE
 	var/colour = "#FFFFFF"
 
-/obj/effect/warped_rune/pyritespace/Initialize()
+/obj/effect/warped_rune/pyritespace/Initialize(mapload)
 	. = ..()
 	colour = pick("#FFFFFF", "#FF0000", "#FFA500", "#FFFF00", "#00FF00", "#0000FF", "#4B0082", "#FF00FF")
 
@@ -804,7 +818,7 @@ GLOBAL_DATUM(warped_room, /datum/map_template/warped_room)
 	return WARPED_ROOM_VIRTUAL_Z
 
 ///creates the warped room and place an exit rune to exit the room
-/obj/effect/warped_rune/rainbowspace/Initialize()
+/obj/effect/warped_rune/rainbowspace/Initialize(mapload)
 	. = ..()
 	if(!GLOB.warped_room)
 		GLOB.warped_room = new

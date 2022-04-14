@@ -21,6 +21,19 @@
 	bodyparts = list(/obj/item/bodypart/chest/alien, /obj/item/bodypart/head/alien, /obj/item/bodypart/l_arm/alien,
 					 /obj/item/bodypart/r_arm/alien, /obj/item/bodypart/r_leg/alien, /obj/item/bodypart/l_leg/alien)
 
+<<<<<<< HEAD
+=======
+GLOBAL_LIST_INIT(strippable_alien_humanoid_items, create_strippable_list(list(
+	/datum/strippable_item/hand/left,
+	/datum/strippable_item/hand/right,
+	/datum/strippable_item/mob_item_slot/handcuffs,
+	/datum/strippable_item/mob_item_slot/legcuffs
+)))
+
+/mob/living/carbon/alien/humanoid/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/strippable, GLOB.strippable_alien_humanoid_items)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 
 /mob/living/carbon/alien/humanoid/restrained(ignore_grab)
 	return handcuffed

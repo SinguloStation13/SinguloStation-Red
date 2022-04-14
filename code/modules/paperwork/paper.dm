@@ -95,8 +95,13 @@
 			contact_poison = null
 	. = ..()
 
+<<<<<<< HEAD
 /obj/item/paper/Initialize()
 	. = ..()
+=======
+/obj/item/paper/Initialize(mapload)
+	..()
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	pixel_y = rand(-8, 8)
 	pixel_x = rand(-9, 9)
 	update_icon()
@@ -359,14 +364,14 @@
  */
 /obj/item/paper/construction
 
-/obj/item/paper/construction/Initialize()
+/obj/item/paper/construction/Initialize(mapload)
 	. = ..()
 	color = pick("FF0000", "#33cc33", "#ffb366", "#551A8B", "#ff80d5", "#4d94ff")
 
 /**
  * Natural paper
  */
-/obj/item/paper/natural/Initialize()
+/obj/item/paper/natural/Initialize(mapload)
 	. = ..()
 	color = "#FFF5ED"
 
@@ -385,7 +390,7 @@
 /obj/item/paper/crumpled/beernuke
 	name = "beer-stained note"
 
-/obj/item/paper/crumpled/beernuke/Initialize()
+/obj/item/paper/crumpled/beernuke/Initialize(mapload)
 	. = ..()
 	var/code
 	for(var/obj/machinery/nuclearbomb/beer/beernuke in GLOB.nuke_list)

@@ -12,7 +12,12 @@
 	block_flags = BLOCKING_ACTIVE | BLOCKING_NASTY
 	attack_verb = list("wacked")
 
+<<<<<<< HEAD
 /obj/item/pool/Initialize()
+=======
+
+/obj/item/pool/Initialize(mapload)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	. = ..()
 	//Pick a random color
 	add_atom_colour(pick(COLOR_YELLOW, COLOR_LIME, COLOR_RED, COLOR_BLUE_LIGHT, COLOR_CYAN, COLOR_MAGENTA), FIXED_COLOUR_PRIORITY)

@@ -12,6 +12,17 @@
 	var/drive_range = 50	//this is mostly irrelevant since current mass drivers throw into space, but you could make a lower-range mass driver for interstation transport or something I guess.
 
 
+<<<<<<< HEAD
+=======
+/obj/machinery/mass_driver/Initialize(mapload)
+	. = ..()
+	wires = new /datum/wires/mass_driver(src)
+
+/obj/machinery/mass_driver/Destroy()
+	QDEL_NULL(wires)
+	. = ..()
+
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 /obj/machinery/mass_driver/proc/drive(amount)
 	if(stat & (BROKEN|NOPOWER))
 		return

@@ -7,6 +7,20 @@
 	attachable = TRUE
 	var/armed = FALSE
 
+<<<<<<< HEAD
+=======
+	///if we are attached to an assembly holder, we attach a connect_loc element to ourselves that listens to this from the holder
+	var/static/list/holder_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+	)
+
+/obj/item/assembly/mousetrap/Initialize(mapload)
+	. = ..()
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 
 /obj/item/assembly/mousetrap/examine(mob/user)
 	. = ..()

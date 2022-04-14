@@ -232,7 +232,7 @@
 		pipe_type = PIPE_TYPE_NODE\
 	)
 
-/obj/structure/disposalpipe/trunk/Initialize()
+/obj/structure/disposalpipe/trunk/Initialize(mapload)
 	. = ..()
 	getlinked()
 

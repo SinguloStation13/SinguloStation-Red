@@ -29,6 +29,13 @@
 	var/next_activate = 0 //When we're next allowed to activate - for spam control
 	var/activate_delay = 30
 
+<<<<<<< HEAD
+=======
+/obj/item/assembly/Initialize(mapload)
+	. = ..()
+	secured &&= securable
+
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 /obj/item/assembly/Destroy()
 	holder = null
 	return ..()

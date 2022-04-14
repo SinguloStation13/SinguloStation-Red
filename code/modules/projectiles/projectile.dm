@@ -127,7 +127,7 @@
 	///If TRUE, hit mobs even if they're on the floor and not our target
 	var/hit_stunned_targets = FALSE
 
-/obj/item/projectile/Initialize()
+/obj/item/projectile/Initialize(mapload)
 	. = ..()
 	permutated = list()
 	decayedRange = range

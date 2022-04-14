@@ -342,6 +342,12 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 
 		if(pmv)
 			mapvotes[map] = mapvotes[map]*VM.voteweight
+<<<<<<< HEAD
+=======
+		else if(VM.map_file == config.map_file)
+			// Don't force them to play the same map when MAPROTATION actually rolls to change the map
+			mapvotes.Remove(map)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 
 	var/pickedmap = pickweight(mapvotes)
 	if (!pickedmap)

@@ -283,7 +283,7 @@
 	firing_effect_type = null
 	var/obj/item/gun/magic/tentacle/gun //the item that shot it
 
-/obj/item/ammo_casing/magic/tentacle/Initialize()
+/obj/item/ammo_casing/magic/tentacle/Initialize(mapload)
 	gun = loc
 	. = ..()
 
@@ -302,7 +302,7 @@
 	var/chain
 	var/obj/item/ammo_casing/magic/tentacle/source //the item that shot it
 
-/obj/item/projectile/tentacle/Initialize()
+/obj/item/projectile/tentacle/Initialize(mapload)
 	source = loc
 	. = ..()
 
@@ -425,7 +425,7 @@
 	slowdown = 0.2
 	var/datum/reagent/salbutamol = /datum/reagent/medicine/salbutamol
 
-/obj/item/clothing/suit/space/changeling/Initialize()
+/obj/item/clothing/suit/space/changeling/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CHANGELING_TRAIT)
 	if(ismob(loc))
@@ -446,7 +446,7 @@
 	armor = list("melee" = 35, "bullet" = 25, "laser" = 25,"energy" = 30, "bomb" = 30, "bio" = 20, "rad" = 20, "fire" = 90, "acid" = 90, "stamina" = 10)
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
-/obj/item/clothing/head/helmet/space/changeling/Initialize()
+/obj/item/clothing/head/helmet/space/changeling/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CHANGELING_TRAIT)
 
@@ -482,7 +482,7 @@
 	blocks_shove_knockdown = TRUE
 	slowdown = 0.2
 
-/obj/item/clothing/suit/armor/changeling/Initialize()
+/obj/item/clothing/suit/armor/changeling/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CHANGELING_TRAIT)
 	if(ismob(loc))
@@ -496,6 +496,6 @@
 	armor = list("melee" = 40, "bullet" = 40, "laser" = 50, "energy" = 50, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25, "stamina" = 30)
 	flags_inv = HIDEEARS|HIDEHAIR|HIDEEYES|HIDEFACIALHAIR|HIDEFACE
 
-/obj/item/clothing/head/helmet/changeling/Initialize()
+/obj/item/clothing/head/helmet/changeling/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CHANGELING_TRAIT)

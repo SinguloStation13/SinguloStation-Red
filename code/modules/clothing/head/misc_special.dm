@@ -166,6 +166,7 @@
 
 	dog_fashion = /datum/dog_fashion/head/kitty
 
+<<<<<<< HEAD
 /obj/item/clothing/head/kitty/equipped(mob/living/carbon/human/user, slot)
 	if(ishuman(user) && slot == ITEM_SLOT_HEAD)
 		update_icon(user)
@@ -175,6 +176,11 @@
 /obj/item/clothing/head/kitty/update_icon(mob/living/carbon/human/user)
 	if(ishuman(user))
 		add_atom_colour("#[user.hair_color]", FIXED_COLOUR_PRIORITY)
+=======
+/obj/item/clothing/head/kitty/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/haircolor_clothing)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 
 /obj/item/clothing/head/kitty/genuine
 	desc = "A pair of kitty ears. A tag on the inside says \"Hand made from real cats.\""
@@ -194,6 +200,26 @@
 
 	dog_fashion = /datum/dog_fashion/head/reindeer
 
+<<<<<<< HEAD
+=======
+/*
+	Rabbit ears
+*/
+
+/obj/item/clothing/head/rabbitears
+	name = "rabbit ears"
+	desc = "Wearing these makes you look useless, and only good for your sex appeal."
+	icon_state = "bunny"
+	clothing_flags = SNUG_FIT
+	dynamic_hair_suffix = ""
+
+	dog_fashion = /datum/dog_fashion/head/rabbit
+
+/obj/item/clothing/head/rabbitears/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/haircolor_clothing)
+
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 /obj/item/clothing/head/cardborg
 	name = "cardborg helmet"
 	desc = "A helmet made out of a box."

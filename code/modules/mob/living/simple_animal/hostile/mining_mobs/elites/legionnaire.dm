@@ -249,6 +249,18 @@
 	light_color = LIGHT_COLOR_RED
 	var/mob/living/simple_animal/hostile/asteroid/elite/legionnaire/myowner = null
 
+<<<<<<< HEAD
+=======
+/obj/structure/legionnaire_bonfire/Initialize(mapload)
+	. = ..()
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
+
+/obj/structure/legionnaire_bonfire/proc/on_entered(datum/source, atom/movable/mover)
+	SIGNAL_HANDLER
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 
 /obj/structure/legionnaire_bonfire/Entered(atom/movable/mover, turf/target)
 	if(isliving(mover))
@@ -267,7 +279,7 @@
 	duration = 10
 	color = rgb(0,0,0)
 
-/obj/effect/temp_visual/dragon_swoop/legionnaire/Initialize()
+/obj/effect/temp_visual/dragon_swoop/legionnaire/Initialize(mapload)
 	. = ..()
 	transform *= 0.33
 

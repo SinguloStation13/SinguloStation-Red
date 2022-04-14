@@ -21,7 +21,20 @@
 	var/pick_style = PICK_STYLE_ORDERED
 	var/requirehuman = TRUE
 
+<<<<<<< HEAD
 /obj/effect/trap/trigger/Crossed(AM as mob|obj)
+=======
+/obj/effect/trap/trigger/Initialize(mapload)
+	. = ..()
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
+
+/obj/effect/trap/trigger/proc/on_entered(datum/source, AM as mob|obj)
+	SIGNAL_HANDLER
+
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	if(isturf(loc))
 		if(ismob(AM) && grounded)
 			var/mob/MM = AM
@@ -164,7 +177,7 @@
 	reusable = TRUE
 	var/mob/living/simple_animal/hostile/spawned = /mob/living/simple_animal/hostile/retaliate/spaceman
 
-/obj/effect/trap/nexus/trickyspawner/Initialize()
+/obj/effect/trap/nexus/trickyspawner/Initialize(mapload)
 	. = ..()
 	crossattempts = rand(1, 10)
 

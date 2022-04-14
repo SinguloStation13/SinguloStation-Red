@@ -13,10 +13,17 @@
 	wreckage = /obj/structure/mecha_wreckage/durand
 	var/obj/durand_shield/shield
 
+<<<<<<< HEAD
 /obj/mecha/combat/durand/Initialize()
 	shield = new/obj/durand_shield
 	shield.chassis = src
 	shield.layer = layer
+=======
+
+/obj/mecha/combat/durand/Initialize(mapload)
+	. = ..()
+	shield = new /obj/durand_shield(loc, src, layer, dir)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	RegisterSignal(src, COMSIG_MECHA_ACTION_ACTIVATE, .proc/relay)
 	RegisterSignal(src, COMSIG_PROJECTILE_PREHIT, .proc/prehit)
 	. = ..()

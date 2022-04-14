@@ -16,6 +16,17 @@
 	var/obj/machinery/field/generator/FG1 = null
 	var/obj/machinery/field/generator/FG2 = null
 
+<<<<<<< HEAD
+=======
+/obj/machinery/field/containment/Initialize(mapload)
+	. = ..()
+	air_update_turf(TRUE, TRUE)
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
+
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 /obj/machinery/field/containment/Destroy()
 	FG1.fields -= src
 	FG2.fields -= src

@@ -16,7 +16,7 @@
 	var/brightness_on = 4 //range of light when on
 	var/flashlight_power = 1 //strength of the light when on
 
-/obj/item/flashlight/Initialize()
+/obj/item/flashlight/Initialize(mapload)
 	. = ..()
 	if(icon_state == "[initial(icon_state)]-on")
 		on = TRUE
@@ -266,7 +266,7 @@
 	light_color = LIGHT_COLOR_FLARE
 	grind_results = list(/datum/reagent/sulfur = 15)
 
-/obj/item/flashlight/flare/Initialize()
+/obj/item/flashlight/flare/Initialize(mapload)
 	. = ..()
 	fuel = rand(1600, 2000)
 
@@ -439,7 +439,12 @@
 	var/burn_pickup = FALSE	//If true, fuel will only decrease after being picked up or used in hand (Useful for mapping)
 	var/fuel = 0 // How many seconds of fuel we have left
 
+<<<<<<< HEAD
 /obj/item/flashlight/glowstick/Initialize()
+=======
+
+/obj/item/flashlight/glowstick/Initialize(mapload)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	fuel = rand(3200, 4000)
 	light_color = color
 	. = ..()
@@ -537,11 +542,11 @@
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "random_glowstick"
 
-/obj/effect/spawner/lootdrop/glowstick/Initialize()
+/obj/effect/spawner/lootdrop/glowstick/Initialize(mapload)
 	loot = typesof(/obj/item/flashlight/glowstick)
 	. = ..()
 
-/obj/effect/spawner/lootdrop/glowstick/lit/Initialize()
+/obj/effect/spawner/lootdrop/glowstick/lit/Initialize(mapload)
 	. = ..()
 	var/obj/item/flashlight/glowstick/found = locate() in get_turf(src)
 	if(!found)

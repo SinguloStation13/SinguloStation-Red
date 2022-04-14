@@ -83,7 +83,7 @@
 	var/pb_knockback = 0
 	var/ranged_cooldown = 0
 
-/obj/item/gun/Initialize()
+/obj/item/gun/Initialize(mapload)
 	. = ..()
 	if(pin)
 		if(no_pin_required)

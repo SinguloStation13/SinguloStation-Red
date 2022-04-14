@@ -894,7 +894,7 @@ GENE SCANNER
 	var/cooldown = -1000 //so it's charged roundstart
 	var/obj/item/stock_parts/scanning_module/scanner //used for upgrading!
 
-/obj/item/extrapolator/Initialize()
+/obj/item/extrapolator/Initialize(mapload)
 	. = ..()
 	scanner = new(src)
 

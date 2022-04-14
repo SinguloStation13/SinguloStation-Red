@@ -108,18 +108,18 @@
 	nofur = TRUE
 	worn_slot_flags = null
 
-/mob/living/simple_animal/pet/dog/Initialize()
+/mob/living/simple_animal/pet/dog/Initialize(mapload)
 	. = ..()
 	var/dog_area = get_area(src)
 	for(var/obj/structure/bed/dogbed/D in dog_area)
 		if(D.update_owner(src)) //No muscling in on my turf you fucking parrot
 			break
 
-/mob/living/simple_animal/pet/dog/corgi/Initialize()
+/mob/living/simple_animal/pet/dog/corgi/Initialize(mapload)
 	. = ..()
 	regenerate_icons()
 
-/mob/living/simple_animal/pet/dog/corgi/exoticcorgi/Initialize()
+/mob/living/simple_animal/pet/dog/corgi/exoticcorgi/Initialize(mapload)
 		. = ..()
 		var/newcolor = rgb(rand(0, 255), rand(0, 255), rand(0, 255))
 		add_atom_colour(newcolor, FIXED_COLOUR_PRIORITY)
@@ -374,7 +374,7 @@
 	worn_slot_flags = ITEM_SLOT_HEAD
 
 
-/mob/living/simple_animal/pet/dog/corgi/Ian/Initialize()
+/mob/living/simple_animal/pet/dog/corgi/Ian/Initialize(mapload)
 	. = ..()
 	//parent call must happen first to ensure IAN
 	//is not in nullspace when child puppies spawn
@@ -634,7 +634,7 @@
 	held_state = "void_puppy"
 	worn_slot_flags = ITEM_SLOT_HEAD
 
-/mob/living/simple_animal/pet/dog/corgi/puppy/void/Initialize()
+/mob/living/simple_animal/pet/dog/corgi/puppy/void/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_AI_BAGATTACK, INNATE_TRAIT)
 

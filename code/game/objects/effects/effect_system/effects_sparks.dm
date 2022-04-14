@@ -24,7 +24,7 @@
 	light_range = MINIMUM_USEFUL_LIGHT_RANGE
 	light_color = LIGHT_COLOR_FIRE
 
-/obj/effect/particle_effect/sparks/Initialize()
+/obj/effect/particle_effect/sparks/Initialize(mapload)
 	..()
 	return INITIALIZE_HINT_LATELOAD
 

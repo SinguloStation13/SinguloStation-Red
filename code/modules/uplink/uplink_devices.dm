@@ -53,7 +53,14 @@
 	hidden_uplink.name = "debug nuclear uplink"
 	hidden_uplink.debug = TRUE
 
+<<<<<<< HEAD
 /obj/item/uplink/nuclear_restricted/Initialize()
+=======
+/obj/item/uplink/nuclear_restricted
+	uplink_flag = UPLINK_NUKE_OPS
+
+/obj/item/uplink/nuclear_restricted/Initialize(mapload)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	. = ..()
 	var/datum/component/uplink/hidden_uplink = GetComponent(/datum/component/uplink)
 	hidden_uplink.allow_restricted = FALSE

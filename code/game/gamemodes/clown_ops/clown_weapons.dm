@@ -39,7 +39,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
 	always_noslip = TRUE
 
-/obj/item/clothing/shoes/clown_shoes/banana_shoes/combat/Initialize()
+/obj/item/clothing/shoes/clown_shoes/banana_shoes/combat/Initialize(mapload)
 	. = ..()
 	var/datum/component/material_container/bananium = GetComponent(/datum/component/material_container)
 	bananium.insert_amount_mat(BANANA_SHOES_MAX_CHARGE, /datum/material/bananium)
@@ -79,7 +79,11 @@
 	light_color = "#ffff00"
 	var/next_trombone_allowed = 0
 
+<<<<<<< HEAD
 /obj/item/melee/transforming/energy/sword/bananium/ComponentInitialize()
+=======
+/obj/item/melee/transforming/energy/sword/bananium/Initialize(mapload)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	. = ..()
 	AddComponent(/datum/component/slippery, 60, GALOSHES_DONT_HELP)
 	var/datum/component/slippery/slipper = GetComponent(/datum/component/slippery)
@@ -136,7 +140,11 @@
 	on_throwforce = 0
 	on_throw_speed = 1
 
+<<<<<<< HEAD
 /obj/item/shield/energy/bananium/ComponentInitialize()
+=======
+/obj/item/shield/energy/bananium/Initialize(mapload)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 	. = ..()
 	AddComponent(/datum/component/slippery, 60, GALOSHES_DONT_HELP)
 	var/datum/component/slippery/slipper = GetComponent(/datum/component/slippery)
@@ -183,7 +191,7 @@
 	var/det_time = 50
 	var/obj/item/grenade/syndieminibomb/bomb
 
-/obj/item/grown/bananapeel/bombanana/Initialize()
+/obj/item/grown/bananapeel/bombanana/Initialize(mapload)
 	. = ..()
 	bomb = new /obj/item/grenade/syndieminibomb(src)
 	bomb.det_time = det_time
@@ -227,7 +235,7 @@
 /obj/item/clothing/mask/fakemoustache/sticky
 	var/unstick_time = 600
 
-/obj/item/clothing/mask/fakemoustache/sticky/Initialize()
+/obj/item/clothing/mask/fakemoustache/sticky/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, STICKY_MOUSTACHE_TRAIT)
 	addtimer(CALLBACK(src, .proc/unstick), unstick_time)
@@ -289,7 +297,7 @@
 		return
 	cell = new /obj/item/stock_parts/cell/hyper(src)
 
-/obj/mecha/combat/honker/dark/loaded/Initialize()
+/obj/mecha/combat/honker/dark/loaded/Initialize(mapload)
 	. = ..()
 	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/thrusters/ion(src)
 	ME.attach(src)

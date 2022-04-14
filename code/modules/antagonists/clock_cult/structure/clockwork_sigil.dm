@@ -20,6 +20,17 @@
 	var/looping = FALSE			//TRUE if the affect repeatedly applied an affect to the thing above it
 	var/living_only = TRUE		//FALSE if the rune can affect non-living atoms
 
+<<<<<<< HEAD
+=======
+/obj/structure/destructible/clockwork/sigil/Initialize(mapload)
+	. = ..()
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+		COMSIG_ATOM_EXITED = .proc/on_exited,
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
+
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 /obj/structure/destructible/clockwork/sigil/attack_hand(mob/user)
 	. = ..()
 	dispell()

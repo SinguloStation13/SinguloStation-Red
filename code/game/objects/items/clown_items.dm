@@ -159,7 +159,7 @@
 	throw_range = 7
 	attack_verb = list("HONKED")
 
-/obj/item/bikehorn/Initialize()
+/obj/item/bikehorn/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/squeak, list('sound/items/bikehorn.ogg'=1), 50)
 

@@ -13,7 +13,7 @@
 	template.load(get_turf(src), centered = template.centerspawner)
 	qdel(src)
 
-/obj/effect/spawner/room/Initialize()
+/obj/effect/spawner/room/Initialize(mapload)
 	..()
 	return INITIALIZE_HINT_LATELOAD
 

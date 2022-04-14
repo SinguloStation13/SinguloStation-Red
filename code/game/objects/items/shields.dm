@@ -13,6 +13,10 @@
 	if(transparent && (hitby.pass_flags & PASSGLASS))
 		return FALSE
 	return ..()
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 
 /obj/item/shield/on_block(mob/living/carbon/human/owner, atom/movable/hitby, attack_text, damage, attack_type)
 	if(durability)
@@ -38,6 +42,11 @@
 			if(block_flags & BLOCKING_NASTY)
 				L.attackby(src, owner)
 				owner.visible_message("<span class='danger'>[L] injures themselves on [owner]'s [src]!</span>")
+<<<<<<< HEAD
+=======
+		if(attackforce)
+			owner.changeNext_move(CLICK_CD_MELEE)
+>>>>>>> 61e367a052... Adds `mapload` to every `Initialize()` and fixes gasses being invisible (#6361)
 		if (obj_integrity <= attackforce)
 			var/turf/T = get_turf(owner)
 			T.visible_message("<span class='warning'>[hitby] destroys [src]!</span>")
@@ -186,7 +195,7 @@
 	item_state = "flashshield"
 	var/obj/item/assembly/flash/handheld/embedded_flash
 
-/obj/item/shield/riot/flash/Initialize()
+/obj/item/shield/riot/flash/Initialize(mapload)
 	. = ..()
 	embedded_flash = new(src)
 
@@ -276,7 +285,7 @@
 	playsound(owner, 'sound/effects/beepskyspinsabre.ogg', 35, 1)
 	to_chat(owner, "<span class='warning'>The [src] is ready to use!.</span>")
 
-/obj/item/shield/energy/Initialize()
+/obj/item/shield/energy/Initialize(mapload)
 	. = ..()
 	icon_state = "[base_icon_state]0"
 
