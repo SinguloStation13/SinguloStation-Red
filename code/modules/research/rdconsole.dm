@@ -202,9 +202,61 @@ Nothing else in the console has ID requirements.
 	var/print = linked_imprinter && linked_imprinter.multitool_act(user, I)
 	return lathe || print
 
+<<<<<<< HEAD
 /obj/machinery/computer/rdconsole/proc/list_categories(list/categories, menu_num as num)
 	if(!categories)
 		return
+=======
+/obj/machinery/computer/rdconsole/ui_interact(mob/user, datum/tgui/ui = null)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if (!ui)
+		ui = new(user, src, "Techweb", name)
+		ui.open()
+		ui.set_autoupdate(TRUE)
+
+/obj/machinery/computer/rdconsole/ui_assets(mob/user)
+	return list(
+		get_asset_datum(/datum/asset/spritesheet/research_designs)
+	)
+
+// heavy data from this proc should be moved to static data when possible
+/obj/machinery/computer/rdconsole/ui_data(mob/user)
+	. = list(
+		"nodes" = list(),
+		"experiments" = list(),
+		"researched_designs" = stored_research.researched_designs,
+		"points" = stored_research.research_points,
+		"points_last_tick" = stored_research.last_bitcoins,
+		"web_org" = stored_research.organization,
+		"sec_protocols" = !(obj_flags & EMAGGED),
+		"t_disk" = null,
+		"d_disk" = null,
+		"locked" = locked,
+		"linkedanalyzer" = FALSE,
+		"analyzertechs" = list(),
+		"itemmats" = list(),
+		"itempoints" = list(),
+		"analyzeritem" = null,
+		"compact" = compact,
+		"tech_tier" = stored_research.current_tier,
+	)
+
+	if (t_disk)
+		.["t_disk"] = list (
+			"stored_research" = t_disk.stored_research.researched_nodes
+		)
+	if (d_disk)
+		.["d_disk"] = list (
+			"max_blueprints" = d_disk.max_blueprints,
+			"blueprints" = list()
+		)
+		for (var/i in 1 to d_disk.max_blueprints)
+			if (d_disk.blueprints[i])
+				var/datum/design/D = d_disk.blueprints[i]
+				.["d_disk"]["blueprints"] += D.id
+			else
+				.["d_disk"]["blueprints"] += null
+>>>>>>> 80e956d115... Further tgui R&D console fixes (#5735)
 
 	var/line_length = 1
 	var/list/l = "<table style='width:100%' align='center'><tr>"
@@ -448,10 +500,87 @@ Nothing else in the console has ID requirements.
 		var/temp_materials
 		var/check_materials = TRUE
 
+<<<<<<< HEAD
 		var/all_materials = D.materials + D.reagents_list
 		var/coeff = linked_imprinter.efficiency_coeff
 		if(!linked_imprinter.efficient_with(D.build_path))
 			coeff = 1
+=======
+		var/costs = n.get_price(stored_research)
+
+		.["nodes"] += list(list(
+			"id" = n.id,
+			"can_unlock" = stored_research.can_afford(costs),
+			"costs" = costs,
+			"tier" = stored_research.tiers[n.id]
+		))
+
+/obj/machinery/computer/rdconsole/proc/compress_id(id)
+	if (!id_cache[id])
+		id_cache[id] = id_cache_seq
+		id_cache_seq += 1
+	return id_cache[id]
+
+/obj/machinery/computer/rdconsole/ui_static_data(mob/user)
+	. = list(
+		"static_data" = list(),
+		"researchable" = research_control
+	)
+	// Build node cache...
+	// Note this looks a bit ugly but its to reduce the size of the JSON payload
+	// by the greatest amount that we can, as larger JSON payloads result in
+	// hanging when the user opens the UI
+	var/node_cache = list()
+	for (var/node_id in SSresearch.techweb_nodes)
+		var/datum/techweb_node/node = SSresearch.techweb_nodes[node_id] || SSresearch.error_node
+		var/compressed_id = "[compress_id(node.id)]"
+		node_cache[compressed_id] = list(
+			"name" = node.display_name,
+			"description" = node.description,
+			"tech_tier" = node.tech_tier,
+		)
+		if (LAZYLEN(node.prereq_ids))
+			node_cache[compressed_id]["prereq_ids"] = list()
+			for (var/prerequisite_node in node.prereq_ids)
+				node_cache[compressed_id]["prereq_ids"] += compress_id(prerequisite_node)
+		if (LAZYLEN(node.design_ids))
+			node_cache[compressed_id]["design_ids"] = list()
+			for (var/unlocked_design in node.design_ids)
+				node_cache[compressed_id]["design_ids"] += compress_id(unlocked_design)
+		if (LAZYLEN(node.unlock_ids))
+			node_cache[compressed_id]["unlock_ids"] = list()
+			for (var/unlocked_node in node.unlock_ids)
+				node_cache[compressed_id]["unlock_ids"] += compress_id(unlocked_node)
+
+	// Build design cache
+	var/design_cache = list()
+	var/datum/asset/spritesheet/research_designs/spritesheet = get_asset_datum(/datum/asset/spritesheet/research_designs)
+	var/size32x32 = "[spritesheet.name]32x32"
+	for (var/design_id in SSresearch.techweb_designs)
+		var/datum/design/design = SSresearch.techweb_designs[design_id] || SSresearch.error_design
+		var/compressed_id = "[compress_id(design.id)]"
+		var/size = spritesheet.icon_size_id(design.id)
+		design_cache[compressed_id] = list(
+			design.name,
+			"[size == size32x32 ? "" : "[size] "][design.id]"
+		)
+
+	// Ensure id cache is included for decompression
+	var/flat_id_cache = list()
+	for (var/id in id_cache)
+		flat_id_cache += id
+
+	.["static_data"] = list(
+		"node_cache" = node_cache,
+		"design_cache" = design_cache,
+		"id_cache" = flat_id_cache
+	)
+
+/obj/machinery/computer/rdconsole/ui_act(action, list/params)
+	. = ..()
+	if (.)
+		return
+>>>>>>> 80e956d115... Further tgui R&D console fixes (#5735)
 
 		for(var/M in all_materials)
 			temp_materials += " | "
