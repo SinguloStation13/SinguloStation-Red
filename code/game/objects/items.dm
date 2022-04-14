@@ -35,9 +35,23 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 
 	//Not on /clothing because for some reason any /obj/item can technically be "worn" with enough fuckery.
 	/// If this is set, update_icons() will find on mob (WORN, NOT INHANDS) states in this file instead, primary use: badminnery/events
-	var/icon/alternate_worn_icon = null
+	var/icon/worn_icon = null
+	//Icon state for mob worn overlays. If not set falls back to item_state, then icon_state
+	var/worn_icon_state
 	/// If this is set, update_icons() will force the on mob state (WORN, NOT INHANDS) onto this layer, instead of it's default
+<<<<<<< HEAD
 	var/alternate_worn_layer = null
+=======
+	var/alternate_worn_layer
+	///The config type to use for greyscaled worn sprites. Both this and greyscale_colors must be assigned to work.
+	var/greyscale_config_worn
+	///The config type to use for greyscaled left inhand sprites. Both this and greyscale_colors must be assigned to work.
+	var/greyscale_config_inhand_left
+	///The config type to use for greyscaled right inhand sprites. Both this and greyscale_colors must be assigned to work.
+	var/greyscale_config_inhand_right
+	///The config type to use for greyscaled belt overlays. Both this and greyscale_colors must be assigned to work.
+	var/greyscale_config_belt
+>>>>>>> e450a63012... Adds gags to jumpsuits and sneakers (#6288)
 
 	max_integrity = 200
 
@@ -271,6 +285,30 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 /obj/item/proc/suicide_act(mob/user)
 	return
 
+<<<<<<< HEAD
+=======
+/obj/item/set_greyscale(list/colors, new_config, new_worn_config, new_inhand_left, new_inhand_right)
+	if(new_worn_config)
+		greyscale_config_worn = new_worn_config
+	if(new_inhand_left)
+		greyscale_config_inhand_left = new_inhand_left
+	if(new_inhand_right)
+		greyscale_config_inhand_right = new_inhand_right
+	return ..()
+
+/// Checks if this atom uses the GAGS system and if so updates the worn and inhand icons
+/obj/item/update_greyscale()
+	. = ..()
+	if(!greyscale_colors)
+		return
+	if(greyscale_config_worn)
+		worn_icon = SSgreyscale.GetColoredIconByType(greyscale_config_worn, greyscale_colors)
+	if(greyscale_config_inhand_left)
+		lefthand_file = SSgreyscale.GetColoredIconByType(greyscale_config_inhand_left, greyscale_colors)
+	if(greyscale_config_inhand_right)
+		righthand_file = SSgreyscale.GetColoredIconByType(greyscale_config_inhand_right, greyscale_colors)
+
+>>>>>>> e450a63012... Adds gags to jumpsuits and sneakers (#6288)
 /obj/item/verb/move_to_top()
 	set name = "Move To Top"
 	set category = "Object"
