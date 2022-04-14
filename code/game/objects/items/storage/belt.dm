@@ -175,6 +175,11 @@
 	desc = "Can hold various medical equipment."
 	icon_state = "medicalbelt"
 	item_state = "medical"
+<<<<<<< HEAD
+=======
+	worn_icon_state = "medical"
+	content_overlays = TRUE
+>>>>>>> 715081b023... Medical belt resprite (#6202)
 
 /obj/item/storage/belt/medical/ComponentInitialize()
 	. = ..()
