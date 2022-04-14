@@ -240,9 +240,18 @@
 			point_gain = 1000
 		var/datum/bank_account/D = SSeconomy.get_dep_account(ACCOUNT_SCI)
 		if(D)
+<<<<<<< HEAD
 			D.adjust_money(point_gain)
 			linked_techweb.add_point_type(TECHWEB_POINT_TYPE_DEFAULT, point_gain)
 			say("Explosion details and mixture analyzed and sold to the highest bidder for $[point_gain], with a reward of [point_gain] points.")
+=======
+			D.adjust_money(general_point_gain)
+			discovery_point_gain = general_point_gain * 0.5
+			linked_techweb.add_point_type(TECHWEB_POINT_TYPE_DEFAULT, general_point_gain)
+			linked_techweb.add_point_type(TECHWEB_POINT_TYPE_DISCOVERY, discovery_point_gain)
+
+			say("Explosion details and mixture analyzed and sold to the highest bidder for $[general_point_gain], with a reward of [general_point_gain] General Research points and [discovery_point_gain] Discovery Research points.")
+>>>>>>> 71a37ea446... Making Toxins even more worth it (#5911)
 
 	else //you've made smaller bombs
 		say("Data already captured. Aborting.")
