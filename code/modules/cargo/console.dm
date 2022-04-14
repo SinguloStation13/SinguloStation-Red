@@ -86,6 +86,11 @@
 	data["docked"] = SSshuttle.supply.mode == SHUTTLE_IDLE
 	data["loan"] = !!SSshuttle.shuttle_loan
 	data["loan_dispatched"] = SSshuttle.shuttle_loan && SSshuttle.shuttle_loan.dispatched
+<<<<<<< HEAD:code/modules/cargo/console.dm
+=======
+	data["can_send"] = can_send
+	data["can_approve_requests"] = can_approve_requests
+>>>>>>> 1e3089f9b6... Cargo can now once again accept requests with their own budget. (#54748) (#6162):code/modules/cargo/orderconsole.dm
 	var/message = "Remember to stamp and send back the supply manifests."
 	if(SSshuttle.centcom_message)
 		message = SSshuttle.centcom_message
