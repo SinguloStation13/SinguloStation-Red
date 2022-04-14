@@ -230,7 +230,10 @@
 	fire_rate = 6
 	spread = 7
 	pin = /obj/item/firing_pin/implant/pindicate
+<<<<<<< HEAD
 	spread_unwielded = 15
+=======
+>>>>>>> cb647c688b... Re-adds the gun wield icon, merges the good parts of both PRs (#6028)
 	bolt_type = BOLT_TYPE_OPEN
 	mag_display = TRUE
 	mag_display_ammo = TRUE
