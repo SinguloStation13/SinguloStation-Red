@@ -20,6 +20,10 @@
 								)
 	production_animation = "protolathe_n"
 	allowed_buildtypes = PROTOLATHE
+<<<<<<< HEAD
+=======
+	consoleless_interface = TRUE
+>>>>>>> 0df5bf9dad... Fix production machines being unusable (#5675)
 
 /obj/machinery/rnd/production/protolathe/disconnect_console()
 	linked_console.linked_lathe = null
