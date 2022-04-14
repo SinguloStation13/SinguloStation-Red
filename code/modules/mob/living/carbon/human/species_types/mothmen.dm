@@ -19,16 +19,17 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	species_language_holder = /datum/language_holder/moth
 
-/datum/species/moth/random_name(gender,unique,lastname)
-	if(unique)
-		return random_unique_moth_name()
-
-	var/randname = moth_name()
+/datum/species/moth/random_name(gender, unique, lastname, attempts)
+	. = "[pick(GLOB.moth_first)]"
 
 	if(lastname)
-		randname += " [lastname]"
+		. += " [lastname]"
+	else
+		. += " [pick(GLOB.moth_last)]"
 
-	return randname
+	if(unique && attempts < 10)
+		if(findname(.))
+			. = .(gender, TRUE, lastname, ++attempts)
 
 /datum/species/moth/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
 	. = ..()

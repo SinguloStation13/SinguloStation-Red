@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /proc/apid_name(gender)
 	if(gender == MALE)
 		return "[pick(GLOB.apid_names_male)] [pick(GLOB.apid_names_last)]"
@@ -34,6 +35,8 @@
 	else
 		return "[pick(GLOB.squid_names_female)] [pick(GLOB.last_names)]"
 
+=======
+>>>>>>> 363fc9dad3... Random Name refactor (#6335)
 GLOBAL_VAR(command_name)
 /proc/command_name()
 	if (GLOB.command_name)
@@ -213,7 +216,7 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 							. += pick(names)
 						else
 							if(prob(10))
-								. += pick(lizard_name(MALE),lizard_name(FEMALE))
+								. += pick(random_lizard_name(MALE),random_lizard_name(FEMALE))
 							else
 								var/new_name = pick(pick(GLOB.first_names_male,GLOB.first_names_female))
 								new_name += " "
