@@ -58,8 +58,6 @@
 
 	if(suiciding)
 		O.set_suicide(suiciding)
-	if(hellbound)
-		O.hellbound = hellbound
 	O.a_intent = INTENT_HARM
 
 	//keep viruses?
@@ -220,8 +218,6 @@
 
 	if(suiciding)
 		O.set_suicide(suiciding)
-	if(hellbound)
-		O.hellbound = hellbound
 	O.a_intent = INTENT_HARM
 
 	//keep viruses?
@@ -385,8 +381,6 @@
 
 	if(suiciding)
 		O.set_suicide(suiciding)
-	if(hellbound)
-		O.hellbound = hellbound
 
 	//keep viruses?
 	if (tr_flags & TR_KEEPVIRUS)

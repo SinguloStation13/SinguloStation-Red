@@ -109,6 +109,7 @@
 
 	var/appears_dead = 0
 	if(stat == DEAD || (HAS_TRAIT(src, TRAIT_FAKEDEATH)))
+<<<<<<< HEAD
 		appears_dead = 1
 		if(suiciding)
 			. += "<span class='warning'>[t_He] appear[p_s()] to have committed suicide. There is no hope of recovery.</span>"
@@ -120,6 +121,21 @@
 				. += "<span class='deadsay'>[t_He] do[t_es]n't appear to be [t_him]self.</span>\n"
 			else if(!key && !get_ghost(FALSE, TRUE))
 				. += "<span class='deadsay'>[t_He] [t_is] limp and unresponsive; there are no signs of life and [t_his] soul has departed.</span>"
+=======
+		appears_dead = TRUE
+
+		if(isliving(user) && HAS_TRAIT(user, TRAIT_NAIVE))
+			just_sleeping = TRUE
+
+		if(!just_sleeping)
+			if(suiciding)
+				. += "<span class='warning'>[t_He] appear[p_s()] to have committed suicide... there is no hope of recovery.</span>"
+			if(ishellbound())
+				. += "<span class='warning'>[t_His] soul seems to have been ripped out of [t_his] body. Revival is impossible.</span>"
+			. += ""
+			if(getorgan(/obj/item/organ/brain) && !key && !get_ghost(FALSE, TRUE))
+				. += "<span class='deadsay'>[t_He] [t_is] limp and unresponsive; there are no signs of life and [t_his] soul has departed...</span>"
+>>>>>>> f52b7be06e... Fixes Hellbound (#6564)
 			else
 				. += "<span class='deadsay'>[t_He] [t_is] limp and unresponsive; there are no signs of life.</span>"
 
