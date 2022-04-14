@@ -11,9 +11,13 @@ every other SS13 codebase), tgui should be fairly easy to pick up.
 
 ## Learn tgui
 
+<<<<<<< HEAD
 People come to tgui from different backgrounds and with different
 learning styles. Whether you prefer a more theoretical or a practical
 approach, we hope you’ll find this section helpful.
+=======
+People come to tgui from different backgrounds and with different learning styles. Whether you prefer a more theoretical or a practical approach, we hope you'll find this section helpful.
+>>>>>>> 60fe9d6981... Fixes few jumpsuit errors (#6365)
 
 ### Practical Tutorial
 

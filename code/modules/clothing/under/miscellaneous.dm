@@ -29,6 +29,7 @@
 	item_state = "b_suit"
 	item_color = "mailman"
 
+<<<<<<< HEAD
 /obj/item/clothing/under/misc/psyche
 	name = "psychedelic jumpsuit"
 	desc = "Groovy!"
@@ -36,6 +37,8 @@
 	item_state = "p_suit"
 	item_color = "psyche"
 
+=======
+>>>>>>> 60fe9d6981... Fixes few jumpsuit errors (#6365)
 /obj/item/clothing/under/misc/vice_officer
 	name = "vice officer's jumpsuit"
 	desc = "It's the standard issue pretty-boy outfit, as seen on Holo-Vision."
@@ -142,6 +145,7 @@
 	icon_state = "plasmarefill"
 	icon = 'icons/obj/device.dmi'
 
+<<<<<<< HEAD
 /obj/item/clothing/under/misc/durathread
 	name = "durathread jumpsuit"
 	desc = "A jumpsuit made from durathread, its resilient fibres provide some protection to the wearer."
@@ -151,6 +155,8 @@
 	can_adjust = FALSE
 	armor = list("melee" = 10, "laser" = 10, "fire" = 40, "acid" = 10, "bomb" = 5, "stamina" = 30)
 
+=======
+>>>>>>> 60fe9d6981... Fixes few jumpsuit errors (#6365)
 /////////////////
 //DONATOR ITEMS//
 /////////////////
