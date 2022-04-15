@@ -62190,6 +62190,10 @@
 	},
 /turf/closed/wall/r_wall,
 /area/engine/supermatter)
+"tWw" = (
+/obj/machinery/ecto_sniffer,
+/turf/open/floor/plasteel,
+/area/science/robotics/lab)
 "tXm" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -100833,8 +100837,13 @@ bgC
 bkv
 blF
 bmM
+<<<<<<< HEAD
 bmM
 bmM
+=======
+tWw
+wug
+>>>>>>> 133b02cf8d... Makes ectoscopic sniffer more obvious, plus fix (#6598)
 bqh
 brx
 bsX

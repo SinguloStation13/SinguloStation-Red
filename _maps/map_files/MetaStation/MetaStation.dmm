@@ -84533,11 +84533,21 @@
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
+<<<<<<< HEAD
 "wqS" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
+=======
+"wqA" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/ecto_sniffer,
+/turf/open/floor/plasteel,
+/area/science/robotics/lab)
+>>>>>>> 133b02cf8d... Makes ectoscopic sniffer more obvious, plus fix (#6598)
 "wtq" = (
 /turf/closed/wall,
 /area/maintenance/aft/secondary)
@@ -113661,7 +113671,7 @@ cDb
 cEk
 cFd
 cGb
-cGb
+wqA
 cHQ
 cIJ
 cYc
