@@ -222,14 +222,19 @@
 
 	var/message = speech_args[SPEECH_MESSAGE]
 	if(message[1] != "*")
-		switch (mode)
+		switch(mode)
 			if(DRILL_SHOUTING)
-				message += "!"
+				message = replacetextEx(message, ".", "!", length(message))
 			if(DRILL_YELLING)
-				message += "!!"
+				message = replacetextEx(message, ".", "!!", length(message))
 			if(DRILL_CANADIAN)
+<<<<<<< HEAD
 				message = " [message]"
 				var/list/canadian_words = strings("canadian_replacement.json", "canadian")
+=======
+				message = "[message]"
+				var/list/canadian_words = strings(CANADIAN_TALK_FILE, "canadian")
+>>>>>>> 9e15ee3182... Refactor/documentation on various headwear (#6507)
 
 				for(var/key in canadian_words)
 					var/value = canadian_words[key]
@@ -241,7 +246,7 @@
 					message = replacetextEx(message, " [key]", " [value]")
 
 				if(prob(30))
-					message += pick(", eh?", ", EH?")
+					message = replacetextEx(message, ".", pick(", eh?", ", EH?"), length(message))
 		speech_args[SPEECH_MESSAGE] = message
 
 /obj/item/clothing/head/beret/corpwarden
