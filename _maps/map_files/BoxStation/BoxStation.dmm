@@ -49091,6 +49091,28 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
+<<<<<<< HEAD
+=======
+"hWS" = (
+/obj/effect/turf_decal/plaque{
+	icon_state = "L5"
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
+"hXZ" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
+	dir = 4
+	},
+/obj/structure/sign/painting/library{
+	pixel_x = -32
+	},
+/turf/open/floor/wood,
+/area/library)
+"hYs" = (
+/obj/machinery/ecto_sniffer,
+/turf/open/floor/plasteel/white,
+/area/science/robotics/lab)
+>>>>>>> 133b02cf8d... Makes ectoscopic sniffer more obvious, plus fix (#6598)
 "hZj" = (
 /obj/structure/disposalpipe/segment,
 /obj/item/cigbutt/roach,
@@ -105670,7 +105692,7 @@ aXq
 bds
 bfV
 bhx
-biL
+hYs
 biL
 cHO
 blG

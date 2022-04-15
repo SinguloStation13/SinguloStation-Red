@@ -176,6 +176,7 @@
 /area/science/robotics/lab)
 "aaw" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/ecto_sniffer,
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "aax" = (

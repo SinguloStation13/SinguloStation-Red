@@ -13397,6 +13397,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+/obj/machinery/ecto_sniffer,
 /turf/open/floor/plasteel/showroomfloor,
 /area/science/robotics/lab)
 "aul" = (
