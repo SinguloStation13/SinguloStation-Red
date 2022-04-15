@@ -1455,6 +1455,10 @@
 /datum/reagent/medicine/modafinil/on_mob_metabolize(mob/living/M)
 	ADD_TRAIT(M, TRAIT_SLEEPIMMUNE, type)
 	..()
+<<<<<<< HEAD
+=======
+	M.add_movespeed_modifier(type, update=TRUE, priority=100, multiplicative_slowdown=-0.5, blacklisted_movetypes=(FLYING|FLOATING))
+>>>>>>> b90128df39... Slows nuka cola and meth down (#6475)
 
 /datum/reagent/medicine/modafinil/on_mob_end_metabolize(mob/living/M)
 	REMOVE_TRAIT(M, TRAIT_SLEEPIMMUNE, type)
