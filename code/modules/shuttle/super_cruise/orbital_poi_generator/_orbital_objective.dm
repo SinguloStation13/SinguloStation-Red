@@ -48,6 +48,10 @@
 	GLOB.exploration_points += payout * 0.1
 	//Announcement
 	priority_announce("Central Command priority objective completed. [payout] credits have been \
+<<<<<<< HEAD
 		distributed across departmental budgets. [payout * 0.1] points have been distrubted to exploration vendors.", "Central Command Report", SSstation.announcer.get_rand_report_sound())
+=======
+		distributed across departmental budgets. [payout] points have been distributed to exploration vendors.", "Central Command Report", SSstation.announcer.get_rand_report_sound())
+>>>>>>> e1de2805eb... Fixes a spelling mistake (#6679)
 	//Delete
 	QDEL_NULL(SSorbits.current_objective)
