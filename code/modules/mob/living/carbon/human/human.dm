@@ -42,6 +42,7 @@
 /mob/living/carbon/human/Destroy()
 	QDEL_NULL(physiology)
 	QDEL_LIST(bioware)
+	GLOB.suit_sensors_list -= src
 	return ..()
 
 

@@ -131,6 +131,7 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 	var/pos_y
 	var/life_status
 
+<<<<<<< HEAD
 	for(var/mob/living/carbon/human/H in GLOB.carbon_list)
 		var/nanite_sensors = FALSE
 		if(H in SSnanites.nanite_monitored_mobs)
@@ -193,6 +194,75 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 				results[++results.len] = list("name" = name, "assignment" = assignment, "ijob" = ijob, "life_status" = life_status, "oxydam" = oxydam, "toxdam" = toxdam, "burndam" = burndam, "brutedam" = brutedam, "area" = area, "pos_x" = pos_x, "pos_y" = pos_y, "can_track" = H.can_track(null))
 
 	data_by_z["[z]"] = sortTim(results,/proc/sensor_compare)
+=======
+	for(var/mob/living/carbon/human/H as() in GLOB.suit_sensors_list)
+		if(!H)
+			stack_trace("Null reference in suit sensors list")
+			GLOB.suit_sensors_list -= H
+
+		var/turf/pos = get_turf(H)
+		if(!pos)
+			continue
+
+		var/virtual_z_level = H.get_virtual_z_level()
+
+		// Check if their virtual z-level is correct or in case it isn't
+		// check if they are on station's 'real' z-level
+		if (virtual_z_level != z && !(is_station_level(pos.z) && is_station_level(zlevel)))
+			continue
+
+		// Determine if this person is using nanites for sensors,
+		// in which case the sensors are always set to full detail
+		var/nanite_sensors = HAS_TRAIT(H, TRAIT_NANITE_SENSORS)
+
+		// Check for a uniform if not using nanites
+		var/obj/item/clothing/under/uniform = H.w_uniform
+
+		//	Radio transmitters are jammed
+		if(nanite_sensors ? H.is_jammed() : uniform.is_jammed())
+			continue
+
+		// Are the suit sensors on?
+		if (!nanite_sensors && (!uniform.has_sensor || !uniform.sensor_mode))
+			continue
+
+		// The entry for this human
+		var/list/entry = list(
+			"ref" = REF(H),
+			"name" = "Unknown",
+			"ijob" = UNKNOWN_JOB_ID,
+		)
+
+		var/obj/item/card/id/I = H.wear_id ? H.wear_id.GetID() : null
+
+		if (I)
+			entry["name"] = I.registered_name
+			entry["assignment"] = I.assignment
+			if(jobs[I.assignment] != null)
+				entry["ijob"] = jobs[I.assignment]
+
+		// Binary living/dead status
+		if (nanite_sensors || uniform.sensor_mode >= SENSOR_LIVING)
+			entry["life_status"] = !H.stat
+
+		// Damage
+		if (nanite_sensors || uniform.sensor_mode >= SENSOR_VITALS)
+			entry["oxydam"] = round(H.getOxyLoss(), 1)
+			entry["toxdam"] = round(H.getToxLoss(), 1)
+			entry["burndam"] = round(H.getFireLoss(), 1)
+			entry["brutedam"] = round(H.getBruteLoss(), 1)
+
+		// Area
+		if (pos && (nanite_sensors || uniform.sensor_mode >= SENSOR_COORDS))
+			entry["area"] = get_area_name(H, TRUE)
+
+		// Trackability
+		entry["can_track"] = H.can_track()
+
+		results[++results.len] = entry
+
+	data_by_z["[z]"] = results
+>>>>>>> b108aea737... Fixes crew monitors and implements global suit sensors list (#6645)
 	last_update["[z]"] = world.time
 
 	return results

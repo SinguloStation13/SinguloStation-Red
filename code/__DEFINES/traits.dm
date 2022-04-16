@@ -377,3 +377,16 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// Trait applied when the MMI component is added to an [/obj/item/integrated_circuit]
 #define TRAIT_COMPONENT_MMI "component_mmi"
+<<<<<<< HEAD
+=======
+
+/// Can use the nuclear device's UI, regardless of a lack of hands
+#define TRAIT_CAN_USE_NUKE "can_use_nuke"
+
+///Mob is being tracked on glob suit sensors list
+#define TRACKED_SENSORS_TRAIT "tracked_sensors"
+///Mob is tracked by suit sensors, and on glob suit sensors list
+#define TRAIT_SUIT_SENSORS "suit_sensors"
+///Mob is tracked by nanites, and on glob suit sensors list
+#define TRAIT_NANITE_SENSORS "nanite_sensors"
+>>>>>>> b108aea737... Fixes crew monitors and implements global suit sensors list (#6645)
