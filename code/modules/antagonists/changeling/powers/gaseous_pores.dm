@@ -3,8 +3,13 @@
 	desc = "Our skins bursts, releasing somniferous gases to put opponents to sleep and cover our retreat."
 	helptext = "Our kind are immune to the gases internals are not necessary"
 	button_icon_state = "smoke"
+<<<<<<< HEAD
 	chemical_cost = 35
 	dna_cost = 2
+=======
+	chemical_cost = 25
+	dna_cost = 1
+>>>>>>> 9b36ef228a... Changeling ability rebalancing (#6129)
 	req_stat = UNCONSCIOUS
 	var/range = 4
 
