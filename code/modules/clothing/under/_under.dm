@@ -33,6 +33,10 @@
 		var/obj/item/stack/cable_coil/C = I
 		C.use(1)
 		has_sensor = HAS_SENSORS
+<<<<<<< HEAD
+=======
+		update_sensors(NO_SENSORS)
+>>>>>>> d8f58549cf... better logic (#6690)
 		to_chat(user,"<span class='notice'>You repair the suit sensors on [src] with [C].</span>")
 		return 1
 	if(!attach_accessory(I, user))
@@ -147,6 +151,27 @@
 			H.update_inv_w_uniform()
 			H.update_inv_wear_suit()
 
+<<<<<<< HEAD
+=======
+//Adds or removes mob from suit sensor global list
+/obj/item/clothing/under/proc/update_sensors(new_mode, forced = FALSE)
+	var/old_mode = sensor_mode
+	sensor_mode = new_mode
+	if(!forced || (old_mode == new_mode || (old_mode != SENSOR_OFF && new_mode != SENSOR_OFF)))
+		return
+	if(!ishuman(loc) || istype(loc, /mob/living/carbon/human/dummy))
+		return
+
+	if(!HAS_TRAIT(loc, TRAIT_SUIT_SENSORS))
+		if(sensor_mode > SENSOR_OFF)
+			ADD_TRAIT(loc, TRAIT_SUIT_SENSORS, TRACKED_SENSORS_TRAIT)
+			if(!HAS_TRAIT(loc, TRAIT_NANITE_SENSORS))
+				GLOB.suit_sensors_list += loc
+		else
+			REMOVE_TRAIT(loc, TRAIT_SUIT_SENSORS, TRACKED_SENSORS_TRAIT)
+			if(!HAS_TRAIT(loc, TRAIT_NANITE_SENSORS))
+				GLOB.suit_sensors_list -= loc
+>>>>>>> d8f58549cf... better logic (#6690)
 
 /obj/item/clothing/under/examine(mob/user)
 	. = ..()
