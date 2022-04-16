@@ -316,7 +316,11 @@ put up a rune with bluespace effects, lots of those runes are fluff or act as a 
 				break
 	if(C?.charge)
 		do_sparks(5,FALSE,C)
+<<<<<<< HEAD
 		empulse(rune_turf, 1, 1)
+=======
+		INVOKE_ASYNC(src, .proc/empulse, rune_turf, 1, 1, FALSE, TRUE, FALSE)
+>>>>>>> 295050a38e... Magical / Holy EMP + explosions are protected by anti-magic (#6123)
 		C.use(C.charge)
 		activated_on_step = TRUE
 	. = ..()

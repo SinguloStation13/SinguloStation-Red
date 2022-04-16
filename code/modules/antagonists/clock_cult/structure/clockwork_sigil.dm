@@ -55,7 +55,11 @@
 	var/mob/living/M = AM
 	if(!istype(M))
 		return FALSE
+<<<<<<< HEAD
 	var/amc = M.anti_magic_check()
+=======
+	var/amc = M.anti_magic_check(magic=FALSE,holy=TRUE)
+>>>>>>> 295050a38e... Magical / Holy EMP + explosions are protected by anti-magic (#6123)
 	if(amc)
 		return FALSE
 	return TRUE

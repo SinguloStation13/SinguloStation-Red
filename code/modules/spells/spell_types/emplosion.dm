@@ -13,5 +13,10 @@
 	for(var/mob/living/target in targets)
 		if(target.anti_magic_check() && target != user)
 			continue
+<<<<<<< HEAD
 		empulse(target.loc, emp_heavy, emp_light)
 	return
+=======
+		empulse(target.loc, emp_heavy, emp_light, magic=TRUE)
+	return
+>>>>>>> 295050a38e... Magical / Holy EMP + explosions are protected by anti-magic (#6123)

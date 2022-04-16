@@ -56,7 +56,11 @@
 	force += force_buff
 	. = ..()
 	force -= force_buff
+<<<<<<< HEAD
 	if(!QDELETED(target) && target.stat != DEAD && !is_servant_of_ratvar(target) && !target.anti_magic_check(major=FALSE))
+=======
+	if(!QDELETED(target) && target.stat != DEAD && !is_servant_of_ratvar(target) && !target.anti_magic_check(magic=FALSE,holy=TRUE,major=FALSE))
+>>>>>>> 295050a38e... Magical / Holy EMP + explosions are protected by anti-magic (#6123)
 		hit_effect(target, user)
 
 /obj/item/clockwork/weapon/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
@@ -66,7 +70,11 @@
 	if(isliving(hit_atom))
 		var/mob/living/target = hit_atom
 		if(!.)
+<<<<<<< HEAD
 			if(!target.anti_magic_check() && !is_servant_of_ratvar(target))
+=======
+			if(!target.anti_magic_check(magic=FALSE,holy=TRUE) && !is_servant_of_ratvar(target))
+>>>>>>> 295050a38e... Magical / Holy EMP + explosions are protected by anti-magic (#6123)
 				hit_effect(target, throwingdatum.thrower, TRUE)
 
 /obj/item/clockwork/weapon/proc/hit_effect(mob/living/target, mob/living/user, thrown=FALSE)
