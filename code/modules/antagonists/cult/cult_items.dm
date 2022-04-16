@@ -676,7 +676,11 @@
 			else
 				L.visible_message("<span class='warning'>[src] bounces off of [L], as if repelled by an unseen force!</span>")
 		else if(!..())
+<<<<<<< HEAD
 			if(!L.anti_magic_check())
+=======
+			if(!L.anti_magic_check(magic=FALSE,holy=TRUE))
+>>>>>>> 295050a38e... Magical / Holy EMP + explosions are protected by anti-magic (#6123)
 				L.Knockdown(50)
 			break_spear(T)
 	else
@@ -947,7 +951,11 @@
 			else
 				L.visible_message("<span class='warning'>[src] bounces off of [L], as if repelled by an unseen force!</span>")
 		else if(!..())
+<<<<<<< HEAD
 			if(!L.anti_magic_check())
+=======
+			if(!L.anti_magic_check(magic=FALSE,holy=TRUE))
+>>>>>>> 295050a38e... Magical / Holy EMP + explosions are protected by anti-magic (#6123)
 				L.Knockdown(30)
 				if(D?.thrower)
 					for(var/mob/living/Next in orange(2, T))

@@ -32,7 +32,11 @@
 		return TRUE
 	if(M.stat == DEAD)
 		return FALSE
+<<<<<<< HEAD
 	var/amc = M.anti_magic_check()
+=======
+	var/amc = M.anti_magic_check(magic=FALSE,holy=TRUE)
+>>>>>>> 295050a38e... Magical / Holy EMP + explosions are protected by anti-magic (#6123)
 	if(amc)
 		return FALSE
 	if(HAS_TRAIT(M, TRAIT_NODEATH))
@@ -73,7 +77,11 @@
 		else
 			visible_message("<span class='neovgre'>\The [src] fails to heal [M]!</span>", "<span class='neovgre'>There is insufficient vitality to heal your wounds!</span>")
 	else
+<<<<<<< HEAD
 		if(M.anti_magic_check())
+=======
+		if(M.anti_magic_check(magic=FALSE,holy=TRUE))
+>>>>>>> 295050a38e... Magical / Holy EMP + explosions are protected by anti-magic (#6123)
 			return
 		if(is_convertable_to_clockcult(M) && !GLOB.gateway_opening)
 			visible_message("<span class='neovgre'>\The [src] refuses to siphon [M]'s vitality, their mind has great potential!</span>")
