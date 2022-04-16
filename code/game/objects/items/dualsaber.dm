@@ -40,6 +40,7 @@
 		item_color = pick(possible_colors)
 		switch(item_color)
 			if("red")
+<<<<<<< HEAD
 				light_color = LIGHT_COLOR_RED
 			if("green")
 				light_color = LIGHT_COLOR_GREEN
@@ -47,6 +48,18 @@
 				light_color = LIGHT_COLOR_LIGHT_CYAN
 			if("purple")
 				light_color = LIGHT_COLOR_LAVENDER
+=======
+				set_light_color(LIGHT_COLOR_RED)
+			if("green")
+				set_light_color(LIGHT_COLOR_GREEN)
+			if("blue")
+				set_light_color(LIGHT_COLOR_CYAN)
+			if("purple")
+				set_light_color(LIGHT_COLOR_LAVENDER)
+	. = ..()
+	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
+	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, .proc/on_unwield)
+>>>>>>> 8534fb7f28... Fixes de-sword runtime (#6689)
 
 /obj/item/dualsaber/Destroy()
 	STOP_PROCESSING(SSobj, src)
