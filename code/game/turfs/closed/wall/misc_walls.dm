@@ -65,10 +65,24 @@
 	ScrapeAway()
 
 /turf/closed/wall/r_wall/rust
+<<<<<<< HEAD
 	name = "rusted reinforced wall"
 	desc = "A huge chunk of rusted reinforced metal."
 	icon = 'icons/turf/walls/rusty_reinforced_wall.dmi'
 	hardness = 15
+=======
+	//SDMM supports colors, this is simply for easier mapping
+	//and should be removed on initialize
+	color = COLOR_ORANGE
+
+/turf/closed/wall/r_wall/rust/Initialize(mapload)
+	. = ..()
+	color = null
+
+/turf/closed/wall/r_wall/rust/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/rust)
+>>>>>>> f754799fd8... RWalls are no longer rusted by default (#6693)
 
 /turf/closed/wall/r_wall/rust/rust_heretic_act()
 	if(prob(50))
