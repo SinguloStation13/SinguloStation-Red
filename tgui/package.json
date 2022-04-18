@@ -37,8 +37,20 @@
     "terser-webpack-plugin": "^5.1.1",
     "typescript": "^4.2.4",
     "url-loader": "^4.1.1",
+<<<<<<< HEAD
     "webpack": "^5.33.2",
     "webpack-bundle-analyzer": "^4.4.1",
     "webpack-cli": "^4.6.0"
   }
+=======
+    "webpack": "^5.50.0",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.7.2"
+  },
+  "resolutions": {
+    "ajv": "^6.12.3",
+    "minimist": "^1.2.6"
+  },
+  "packageManager": "yarn@3.1.1"
+>>>>>>> 2f39577854... Forces minimist's resolution to 1.2.6 (#6708)
 }
