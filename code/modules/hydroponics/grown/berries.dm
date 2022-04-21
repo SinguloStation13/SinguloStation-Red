@@ -161,6 +161,37 @@
 	grind_results = list(/datum/reagent/consumable/bluecherryjelly = 0)
 	tastes = list("blue cherry" = 1)
 	wine_power = 50
+<<<<<<< HEAD
+=======
+	discovery_points = 300
+
+//Cherry Bulbs
+/obj/item/seeds/cherry/bulb
+	name = "pack of cherry bulb pits"
+	desc = "The glowy kind of cherries."
+	icon_state = "seed-cherrybulb"
+	species = "cherrybulb"
+	plantname = "Cherry Bulb Tree"
+	icon_harvest = "cherry-harvest"
+	product = /obj/item/reagent_containers/food/snacks/grown/cherrybulbs
+	genes = list(/datum/plant_gene/trait/repeated_harvest, /datum/plant_gene/trait/glow/pink)
+	mutatelist = list()
+	reagents_add = list(/datum/reagent/consumable/nutriment = 0.07, /datum/reagent/consumable/sugar = 0.07)
+	rarity = 10
+
+/obj/item/reagent_containers/food/snacks/grown/cherrybulbs
+	seed = /obj/item/seeds/cherry/bulb
+	name = "cherry bulbs"
+	desc = "They're like little Space Christmas lights!"
+	icon_state = "cherry_bulb"
+	filling_color = "#FF0000"
+	bitesize_mod = 2
+	foodtype = FRUIT
+	grind_results = list(/datum/reagent/consumable/cherryjelly = 0)
+	tastes = list("cherry" = 1)
+	wine_power = 50
+	discovery_points = 300
+>>>>>>> c4beee4b0d... Botany fixes (#6705)
 
 // Grapes
 /obj/item/seeds/grape
