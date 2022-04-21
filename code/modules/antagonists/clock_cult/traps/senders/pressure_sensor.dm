@@ -20,7 +20,14 @@
 
 /datum/component/clockwork_trap/pressure_sensor/Initialize()
 	. = ..()
+<<<<<<< HEAD
 	RegisterSignal(parent, COMSIG_MOVABLE_CROSSED, .proc/crossed)
+=======
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
+>>>>>>> cfee06dbce... Update pressure_sensor.dm (#6666)
 
 /datum/component/clockwork_trap/pressure_sensor/proc/crossed(datum/source, atom/movable/AM)
 	SIGNAL_HANDLER
