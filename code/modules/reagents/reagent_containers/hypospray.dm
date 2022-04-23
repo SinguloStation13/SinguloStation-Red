@@ -148,12 +148,18 @@
 	user.visible_message("<span class='suicide'>[user] begins to choke on \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return OXYLOSS//ironic. he could save others from oxyloss, but not himself.
 
+<<<<<<< HEAD
 /obj/item/reagent_containers/hypospray/medipen/attack(mob/M, mob/user)
 	if(!reagents.total_volume)
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
 		return
 	..()
 	if(!iscyborg(user))
+=======
+/obj/item/reagent_containers/hypospray/medipen/inject(mob/living/M, mob/user)
+	. = ..()
+	if(.)
+>>>>>>> fa0a4cba51... Hypospray refills work again (#6733)
 		reagents.maximum_volume = 0 //Makes them useless afterwards
 		reagents.flags = NONE
 	update_icon()
