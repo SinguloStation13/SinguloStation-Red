@@ -20,9 +20,14 @@
 /obj/machinery/atmospherics/components/binary/getNodeConnects()
 	return list(turn(dir, 180), dir)
 
+///Used by binary devices to set what the offset will be for each layer
 /obj/machinery/atmospherics/components/binary/proc/set_overlay_offset(pipe_layer)
+<<<<<<< HEAD
 	switch(pipe_layer)
 		if(2)
 			return 1
 		if(1, 3)
 			return 2
+=======
+	return pipe_layer & 1 ? 1 : 2
+>>>>>>> 3834d50a29... ports 5 piping layers from tg (#6039)
