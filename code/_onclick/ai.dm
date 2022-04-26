@@ -14,9 +14,15 @@
 		return
 
 	if(ismob(A))
+<<<<<<< HEAD
 		ai_actual_track(A)
 	else
 		A.move_camera_by_click()
+=======
+		ai_start_tracking(A)
+	else if(!ismachinery(A))	//Getting the camera moved just because you double click on something to interact with it is annoying as hell
+		eyeobj.move_camera_by_click(A)
+>>>>>>> cd525a8b31... Converts ai tracking towards using signals (#6491)
 
 /mob/living/silicon/ai/ClickOn(var/atom/A, params)
 	if(world.time <= next_click)
