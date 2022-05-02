@@ -13,7 +13,11 @@
 	resistance_flags = FLAMMABLE
 	var/value = 0
 
+<<<<<<< HEAD
 /obj/item/stack/spacecash/Initialize()
+=======
+/obj/item/stack/spacecash/Initialize(mapload, new_amount, merge = TRUE, mob/user = null)
+>>>>>>> 60bcc7b3ef... Fixes adding component to qdeleting object runtime (#6747)
 	. = ..()
 	update_desc()
 
