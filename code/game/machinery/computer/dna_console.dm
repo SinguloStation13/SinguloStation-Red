@@ -36,6 +36,11 @@
 	idle_power_usage = 10
 	active_power_usage = 400
 	light_color = LIGHT_COLOR_BLUE
+<<<<<<< HEAD
+=======
+	req_access = list(ACCESS_GENETICS)
+	clicksound = null
+>>>>>>> 4094e14336... [PORT] New sounds when interacting with stuff (#6553)
 
 	var/datum/techweb/stored_research
 	var/max_storage = 6
