@@ -163,7 +163,13 @@
 /mob/living/silicon/pai/Login()
 	..()
 	var/datum/asset/notes_assets = get_asset_datum(/datum/asset/simple/pAI)
+<<<<<<< HEAD
 	notes_assets.send(client)
+=======
+	mind.assigned_role = "Personal AI"
+	if(!notes_assets.send(client))
+		return
+>>>>>>> a090357443... Possibly fixes null client on tgui intialize runtime (#6748)
 	client.perspective = EYE_PERSPECTIVE
 	if(holoform)
 		client.eye = src
