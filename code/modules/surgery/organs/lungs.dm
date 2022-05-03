@@ -270,6 +270,7 @@
 			H.reagents.add_reagent(/datum/reagent/stimulum,max(0, 1 - existing))
 		breath.adjust_moles(GAS_STIMULUM, -gas_breathed)
 
+<<<<<<< HEAD
 	// Miasma
 		if (breath.get_moles(GAS_MIASMA))
 			var/miasma_pp = PP(breath,GAS_MIASMA)
@@ -317,6 +318,8 @@
 		else
 			SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "smell")
 
+=======
+>>>>>>> 412cb24db7... Removes miasma (#6445)
 		handle_breath_temperature(breath, H)
 	return TRUE
 
