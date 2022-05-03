@@ -68,11 +68,17 @@
 /turf/open/floor/plasteel,
 /area/medical/sleeper)
 "aah" = (
+<<<<<<< HEAD
 /obj/structure/displaycase/captain{
 	req_access = null;
 	req_access_txt = "20";
 	req_one_access_txt = "0"
 	},
+=======
+/obj/structure/displaycase/captain,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+>>>>>>> 867daf2dd8... Various things involving the Captain's Laser and display cases.  (#6753)
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/captain)
 "aai" = (
