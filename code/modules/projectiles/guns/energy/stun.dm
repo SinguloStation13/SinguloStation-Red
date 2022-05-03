@@ -60,8 +60,13 @@
 	icon_state = "personal"
 	item_state = "gun"
 	pin = /obj/item/firing_pin/dna //Personal.
+<<<<<<< HEAD
 	w_class = WEIGHT_CLASS_SMALL 
 	cell_type = /obj/item/stock_parts/cell{charge = 320; maxcharge = 320} //Should be about 8 shots. 3 times less than the regular one.
+=======
+	w_class = WEIGHT_CLASS_SMALL
+	gun_charge = 320
+>>>>>>> 867daf2dd8... Various things involving the Captain's Laser and display cases.  (#6753)
 	ammo_x_offset = 2
 	charge_sections = 2
 	can_flashlight = FALSE

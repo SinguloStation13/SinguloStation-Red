@@ -94468,10 +94468,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 5
 	},
-/obj/structure/displaycase/captain{
-	req_access = null;
-	req_access_txt = "20"
-	},
+/obj/structure/displaycase/captain,
 /turf/open/floor/carpet/royalblue,
 /area/crew_quarters/heads/captain/private)
 "wnO" = (
