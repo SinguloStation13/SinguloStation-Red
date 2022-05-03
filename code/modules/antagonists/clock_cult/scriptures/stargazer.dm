@@ -115,14 +115,16 @@
 		if(HAS_TRAIT(I, TRAIT_STARGAZED))
 			to_chat(user, "<span class='brass'>[I] has already been enhanced!</span>")
 			return
-		if(istype(I, /obj/item))
+		if(istype(I, /obj/item) && !istype(I, /obj/item/clothing) && I.force)
 			upgrade_weapon(I, user)
 			cooldowntime = world.time + STARGAZER_COOLDOWN
 			return
 		to_chat(user, "<span class='brass'>You cannot upgrade [I].</span>")
 
 /obj/structure/destructible/clockwork/gear_base/stargazer/proc/upgrade_weapon(obj/item/I, mob/living/user)
+	//Prevent re-enchanting
 	ADD_TRAIT(I, TRAIT_STARGAZED, STARGAZER_TRAIT)
+<<<<<<< HEAD
 	switch(rand(1, 10))
 		if(1)
 			to_chat(user, "<span class='neovgre'>You feel [I] tighten to your hand.</span>")
@@ -188,3 +190,11 @@
 			I.AddComponent(/datum/component/anti_magic, TRUE, TRUE)
 			I.color = COLOR_ALMOST_BLACK
 			return
+=======
+	//Add a glowy colour
+	I.add_atom_colour(rgb(243, 227, 183), ADMIN_COLOUR_PRIORITY)
+	//Pick a random effect
+	var/static/list/possible_components = subtypesof(/datum/component/enchantment)
+	I.AddComponent(pick(possible_components))
+	to_chat(user, "<span class='notice'>[I] glows with a brilliant light!</span>")
+>>>>>>> 2263529dc3... Fixes a potential failure in clockcult setup, reworks stargazer enchantments (#6062)
