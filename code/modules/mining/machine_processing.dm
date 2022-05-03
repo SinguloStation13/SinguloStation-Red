@@ -120,6 +120,12 @@
 	var/datum/material/selected_material = null
 	var/selected_alloy = null
 	var/datum/techweb/stored_research
+<<<<<<< HEAD
+=======
+	var/link_id = null
+	var/points = 0
+	var/allow_point_redemption = FALSE
+>>>>>>> c4e9b90d39... Update machine_processing.dm (#6800)
 
 /obj/machinery/mineral/processing_unit/Initialize()
 	. = ..()
