@@ -51,7 +51,6 @@
 		"stimulum" = /obj/machinery/portable_atmospherics/canister/stimulum,
 		"pluoxium" = /obj/machinery/portable_atmospherics/canister/pluoxium,
 		"caution" = /obj/machinery/portable_atmospherics/canister,
-		"miasma" = /obj/machinery/portable_atmospherics/canister/miasma
 	)
 
 /obj/machinery/portable_atmospherics/canister/interact(mob/user)
@@ -79,6 +78,7 @@
 	icon_state = "black"
 	gas_type = GAS_CO2
 
+<<<<<<< HEAD
 /obj/machinery/portable_atmospherics/canister/toxins
 	name = "plasma canister"
 	desc = "Plasma gas. The reason YOU are here. Highly toxic."
@@ -90,6 +90,14 @@
 	desc = "BZ, a powerful hallucinogenic nerve agent."
 	icon_state = "purple"
 	gas_type = GAS_BZ
+=======
+/obj/machinery/portable_atmospherics/canister/nitrogen
+	name = "n2 canister"
+	desc = "Nitrogen gas. Reportedly useful for something."
+	gas_type = GAS_N2
+	greyscale_config = /datum/greyscale_config/canister
+	greyscale_colors = "#d41010"
+>>>>>>> 412cb24db7... Removes miasma (#6445)
 
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide
 	name = "n2o canister"
