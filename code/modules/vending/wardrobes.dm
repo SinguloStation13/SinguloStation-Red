@@ -144,7 +144,12 @@
 					/obj/item/clothing/head/helmet/space/plasmaman/replacement/cargo = 3,
 					/obj/item/clothing/shoes/sneakers/black = 3,
 					/obj/item/clothing/gloves/fingerless = 3,
+<<<<<<< HEAD
 					/obj/item/clothing/head/soft = 3,
+=======
+					/obj/item/clothing/head/soft/cargo = 3,
+					/obj/item/clothing/head/beret/supply = 3,
+>>>>>>> e445b3e220... beret (#6811)
 					/obj/item/radio/headset/headset_cargo = 3)
 	premium = list(/obj/item/clothing/under/rank/cargo/miner = 3)
 	contraband = list(/obj/item/radio/headset/headset_quartermaster = 1)
