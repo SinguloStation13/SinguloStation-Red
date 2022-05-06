@@ -165,7 +165,23 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	/// cooldown tracker for accent sounds,
 	var/last_accent_sound = 0
 
+<<<<<<< HEAD
 /obj/machinery/power/supermatter_crystal/Initialize()
+=======
+	//For making hugbox supermatters
+	///Disables all methods of taking damage
+	var/takes_damage = TRUE
+	///Disables the production of gas, and pretty much any handling of it we do.
+	var/produces_gas = TRUE
+	///Disables power changes
+	var/power_changes = TRUE
+	///Disables the sm's proccessing totally.
+	var/processes = TRUE
+	///Timer id for the disengage_field proc timer
+	var/disengage_field_timer = null
+
+/obj/machinery/power/supermatter_crystal/Initialize(mapload)
+>>>>>>> 84b65cb372... Fixes SM bumping with indestructable item crashing the server (#6816)
 	. = ..()
 	uid = gl_uid++
 	SSair.atmos_air_machinery += src
@@ -714,10 +730,11 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	else if(isobj(AM))
 		var/obj/O = AM
 		if(O.resistance_flags & INDESTRUCTIBLE)
-			var/image/causality_field = image(icon, null, "causality_field")
-			add_overlay(causality_field, TRUE)
-			radio.talk_into(src, "Anomalous object has breached containment, emergency causality field enganged to prevent reality destabilization.", engineering_channel)
-			addtimer(CALLBACK(src, .proc/disengage_field, causality_field), 5 SECONDS)
+			if(!disengage_field_timer) //we really don't want to have more than 1 timer and causality field overlayer at once
+				var/image/causality_field = image(icon, null, "causality_field")
+				add_overlay(causality_field, TRUE)
+				radio.talk_into(src, "Anomalous object has breached containment, emergency causality field enganged to prevent reality destabilization.", engineering_channel)
+				disengage_field_timer = addtimer(CALLBACK(src, .proc/disengage_field, causality_field), 5 SECONDS)
 			return
 		if(!iseffect(AM))
 			var/suspicion = ""
@@ -743,6 +760,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	if(QDELETED(src) || !causality_field)
 		return
 	cut_overlay(causality_field, TRUE)
+	disengage_field_timer = null
 
 //Do not blow up our internal radio
 /obj/machinery/power/supermatter_crystal/contents_explosion(severity, target)
