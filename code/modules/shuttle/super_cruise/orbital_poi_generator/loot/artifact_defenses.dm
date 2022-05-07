@@ -15,10 +15,12 @@
 	desc = "It sends a shiver down your spine."
 	icon_state = "watcher"
 	var/cooldown = 0
+	var/range //Trigger range
 
 /obj/structure/alien_artifact/watcher/Initialize()
 	. = ..()
-	proximity_monitor = new(src, rand(3, 6))
+	range = rand(3, 6)
+	proximity_monitor = new(src, range)
 	var/turf/T = get_turf(src)
 	var/list/turfs = RANGE_TURFS(5, T)
 	var/list/valid_turfs = list()
@@ -31,9 +33,13 @@
 	new /obj/structure/alien_artifact/protector(valid_turfs[1])
 
 /obj/structure/alien_artifact/watcher/HasProximity(atom/movable/AM)
+<<<<<<< HEAD
 	if(cooldown > world.time)
 		return
 	if (istype(AM, /obj/effect))
+=======
+	if(cooldown > world.time || iseffect(AM) || isprojectile(AM) || !(locate(AM) in view(range ,src)))
+>>>>>>> 380935e4b2... Initial (#6821)
 		return
 	cooldown = world.time + 50
 	//Trigger nearby protectors
