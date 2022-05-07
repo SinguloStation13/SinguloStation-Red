@@ -82,13 +82,6 @@
 			slow += (health_deficiency / 25)
 	add_movespeed_modifier(MOVESPEED_ID_MONKEY_HEALTH_SPEEDMOD, TRUE, 100, override = TRUE, multiplicative_slowdown = slow)
 
-/mob/living/carbon/monkey/adjust_bodytemperature(amount)
-	. = ..()
-	var/slow = 0
-	if (bodytemperature < 283.222)
-		slow += ((283.222 - bodytemperature) / 10) * 1.75
-	add_movespeed_modifier(MOVESPEED_ID_MONKEY_TEMPERATURE_SPEEDMOD, TRUE, 100, override = TRUE, multiplicative_slowdown = slow)
-
 /mob/living/carbon/monkey/get_stat_tab_status()
 	var/list/tab_data = ..()
 	tab_data["Intent"] = GENERATE_STAT_TEXT("[a_intent]")

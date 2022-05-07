@@ -452,7 +452,7 @@
 
 			// Go over all standard mutations and check if they've been discovered.
 			for(var/mutation_type in scanner_occupant.dna.mutation_index)
-				var/datum/mutation/human/HM = GET_INITIALIZED_MUTATION(mutation_type)
+				var/datum/mutation/HM = GET_INITIALIZED_MUTATION(mutation_type)
 				check_discovery(HM.alias)
 
 			return
@@ -550,7 +550,7 @@
 
 			// GUARD CHECK - Only search occupant for this specific ref, since your
 			//  can only apply chromosomes to mutations occupants.
-			var/datum/mutation/human/HM = get_mut_by_ref(bref, SEARCH_OCCUPANT)
+			var/datum/mutation/HM = get_mut_by_ref(bref, SEARCH_OCCUPANT)
 
 			// GUARD CHECK - This should not be possible. Unexpected result
 			if(!HM)
@@ -607,7 +607,7 @@
 					search_flags |= SEARCH_DISKETTE
 
 			var/bref = params["mutref"]
-			var/datum/mutation/human/HM = get_mut_by_ref(bref, search_flags)
+			var/datum/mutation/HM = get_mut_by_ref(bref, search_flags)
 
 			// GUARD CHECK - This should not be possible. Unexpected result
 			if(!HM)
@@ -644,6 +644,67 @@
 
 			return
 
+<<<<<<< HEAD
+=======
+		//Activate mutation already in a subject's genome
+		if("activate_mutation")
+			if(!can_modify_occupant())
+				return
+
+			var/path = GET_MUTATION_TYPE_FROM_ALIAS(params["alias"])
+			if(stored_research && stored_research.discovered_mutations[path])
+				var/datum/mutation/HM = GET_INITIALIZED_MUTATION(path)
+				// GUARD CHECK - This should not be possible. Unexpected result
+				if(!HM)
+					return
+
+				scanner_occupant.dna.activate_mutation(HM)
+				log_game("[key_name(usr)] activated [HM] in [key_name(scanner_occupant)] [loc_name(usr)]")
+
+				if(scanner_operational())
+					injectorready = world.time + INJECTOR_TIMEOUT * 0.1 * (1 - 0.1 * connected_scanner.precision_coeff)
+				else
+					injectorready = world.time + INJECTOR_TIMEOUT * 0.1
+
+				if(scanner_occupant?.client)
+					var/c_typepath = generate_chromosome()
+					var/obj/item/chromosome/CM = new c_typepath (drop_location())
+					if(LAZYLEN(stored_chromosomes) < max_chromosomes)
+						CM.forceMove(src)
+						stored_chromosomes += CM
+						to_chat(usr,"<span class='notice'>[capitalize(CM.name)] added to storage.</span>")
+
+		//Creates a new MUT_EXTRA mutation in subject
+		if("add_mutation")
+			if(!can_modify_occupant())
+				return
+
+			var/search_flags = 0
+
+			switch(params["source"])
+				if("console")
+					search_flags |= SEARCH_STORED
+				if("disk")
+					search_flags |= SEARCH_DISKETTE
+
+			var/bref = params["mutref"]
+			var/datum/mutation/HM = get_mut_by_ref(bref, search_flags)
+
+			if(!HM)
+				return
+			if(scanner_occupant.dna.mutation_in_sequence(HM))
+				scanner_occupant.dna.activate_mutation(HM)
+			else
+				scanner_occupant.dna.add_mutation(HM, MUT_EXTRA)
+
+			if(scanner_operational())
+				injectorready = world.time + INJECTOR_TIMEOUT * 0.5 * (1 - 0.1 * connected_scanner.precision_coeff)
+			else
+				injectorready = world.time + INJECTOR_TIMEOUT * 0.5
+
+			log_game("[key_name(usr)] added [HM] to [key_name(scanner_occupant)] [loc_name(usr)]")
+
+>>>>>>> a2ad51fc44... Monkey mutations (#6694)
 		// Save a mutation to the console's storage buffer.
 		// ---------------------------------------------------------------------- //
 		// params["mutref"] - ATOM Ref of specific mutation to store
@@ -671,13 +732,13 @@
 				return
 
 			var/bref = params["mutref"]
-			var/datum/mutation/human/HM = get_mut_by_ref(bref, search_flags)
+			var/datum/mutation/HM = get_mut_by_ref(bref, search_flags)
 
 			// GUARD CHECK - This should not be possible. Unexpected result
 			if(!HM)
 				return
 
-			var/datum/mutation/human/A = new HM.type()
+			var/datum/mutation/A = new HM.type()
 			A.copy_mutation(HM)
 			stored_mutations += A
 			to_chat(usr,"<span class='notice'>Mutation successfully stored.</span>")
@@ -721,13 +782,13 @@
 					search_flags |= SEARCH_STORED
 
 			var/bref = params["mutref"]
-			var/datum/mutation/human/HM = get_mut_by_ref(bref, search_flags)
+			var/datum/mutation/HM = get_mut_by_ref(bref, search_flags)
 
 			// GUARD CHECK - This should not be possible. Unexpected result
 			if(!HM)
 				return
 
-			var/datum/mutation/human/A = new HM.type()
+			var/datum/mutation/A = new HM.type()
 			A.copy_mutation(HM)
 			diskette.mutations += A
 			to_chat(usr,"<span class='notice'>Mutation successfully stored to disk.</span>")
@@ -744,7 +805,7 @@
 				return
 
 			var/bref = params["mutref"]
-			var/datum/mutation/human/HM = get_mut_by_ref(bref, SEARCH_OCCUPANT)
+			var/datum/mutation/HM = get_mut_by_ref(bref, SEARCH_OCCUPANT)
 
 			// GUARD CHECK - This should not be possible. Unexpected result
 			if(!HM)
@@ -763,7 +824,7 @@
 		// params["mutref"] - ATOM Ref of specific mutation to delete
 		if("delete_console_mut")
 			var/bref = params["mutref"]
-			var/datum/mutation/human/HM = get_mut_by_ref(bref, SEARCH_STORED)
+			var/datum/mutation/HM = get_mut_by_ref(bref, SEARCH_STORED)
 
 			if(HM)
 				stored_mutations.Remove(HM)
@@ -787,7 +848,7 @@
 				return
 
 			var/bref = params["mutref"]
-			var/datum/mutation/human/HM = get_mut_by_ref(bref, SEARCH_DISKETTE)
+			var/datum/mutation/HM = get_mut_by_ref(bref, SEARCH_DISKETTE)
 
 			if(HM)
 				diskette.mutations.Remove(HM)
@@ -833,11 +894,11 @@
 
 			// GUARD CHECK - Find the source and destination mutations on the console
 			// and make sure they actually exist.
-			var/datum/mutation/human/source_mut = get_mut_by_ref(first_bref, SEARCH_STORED | SEARCH_DISKETTE)
+			var/datum/mutation/source_mut = get_mut_by_ref(first_bref, SEARCH_STORED | SEARCH_DISKETTE)
 			if(!source_mut)
 				return
 
-			var/datum/mutation/human/dest_mut = get_mut_by_ref(second_bref, SEARCH_STORED | SEARCH_DISKETTE)
+			var/datum/mutation/dest_mut = get_mut_by_ref(second_bref, SEARCH_STORED | SEARCH_DISKETTE)
 			if(!dest_mut)
 				return
 
@@ -857,8 +918,13 @@
 			if(result_path in stored_research.discovered_mutations)
 				return
 
+<<<<<<< HEAD
 			var/datum/mutation/human/HM = GET_INITIALIZED_MUTATION(result_path)
 			stored_research.discovered_mutations += result_path
+=======
+			var/datum/mutation/HM = GET_INITIALIZED_MUTATION(result_path)
+			stored_research.discovered_mutations[result_path] = TRUE
+>>>>>>> a2ad51fc44... Monkey mutations (#6694)
 			say("Successfully mutated [HM.name].")
 			return
 
@@ -895,11 +961,11 @@
 
 			// GUARD CHECK - Find the source and destination mutations on the console
 			// and make sure they actually exist.
-			var/datum/mutation/human/source_mut = get_mut_by_ref(first_bref, SEARCH_STORED | SEARCH_DISKETTE)
+			var/datum/mutation/source_mut = get_mut_by_ref(first_bref, SEARCH_STORED | SEARCH_DISKETTE)
 			if(!source_mut)
 				return
 
-			var/datum/mutation/human/dest_mut = get_mut_by_ref(second_bref, SEARCH_STORED | SEARCH_DISKETTE)
+			var/datum/mutation/dest_mut = get_mut_by_ref(second_bref, SEARCH_STORED | SEARCH_DISKETTE)
 			if(!dest_mut)
 				return
 
@@ -919,8 +985,13 @@
 			if(result_path in stored_research.discovered_mutations)
 				return
 
+<<<<<<< HEAD
 			var/datum/mutation/human/HM = GET_INITIALIZED_MUTATION(result_path)
 			stored_research.discovered_mutations += result_path
+=======
+			var/datum/mutation/HM = GET_INITIALIZED_MUTATION(result_path)
+			stored_research.discovered_mutations[result_path] = TRUE
+>>>>>>> a2ad51fc44... Monkey mutations (#6694)
 			say("Successfully mutated [HM.name].")
 			return
 
@@ -1299,8 +1370,7 @@
 
 			// Run through each mutation in our Advanced Injector and add them to a
 			//  new injector
-			for(var/A in injector)
-				var/datum/mutation/human/HM = A
+			for(var/datum/mutation/HM as() in injector)
 				I.add_mutations += new HM.type(copymut=HM)
 
 			// Force apply any mutations, this is functionality similar to mutators
@@ -1358,7 +1428,7 @@
 			var/bref = params["mutref"]
 			// We've already made sure we can modify the occupant, so this is safe to
 			//  call
-			var/datum/mutation/human/HM = get_mut_by_ref(bref, search_flag)
+			var/datum/mutation/HM = get_mut_by_ref(bref, search_flag)
 
 			// GUARD CHECK - This should not be possible. Unexpected result
 			if(!HM)
@@ -1370,7 +1440,7 @@
 
 			// We then add the instabilities of all other mutations in the injector,
 			//  remembering to apply the Stabilizer chromosome modifiers
-			for(var/datum/mutation/human/I in injector_selection[adv_inj])
+			for(var/datum/mutation/I as() in injector_selection[adv_inj])
 				instability_total += I.instability * GET_MUTATION_STABILIZER(I)
 
 			// If this would take us over the max instability, we inform the user.
@@ -1380,7 +1450,7 @@
 
 			// If we've got here, all our checks are passed and we can successfully
 			//  add the mutation to the advanced injector.
-			var/datum/mutation/human/A = new HM.type()
+			var/datum/mutation/A = new HM.type()
 			A.copy_mutation(HM)
 			injector_selection[adv_inj] += A
 			to_chat(usr,"<span class='notice'>Mutation successfully added to advanced injector.</span>")
@@ -1392,7 +1462,7 @@
 		if("delete_injector_mut")
 			var/bref = params["mutref"]
 
-			var/datum/mutation/human/HM = get_mut_by_ref(bref, SEARCH_ADV_INJ)
+			var/datum/mutation/HM = get_mut_by_ref(bref, SEARCH_ADV_INJ)
 
 			// GUARD CHECK - This should not be possible. Unexpected result
 			if(!HM)
@@ -1518,7 +1588,7 @@
 		//	   this DNA can not be bad
 		//   is done via radiation bursts, so radiation immune carbons are not viable
 		// And the DNA Scanner itself must have a valid scan level
-	if(scanner_occupant.has_dna() && !HAS_TRAIT(scanner_occupant, TRAIT_RADIMMUNE) && !HAS_TRAIT(scanner_occupant, TRAIT_BADDNA) || (connected_scanner.scan_level == 3))
+	if(scanner_occupant.has_dna() && !HAS_TRAIT(scanner_occupant, TRAIT_RADIMMUNE) && !HAS_TRAIT(scanner_occupant, TRAIT_BADDNA) || (connected_scanner.scan_level >= 3))
 		return TRUE
 
 	return FALSE
@@ -1600,7 +1670,7 @@
 		// ---------------------------------------------------------------------- //
 		// Start cataloguing all mutations that the occupant has by default
 		for(var/mutation_type in scanner_occupant.dna.mutation_index)
-			var/datum/mutation/human/HM = GET_INITIALIZED_MUTATION(mutation_type)
+			var/datum/mutation/HM = GET_INITIALIZED_MUTATION(mutation_type)
 
 			var/list/mutation_data = list()
 			var/text_sequence = scanner_occupant.dna.mutation_index[mutation_type]
@@ -1627,7 +1697,7 @@
 
 			// Check if the mutation is currently activated. If it is, we can add even
 			//  MORE information to send to tgui.
-			var/datum/mutation/human/A = scanner_occupant.dna.get_mutation(mutation_type)
+			var/datum/mutation/A = scanner_occupant.dna.get_mutation(mutation_type)
 			if(A)
 				mutation_data["Active"] = TRUE
 				mutation_data["Scrambled"] = A.scrambled
@@ -1660,7 +1730,7 @@
 
 		// ---------------------------------------------------------------------- //
 		// Now get additional/"extra" mutations that they shouldn't have by default
-		for(var/datum/mutation/human/HM in scanner_occupant.dna.mutations)
+		for(var/datum/mutation/HM as() in scanner_occupant.dna.mutations)
 			// If it's in the mutation index array, we've already catalogued this
 			//  mutation and can safely skip over it. It really shouldn't be, but this
 			//  will catch any weird edge cases
@@ -1673,7 +1743,7 @@
 			// These will all be active mutations. They're added by injector and their
 			//  sequencing code can't be changed. They can only be nullified, which
 			//  completely removes them.
-			var/datum/mutation/human/A = GET_INITIALIZED_MUTATION(HM.type)
+			var/datum/mutation/A = GET_INITIALIZED_MUTATION(HM.type)
 
 			mutation_data["Alias"] = A.alias
 			mutation_data["Sequence"] = text_sequence
@@ -1708,10 +1778,10 @@
 
 	// ------------------------------------------------------------------------ //
 	// Build the list of mutations stored within the DNA Console
-	for(var/datum/mutation/human/HM in stored_mutations)
+	for(var/datum/mutation/HM as() in stored_mutations)
 		var/list/mutation_data = list()
 
-		var/datum/mutation/human/A = GET_INITIALIZED_MUTATION(HM.type)
+		var/datum/mutation/A = GET_INITIALIZED_MUTATION(HM.type)
 
 		mutation_data["Alias"] = A.alias
 		mutation_data["Name"] = HM.name
@@ -1746,10 +1816,10 @@
 	// ------------------------------------------------------------------------ //
 	// Build the list of mutations stored on any inserted diskettes
 	if(diskette)
-		for(var/datum/mutation/human/HM in diskette.mutations)
+		for(var/datum/mutation/HM as() in diskette.mutations)
 			var/list/mutation_data = list()
 
-			var/datum/mutation/human/A = GET_INITIALIZED_MUTATION(HM.type)
+			var/datum/mutation/A = GET_INITIALIZED_MUTATION(HM.type)
 
 			mutation_data["Alias"] = A.alias
 			mutation_data["Name"] = HM.name
@@ -1774,10 +1844,10 @@
 	if(LAZYLEN(injector_selection))
 		for(var/I in injector_selection)
 			var/list/mutations = list()
-			for(var/datum/mutation/human/HM in injector_selection[I])
+			for(var/datum/mutation/HM as() in injector_selection[I])
 				var/list/mutation_data = list()
 
-				var/datum/mutation/human/A = GET_INITIALIZED_MUTATION(HM.type)
+				var/datum/mutation/A = GET_INITIALIZED_MUTATION(HM.type)
 
 				mutation_data["Alias"] = A.alias
 				mutation_data["Name"] = HM.name
@@ -1843,14 +1913,20 @@
 	//  then the mutation isn't eligible for discovery. If it is but is scrambled,
 	//  then the mutation isn't eligible for discovery. Finally, check if the
 	//  mutation is in discovered mutations - If it isn't, add it to discover.
-	var/datum/mutation/human/M = scanner_occupant.dna.get_mutation(path)
+	var/datum/mutation/M = scanner_occupant.dna.get_mutation(path)
 	if(!M)
 		return FALSE
 	if(M.scrambled)
 		return FALSE
+<<<<<<< HEAD
 	if(stored_research && !(path in stored_research.discovered_mutations))
 		var/datum/mutation/human/HM = GET_INITIALIZED_MUTATION(path)
 		stored_research.discovered_mutations += path
+=======
+	if(stored_research && !stored_research.discovered_mutations[path])
+		var/datum/mutation/HM = GET_INITIALIZED_MUTATION(path)
+		stored_research.discovered_mutations[path] = TRUE
+>>>>>>> a2ad51fc44... Monkey mutations (#6694)
 		say("Successfully discovered [HM.name].")
 		return TRUE
 
