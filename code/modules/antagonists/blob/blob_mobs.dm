@@ -209,6 +209,16 @@
 		color = initial(color)//looks better.
 		add_overlay(blob_head_overlay)
 
+<<<<<<< HEAD
+=======
+/mob/living/simple_animal/hostile/blob/blobspore/Goto(target, delay, minimum_distance)
+	if(target == src.target)
+		approaching_target = TRUE
+	else
+		approaching_target = FALSE
+	SSmove_manager.hostile_jps_move(src, target,delay, minimum_distance = minimum_distance)
+
+>>>>>>> c9cb034cb1... Ports Movement loop from TG (#6697)
 /mob/living/simple_animal/hostile/blob/blobspore/weak
 	name = "fragile blob spore"
 	health = 15

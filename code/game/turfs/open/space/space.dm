@@ -178,11 +178,19 @@
 			A.start_pulling(AM)
 			AM.can_be_z_moved = TRUE
 
+<<<<<<< HEAD
 		//now we're on the new z_level, proceed the space drifting
 		stoplag()//Let a diagonal move finish, if necessary
 		A.newtonian_move(A.inertia_dir)
 		A.inertia_moving = TRUE
 
+=======
+		// now we're on the new z_level, proceed the space drifting
+		// Stays as a comment for now most likely this is not needed at all but just in case i will leave it here
+		// stoplag() //Let a diagonal move finish, if necessary
+		// if(!arrived.inertia_moving)
+		// 	arrived.newtonian_move(get_dir(old_loc, src)) //we don't have inertial dir anymore so this has to do
+>>>>>>> c9cb034cb1... Ports Movement loop from TG (#6697)
 
 /turf/open/space/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return

@@ -133,7 +133,7 @@
 	if(held_item)
 		held_item.forceMove(drop_location())
 		held_item = null
-	walk(src,0)
+	SSmove_manager.stop_looping(src)
 
 	if(buckled)
 		buckled.unbuckle_mob(src,force=1)
@@ -142,6 +142,11 @@
 	pixel_y = initial(pixel_y)
 
 	..(gibbed)
+
+/mob/living/simple_animal/parrot/Process_Spacemove()
+	if(!stat) //Birds can fly, fun fact. No I don't care that space doesn't have air. Space parrots bitch
+		return TRUE
+	return ..()
 
 /mob/living/simple_animal/parrot/get_stat_tab_status()
 	var/list/tab_data = ..()
@@ -444,7 +449,7 @@
 //-----WANDERING - This is basically a 'I dont know what to do yet' state
 	else if(parrot_state == PARROT_WANDER)
 		//Stop movement, we'll set it later
-		walk(src, 0)
+		SSmove_manager.stop_looping(src)
 		parrot_interest = null
 
 		//Wander around aimlessly. This will help keep the loops from searches down
@@ -482,7 +487,7 @@
 				return
 //-----STEALING
 	else if(parrot_state == (PARROT_SWOOP | PARROT_STEAL))
-		walk(src,0)
+		SSmove_manager.stop_looping(src)
 		if(!parrot_interest || held_item)
 			parrot_state = PARROT_SWOOP | PARROT_RETURN
 			return
@@ -505,8 +510,7 @@
 			parrot_interest = null
 			parrot_state = PARROT_SWOOP | PARROT_RETURN
 			return
-
-		walk_to(src, parrot_interest, 1, parrot_speed)
+		SSmove_manager.move_to(src, parrot_interest, 1, parrot_speed)
 		if(isStuck())
 			return
 
@@ -514,7 +518,7 @@
 
 //-----RETURNING TO PERCH
 	else if(parrot_state == (PARROT_SWOOP | PARROT_RETURN))
-		walk(src, 0)
+		SSmove_manager.stop_looping(src)
 		if(!parrot_perch || !isturf(parrot_perch.loc)) //Make sure the perch exists and somehow isn't inside of something else.
 			parrot_perch = null
 			parrot_state = PARROT_WANDER
@@ -527,7 +531,7 @@
 			icon_state = icon_sit
 			return
 
-		walk_to(src, parrot_perch, 1, parrot_speed)
+		SSmove_manager.move_to(src, parrot_perch, 1, parrot_speed)
 		if(isStuck())
 			return
 
@@ -535,11 +539,11 @@
 
 //-----FLEEING
 	else if(parrot_state == (PARROT_SWOOP | PARROT_FLEE))
-		walk(src,0)
+		SSmove_manager.stop_looping(src)
 		if(!parrot_interest || !isliving(parrot_interest)) //Sanity
 			parrot_state = PARROT_WANDER
 
-		walk_away(src, parrot_interest, 1, parrot_speed)
+		SSmove_manager.move_away(src, parrot_interest, 1, parrot_speed)
 		if(isStuck())
 			return
 
@@ -579,14 +583,14 @@
 			L.attack_animal(src)//Time for the hurt to begin!
 		//Otherwise, fly towards the mob!
 		else
-			walk_to(src, parrot_interest, 1, parrot_speed)
+			SSmove_manager.move_to(src, parrot_interest, 1, parrot_speed)
 			if(isStuck())
 				return
 
 		return
 //-----STATE MISHAP
 	else //This should not happen. If it does lets reset everything and try again
-		walk(src,0)
+		SSmove_manager.stop_looping(src)
 		parrot_interest = null
 		parrot_perch = null
 		drop_held_item()
@@ -976,7 +980,7 @@
 		if(!ishuman(parrot_interest))
 			parrot_interest = null
 		else if(parrot_state == (PARROT_SWOOP | PARROT_ATTACK) && Adjacent(parrot_interest))
-			walk_to(src, parrot_interest, 0, parrot_speed)
+			SSmove_manager.move_to(src, parrot_interest, 0, parrot_speed)
 			Possess(parrot_interest)
 	..()
 

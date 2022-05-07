@@ -68,7 +68,7 @@
 	target = null
 	oldtarget_name = null
 	anchored = FALSE
-	walk_to(src,0)
+	SSmove_manager.stop_looping(src)
 	last_found = world.time
 	spam_flag = FALSE
 
@@ -227,7 +227,7 @@ Maintenance panel panel is [open ? "opened" : "closed"]"},
 
 		if(BOT_IDLE)		// idle
 
-			walk_to(src,0)
+			SSmove_manager.stop_looping(src)
 			look_for_perp()
 			if(!mode && auto_patrol)
 				mode = BOT_START_PATROL
@@ -236,7 +236,7 @@ Maintenance panel panel is [open ? "opened" : "closed"]"},
 
 			// if can't reach perp for long enough, go idle
 			if(frustration >= 5) //gives up easier than beepsky
-				walk_to(src,0)
+				SSmove_manager.stop_looping(src)
 				back_to_idle()
 				return
 
@@ -255,7 +255,7 @@ Maintenance panel panel is [open ? "opened" : "closed"]"},
 
 				else	// not next to perp
 					var/turf/olddist = get_dist(src, target)
-					walk_to(src, target,1,4)
+					SSmove_manager.move_to(src, target, 1, 4)
 					if((get_dist(src, target)) >= (olddist))
 						frustration++
 					else
@@ -320,8 +320,6 @@ Maintenance panel panel is [open ? "opened" : "closed"]"},
 				continue
 
 /mob/living/simple_animal/bot/honkbot/explode()
-
-	walk_to(src,0)
 	visible_message("<span class='boldannounce'>[src] blows apart!</span>")
 	var/atom/Tsec = drop_location()
 	//doesn't drop cardboard nor its assembly, since its a very frail material.

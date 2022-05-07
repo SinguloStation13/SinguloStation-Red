@@ -59,8 +59,18 @@
 	if(!teleport(AM))
 		return ..()
 
+<<<<<<< HEAD
 /obj/effect/portal/attack_tk(mob/user)
 	return
+=======
+/obj/effect/portal/newtonian_move(direction, instant = FALSE) // Prevents portals spawned by jaunter/handtele from floating into space when relocated to an adjacent tile.
+	return TRUE
+
+/obj/effect/portal/CanAllowThrough(atom/movable/mover, border_dir)
+	. = ..()
+	if(HAS_TRAIT(mover, TRAIT_NO_TELEPORT))
+		return TRUE
+>>>>>>> c9cb034cb1... Ports Movement loop from TG (#6697)
 
 /obj/effect/portal/attack_hand(mob/user)
 	. = ..()
