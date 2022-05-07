@@ -1101,3 +1101,12 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		SSambience.ambience_listening_clients[src] = world.time + 10 SECONDS //Just wait 10 seconds before the next one aight mate? cheers.
 	else
 		SSambience.ambience_listening_clients -= src
+<<<<<<< HEAD
+=======
+
+/client/proc/give_award(achievement_type, mob/user)
+	return player_details.achievements.unlock(achievement_type, user)
+
+/client/proc/increase_score(achievement_type, mob/user, value)
+	return player_details.achievements.increase_score(achievement_type, user, value)
+>>>>>>> 689ad86c28... Adds score for biggest toxins bomb (#6721)
