@@ -136,6 +136,7 @@ GLOBAL_VAR_INIT(sc_safecode5, "[rand(0,9)]")
 	new /obj/item/clothing/suit/space/hardsuit/cult(src)
 	//new /obj/item/teleportation_scroll(src)
 	new /obj/item/stack/ore/diamond(src)
+<<<<<<< HEAD
 
 /*
  * Modified Nar'Sie
@@ -155,3 +156,5 @@ GLOBAL_VAR_INIT(sc_safecode5, "[rand(0,9)]")
 
 /obj/singularity/narsie/mini/ex_act()
 	return
+=======
+>>>>>>> c9cb034cb1... Ports Movement loop from TG (#6697)
