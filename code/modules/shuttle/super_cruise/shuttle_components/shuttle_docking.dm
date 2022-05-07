@@ -311,8 +311,16 @@
 	src.origin = origin
 	return ..()
 
+<<<<<<< HEAD
 /mob/camera/ai_eye/remote/shuttle_docker/setLoc(T)
 	..()
+=======
+/mob/camera/ai_eye/remote/shuttle_docker/canZMove(direction, turf/target)
+	return TRUE
+
+/mob/camera/ai_eye/remote/shuttle_docker/setLoc(destination)
+	. = ..()
+>>>>>>> 58aa53725c... Various improvements to multi-Z travel (#6724)
 	var/obj/machinery/computer/shuttle_flight/console = origin
 	console.checkLandingSpot()
 
