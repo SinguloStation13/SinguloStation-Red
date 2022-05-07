@@ -851,8 +851,12 @@
 	remove_all_embedded_objects()
 	set_heartattack(FALSE)
 	drunkenness = 0
+<<<<<<< HEAD
 	set_hygiene(HYGIENE_LEVEL_NORMAL)
 	for(var/datum/mutation/human/HM in dna.mutations)
+=======
+	for(var/datum/mutation/HM as() in dna.mutations)
+>>>>>>> a2ad51fc44... Monkey mutations (#6694)
 		if(HM.quality != POSITIVE)
 			dna.remove_mutation(HM.name)
 	..()
