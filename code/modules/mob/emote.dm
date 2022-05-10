@@ -57,4 +57,18 @@
 				for(var/mob/M in R.buckled_mobs)
 					riding_datum.force_dismount(M)
 			else
+<<<<<<< HEAD
 				R.unbuckle_all_mobs()
+=======
+				R.unbuckle_all_mobs()
+
+/datum/emote/inhale
+	key = "inhale"
+	key_third_person = "inhales"
+	message = "breathes in"
+
+/datum/emote/exhale
+	key = "exhale"
+	key_third_person = "exhales"
+	message = "breathes out"
+>>>>>>> 69a1e55600... Adds some new emotes and an IPC dialup sound on revival (#6832)
