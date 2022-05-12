@@ -664,6 +664,11 @@ GLOBAL_LIST_INIT(cable_coil_recipes, list (new/datum/stack_recipe("cable restrai
 		return
 
 	var/dirn = get_dir(C, user)
+<<<<<<< HEAD
+=======
+	if(T.allow_z_travel && T.below() && !locate(/obj/structure/lattice/catwalk, T))
+		dirn = DOWN
+>>>>>>> 0f504bbda7... Fixes cable joining (#6858)
 	if(forceddir)
 		dirn = forceddir
 
