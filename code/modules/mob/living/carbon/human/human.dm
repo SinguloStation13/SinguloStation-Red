@@ -545,6 +545,7 @@
 		. = 0
 	// If targeting the head, see if the head item is thin enough.
 	// If targeting anything else, see if the wear suit is thin enough.
+<<<<<<< HEAD
 	if (!penetrate_thick)
 		if(above_neck(target_zone))
 			if(head && isclothing(head))
@@ -572,6 +573,38 @@
 						if(CS.body_parts_covered & LEGS)
 							balloon_alert(user, "There is no exposed flesh on these legs")
 							return FALSE
+=======
+	if(above_neck(target_zone))
+		if(!head || !isclothing(head))
+			return TRUE
+		var/obj/item/clothing/head/CH = head
+		if(CH.clothing_flags & THICKMATERIAL)
+			balloon_alert(user, "There is no exposed flesh on [p_their()] head.")
+			return FALSE
+		return TRUE
+	if(!wear_suit || !isclothing(wear_suit))
+		return TRUE
+	var/obj/item/clothing/suit/CS = wear_suit
+	if(CS.clothing_flags & THICKMATERIAL)
+		switch(target_zone)
+			if(BODY_ZONE_CHEST)
+				if(CS.body_parts_covered & CHEST)
+					balloon_alert(user, "There is no exposed flesh on [p_their()] chest.")
+					return FALSE
+			if(BODY_ZONE_PRECISE_GROIN)
+				if(CS.body_parts_covered & GROIN)
+					balloon_alert(user, "There is no exposed flesh on [p_their()] groin.")
+					return FALSE
+			if(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM)
+				if(CS.body_parts_covered & ARMS)
+					balloon_alert(user, "There is no exposed flesh on [p_their()] arms.")
+					return FALSE
+			if(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
+				if(CS.body_parts_covered & LEGS)
+					balloon_alert(user, "There is no exposed flesh on [p_their()] legs.")
+					return FALSE
+	return TRUE
+>>>>>>> fabb0bc844... Improves bubble alerts (#6824)
 
 /mob/living/carbon/human/assess_threat(judgment_criteria, lasercolor = "", datum/callback/weaponcheck=null)
 	if(judgment_criteria & JUDGE_EMAGGED)
