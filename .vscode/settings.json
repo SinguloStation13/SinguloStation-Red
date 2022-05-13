@@ -10,8 +10,13 @@
 		"**/.yarn": true,
 		"**/.pnp.*": true
 	},
+<<<<<<< HEAD
 	"workbench.editorAssociations": {
 		"*.dmi": "imagePreview.previewEditor"
+=======
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+>>>>>>> ce01718fa0... makes dmi editor default viewer for dmi's (#6847)
 	},
 	"files.eol": "\n",
 	"gitlens.advanced.blame.customArguments": ["-w"],
