@@ -3,10 +3,10 @@
 	name = "Jellyperson"
 	id = "jelly"
 	default_color = "00FF90"
-	say_mod = "blorbles"
 	species_traits = list(MUTCOLORS,EYECOLOR,NOBLOOD)
 	inherent_traits = list(TRAIT_TOXINLOVER, TRAIT_NONECRODISEASE)
 	mutantlungs = /obj/item/organ/lungs/slime
+	mutanttongue = /obj/item/organ/tongue/slime
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/slime
 	exotic_blood = /datum/reagent/toxin/slimejelly
 	damage_overlay_type = ""
@@ -113,7 +113,6 @@
 	id = "slime"
 	default_color = "00FFFF"
 	species_traits = list(MUTCOLORS,EYECOLOR,HAIR,FACEHAIR,NOBLOOD)
-	say_mod = "says"
 	hair_color = "mutcolor"
 	hair_alpha = 150
 	var/datum/action/innate/split_body/slime_split
@@ -405,8 +404,12 @@
 
 /datum/species/jelly/luminescent
 	name = "Luminescent"
+<<<<<<< HEAD
 	id = "lum"
 	say_mod = "says"
+=======
+	id = SPECIES_LUMINESCENT
+>>>>>>> d23719e5c8... Makes tongues control the say mods instead of species (#6658)
 	var/glow_intensity = LUMINESCENT_DEFAULT_GLOW
 	var/obj/effect/dummy/luminescent_glow/glow
 	var/obj/item/slime_extract/current_extract

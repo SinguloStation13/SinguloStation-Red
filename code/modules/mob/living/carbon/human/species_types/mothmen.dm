@@ -1,7 +1,13 @@
 /datum/species/moth
+<<<<<<< HEAD
 	name = "Mothman"
 	id = "moth"
 	say_mod = "flutters"
+=======
+	name = "\improper Mothman"
+	id = SPECIES_MOTH
+	bodyflag = FLAG_MOTH
+>>>>>>> d23719e5c8... Makes tongues control the say mods instead of species (#6658)
 	default_color = "00FF00"
 	species_traits = list(LIPS, NOEYESPRITES)
 	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID, MOB_BUG)
@@ -16,6 +22,7 @@
 	toxic_food = MEAT | RAW
 	mutanteyes = /obj/item/organ/eyes/moth
 	mutantwings = /obj/item/organ/wings/moth
+	mutanttongue = /obj/item/organ/tongue/moth
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	species_language_holder = /datum/language_holder/moth
 
