@@ -1,7 +1,12 @@
 /datum/species/abductor
+<<<<<<< HEAD
 	name = "Abductor"
 	id = "abductor"
 	say_mod = "gibbers"
+=======
+	name = "\improper Abductor"
+	id = SPECIES_ABDUCTOR
+>>>>>>> d23719e5c8... Makes tongues control the say mods instead of species (#6658)
 	sexes = FALSE
 	species_traits = list(NOBLOOD,NOEYESPRITES,NOMOUTH)
 	inherent_traits = list(TRAIT_VIRUSIMMUNE,TRAIT_NOGUNS,TRAIT_NOHUNGER,TRAIT_NOBREATH)

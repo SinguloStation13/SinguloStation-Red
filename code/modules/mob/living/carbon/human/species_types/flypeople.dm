@@ -1,7 +1,13 @@
 /datum/species/fly
+<<<<<<< HEAD
 	name = "Flyperson"
 	id = "fly"
 	say_mod = "buzzes"
+=======
+	name = "\improper Flyperson"
+	id = SPECIES_FLY
+	bodyflag = FLAG_FLY
+>>>>>>> d23719e5c8... Makes tongues control the say mods instead of species (#6658)
 	species_traits = list(NOEYESPRITES, NO_UNDERWEAR, TRAIT_BEEFRIEND)
 	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID, MOB_BUG)
 	mutanttongue = /obj/item/organ/tongue/fly

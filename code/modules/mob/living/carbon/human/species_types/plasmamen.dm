@@ -1,7 +1,13 @@
 /datum/species/plasmaman
+<<<<<<< HEAD
 	name = "Plasmaman"
 	id = "plasmaman"
 	say_mod = "rattles"
+=======
+	name = "\improper Plasmaman"
+	id = SPECIES_PLASMAMAN
+	bodyflag = FLAG_PLASMAMAN
+>>>>>>> d23719e5c8... Makes tongues control the say mods instead of species (#6658)
 	sexes = 0
 	meat = /obj/item/stack/sheet/mineral/plasma
 	species_traits = list(NOBLOOD,NOTRANSSTING)

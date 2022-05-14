@@ -1,8 +1,14 @@
 /datum/species/lizard
 	// Reptilian humanoids with scaled skin and tails.
+<<<<<<< HEAD
 	name = "Lizardperson"
 	id = "lizard"
 	say_mod = "hisses"
+=======
+	name = "\improper Lizardperson"
+	id = SPECIES_LIZARD
+	bodyflag = FLAG_LIZARD
+>>>>>>> d23719e5c8... Makes tongues control the say mods instead of species (#6658)
 	default_color = "00FF00"
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS)
 	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID, MOB_REPTILE)

@@ -1,13 +1,18 @@
 /datum/species/apid
 	// Beepeople, god damn it. It's hip, and alive! - Fuck ubunutu edition
+<<<<<<< HEAD
 	name = "Apids"
 	id = "apid"
 	say_mod = "buzzes"
+=======
+	name = "\improper Apid"
+	id = SPECIES_APID
+	bodyflag = FLAG_APID
+>>>>>>> d23719e5c8... Makes tongues control the say mods instead of species (#6658)
 	default_color = "FFE800"
 	species_traits = list(LIPS,NOEYESPRITES)
 	inherent_traits = list(TRAIT_BEEFRIEND)
 	inherent_biotypes = list(MOB_ORGANIC,MOB_HUMANOID,MOB_BUG)
-	mutanttongue = /obj/item/organ/tongue/bee
 	attack_verb = "slash"
 	attack_sound = 'sound/weapons/slash.ogg'
 	miss_sound = 'sound/weapons/slashmiss.ogg'
@@ -18,6 +23,7 @@
 	mutanteyes = /obj/item/organ/eyes/apid
 	mutantlungs = /obj/item/organ/lungs/apid
 	mutantwings = /obj/item/organ/wings/bee
+	mutanttongue = /obj/item/organ/tongue/bee
 	burnmod = 1.5
 	toxmod = 1.5
 	staminamod = 1.25
