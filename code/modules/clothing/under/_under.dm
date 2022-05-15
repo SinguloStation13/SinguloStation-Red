@@ -73,6 +73,11 @@
 		if(DIGITIGRADE in H.dna.species.species_traits)
 			adjusted = DIGITIGRADE_STYLE
 		H.update_inv_w_uniform()
+<<<<<<< HEAD
+=======
+	if(slot == ITEM_SLOT_ICLOTHING)
+		update_sensors(sensor_mode, TRUE)
+>>>>>>> f488025b08... working (#6775)
 
 	if(slot == ITEM_SLOT_ICLOTHING && freshly_laundered)
 		freshly_laundered = FALSE
@@ -85,6 +90,7 @@
 			H.update_inv_wear_suit()
 
 /obj/item/clothing/under/dropped(mob/user)
+<<<<<<< HEAD
 	if(attached_accessory)
 		attached_accessory.on_uniform_dropped(src, user)
 		if(ishuman(user))
@@ -93,6 +99,22 @@
 				H.update_inv_wear_suit()
 
 	..()
+=======
+	..()
+	var/mob/living/carbon/human/H = user
+	if(attached_accessory)
+		attached_accessory.on_uniform_dropped(src, user)
+		if(ishuman(H) && attached_accessory.above_suit)
+			H.update_inv_wear_suit()
+
+	if(ishuman(H))
+		if(H.w_uniform == src)
+			if(!HAS_TRAIT(user, TRAIT_SUIT_SENSORS))
+				return
+			REMOVE_TRAIT(user, TRAIT_SUIT_SENSORS, TRACKED_SENSORS_TRAIT)
+			if(!HAS_TRAIT(user, TRAIT_SUIT_SENSORS) && !HAS_TRAIT(user, TRAIT_NANITE_SENSORS))
+				GLOB.suit_sensors_list -= user
+>>>>>>> f488025b08... working (#6775)
 
 /obj/item/clothing/under/proc/attach_accessory(obj/item/I, mob/user, notifyAttach = 1)
 	. = FALSE
@@ -147,6 +169,31 @@
 			H.update_inv_w_uniform()
 			H.update_inv_wear_suit()
 
+<<<<<<< HEAD
+=======
+//Adds or removes mob from suit sensor global list
+/obj/item/clothing/under/proc/update_sensors(new_mode, forced = FALSE)
+	var/old_mode = sensor_mode
+	sensor_mode = new_mode
+	if(!forced && (old_mode == new_mode || (old_mode != SENSOR_OFF && new_mode != SENSOR_OFF)))
+		return
+	if(!ishuman(loc) || istype(loc, /mob/living/carbon/human/dummy))
+		return
+
+	if(has_sensor >= HAS_SENSORS && sensor_mode > SENSOR_OFF)
+		if(HAS_TRAIT(loc, TRAIT_SUIT_SENSORS))
+			return
+		ADD_TRAIT(loc, TRAIT_SUIT_SENSORS, TRACKED_SENSORS_TRAIT)
+		if(!HAS_TRAIT(loc, TRAIT_NANITE_SENSORS))
+			GLOB.suit_sensors_list += loc
+	else
+		if(!HAS_TRAIT(loc, TRAIT_SUIT_SENSORS))
+			return
+		REMOVE_TRAIT(loc, TRAIT_SUIT_SENSORS, TRACKED_SENSORS_TRAIT)
+		if(!HAS_TRAIT(loc, TRAIT_NANITE_SENSORS))
+			GLOB.suit_sensors_list -= loc
+
+>>>>>>> f488025b08... working (#6775)
 
 /obj/item/clothing/under/examine(mob/user)
 	. = ..()
