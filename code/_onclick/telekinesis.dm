@@ -93,7 +93,12 @@
 		update_icon()
 
 /obj/item/tk_grab/dropped(mob/user)
+<<<<<<< HEAD
 	if(focus && user && loc != user && loc != user.loc) // drop_item() gets called when you tk-attack a table/closet with an item
+=======
+	..()
+	if(focus && user && loc != user && loc != user.loc) // transferItemToLoc() gets called when you tk-attack a table/closet with an item
+>>>>>>> 7e466ec7f7... Cleanup dead code uses of "drop_item". (#6884)
 		if(focus.Adjacent(loc))
 			focus.forceMove(loc)
 	. = ..()
