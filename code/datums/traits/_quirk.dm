@@ -33,21 +33,31 @@
 	STOP_PROCESSING(SSquirks, src)
 	remove()
 	if(quirk_holder)
+<<<<<<< HEAD
 		to_chat(quirk_holder, lose_text)
+=======
+		remove()
+		UnregisterSignal(quirk_holder, COMSIG_PARENT_QDELETING)
+		if(!QDELETED(quirk_holder))
+			to_chat(quirk_holder, lose_text)
+>>>>>>> e82466beb4... Update _quirk.dm (#6902)
 		quirk_holder.roundstart_quirks -= src
 		if(mob_trait)
 			REMOVE_TRAIT(quirk_holder, mob_trait, ROUNDSTART_TRAIT)
+		quirk_holder = null
 	SSquirks.quirk_objects -= src
 	return ..()
 
 /datum/quirk/proc/transfer_mob(mob/living/to_mob)
 	quirk_holder.roundstart_quirks -= src
+	UnregisterSignal(quirk_holder, COMSIG_PARENT_QDELETING)
 	to_mob.roundstart_quirks += src
 	if(mob_trait)
 		REMOVE_TRAIT(quirk_holder, mob_trait, ROUNDSTART_TRAIT)
 		ADD_TRAIT(to_mob, mob_trait, ROUNDSTART_TRAIT)
 	quirk_holder = to_mob
 	on_transfer()
+	RegisterSignal(quirk_holder, COMSIG_PARENT_QDELETING, .proc/handle_parent_del)
 
 /datum/quirk/proc/add() //special "on add" effects
 /datum/quirk/proc/on_spawn() //these should only trigger when the character is being created for the first time, i.e. roundstart/latejoin
@@ -59,6 +69,13 @@
 /datum/quirk/proc/clone_data() //return additional data that should be remembered by cloning
 /datum/quirk/proc/on_clone(data) //create the quirk from clone data
 
+<<<<<<< HEAD
+=======
+/datum/quirk/proc/handle_parent_del()
+	SIGNAL_HANDLER
+	qdel(src)
+
+>>>>>>> e82466beb4... Update _quirk.dm (#6902)
 /datum/quirk/process(delta_time)
 	if(QDELETED(quirk_holder))
 		quirk_holder = null
