@@ -111,6 +111,7 @@
 #define NOTRANSSTING	7
 #define MUTCOLORS_PARTSONLY	8	//! Used if we want the mutant colour to be only used by mutant bodyparts. Don't combine this with MUTCOLORS, or it will be useless.
 #define NOZOMBIE		9
+<<<<<<< HEAD
 #define DIGITIGRADE		10	//! Uses weird leg sprites. Optional for Lizards, required for ashwalkers. Don't give it to other races unless you make sprites for this (see human_parts_greyscale.dmi)
 #define NO_UNDERWEAR	11
 #define NOLIVER			12
@@ -127,6 +128,21 @@
 #define ROBOTIC_LIMBS	23 //limbs start out as robotic; but also use organic icons. If you want to use the default ones, you'll have to use on_species_gain
 #define NOMOUTH			24
 #define NOSOCKS       25 // You cannot wear socks.
+=======
+#define NO_UNDERWEAR	10
+#define NOLIVER			11
+#define NOSTOMACH		12
+#define NO_DNA_COPY     13
+#define NOFLASH			14
+#define DYNCOLORS		15 //! Use this if you want to change the race's color without the player being able to pick their own color. AKA special color shifting TRANSLATION: AWFUL.
+#define AGENDER			16
+#define NOEYESPRITES	17 //! Do not draw eyes or eyeless overlay
+#define NOREAGENTS     18 //! DO NOT PROCESS REAGENTS
+#define REVIVESBYHEALING 19 // Will revive on heal when healing and total HP > 0.
+#define NOHUSK			20 // Can't be husked.
+#define NOMOUTH			21
+#define NOSOCKS       22 // You cannot wear socks.
+>>>>>>> 98a393b895... 2021 viro expansion pack (#5624)
 
 //organ slots
 #define ORGAN_SLOT_BRAIN "brain"

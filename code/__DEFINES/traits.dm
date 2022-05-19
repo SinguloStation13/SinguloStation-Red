@@ -233,6 +233,12 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_DIGINVIS     		"digital_invis"	//note: diginvis grants digitalcamo, but carbons can tell if you have the digicamo trait on examine
 #define TRAIT_NICE_SHOT			"nice_shot" //hnnnnnnnggggg..... you're pretty good....
 #define TRAIT_ALWAYS_STUBS      "always_stubs_toe" //you will always stub your toe on tables, even if you're wearing shoes
+<<<<<<< HEAD
+=======
+#define TRAIT_NAIVE				"naive" //All dead people will appear as sleeping.
+#define TRAIT_DROPS_ITEMS_ON_DEATH "drops_items_on_death" //used for battle royale
+#define TRAIT_DRINKSBLOOD		"drinks_blood"
+>>>>>>> 98a393b895... 2021 viro expansion pack (#5624)
 
 //non-mob traits
 #define TRAIT_PARALYSIS			"paralysis" //Used for limb-based paralysis, where replacing the limb will fix it

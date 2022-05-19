@@ -45,9 +45,17 @@
 	infect(infectee, make_copy)
 	return TRUE
 
-//add the disease with no checks
+/**
+* add the disease with no checks
+* Don't use this proc. use ForceContractDisease on mob/living/carbon instead
+*/
 /datum/disease/proc/infect(var/mob/living/infectee, make_copy = TRUE)
+<<<<<<< HEAD
 	var/datum/disease/D = make_copy ? Copy() : src
+=======
+	PROTECTED_PROC(TRUE)
+	var/datum/disease/D = make_copy ? Copy() : src	
+>>>>>>> 98a393b895... 2021 viro expansion pack (#5624)
 	infectee.diseases += D
 	D.affected_mob = infectee
 	SSdisease.active_diseases += D //Add it to the active diseases list, now that it's actually in a mob and being processed.
