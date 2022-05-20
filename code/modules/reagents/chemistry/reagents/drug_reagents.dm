@@ -279,7 +279,11 @@
 	overdose_threshold = 20
 	addiction_threshold = 10
 	taste_description = "salt" // because they're bathsalts?
+<<<<<<< HEAD
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
+=======
+	var/datum/martial_art/psychotic_brawling/brawling
+>>>>>>> 08cd87dafa... re-add brawling (#6452)
 
 /datum/reagent/drug/bath_salts/on_mob_metabolize(mob/living/L)
 	..()
@@ -289,10 +293,16 @@
 	ADD_TRAIT(L, TRAIT_NOSTAMCRIT, type)
 	ADD_TRAIT(L, TRAIT_NOLIMBDISABLE, type)
 	ADD_TRAIT(L, TRAIT_NOBLOCK, type)
+<<<<<<< HEAD
 	if(iscarbon(L))
 		var/mob/living/carbon/C = L
 		rage = new()
 		C.gain_trauma(rage, TRAUMA_RESILIENCE_ABSOLUTE)
+=======
+	brawling = new(null)
+	if(!brawling.teach(L, TRUE))
+		QDEL_NULL(brawling)
+>>>>>>> 08cd87dafa... re-add brawling (#6452)
 
 /datum/reagent/drug/bath_salts/on_mob_end_metabolize(mob/living/L)
 	REMOVE_TRAIT(L, TRAIT_STUNIMMUNE, type)
@@ -301,8 +311,13 @@
 	REMOVE_TRAIT(L, TRAIT_NOSTAMCRIT, type)
 	REMOVE_TRAIT(L, TRAIT_NOLIMBDISABLE, type)
 	REMOVE_TRAIT(L, TRAIT_NOBLOCK, type)
+<<<<<<< HEAD
 	if(rage)
 		QDEL_NULL(rage)
+=======
+	brawling.remove(L)
+	QDEL_NULL(brawling)
+>>>>>>> 08cd87dafa... re-add brawling (#6452)
 	..()
 
 /datum/reagent/drug/bath_salts/on_mob_life(mob/living/carbon/M)
