@@ -17,7 +17,18 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 	if(!quirks.len)
 		SetupQuirks()
 
+<<<<<<< HEAD
 	quirk_blacklist = list(list("Blind","Nearsighted"),list("Jolly","Depression","Apathetic","Hypersensitive"),list("Ageusia","Vegetarian","Deviant Tastes"),list("Ananas Affinity","Ananas Aversion"),list("Alcohol Tolerance","Light Drinker"),list(list("Neat","NEET")))
+=======
+	quirk_blacklist = list(
+		list("Blind","Nearsighted"),
+		list("Jolly","Depression","Apathetic","Hypersensitive"),
+		list("Ageusia","Vegetarian","Deviant Tastes"),
+		list("Ananas Affinity","Ananas Aversion"),
+		list("Alcohol Tolerance","Light Drinker"),
+		list("Social Anxiety","Mute"),
+	)
+>>>>>>> b1a9c9b82a... Adds mute quirk (this time it's neutral) (#6714)
 	return ..()
 
 /datum/controller/subsystem/processing/quirks/proc/SetupQuirks()
