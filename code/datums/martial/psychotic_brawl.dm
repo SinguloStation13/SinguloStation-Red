@@ -69,4 +69,8 @@
 
 	if(atk_verb)
 		log_combat(A, D, "[atk_verb] (Psychotic Brawling)")
+<<<<<<< HEAD
 	return 1
+=======
+	return 1
+>>>>>>> 08cd87dafa... re-add brawling (#6452)
