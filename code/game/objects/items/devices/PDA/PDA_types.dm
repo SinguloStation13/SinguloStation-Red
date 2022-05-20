@@ -57,12 +57,21 @@
 /obj/item/pda/ai/pai
 	ttone = "assist"
 
+//Various types of PDAs
 
+/obj/item/pda/assistant
+	name = "assistant PDA"
+	icon_state = "pda-assistant"
 
 /obj/item/pda/medical
 	name = "medical PDA"
 	default_cartridge = /obj/item/cartridge/medical
 	icon_state = "pda-medical"
+
+/obj/item/pda/paramedic
+	name = "paramedic PDA"
+	default_cartridge = /obj/item/cartridge/medical
+	icon_state = "pda-paramedical"
 
 /obj/item/pda/viro
 	name = "virology PDA"
@@ -78,6 +87,16 @@
 	name = "security PDA"
 	default_cartridge = /obj/item/cartridge/security
 	icon_state = "pda-security"
+
+/obj/item/pda/deputy
+	name = "deputy PDA"
+	default_cartridge = /obj/item/cartridge/security
+	icon_state = "pda-deputy"
+
+/obj/item/pda/brigphys
+	name = "brig Physician PDA"
+	//no cartridge?
+	icon_state = "pda-brigphys"
 
 /obj/item/pda/detective
 	name = "detective PDA"
@@ -101,10 +120,13 @@
 	icon_state = "pda-science"
 	ttone = "boom"
 
+/obj/item/pda/service
+	name = "service PDA"
+	icon_state = "pda-service"
 
 /obj/item/pda/heads
 	default_cartridge = /obj/item/cartridge/head
-	icon_state = "pda-hop"
+	icon_state = "pda-heads"
 
 /obj/item/pda/heads/hop
 	name = "head of personnel PDA"
@@ -136,6 +158,7 @@
 	name = "captain PDA"
 	default_cartridge = /obj/item/cartridge/captain
 	inserted_item = /obj/item/pen/fountain/captain
+	desc = "A portable microcomputer by Thinktronic Systems, LTD. The internals are modified to be more tough than the usual."
 	icon_state = "pda-captain"
 	detonatable = FALSE
 
@@ -160,9 +183,15 @@
 
 /obj/item/pda/syndicate
 	default_cartridge = /obj/item/cartridge/virus/syndicate
+	desc = "A portable microcomputer by Thinktronic Systems, LTD. This model is a WGW-XL series."
+	note = "Congratulations, your -corrupted- has chosen the Thinktronic 5290 WGW-XL Series Personal Data Assistant!"
 	icon_state = "pda-syndi"
+	icon_alert = "pda-r-wide"
+	icon_pai = "pai-overlay-wide"
+	icon_inactive_pai = "pai-off-overlay-wide"
 	name = "military PDA"
 	owner = "John Doe"
+	detonatable = FALSE
 	hidden = 1
 
 /obj/item/pda/chaplain
@@ -177,11 +206,6 @@
 	icon_state = "pda-lawyer"
 	ttone = "objection"
 
-/obj/item/pda/botanist
-	name = "botanist PDA"
-	//default_cartridge = /obj/item/cartridge/botanist
-	icon_state = "pda-hydro"
-
 /obj/item/pda/roboticist
 	name = "roboticist PDA"
 	icon_state = "pda-roboticist"
@@ -190,13 +214,14 @@
 /obj/item/pda/curator
 	name = "curator PDA"
 	icon_state = "pda-library"
-	icon_alert = "pda-r-library"
+	icon_alert = "pda-r-wide"
+	icon_pai = "pai-overlay-wide"
+	icon_inactive_pai = "pai-off-overlay-wide"
 	default_cartridge = /obj/item/cartridge/curator
 	inserted_item = /obj/item/pen/fountain
 	desc = "A portable microcomputer by Thinktronic Systems, LTD. This model is a WGW-11 series e-reader."
 	note = "Congratulations, your station has chosen the Thinktronic 5290 WGW-11 Series E-reader and Personal Data Assistant!"
 	silent = TRUE //Quiet in the library!
-	overlays_x_offset = -3
 
 /obj/item/pda/clear
 	name = "clear PDA"
@@ -233,12 +258,16 @@
 	desc = "A shitty knockoff of a portable microcomputer by Thinktronic Systems, LTD. Complete with a cracked operating system."
 	note = "Error: Unlicensed OS. Please contact your supervisor."
 	icon_state = "pda-knockoff"
+	icon_alert = "pda-r-wide"
+	icon_pai = "pai-overlay-wide"
+	icon_inactive_pai = "pai-off-overlay-wide"
 	inserted_item = /obj/item/pen/charcoal
 
 /obj/item/pda/celebrity
 	name = "fancy PDA"
 	default_cartridge = /obj/item/cartridge/annoyance //so they can send messages to everyone and be generally obnoxious
 	inserted_item = /obj/item/pen/fountain
-	desc = "A portable microcomputer by Thinktronic Systems, LTD. This model is gold-plated, and probably quite expensive."
+	desc = "A portable microcomputer by Thinktronic Systems, LTD. This model is a gold-plated LRP Series, and probably quite expensive."
+	note = "Congratulations, you have chosen the Thinktronic 5230 LRP Series Personal Data Assistant Golden Edition!"
 	icon_state = "pda-gold"
 	ttone = "ch-CHING"

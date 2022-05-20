@@ -30,7 +30,12 @@
 	name = "Brig Physician"
 	jobtype = /datum/job/brig_phys
 
+<<<<<<< HEAD
 	belt = /obj/item/pda/security
+=======
+	id = /obj/item/card/id/job/brigphys
+	belt = /obj/item/pda/brigphys
+>>>>>>> c9df75301c... New PDA and Cartridges Icons (#6746)
 	ears = /obj/item/radio/headset/headset_medsec
 	uniform = /obj/item/clothing/under/rank/brig_phys
 	shoes = /obj/item/clothing/shoes/sneakers/white
