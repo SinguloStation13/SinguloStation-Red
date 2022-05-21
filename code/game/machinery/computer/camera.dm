@@ -49,9 +49,16 @@
 	cam_background.del_on_map_removal = FALSE
 
 /obj/machinery/computer/security/Destroy()
+<<<<<<< HEAD
 	qdel(cam_screen)
 	qdel(cam_plane_master)
 	qdel(cam_background)
+=======
+	QDEL_NULL(cam_screen)
+	QDEL_NULL(cam_plane_master)
+	QDEL_NULL(visual_plane_master)
+	QDEL_NULL(cam_background)
+>>>>>>> 67d45782d6... So that should fix that plane_master_controller harddel (#6772)
 	return ..()
 
 /obj/machinery/computer/security/connect_to_shuttle(obj/docking_port/mobile/port, obj/docking_port/stationary/dock, idnum, override=FALSE)
