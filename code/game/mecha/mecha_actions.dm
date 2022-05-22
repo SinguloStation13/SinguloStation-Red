@@ -106,6 +106,8 @@
 /datum/action/innate/mecha/mech_toggle_lights/Activate()
 	if(!owner || !chassis || chassis.occupant != owner)
 		return
+	if(!chassis.lights_power)
+		return
 	chassis.lights = !chassis.lights
 	if(chassis.lights)
 		chassis.set_light(chassis.lights_power)

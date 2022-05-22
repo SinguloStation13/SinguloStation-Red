@@ -14,6 +14,16 @@
 	else
 		camera_mode_on(user)
 
+<<<<<<< HEAD
+=======
+/obj/item/camera/siliconcam/lighteater_act(obj/item/light_eater/light_eater)
+	..()
+	return
+
+/obj/item/camera/siliconcam/burn()
+	return
+
+>>>>>>> 4918fe0e99... Fix light eater not being able to break mech lights or wisps (#6627)
 /obj/item/camera/siliconcam/proc/camera_mode_off(mob/user)
 	in_camera_mode = FALSE
 	to_chat(user, "<B>Camera Mode deactivated</B>")
