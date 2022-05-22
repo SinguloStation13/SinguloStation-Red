@@ -328,7 +328,7 @@
 	for(var/i in 1 to all_turfs.len)
 		var/turf/curT = all_turfs[i]
 		var/area/shuttle/cur_area = curT.loc
-		if(istype(cur_area, area_type))
+		if(istype(cur_area, area_type) && !istype(cur_area, /area/shuttle/transit))
 			shuttle_areas[cur_area] = TRUE
 			if(!cur_area.mobile_port)
 				cur_area.link_to_shuttle(src)
