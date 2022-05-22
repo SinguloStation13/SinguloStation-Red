@@ -65,8 +65,13 @@ GLOBAL_LIST_INIT(valid_keys, list(
 		var/datum/keybinding/kb = GLOB.keybindings_by_name[kb_name]
 		kbs += kb
 	kbs = sortList(kbs, /proc/cmp_keybinding_dsc)
+<<<<<<< HEAD
 	for (var/datum/keybinding/kb in kbs)
 		if (kb.down(src))
+=======
+	for(var/datum/keybinding/kb in kbs)
+		if(kb.can_use(src) && kb.down(src))
+>>>>>>> 4a00e5e622... Ports holding down space to toggle throw mode from tg (#6493)
 			break
 
 	if(holder)
@@ -93,8 +98,8 @@ GLOBAL_LIST_INIT(valid_keys, list(
 		var/datum/keybinding/kb = GLOB.keybindings_by_name[kb_name]
 		kbs += kb
 	kbs = sortList(kbs, /proc/cmp_keybinding_dsc)
-	for (var/datum/keybinding/kb in kbs)
-		if (kb.up(src))
+	for(var/datum/keybinding/kb in kbs)
+		if(kb.can_use(src) && kb.up(src))
 			break
 
 	if(holder)
