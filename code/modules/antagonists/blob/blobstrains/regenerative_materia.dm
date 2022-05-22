@@ -11,7 +11,12 @@
 /datum/reagent/blob/regenerative_materia
 	name = "Regenerative Materia"
 	taste_description = "heaven"
+<<<<<<< HEAD
 	color = "#C8A5DC"
+=======
+	color = "#A88FB7"
+	chem_flags = CHEMICAL_NOT_SYNTH | CHEMICAL_RNG_FUN
+>>>>>>> ac3d38f54b... chemical flag refactoring for random chemical / can_synth check (#6558)
 
 /datum/reagent/blob/regenerative_materia/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message, touch_protection, mob/camera/blob/O)
 	reac_volume = ..()
