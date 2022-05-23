@@ -10,6 +10,12 @@ SUBSYSTEM_DEF(atoms)
 
 	var/old_initialized
 
+<<<<<<< HEAD
+=======
+	/// Is initialized currently changed if yes then this is TRUE otherwise false here so we can prevent old_initialize being overriden by some other value, breaking init code
+	var/initialized_changed = 0
+
+>>>>>>> 8a2ac793fd... fix (#6930)
 	var/list/late_loaders = list()
 
 	var/list/BadInitializeCalls = list()
@@ -119,6 +125,22 @@ SUBSYSTEM_DEF(atoms)
 	initialized = INITIALIZATION_INSSATOMS
 
 /datum/controller/subsystem/atoms/proc/map_loader_stop()
+<<<<<<< HEAD
+=======
+	clear_tracked_initalize()
+
+/// Use this to set initialized to prevent error states where old_initialized is overriden. It keeps happening and it's cheesing me off
+/datum/controller/subsystem/atoms/proc/set_tracked_initalized(value)
+	if(!initialized_changed)
+		old_initialized = initialized
+		initialized = value
+		initialized_changed = TRUE // who cares how often this gets called important is only that we don't overwrite old_initialize
+	else
+		stack_trace("We started maploading while we were already maploading. You doing something odd?")
+
+/datum/controller/subsystem/atoms/proc/clear_tracked_initalize()
+	initialized_changed = FALSE
+>>>>>>> 8a2ac793fd... fix (#6930)
 	initialized = old_initialized
 
 /datum/controller/subsystem/atoms/Recover()
