@@ -973,8 +973,13 @@
   * Turns you to face the other mob too
   */
 /mob/buckle_mob(mob/living/M, force = FALSE, check_loc = TRUE)
+<<<<<<< HEAD
 	if(M.buckled)
 		return 0
+=======
+	if(M.buckled && !force)
+		return FALSE
+>>>>>>> 3b9642b7d8... Fixes slimes being unable to feed on buckled players (#6894)
 	var/turf/T = get_turf(src)
 	if(M.loc != T)
 		var/old_density = density
