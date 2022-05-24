@@ -26,8 +26,27 @@
 	can_flashlight = FALSE // Can't attach or detach the flashlight, and override it's icon update
 	weapon_weight = WEAPON_LIGHT
 
+<<<<<<< HEAD
 /obj/item/gun/energy/e_gun/mini/Initialize()
 	gun_light = new /obj/item/flashlight/seclite(src)
+=======
+/obj/item/gun/energy/e_gun/mini/heads
+	name = "Personal Tiny Self Defense Gun"
+	desc = "The PTSD gun has a built-in flashlight and the ability to recharge itself in two minutes. PTSD is standard issue for leadership within Nanotrasen. It has two settings: disable and kill."
+	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hos, /obj/item/ammo_casing/energy/laser) ///uses the hos disabler rounds to slightly weaken the disabler count and also to avoid encountering a visual bug where the gun is out of charge but displays that it has one enough for another shot. 
+	selfcharge = 1
+	charge_delay = 20
+	can_charge = FALSE 			///Not compatible with fast charging stations, must recharge slowly. 
+	icon_state = "personal"
+	item_state = "gun"
+	ammo_x_offset = 2
+	charge_sections = 2
+	flight_x_offset = 13
+	flight_y_offset = 12
+
+/obj/item/gun/energy/e_gun/mini/Initialize(mapload)
+	set_gun_light(new /obj/item/flashlight/seclite(src))
+>>>>>>> 5aec5b5aa6... PTSD: Now standard issue for all heads of staff (#6754)
 	return ..()
 
 /obj/item/gun/energy/e_gun/mini/update_icon()
