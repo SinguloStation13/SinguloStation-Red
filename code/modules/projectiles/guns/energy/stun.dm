@@ -53,6 +53,7 @@
 	desc = "An integrated pulse rifle"
 	can_charge = FALSE
 	use_cyborg_cell = TRUE
+<<<<<<< HEAD
 
 /obj/item/gun/energy/disabler/personal
 	name = "PTSD"
@@ -68,3 +69,6 @@
 	flight_x_offset = 13
 	flight_y_offset = 12
 	weapon_weight = WEAPON_LIGHT
+=======
+	requires_wielding = FALSE
+>>>>>>> 5aec5b5aa6... PTSD: Now standard issue for all heads of staff (#6754)

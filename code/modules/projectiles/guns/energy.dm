@@ -8,9 +8,18 @@
 	var/cell_type = /obj/item/stock_parts/cell
 	var/modifystate = 0
 	var/list/ammo_type = list(/obj/item/ammo_casing/energy)
+<<<<<<< HEAD
 	var/select = 1 //The state of the select fire switch. Determines from the ammo_type list what kind of shot is fired next.
 	var/can_charge = TRUE //Can it be charged in a recharger?
 	var/automatic_charge_overlays = TRUE	//Do we handle overlays with base update_icon()?
+=======
+	///The state of the select fire switch. Determines from the ammo_type list what kind of shot is fired next.
+	var/select = 1 
+	///Can it be charged in a recharger?
+	var/can_charge = TRUE
+	///Do we handle overlays with base update_icon()?
+	var/automatic_charge_overlays = TRUE
+>>>>>>> 5aec5b5aa6... PTSD: Now standard issue for all heads of staff (#6754)
 	var/charge_sections = 4
 	ammo_x_offset = 2
 	var/shaded_charge = FALSE //if this gun uses a stateful charge bar for more detail
