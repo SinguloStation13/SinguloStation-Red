@@ -1,6 +1,7 @@
 /datum/keybinding/mob
 		category = CATEGORY_HUMAN
 		weight = WEIGHT_MOB
+<<<<<<< HEAD
 
 
 /datum/keybinding/mob/face_north
@@ -53,6 +54,109 @@
 	M.westface()
 	return TRUE
 
+=======
+		
+		
+/datum/keybinding/mob/move_north
+	key = "W"
+	name = "move_north"
+	full_name = "Move North"
+	description = ""
+	keybind_signal = COMSIG_KB_MOB_MOVENORTH_DOWN
+	any_modifier = TRUE
+
+/datum/keybinding/mob/move_north/down(client/user)
+	. = ..()
+	if(.)
+		return
+	if(!user.mob) return
+	user.keyDown("North")
+	return TRUE
+	
+/datum/keybinding/mob/move_north/up(client/user)
+	. = ..()
+	if(.)
+		return
+	if(!user.mob) return
+	user.keyUp("North")
+	return TRUE
+	
+	
+/datum/keybinding/mob/move_east
+	key = "D"
+	name = "move_east"
+	full_name = "Move East"
+	description = ""
+	keybind_signal = COMSIG_KB_MOB_MOVEEAST_DOWN
+	any_modifier = TRUE
+
+/datum/keybinding/mob/move_east/down(client/user)
+	. = ..()
+	if(.)
+		return
+	if(!user.mob) return
+	user.keyDown("East")
+	return TRUE
+	
+/datum/keybinding/mob/move_east/up(client/user)
+	. = ..()
+	if(.)
+		return
+	if(!user.mob) return
+	user.keyUp("East")
+	return TRUE
+	
+	
+/datum/keybinding/mob/move_south
+	key = "S"
+	name = "move_south"
+	full_name = "Move South"
+	description = ""
+	keybind_signal = COMSIG_KB_MOB_MOVESOUTH_DOWN
+	any_modifier = TRUE
+
+/datum/keybinding/mob/move_south/down(client/user)
+	. = ..()
+	if(.)
+		return
+	if(!user.mob) return
+	user.keyDown("South")
+	return TRUE
+	
+/datum/keybinding/mob/move_south/up(client/user)
+	. = ..()
+	if(.)
+		return
+	if(!user.mob) return
+	user.keyUp("South")
+	return TRUE
+	
+
+/datum/keybinding/mob/move_west
+	key = "A"
+	name = "move_west"
+	full_name = "Move West"
+	description = ""
+	keybind_signal = COMSIG_KB_MOB_MOVEWEST_DOWN
+	any_modifier = TRUE
+
+/datum/keybinding/mob/move_west/down(client/user)
+	. = ..()
+	if(.)
+		return
+	if(!user.mob) return
+	user.keyDown("West")
+	return TRUE
+
+/datum/keybinding/mob/move_west/up(client/user)
+	. = ..()
+	if(.)
+		return
+	if(!user.mob) return
+	user.keyUp("West")
+	return TRUE
+	
+>>>>>>> 4f3af9686c... Refactor handling of movement with modifier keys (#6886)
 /datum/keybinding/mob/stop_pulling
 	key = "H"
 	name = "stop_pulling"
@@ -243,7 +347,7 @@
 /datum/keybinding/mob/prevent_movement
 	key = "Ctrl"
 	name = "block_movement"
-	full_name = "Block movement"
+	full_name = "Hold to change facing"
 	description = "While pressed, prevents movement when pressing directional keys; instead just changes your facing direction"
 
 /datum/keybinding/mob/prevent_movement/down(client/user)
