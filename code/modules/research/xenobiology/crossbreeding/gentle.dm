@@ -6,6 +6,7 @@
 	icon_state = "gentle"
 	var/extract_type
 	var/obj/item/slime_extract/extract
+	COOLDOWN_DECLARE(use_cooldown)
 	var/cooldown = 5 //This is in seconds
 
 /obj/item/slimecross/gentle/Initialize()
@@ -18,16 +19,8 @@
 	extract.icon_state = icon_state
 	extract.color = color
 	extract.forceMove(src)
-	START_PROCESSING(SSobj,src)
 
-/obj/item/slimecross/gentle/process()
-	if(cooldown > 0)
-		cooldown--
-
-/obj/item/slimecross/gentle/Destroy()
-	. = ..()
-	STOP_PROCESSING(SSobj,src)
-
+<<<<<<< HEAD
 /obj/item/slimecross/gentle/attack_self(mob/user)
 	if(cooldown > 0)
 		return
@@ -49,6 +42,21 @@
 	var/newcooldown = extract.activate(user,species,SLIME_ACTIVATE_MAJOR)
 	if(newcooldown)
 		cooldown = newcooldown/10
+=======
+/obj/item/slimecross/gentle/attack_self(mob/living/carbon/user)
+	if(user.incapacitated() || !iscarbon(user))
+		return
+	if(!COOLDOWN_FINISHED(src, use_cooldown))
+		return
+	COOLDOWN_START(src, use_cooldown, extract.activate(user, user.dna.species, SLIME_ACTIVATE_MINOR))
+
+/obj/item/slimecross/gentle/AltClick(mob/living/carbon/user, obj/item/I)
+	if(user.incapacitated() || !iscarbon(user))
+		return
+	if(!COOLDOWN_FINISHED(src, use_cooldown))
+		return
+	COOLDOWN_START(src, use_cooldown, extract.activate(user, user.dna.species, SLIME_ACTIVATE_MAJOR))
+>>>>>>> 56b763cde6... e (#6796)
 
 /obj/item/slimecross/gentle/grey
 	extract_type = /obj/item/slime_extract/grey
