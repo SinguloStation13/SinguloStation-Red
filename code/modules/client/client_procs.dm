@@ -143,21 +143,35 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
  *
  * Handles checking for duplicate messages and people sending messages too fast
  *
+<<<<<<< HEAD
  * The first checks are if you're sending too fast, this is defined as sending
  * SPAM_TRIGGER_AUTOMUTE messages in
  * 5 seconds, this will start supressing your messages,
  * if you send 2* that limit, you also get muted
+=======
+ * This is defined as sending SPAM_TRIGGER_AUTOMUTE (10) messages within 5 seconds, which gets you auto-muted.
+ *
+ * You will be warned if you send SPAM_TRIGGER_WARNING(5) messages withing 5 seconds to hopefully prevent false positives.
+>>>>>>> 6236b1e419... changes automute logic back to old timing logic(purly logic not code) (#6937)
  *
  * The second checks for the same duplicate message too many times and mutes
  * you for it
  */
 /client/proc/handle_spam_prevention(message, mute_type)
 
+<<<<<<< HEAD
 	//Increment message count
 	total_message_count += 1
 
 	//store the total to act on even after a reset
 	var/cache = total_message_count
+=======
+	if(COOLDOWN_FINISHED(src, total_count_reset))
+		total_message_count = 0 //reset the count if it's been more than 5 seconds since the first message
+		COOLDOWN_START(src, total_count_reset, 5 SECONDS) //inside this if so we don't reset it every single message
+
+	total_message_count++
+>>>>>>> 6236b1e419... changes automute logic back to old timing logic(purly logic not code) (#6937)
 
 	if(total_count_reset <= world.time)
 		total_message_count = 0
