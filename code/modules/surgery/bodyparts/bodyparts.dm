@@ -66,12 +66,29 @@
 	var/medium_burn_msg = "blistered"
 	var/heavy_burn_msg = "peeling away"
 
+<<<<<<< HEAD
+=======
+/obj/item/bodypart/Initialize(mapload)
+	..()
+	name = "[parse_zone(body_zone)]"
+	if(is_dimorphic)
+		limb_gender = pick("m", "f")
+	update_icon_dropped()
+
+/obj/item/bodypart/forceMove(atom/destination) //Please. Never forcemove a limb if its's actually in use. This is only for borgs.
+	. = ..()
+	if(isturf(destination))
+		update_icon_dropped()
+
+>>>>>>> 649de47a84... Removes the redundant species ID from limb names (#6972)
 /obj/item/bodypart/examine(mob/user)
 	. = ..()
 	if(brute_dam > DAMAGE_PRECISION)
 		. += "<span class='warning'>This limb has [brute_dam > 30 ? "severe" : "minor"] bruising.</span>"
 	if(burn_dam > DAMAGE_PRECISION)
 		. += "<span class='warning'>This limb has [burn_dam > 30 ? "severe" : "minor"] burns.</span>"
+	if(limb_id)
+		. += "<span class='notice'>It is a [limb_id] [parse_zone(body_zone)].</span>"
 
 /obj/item/bodypart/blob_act()
 	take_damage(max_damage)
