@@ -59,7 +59,12 @@
 	damage = 15
 	irradiate = 300
 	range = 15
+<<<<<<< HEAD
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE | PASSCLOSEDTURF
+=======
+	armour_penetration = 60
+	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE | PASSCLOSEDTURF | PASSMACHINE | PASSSTRUCTURE | PASSDOORS
+>>>>>>> 77d4355753... X-ray guns have 60% armour penetration. (#6551)
 
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
 	light_color = LIGHT_COLOR_GREEN
