@@ -173,6 +173,23 @@
 	else if(l_limbs_missing >= 2 && r_limbs_missing >= 2)
 		msg += "[t_He] [p_do()]n't seem all there.\n"
 
+<<<<<<< HEAD
+=======
+
+	for(var/obj/item/bodypart/BP as() in bodyparts)
+		if(BP.limb_id != (dna.species.examine_limb_id ? dna.species.examine_limb_id : dna.species.id))
+			msg += "<span class='info'>[t_He] [t_has] \an [BP.name].</span>\n"
+
+	var/list/harm_descriptors = dna?.species.get_harm_descriptors()
+	var/brute_msg = harm_descriptors?["brute"]
+	var/burn_msg = harm_descriptors?["burn"]
+	var/bleed_msg = harm_descriptors?["bleed"]
+
+	brute_msg = brute_msg ? brute_msg : "bruising"
+	burn_msg = burn_msg ? burn_msg : "burns"
+	bleed_msg = bleed_msg ? bleed_msg : "bleeding"
+
+>>>>>>> 45dd60d537... Fixes conjugation for plural gender limb examines (#7005)
 	if(!(user == src && src.hal_screwyhud == SCREWYHUD_HEALTHY)) //fake healthy
 		if(temp)
 			if(temp < 25)
