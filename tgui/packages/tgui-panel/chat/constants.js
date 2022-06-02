@@ -58,7 +58,11 @@ export const MESSAGE_TYPES = [
     type: MESSAGE_TYPE_RADIO,
     name: 'Radio',
     description: 'All departments of radio messages',
+<<<<<<< HEAD
     selector: '.alert, .syndradio, .centradio, .airadio, .entradio, .comradio, .secradio, .engradio, .medradio, .sciradio, .supradio, .srvradio, .expradio, .radio, .deptradio, .newscaster',
+=======
+    selector: '.alert, .syndradio, .centcomradio, .aiprivradio, .comradio, .secradio, .engradio, .medradio, .sciradio, .suppradio, .servradio, .explradio, .entradio, .radio, .deptradio, .newscaster, .redteamradio, .blueteamradio, .sinister, .cult, .shadowling, .changeling',
+>>>>>>> 8daf97e136... Update constants.js (#7009)
   },
   {
     type: MESSAGE_TYPE_INFO,
