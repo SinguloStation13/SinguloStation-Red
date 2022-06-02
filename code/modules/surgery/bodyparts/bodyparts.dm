@@ -66,6 +66,21 @@
 	var/medium_burn_msg = "blistered"
 	var/heavy_burn_msg = "peeling away"
 
+<<<<<<< HEAD
+=======
+/obj/item/bodypart/Initialize(mapload)
+	..()
+	name = "[limb_id] [parse_zone(body_zone)]"
+	if(is_dimorphic)
+		limb_gender = pick("m", "f")
+	update_icon_dropped()
+
+/obj/item/bodypart/forceMove(atom/destination) //Please. Never forcemove a limb if its's actually in use. This is only for borgs.
+	. = ..()
+	if(isturf(destination))
+		update_icon_dropped()
+
+>>>>>>> 45dd60d537... Fixes conjugation for plural gender limb examines (#7005)
 /obj/item/bodypart/examine(mob/user)
 	. = ..()
 	if(brute_dam > DAMAGE_PRECISION)
