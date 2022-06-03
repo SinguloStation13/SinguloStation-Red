@@ -484,6 +484,7 @@
 						dat += "<BR>\[ <A HREF='?src=[REF(src)];operation=MessageSyndicate'>Send Message to \[UNKNOWN\]</A> \]"
 						dat += "<BR>\[ <A HREF='?src=[REF(src)];operation=RestoreBackup'>Restore Backup Routing Data</A> \]"
 			else
+<<<<<<< HEAD
 				dat += "<BR>\[ <A HREF='?src=[REF(src)];operation=login'>Log In</A> \]"
 		if(STATE_CALLSHUTTLE)
 			dat += get_call_shuttle_form()
@@ -508,6 +509,141 @@
 					var/answered = currmsg.possible_answers[currmsg.answered]
 					dat += "<br> Archived Answer : [answered]"
 				dat += "<BR><BR>\[ <A HREF='?src=[REF(src)];operation=delmessage'>Delete</A> \]"
+=======
+				message_centcom(message, usr)
+				to_chat(usr, "<span class='notice'>Message transmitted to Central Command.</span>")
+
+			var/associates = emagged ? "the Syndicate": "CentCom"
+			usr.log_talk(message, LOG_SAY, tag = "message to [associates]")
+			deadchat_broadcast("<span class='deadsay'><span class='name'>[usr.real_name]</span> has messaged [associates], \"[message]\" at <span class='name'>[get_area_name(usr, TRUE)]</span>.</span>", usr)
+			COOLDOWN_START(src, important_action_cooldown, IMPORTANT_ACTION_COOLDOWN)
+			. = TRUE
+		if ("purchaseShuttle")
+			var/can_buy_shuttles_or_fail_reason = can_buy_shuttles(usr)
+			if (can_buy_shuttles_or_fail_reason != TRUE)
+				if (can_buy_shuttles_or_fail_reason != FALSE)
+					to_chat(usr, "<span class='alert'>[can_buy_shuttles_or_fail_reason]</span>")
+				return
+			var/list/shuttles = flatten_list(SSmapping.shuttle_templates)
+			var/datum/map_template/shuttle/shuttle = locate(params["shuttle"]) in shuttles
+			if (!istype(shuttle))
+				return
+			if (!can_purchase_this_shuttle(shuttle))
+				return
+			if (!shuttle.prerequisites_met())
+				to_chat(usr, "<span class='alert'>You have not met the requirements for purchasing this shuttle.</span>")
+				return
+			var/datum/bank_account/bank_account = SSeconomy.get_dep_account(ACCOUNT_CAR)
+			if (bank_account.account_balance < shuttle.credit_cost)
+				return
+			SSshuttle.shuttle_purchased = TRUE
+			SSshuttle.unload_preview()
+			SSshuttle.existing_shuttle = SSshuttle.emergency
+			SSshuttle.action_load(shuttle)
+			bank_account.adjust_money(-shuttle.credit_cost)
+			minor_announce("[shuttle.name] has been purchased for [shuttle.credit_cost] credits! Purchase authorized by [authorize_name] [shuttle.extra_desc ? " [shuttle.extra_desc]" : ""]" , "Shuttle Purchase")
+			message_admins("[ADMIN_LOOKUPFLW(usr)] purchased [shuttle.name].")
+			log_game("[key_name(usr)] has purchased [shuttle.name].")
+			SSblackbox.record_feedback("text", "shuttle_purchase", 1, shuttle.name)
+			//state = STATE_MAIN
+			. = TRUE
+		if ("recallShuttle")
+			// AIs cannot recall the shuttle
+			if (!authenticated(usr) || issilicon(usr))
+				return
+			. = SSshuttle.cancelEvac(usr)
+		if ("requestNukeCodes")
+			if (!authenticated_as_non_silicon_captain(usr))
+				return
+			if (!COOLDOWN_FINISHED(src, important_action_cooldown))
+				return
+			var/reason = trim(html_encode(params["reason"]), MAX_MESSAGE_LEN)
+			nuke_request(reason, usr)
+			to_chat(usr, "<span class='notice'>Request sent.</span>")
+			usr.log_message("has requested the nuclear codes from CentCom with reason \"[reason]\"", LOG_SAY)
+			priority_announce("The codes for the on-station nuclear self-destruct have been requested by [usr]. Confirmation or denial of this request will be sent shortly.", "Nuclear Self-Destruct Codes Requested", SSstation.announcer.get_rand_report_sound())
+			playsound(src, 'sound/machines/terminal_prompt.ogg', 50, FALSE)
+			COOLDOWN_START(src, important_action_cooldown, IMPORTANT_ACTION_COOLDOWN)
+			. = TRUE
+		if ("restoreBackupRoutingData")
+			if (!authenticated_as_non_silicon_captain(usr))
+				return
+			if (!(obj_flags & EMAGGED))
+				return
+			to_chat(usr, "<span class='notice'>Backup routing data restored.</span>")
+			playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
+			obj_flags &= ~EMAGGED
+			. = TRUE
+		if ("sendToOtherSector")
+			if (!authenticated_as_non_silicon_captain(usr))
+				return
+			if (!can_send_messages_to_other_sectors(usr))
+				return
+			if (!COOLDOWN_FINISHED(src, important_action_cooldown))
+				return
+
+			var/message = trim(html_encode(params["message"]), MAX_MESSAGE_LEN)
+			if (!message)
+				return
+
+			playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
+
+			SStopic.crosscomms_send("comms_console", message, station_name())
+			minor_announce(message, title = "Outgoing message to allied station", html_encode = FALSE)
+			usr.log_talk(message, LOG_SAY, tag="message to the other server")
+			message_admins("[ADMIN_LOOKUPFLW(usr)] has sent a message to the other server.")
+			deadchat_broadcast("<span class='deadsay bold'>[usr.real_name] has sent an outgoing message to the other station(s).</span>", usr)
+
+			COOLDOWN_START(src, important_action_cooldown, IMPORTANT_ACTION_COOLDOWN)
+			. = TRUE
+		if ("setState")
+			if (!authenticated(usr))
+				return
+			if (!(params["state"] in approved_states))
+				return
+			var/newState = params["state"]
+			if (newState == STATE_BUYING_SHUTTLE && can_buy_shuttles(usr) != TRUE)
+				return
+			set_state(usr, newState)
+			playsound(src, "terminal_type", 50, FALSE)
+			. = TRUE
+		if ("setStatusMessage")
+			if (!authenticated(usr))
+				return
+			var/line_one = reject_bad_text(params["lineOne"] || "", MAX_STATUS_LINE_LENGTH)
+			var/line_two = reject_bad_text(params["lineTwo"] || "", MAX_STATUS_LINE_LENGTH)
+			message_admins("[ADMIN_LOOKUPFLW(usr)] changed the Status Message to - [line_one], [line_two] - From a Communications Console.")
+			log_game("[key_name(usr)] changed the Status Message to - [line_one], [line_two] - From a Communications Console.")
+			post_status("alert", "blank")
+			post_status("message", line_one, line_two)
+			last_status_display = list(line_one, line_two)
+			playsound(src, "terminal_type", 50, FALSE)
+			. = TRUE
+		if ("setStatusPicture")
+			if (!authenticated(usr))
+				return
+			var/picture = params["picture"]
+			if (!(picture in approved_status_pictures))
+				return
+			post_status("alert", picture)
+			playsound(src, "terminal_type", 50, FALSE)
+			. = TRUE
+		if ("toggleAuthentication")
+			// Log out if we're logged in
+			if (authorize_name)
+				authenticated = FALSE
+				authorize_access = null
+				authorize_name = null
+				playsound(src, 'sound/machines/terminal_off.ogg', 50, FALSE)
+				return TRUE
+
+			if (obj_flags & EMAGGED)
+				authenticated = TRUE
+				authorize_access = get_all_accesses()
+				authorize_name = "Unknown"
+				to_chat(usr, "<span class='warning'>[src] lets out a quiet alarm as its login is overridden.</span>")
+				playsound(src, 'sound/machines/terminal_alert.ogg', 25, FALSE)
+>>>>>>> b9f3611564... Adds Status Message logging (#7015)
 			else
 				aistate = STATE_MESSAGELIST
 				attack_hand(user)
