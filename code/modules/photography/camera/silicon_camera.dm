@@ -14,6 +14,12 @@
 	else
 		camera_mode_on(user)
 
+<<<<<<< HEAD
+=======
+/obj/item/camera/siliconcam/burn()
+	return
+
+>>>>>>> 160e4c23eb... Fixes lighteater (#7014)
 /obj/item/camera/siliconcam/proc/camera_mode_off(mob/user)
 	in_camera_mode = FALSE
 	to_chat(user, "<B>Camera Mode deactivated</B>")
