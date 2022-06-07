@@ -526,6 +526,7 @@ Difficulty: Hard
 	queue_smooth_neighbors(src)
 	return ..()
 
+<<<<<<< HEAD
 /obj/effect/temp_visual/hierophant/wall/CanPass(atom/movable/mover, turf/target)
 	if(QDELETED(caster))
 		return FALSE
@@ -539,6 +540,8 @@ Difficulty: Hard
 		return TRUE
 	return FALSE
 
+=======
+>>>>>>> fac681c63d... Colossus gets tells + new Kinetic Crusher ability from Hiero (#6805)
 /obj/effect/temp_visual/hierophant/chaser //a hierophant's chaser. follows target around, moving and producing a blast every speed deciseconds.
 	duration = 98
 	var/mob/living/target //what it's following
