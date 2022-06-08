@@ -20,7 +20,14 @@
 
 /datum/component/clockwork_trap/pressure_sensor/Initialize()
 	. = ..()
+<<<<<<< HEAD
 	RegisterSignal(parent, COMSIG_MOVABLE_CROSSED, .proc/crossed)
+=======
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+	)
+	AddComponent(/datum/component/connect_loc_behalf, parent, loc_connections)
+>>>>>>> b300e9e206... Fixes clockcult pressure sensors (#7045)
 
 /datum/component/clockwork_trap/pressure_sensor/proc/crossed(datum/source, atom/movable/AM)
 	SIGNAL_HANDLER
