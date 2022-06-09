@@ -98,7 +98,7 @@
 	desc = "Crystals with bluespace properties"
 	color = "#506bc7"
 	categories = list(MAT_CATEGORY_ORE = TRUE)
-	sheet_type = /obj/item/stack/sheet/bluespace_crystal
+	sheet_type = /obj/item/stack/ore/bluespace_crystal/refined
 
 ///Honks and slips
 /datum/material/bananium
