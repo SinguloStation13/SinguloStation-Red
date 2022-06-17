@@ -4,22 +4,32 @@
 	pass_flags = PASSTABLE
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/xeno = 5, /obj/item/stack/sheet/animalhide/xeno = 1)
 	possible_a_intents = list(INTENT_HELP, INTENT_DISARM, INTENT_GRAB, INTENT_HARM)
-	limb_destroyer = 1
+	limb_destroyer = TRUE
 	hud_type = /datum/hud/alien
+<<<<<<< HEAD
 	var/obj/item/r_store = null
 	var/obj/item/l_store = null
+=======
+	deathsound = 'sound/voice/hiss6.ogg'
+	bodyparts = list(/obj/item/bodypart/chest/alien, /obj/item/bodypart/head/alien, /obj/item/bodypart/l_arm/alien,
+					/obj/item/bodypart/r_arm/alien, /obj/item/bodypart/r_leg/alien, /obj/item/bodypart/l_leg/alien)
+>>>>>>> 8ed8368dcf... Small-ish xenomorph refactor, hunter and sentinel rebalance (#6960)
 	var/caste = ""
 	var/alt_icon = 'icons/mob/alienleap.dmi' //used to switch between the two alien icon files.
-	var/leap_on_click = 0
-	var/pounce_cooldown = 0
-	var/pounce_cooldown_time = 30
+	var/leap_on_click = FALSE
+	COOLDOWN_DECLARE(pounce_cooldown)
 	var/custom_pixel_x_offset = 0 //for admin fuckery.
 	var/custom_pixel_y_offset = 0
+<<<<<<< HEAD
 	var/sneaking = 0 //For sneaky-sneaky mode and appropriate slowdown
 	var/drooling = 0 //For Neruotoxic spit overlays
 	deathsound = 'sound/voice/hiss6.ogg'
 	bodyparts = list(/obj/item/bodypart/chest/alien, /obj/item/bodypart/head/alien, /obj/item/bodypart/l_arm/alien,
 					 /obj/item/bodypart/r_arm/alien, /obj/item/bodypart/r_leg/alien, /obj/item/bodypart/l_leg/alien)
+=======
+	var/sneaking = FALSE //For sneaky-sneaky mode and appropriate slowdown
+	var/drooling = FALSE //For Neurotoxic spit overlays
+>>>>>>> 8ed8368dcf... Small-ish xenomorph refactor, hunter and sentinel rebalance (#6960)
 
 
 /mob/living/carbon/alien/humanoid/restrained(ignore_grab)
@@ -94,10 +104,10 @@
 
 /mob/living/carbon/alien/humanoid/alien_evolve(mob/living/carbon/alien/humanoid/new_xeno)
 	drop_all_held_items()
-	..()
+	return ..()
 
 //For alien evolution/promotion/queen finder procs. Checks for an active alien of that type
-/proc/get_alien_type(var/alienpath)
+/proc/get_alien_type_in_hive(datum/alienpath)
 	for(var/mob/living/carbon/alien/humanoid/A in GLOB.alive_mob_list)
 		if(!istype(A, alienpath))
 			continue
@@ -106,8 +116,7 @@
 		return A
 	return FALSE
 
-
 /mob/living/carbon/alien/humanoid/check_breath(datum/gas_mixture/breath)
 	if(breath && breath.total_moles() > 0 && !sneaking)
 		playsound(get_turf(src), pick('sound/voice/lowHiss2.ogg', 'sound/voice/lowHiss3.ogg', 'sound/voice/lowHiss4.ogg'), 50, 0, -5)
-	..()
+	return ..()
