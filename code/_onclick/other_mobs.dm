@@ -85,6 +85,16 @@
 /mob/living/carbon/RestrainedClickOn(atom/A)
 	return 0
 
+<<<<<<< HEAD
+=======
+/mob/living/carbon/RangedAttack(atom/A, mouseparams)
+	. = ..()
+	if(!dna)
+		return
+	for(var/datum/mutation/HM as() in dna.mutations)
+		HM.on_ranged_attack(A, mouseparams)
+
+>>>>>>> 8ed8368dcf... Small-ish xenomorph refactor, hunter and sentinel rebalance (#6960)
 /mob/living/carbon/human/RangedAttack(atom/A, mouseparams)
 	. = ..()
 	if(gloves)
