@@ -87,17 +87,17 @@
 	can_adjust = FALSE
 	fitted = FEMALE_UNIFORM_TOP
 
-/obj/item/clothing/under/rank/civilian/head_of_personnel/suit
-	name = "head of personnel's suit"
+/obj/item/clothing/under/rank/civilian/head_of_personnel/alt
+	name = "head of personnel's teal jumpsuit"
 	desc = "A teal suit and yellow necktie. An authoritative yet tacky ensemble."
 	icon_state = "teal_suit"
 	item_state = "g_suit"
 	item_color = "teal_suit"
 	can_adjust = FALSE
 
-/obj/item/clothing/under/rank/civilian/head_of_personnel/suit/skirt
-	name = "head of personnel's suit"
-	desc = "A teal suit and yellow necktie. An authoritative yet tacky ensemble."
+/obj/item/clothing/under/rank/civilian/head_of_personnel/alt/skirt
+	name = "head of personnel's teal jumpskirt"
+	desc = "A teal skirt and yellow necktie. An authoritative yet tacky ensemble."
 	icon_state = "teal_suit_skirt"
 	item_state = "g_suit"
 	item_color = "teal_suit_skirt"
