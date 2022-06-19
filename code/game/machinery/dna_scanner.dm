@@ -16,6 +16,10 @@
 	var/message_cooldown
 	var/breakout_time = 1200
 
+/obj/machinery/dna_scannernew/Destroy()
+	QDEL_NULL(wires)
+	return ..()
+
 /obj/machinery/dna_scannernew/RefreshParts()
 	scan_level = 0
 	damage_coeff = 0
