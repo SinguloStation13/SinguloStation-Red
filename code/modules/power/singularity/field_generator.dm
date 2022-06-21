@@ -340,6 +340,25 @@ field_generator power level display
 			O.last_warning = world.time
 
 	move_resist = initial(move_resist)
+<<<<<<< HEAD
+=======
+	loose_message(dist) //we forward the distance of the furtest away generator
+
+/obj/machinery/field/generator/proc/loose_message(dist)
+	if(COOLDOWN_FINISHED(src, loose_message_cooldown))
+		COOLDOWN_START(src, loose_message_cooldown, 5 SECONDS) //this cooldown is shared between all field generators
+		var/obj/anomaly/a = locate(/obj/anomaly) in oview(dist, src)
+		var/turf/T = get_turf(src)
+		if(a)
+			message_admins("A [a.name] exists and a containment field has failed at [ADMIN_VERBOSEJMP(T)].")
+			investigate_log("has <font color='red'>failed</font> whilst a [a.name] exists at [AREACOORD(T)].", INVESTIGATE_ENGINES)
+			notify_ghosts("IT'S LOOSE", source = src, action = NOTIFY_ORBIT, flashwindow = FALSE, ghost_sound = 'sound/machines/warning-buzzer.ogg', header = "IT'S LOOSE", notify_volume = 75)
+
+/obj/machinery/field/generator/proc/block_singularity_if_active()
+	SIGNAL_HANDLER
+	if(active)
+		return SINGULARITY_TRY_MOVE_BLOCK
+>>>>>>> 8c1733a8ba... whops (#7086)
 
 /obj/machinery/field/generator/shock(mob/living/user)
 	if(fields.len)
