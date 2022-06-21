@@ -32,7 +32,7 @@
 	var/remote_door_id = ""
 
 	var/bot_access_flags = 0 //Bit flags. Selection: SEC_BOT | MULE_BOT | FLOOR_BOT | CLEAN_BOT | MED_BOT | FIRE_BOT
-	var/spam_enabled = 0 //Enables "Send to All" Option
+	var/spam_delay = 0 //Enables "Send to All" Option. 1=1 min, 2=2mins, 2.5=2 min 30 seconds
 
 	var/obj/item/pda/host_pda = null
 	var/menu
@@ -102,12 +102,13 @@
 	name = "\improper P.R.O.V.E. cartridge"
 	icon_state = "cart-s"
 	access = CART_SECURITY
-	spam_enabled = 1
+	spam_delay = 2.5
 
 /obj/item/cartridge/curator
 	name = "\improper Lib-Tweet cartridge"
 	icon_state = "cart-s"
 	access = CART_NEWSCASTER
+	spam_delay = 3.5
 
 /obj/item/cartridge/roboticist
 	name = "\improper B.O.O.P. Remote Control cartridge"
@@ -184,7 +185,7 @@
 	icon_state = "cart-c"
 	access = ~(CART_CLOWN | CART_MIME | CART_REMOTE_DOOR)
 	bot_access_flags = SEC_BOT | MULE_BOT | FLOOR_BOT | CLEAN_BOT | MED_BOT | FIRE_BOT
-	spam_enabled = 1
+	spam_delay = 2
 
 /obj/item/cartridge/captain/Initialize()
 	. = ..()
@@ -192,8 +193,18 @@
 
 /obj/item/cartridge/annoyance //the only purpose of this cartridge is to allow the VIP to be annoying
 	name = "\improper TWIT cartridge"
+<<<<<<< HEAD
 	icon_state = "cart-c"
 	spam_enabled = 1
+=======
+	icon_state = "cart-twit"
+	spam_delay = 1.5
+
+/obj/item/cartridge/annoyance/lesser //HoP can give you this
+	name = "\improper FACEBUCKS cartridge"
+	icon_state = "cart-signal" // might need a new sprite
+	spam_delay = 5
+>>>>>>> f27b8aa579... New SPAM Cartridge + cartridge spam tweak (#7067)
 
 /obj/item/cartridge/proc/post_status(command, data1, data2)
 

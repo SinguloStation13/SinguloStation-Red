@@ -228,12 +228,23 @@
 	default_cartridge = /obj/item/cartridge/medical
 	icon_state = "pda-genetics"
 
+/obj/item/pda/celebrity
+	name = "fancy PDA"
+	default_cartridge = /obj/item/cartridge/annoyance //so they can send messages to everyone and be generally obnoxious
+	inserted_item = /obj/item/pen/fountain
+	desc = "A portable microcomputer by Thinktronic Systems, LTD. This model is a gold-plated LRP Series, and probably quite expensive."
+	note = "Congratulations, you have chosen the Thinktronic 5230 LRP Series Personal Data Assistant Golden Edition!"
+	icon_state = "pda-gold"
+	ttone = "ch-CHING"
+
 /obj/item/pda/unlicensed
 	name = "unlicensed PDA"
+	default_cartridge = /obj/item/cartridge/annoyance/lesser
 	desc = "A shitty knockoff of a portable microcomputer by Thinktronic Systems, LTD. Complete with a cracked operating system."
 	note = "Error: Unlicensed OS. Please contact your supervisor."
 	icon_state = "pda-knockoff"
 	inserted_item = /obj/item/pen/charcoal
+<<<<<<< HEAD
 
 /obj/item/pda/celebrity
 	name = "fancy PDA"
@@ -242,3 +253,5 @@
 	desc = "A portable microcomputer by Thinktronic Systems, LTD. This model is gold-plated, and probably quite expensive."
 	icon_state = "pda-gold"
 	ttone = "ch-CHING"
+=======
+>>>>>>> f27b8aa579... New SPAM Cartridge + cartridge spam tweak (#7067)
