@@ -32,6 +32,7 @@
 	hidden_uplink.name = "debug uplink"
 	hidden_uplink.debug = TRUE
 
+<<<<<<< HEAD
 /obj/item/uplink/incursion/Initialize(mapload, owner, tc_amount = 20)
 	. = ..()
 	var/datum/component/uplink/hidden_uplink = GetComponent(/datum/component/uplink)
@@ -42,6 +43,10 @@
 	. = ..()
 	var/datum/component/uplink/hidden_uplink = GetComponent(/datum/component/uplink)
 	hidden_uplink.set_gamemode(/datum/game_mode/nuclear)
+=======
+/obj/item/uplink/nuclear
+	uplink_flag = UPLINK_NUKE_OPS
+>>>>>>> 4999a238eb... Incursion Uplink (#7120)
 
 /obj/item/uplink/nuclear/debug
 	name = "debug nuclear uplink"
