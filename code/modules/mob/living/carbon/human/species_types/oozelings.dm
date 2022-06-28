@@ -18,8 +18,12 @@
 	species_language_holder = /datum/language_holder/oozeling
 	limbs_id = "ooze"
 	swimming_component = /datum/component/swimming/dissolve
+<<<<<<< HEAD
 	toxic_food = NONE
 	disliked_food = NONE
+=======
+	inert_mutation = ACIDOOZE
+>>>>>>> 121060bd9b... Moves taste to tongues (#6981)
 
 /datum/species/oozeling/random_name(gender,unique,lastname)
 	if(unique)

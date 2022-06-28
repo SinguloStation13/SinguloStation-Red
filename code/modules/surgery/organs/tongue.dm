@@ -6,7 +6,14 @@
 	slot = ORGAN_SLOT_TONGUE
 	attack_verb = list("licked", "slobbered", "slapped", "frenched", "tongued")
 	var/list/languages_possible
+<<<<<<< HEAD
 	var/say_mod = null
+=======
+	var/say_mod = "says"
+	var/liked_food = JUNKFOOD | FRIED
+	var/disliked_food = GROSS | RAW
+	var/toxic_food = TOXIC
+>>>>>>> 121060bd9b... Moves taste to tongues (#6981)
 	var/taste_sensitivity = 15 // lower is more sensitive.
 	var/modifies_speech = FALSE
 	var/static/list/languages_possible_base = typecacheof(list(
@@ -37,19 +44,28 @@
 /obj/item/organ/tongue/proc/handle_speech(datum/source, list/speech_args)
 	SIGNAL_HANDLER
 /obj/item/organ/tongue/Insert(mob/living/carbon/M, special = 0)
+<<<<<<< HEAD
 	..()
 	if(say_mod && M.dna && M.dna.species)
 		M.dna.species.say_mod = say_mod
 	if (modifies_speech)
+=======
+	if(modifies_speech)
+>>>>>>> 121060bd9b... Moves taste to tongues (#6981)
 		RegisterSignal(M, COMSIG_MOB_SAY, .proc/handle_speech)
 	M.UnregisterSignal(M, COMSIG_MOB_SAY)
+	return ..()
 
 /obj/item/organ/tongue/Remove(mob/living/carbon/M, special = 0)
+<<<<<<< HEAD
 	..()
 	if(say_mod && M.dna && M.dna.species)
 		M.dna.species.say_mod = initial(M.dna.species.say_mod)
+=======
+>>>>>>> 121060bd9b... Moves taste to tongues (#6981)
 	UnregisterSignal(M, COMSIG_MOB_SAY, .proc/handle_speech)
 	M.RegisterSignal(M, COMSIG_MOB_SAY, /mob/living/carbon/.proc/handle_tongueless_speech)
+	return ..()
 
 /obj/item/organ/tongue/could_speak_language(datum/language/dt)
 	return is_type_in_typecache(dt, languages_possible)
@@ -61,6 +77,8 @@
 	say_mod = "hisses"
 	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
 	modifies_speech = TRUE
+	disliked_food = GRAIN | DAIRY
+	liked_food = GROSS | MEAT
 
 /obj/item/organ/tongue/lizard/handle_speech(datum/source, list/speech_args)
 	var/static/regex/lizard_hiss = new("s+", "g")
@@ -78,6 +96,7 @@
 	say_mod = "buzzes"
 	taste_sensitivity = 25 // you eat vomit, this is a mercy
 	modifies_speech = TRUE
+	liked_food = GROSS | MEAT | RAW | FRUIT
 
 /obj/item/organ/tongue/fly/handle_speech(datum/source, list/speech_args)
 	var/static/regex/fly_buzz = new("z+", "g")
@@ -147,6 +166,7 @@
 	say_mod = "moans"
 	modifies_speech = TRUE
 	taste_sensitivity = 32
+	liked_food = GROSS | MEAT | RAW
 
 /obj/item/organ/tongue/zombie/handle_speech(datum/source, list/speech_args)
 	var/list/message_list = splittext(speech_args[SPEECH_MESSAGE], " ")
@@ -191,6 +211,9 @@
 	icon_state = "tonguefly"
 	say_mod = "buzzes"
 	taste_sensitivity = 5
+	liked_food = VEGETABLES | FRUIT
+	disliked_food = GROSS | DAIRY
+	toxic_food = MEAT | RAW
 
 /obj/item/organ/tongue/bone
 	name = "bone \"tongue\""
@@ -200,6 +223,8 @@
 	attack_verb = list("bitten", "chattered", "chomped", "enamelled", "boned")
 	taste_sensitivity = 101 // skeletons cannot taste anything
 	modifies_speech = TRUE
+	liked_food = GROSS | MEAT | RAW
+	toxic_food = NONE
 	var/chattering = FALSE
 	var/phomeme_type = "sans"
 	var/list/phomeme_types = list("sans", "papyrus")
@@ -222,6 +247,8 @@
 	desc = "Like animated skeletons, Plasmamen vibrate their teeth in order to produce speech."
 	icon_state = "tongueplasma"
 	modifies_speech = FALSE
+	disliked_food = FRUIT
+	liked_food = VEGETABLES
 
 /obj/item/organ/tongue/robot
 	name = "robotic voicebox"
@@ -266,7 +293,72 @@
 	say_mod = "crackles"
 	attack_verb = list("shocked", "jolted", "zapped")
 	taste_sensitivity = 101 // Not a tongue, they can't taste shit
+	toxic_food = NONE
 
 /obj/item/organ/tongue/ethereal/Initialize(mapload)
 	. = ..()
 	languages_possible = languages_possible_base += typecacheof(/datum/language/voltaic)
+<<<<<<< HEAD
+=======
+
+/obj/item/organ/tongue/golem
+	name = "mineral tongue"
+	desc = "A strange tongue made out of some kind of mineral. It's smooth, but flexible."
+	say_mod = "rumbles"
+	taste_sensitivity = 101 //They don't eat.
+	icon_state = "adamantine_cords"
+
+/obj/item/organ/tongue/golem/Initialize(mapload)
+	. = ..()
+	languages_possible = languages_possible_base += typecacheof(/datum/language/terrum)
+
+/obj/item/organ/tongue/golem/bananium
+	name = "bananium tongue"
+	desc = "It's a tongue made out of pure bananium."
+	say_mod = "honks"
+
+/obj/item/organ/tongue/golem/clockwork
+	name = "clockwork tongue"
+	desc = "It's a tongue made out of many tiny cogs. You can hear a very subtle clicking noise emanating from it."
+	say_mod = "clicks"
+
+/obj/item/organ/tongue/cat
+	name = "cat tongue"
+	desc = "A rough tongue, full of small, boney spines all over it's surface."
+	say_mod = "meows"
+	disliked_food = VEGETABLES | SUGAR
+	liked_food = DAIRY | MEAT
+
+/obj/item/organ/tongue/slime
+	name = "slimey tongue"
+	desc = "It's a piece of slime, shaped like a tongue."
+	say_mod = "blorbles"
+	toxic_food = NONE
+	disliked_food = NONE
+
+/obj/item/organ/tongue/slime/Initialize(mapload)
+	. = ..()
+	languages_possible = languages_possible_base += typecacheof(/datum/language/slime)
+
+/obj/item/organ/tongue/moth
+	name = "mothic tongue"
+	desc = "It's long and noodly."
+	say_mod = "flutters"
+	icon_state = "tonguemoth"
+	liked_food = VEGETABLES | DAIRY | CLOTH
+	disliked_food = FRUIT | GROSS
+	toxic_food = MEAT | RAW
+
+/obj/item/organ/tongue/teratoma
+	name = "malformed tongue"
+	desc = "It's a tongue that looks off... Must be from a creature that shouldn't exist."
+	say_mod = "mumbles"
+	icon_state = "tonguefly"
+	liked_food = JUNKFOOD | FRIED | GROSS | RAW
+
+/obj/item/organ/tongue/podperson
+	name = "plant tongue"
+	desc = "It's an odd tongue, seemingly made of plant matter."
+	disliked_food = MEAT | DAIRY
+	liked_food = VEGETABLES | FRUIT | GRAIN //cannibals apparently
+>>>>>>> 121060bd9b... Moves taste to tongues (#6981)
