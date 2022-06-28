@@ -332,8 +332,13 @@ put up a rune with bluespace effects, lots of those runes are fluff or act as a 
 	desc = "To gain something you must sacrifice something else in return."
 	var/static/list/materials = list(/obj/item/stack/sheet/iron, /obj/item/stack/sheet/glass, /obj/item/stack/sheet/mineral/silver,
 									/obj/item/stack/sheet/mineral/gold, /obj/item/stack/sheet/mineral/diamond, /obj/item/stack/sheet/mineral/uranium,
+<<<<<<< HEAD
 									/obj/item/stack/sheet/mineral/titanium, /obj/item/stack/sheet/mineral/copper, /obj/item/stack/sheet/mineral/uranium,
 									/obj/item/stack/sheet/bluespace_crystal)
+=======
+									/obj/item/stack/sheet/mineral/titanium, /obj/item/stack/sheet/mineral/copper,
+									/obj/item/stack/ore/bluespace_crystal/refined)
+>>>>>>> ceb31e947e... Removes duplicate uranium in darkpurple warping (#7102)
 
 /obj/effect/warped_rune/darkpurplespace/do_effect(mob/user)
 	if(locate(/obj/item/stack/sheet/mineral/plasma) in rune_turf)
