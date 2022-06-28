@@ -1,5 +1,6 @@
 //Subtype of human
 /datum/species/human/felinid
+<<<<<<< HEAD
 	name = "Felinid"
 	id = "felinid"
 	limbs_id = "human"
@@ -7,6 +8,12 @@
 
 	disliked_food = VEGETABLES | SUGAR
 	liked_food = DAIRY | MEAT
+=======
+	name = "\improper Felinid"
+	id = SPECIES_FELINID
+	bodyflag = FLAG_FELINID
+	examine_limb_id = SPECIES_HUMAN
+>>>>>>> 121060bd9b... Moves taste to tongues (#6981)
 
 	mutant_bodyparts = list("ears", "tail_human")
 	default_features = list("mcolor" = "FFF", "wings" = "None")
