@@ -153,6 +153,7 @@ export const OrbitalMap = (props, context) => {
                       <NoticeBox>
                         Currently docked, awaiting launch order.
                       </NoticeBox>
+<<<<<<< HEAD
                       <Button
                         content="INITIATE LAUNCH"
                         textAlign="center"
@@ -171,6 +172,36 @@ export const OrbitalMap = (props, context) => {
             </Section>
           </ScrollableBox>
         </div>
+=======
+                    ))}
+              </Section>
+              {
+                !!designatorInserted
+                && (designatorId ? !shuttleId : shuttleId) && (
+                  <>
+                    <Divider />
+                    <Section title="Designator Linking" >
+                      {
+                        designatorId
+                          ? (
+                            <Button
+                              content="Download shuttle link from designator"
+                              onClick={() => act('updateLinkedId')} />
+                          )
+                          : (
+                            <Button
+                              content="Upload shuttle link to designator"
+                              onClick={() => act('updateDesignatorId')} />
+                          )
+                      }
+                    </Section>
+                  </>
+                )
+              }
+            </Section>
+          </Flex.Item>
+        </Flex>
+>>>>>>> dac3caff64... shuttle linking fix (#7151)
       </Window.Content>
     </Window>
   );
