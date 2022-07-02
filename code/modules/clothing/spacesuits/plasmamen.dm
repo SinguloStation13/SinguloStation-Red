@@ -102,12 +102,51 @@
 				smile_color = CR.paint_color
 				to_chat(user, "You draw a smiley on the helmet visor.")
 				update_icon()
+<<<<<<< HEAD
 				return
 		if(smile == TRUE)
 			to_chat(user, "<span class='notice'>Seems like someone already drew something on this helmet's visor.</span>")
+=======
+				update_button_icons(user)
+		return
+	if(istype(item, /obj/item/clothing/head) \
+		// i know someone is gonna do it after i thought about it
+		&& !istype(item, /obj/item/clothing/head/helmet/space/plasmaman) \
+		// messy and icon can't be seen before putting on
+		&& !istype(item, /obj/item/clothing/head/foilhat))
+		var/obj/item/clothing/head/hat = item
+		if(attached_hat)
+			to_chat(user, "<span class='notice'>There's already a hat on the helmet!</span>")
+			return
+		attached_hat = hat
+		hat.forceMove(src)
+		if (user.get_item_by_slot(ITEM_SLOT_HEAD) == src)
+			hat.equipped(user, ITEM_SLOT_HEAD)
+		update_icon()
+		update_button_icons(user)
+		add_verb(/obj/item/clothing/head/helmet/space/plasmaman/verb/unattach_hat)
+
+/obj/item/clothing/head/helmet/space/plasmaman/equipped(mob/user, slot)
+	. = ..()
+	attached_hat?.equipped(user, slot)
+
+/obj/item/clothing/head/helmet/space/plasmaman/dropped(mob/user)
+	. = ..()
+	attached_hat?.dropped(user)
+
+/obj/item/clothing/head/helmet/space/plasmaman/proc/update_button_icons(mob/user)
+	if(!user)
+		return
+
+	//The icon's may look differently due to overlays being applied asynchronously
+	for(var/X in actions)
+		var/datum/action/A=X
+		A.UpdateButtonIcon()
+>>>>>>> 2976fe35ff... Plasmaman hats additions (#7094)
 
 /obj/item/clothing/head/helmet/space/plasmaman/worn_overlays(isinhands)
 	. = ..()
+<<<<<<< HEAD
 	if(!isinhands && smile)
 		var/mutable_appearance/M = mutable_appearance('icons/mob/head.dmi', smile_state)
 		M.color = smile_color
@@ -116,6 +155,31 @@
 		. += mutable_appearance('icons/mob/head.dmi', visor_icon)
 	else
 		cut_overlays()
+=======
+	if(!isinhands)
+		if(smile)
+			var/mutable_appearance/M = mutable_appearance('icons/mob/clothing/head.dmi', smile_state)
+			M.color = smile_color
+			. += M
+		if(helmet_on)
+			. += mutable_appearance('icons/mob/clothing/head.dmi', visor_state + "_light")
+		if(!up)
+			. += mutable_appearance('icons/mob/clothing/head.dmi', visor_state + "_weld")
+		if(attached_hat)
+			. += attached_hat.build_worn_icon(attached_hat.icon_state, default_layer = HEAD_LAYER, default_icon_file = 'icons/mob/clothing/head.dmi')
+
+/obj/item/clothing/head/helmet/space/plasmaman/verb/unattach_hat()
+	set name = "Remove Hat"
+	set category = "Object"
+	set src in usr
+
+	usr.put_in_hands(attached_hat)
+	if (usr.get_item_by_slot(ITEM_SLOT_HEAD) == src)
+		attached_hat.dropped(usr)
+	attached_hat = null
+	update_icon()
+	remove_verb(/obj/item/clothing/head/helmet/space/plasmaman/verb/unattach_hat)
+>>>>>>> 2976fe35ff... Plasmaman hats additions (#7094)
 
 /obj/item/clothing/head/helmet/space/plasmaman/ComponentInitialize()
 	. = ..()
@@ -144,9 +208,25 @@
 	else
 		set_light(0)
 
+<<<<<<< HEAD
 	for(var/X in actions)
 		var/datum/action/A=X
 		A.UpdateButtonIcon()
+=======
+	update_icon()
+	user.update_inv_head() //So the mob overlay updates
+	update_button_icons(user)
+
+/obj/item/clothing/head/helmet/space/plasmaman/update_overlays()
+	cut_overlays()
+
+	if(!up)
+		add_overlay(mutable_appearance('icons/obj/clothing/hats.dmi', visor_state + "_weld"))
+	else if(helmet_on)
+		add_overlay(mutable_appearance('icons/obj/clothing/hats.dmi', visor_state + "_light"))
+
+	return ..()
+>>>>>>> 2976fe35ff... Plasmaman hats additions (#7094)
 
 /obj/item/clothing/head/helmet/space/plasmaman/security
 	name = "security envirosuit helmet"
