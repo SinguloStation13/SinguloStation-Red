@@ -421,7 +421,11 @@
 
 /datum/reagent/consumable/nuka_cola/on_mob_metabolize(mob/living/L)
 	..()
+<<<<<<< HEAD
 	L.add_movespeed_modifier(type, update=TRUE, priority=100, multiplicative_slowdown=-0.75, blacklisted_movetypes=(FLYING|FLOATING))
+=======
+	L.add_movespeed_modifier(type, update=TRUE, priority=100, multiplicative_slowdown=-0.25, blacklisted_movetypes=(FLYING|FLOATING))
+>>>>>>> 832229d593... Second sweep of speedup chem nerfs (#6956)
 
 /datum/reagent/consumable/nuka_cola/on_mob_end_metabolize(mob/living/L)
 	L.remove_movespeed_modifier(type)
@@ -599,7 +603,7 @@
 /datum/reagent/consumable/monkey_energy/on_mob_metabolize(mob/living/L)
 	..()
 	if(ismonkey(L))
-		L.add_movespeed_modifier(type, update=TRUE, priority=100, multiplicative_slowdown=-0.75, blacklisted_movetypes=(FLYING|FLOATING))
+		L.add_movespeed_modifier(type, update=TRUE, priority=100, multiplicative_slowdown=-0.25, blacklisted_movetypes=(FLYING|FLOATING))
 
 /datum/reagent/consumable/monkey_energy/on_mob_end_metabolize(mob/living/L)
 	L.remove_movespeed_modifier(type)

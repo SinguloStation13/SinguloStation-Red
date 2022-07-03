@@ -195,7 +195,11 @@
 	if (L.client)
 		SSmedals.UnlockMedal(MEDAL_APPLY_REAGENT_METH,L.client)
 
+<<<<<<< HEAD
 	L.add_movespeed_modifier(type, update=TRUE, priority=100, multiplicative_slowdown=-1.25, blacklisted_movetypes=(FLYING|FLOATING))
+=======
+	L.add_movespeed_modifier(type, update=TRUE, priority=100, multiplicative_slowdown=-0.5, blacklisted_movetypes=(FLYING|FLOATING))
+>>>>>>> 832229d593... Second sweep of speedup chem nerfs (#6956)
 	ADD_TRAIT(L, TRAIT_SLEEPIMMUNE, type)
 
 /datum/reagent/drug/methamphetamine/on_mob_end_metabolize(mob/living/L)
