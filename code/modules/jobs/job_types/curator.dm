@@ -23,6 +23,12 @@
 	species_outfits = list(
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/curator
 	)
+<<<<<<< HEAD
+=======
+	//they doesnt get out that much
+	biohazard = 5
+
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /datum/outfit/job/curator
 	name = "Curator"
 	jobtype = /datum/job/curator
