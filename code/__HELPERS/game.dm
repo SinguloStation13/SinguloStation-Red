@@ -449,9 +449,15 @@
 		return candidates
 
 	for(var/mob/dead/observer/G in GLOB.player_list)
+<<<<<<< HEAD
 		candidates += G
 
 	return pollCandidates(Question, jobbanType, gametypeCheck, be_special_flag, poll_time, ignore_category, flashwindow, candidates)
+=======
+		if(COOLDOWN_FINISHED(G, creation_time) || G.started_as_observer) // Prevents people who have just died from becoming Antagonists
+			candidates += G
+	return pollCandidates(Question, jobbanType, gametypeCheck, be_special_flag, poll_time, ignore_category, flashwindow, candidates, req_hours)
+>>>>>>> 05e9fbd880... Players who suicide or cryo are not elegible for Antagonist roles for 5 minutes (#7156)
 
 /proc/pollCandidates(Question, jobbanType, datum/game_mode/gametypeCheck, be_special_flag = 0, poll_time = 300, ignore_category = null, flashwindow = TRUE, list/group = null)
 	var/time_passed = world.time
