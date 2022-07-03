@@ -488,6 +488,7 @@ update_label("John Doe", "Clowny")
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 	registered_name = "Captain"
 	assignment = "Captain"
+	investigate_flags = ADMIN_INVESTIGATE_TARGET
 
 /obj/item/card/id/captains_spare/Initialize()
 	var/datum/job/captain/J = new/datum/job/captain
@@ -671,8 +672,14 @@ update_label("John Doe", "Clowny")
 	var/department_ID = ACCOUNT_CIV
 	var/department_name = ACCOUNT_CIV_NAME
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+<<<<<<< HEAD
 	
 /obj/item/card/id/departmental_budget/Initialize()
+=======
+	investigate_flags = ADMIN_INVESTIGATE_TARGET
+
+/obj/item/card/id/departmental_budget/Initialize(mapload)
+>>>>>>> b6c87aaee1... investigate logs for items to track who picked up and dropped it (#6998)
 	. = ..()
 	var/datum/bank_account/B = SSeconomy.get_dep_account(department_ID)
 	if(B)
@@ -723,6 +730,14 @@ update_label("John Doe", "Clowny")
 	icon_state = "budget_sec"
 
 ///Job Specific ID Cards///
+<<<<<<< HEAD
+=======
+/obj/item/card/id/job/captain
+	icon_state = "captain"
+
+/obj/item/card/id/job/hop
+	icon_state = "hop"
+>>>>>>> b6c87aaee1... investigate logs for items to track who picked up and dropped it (#6998)
 
 /obj/item/card/id/job/ce
 	icon_state = "ce"
