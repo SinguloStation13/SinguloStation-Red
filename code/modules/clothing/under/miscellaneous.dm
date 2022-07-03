@@ -22,6 +22,7 @@
 	item_color = "ek"
 	can_adjust = FALSE
 
+<<<<<<< HEAD
 /obj/item/clothing/under/misc/mailman
 	name = "mailman's jumpsuit"
 	desc = "<i>'Special delivery!'</i>"
@@ -36,6 +37,8 @@
 	item_state = "p_suit"
 	item_color = "psyche"
 
+=======
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/item/clothing/under/misc/vice_officer
 	name = "vice officer's jumpsuit"
 	desc = "It's the standard issue pretty-boy outfit, as seen on Holo-Vision."

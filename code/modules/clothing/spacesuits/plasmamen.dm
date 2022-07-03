@@ -222,6 +222,11 @@
 	icon_state = "atmos_envirohelm"
 	item_state = "atmos_envirohelm"
 
+/obj/item/clothing/head/helmet/space/plasmaman/mailman
+	name = "mailman envirosuit helmet"
+	desc = "<i>'Right-on-time'</i> mail plasmamen service head wear."
+	greyscale_colors = "#091544#e6c447#091544"
+
 /obj/item/clothing/head/helmet/space/plasmaman/cargo
 	name = "cargo envirosuit helmet"
 	desc = "An plasmaman envirohelmet designed for cargo techs and quartermasters."
@@ -356,8 +361,176 @@
 /obj/item/clothing/head/helmet/space/plasmaman/intern
 	name = "CentCom intern envirosuit helmet"
 	desc = "A special containment helmet designed for CentCom Staff. You know, so any coffee spills don't kill the poor sod."
+<<<<<<< HEAD
 	icon_state = "intern_envirohelm"
 	item_state = "intern_envirohelm"
+=======
+	greyscale_colors = "#088756#313131#088756"
+
+// The Mark 2 variants of the standard envirohelms.
+/obj/item/clothing/head/helmet/space/plasmaman/mark2
+	name = "Mk.II envirosuit helmet"
+	desc = "A sleek new plasmaman containment helmet, painted in classic Hazardous Orange."
+	greyscale_colors = "#DF5900#A349A4"
+	greyscale_config = /datum/greyscale_config/plasmaman_helmet_mark2
+	greyscale_config_inhand_left = /datum/greyscale_config/plasmaman_helmet_mark2_inhand_left
+	greyscale_config_inhand_right = /datum/greyscale_config/plasmaman_helmet_mark2_inhand_right
+	greyscale_config_worn = /datum/greyscale_config/plasmaman_helmet_mark2_worn
+	visor_state = "mark2_visor"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/security
+	name = "security Mk.II envirosuit helmet"
+	desc = "A stylish new iteration upon the original plasmaman containment helmet design for security officers, retaining all the old protections for a new era of fragile law enforcement."
+	greyscale_colors = "#9F2A2E#2D2D2D"
+	armor = list("melee" = 10, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 0, "fire" = 100, "acid" = 75, "stamina" = 10)
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/security/warden
+	name = "warden's Mk.II envirosuit helmet"
+	desc = "A stylish new iteration upon the original plasmaman containment helmet design for the warden. All the chic of the standard look with the Warden's iconic reflective white stripe."
+	greyscale_colors = "#9F2A2E#C0C0C0"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/medical
+	name = "medical's Mk.II envirosuit helmet"
+	desc = "A stylish new iteration upon the original plasmaman containment helmet design for medical doctors. Glue your fellow crewmen back together and make a fashion statement while you're at it."
+	greyscale_colors = "#E6E6E6#5A96BB"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/genetics
+	name = "geneticist's Mk.II envirosuit helmet"
+	desc = "A stylish new iteration upon the original plasmaman containment helmet design for geneticists. Pushing the boundaries of organic life never looked so good!"
+	greyscale_colors = "#E6E6E6#0097CA"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/viro
+	name = "virology Mk.II envirosuit helmet"
+	desc = "The helmet worn by the safest people on the station, those who are completely immune to the monstrosities they create, including the monstrosities of outdated fashion"
+	greyscale_colors = "#E6E6E6#339900"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/chemist
+	name = "chemistry Mk.II envirosuit helmet"
+	desc = "A braced plasmaman containment helmet design for chemists."
+	greyscale_colors = "#E6E6E6#FF8800"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/emt
+	name = "paramedic Mk.II envirosuit helmet"
+	desc = "A new and improved envirosuit helmet only for the bravest medical plasmaman."
+	greyscale_colors = "#2C3A4E#D9D9D9"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/security/secmed
+	name = "brig physician Mk.II envirosuit helmet"
+	desc = "A braced plasmaman containment helmet design for brig physicians."
+	greyscale_colors = "#A5A9B6#B72B2F"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/science
+	name = "science Mk.II envirosuit helmet"
+	desc = "A stylish new iteration upon the original plasmaman containment helmet design for scientists."
+	greyscale_colors = "#E6E6E6#9E00EA"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/robotics
+	name = "robotics Mk.II envirosuit helmet"
+	desc = "A stylish new iteration upon the original plasmaman containment helmet design for roboticists."
+	greyscale_colors = "#2F2E31#932500"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/engineering
+	name = "engineering Mk.II envirosuit helmet"
+	desc = "A new iteration upon the classic space-worthy design, painted in classic engineering pigments."
+	greyscale_colors = "#E8D700#D75600"
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 10, "fire" = 100, "acid" = 75, "stamina" = 0)
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/engineering/atmospherics
+	name = "atmospherics Mk.II envirosuit helmet"
+	desc = "A new iteration upon the classic space-worthy design, painted in classic atmosian pigments."
+	greyscale_colors = "#E8D700#0098CA"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/cargo
+	name = "cargo Mk.II envirosuit helmet"
+	desc = "A stylish new iteration upon the original plasmaman containment helmet design for cargo techs and quartermasters. Neo-liberal grifting has never been this groovy"
+	greyscale_colors = "#ADADAD#BB9042"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/mailman
+	name = "mailman Mk.II envirosuit helmet"
+	desc = "<i>'Right-on-time'</i> a modernized mail plasmamen service head wear."
+	greyscale_colors = "#091544#e6c447"
+
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/mining
+	name = "mining Mk.II envirosuit helmet"
+	desc = "A new styling of the classi khaki helmet given to plasmamen miners."
+	greyscale_colors = "#E1D9CA#2BFF92"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/chaplain
+	name = "chaplain's Mk.II envirosuit helmet"
+	desc = "A stylish new iteration upon the original plasmaman containment helmet design for only the most pious of plasmamen. Old age traditions wrapped in a new age shell."
+	greyscale_colors = "#313131#A349A4"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/white
+	name = "white Mk.II envirosuit helmet"
+	desc = "The generic white envirohelm brought into a new era of fashion."
+	greyscale_colors = "#E6E6E6#A349A4"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/botany
+	name = "botany Mk.II envirosuit helmet"
+	desc = "A stylish new iteration upon the original plasmaman containment helmet design for botanists. Now specially designed against minor planet-related injuries."
+	greyscale_colors = "#54911A#0650D7"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/janitor
+	name = "janitor's Mk.II envirosuit helmet"
+	desc = "A new look for the flashy janitor enviro helmet. Get the appreciation you deserve with this cutting edge vogue."
+	greyscale_colors = "#ADADAD#FCFF00"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/exploration
+	name = "mining envirosuit helmet"
+	desc = "A new plasmaman envirohelmet designed for the exploration crew, decked out in their iconic garish turquiose."
+	greyscale_colors = "#E1D9CA#2BFF92"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/command
+	name = "captain's Mk.II envirosuit helmet"
+	desc = "A new age helmet issued to the head of the command staff. Sleeker and stylish-er, as all captains should be."
+	greyscale_colors = "#005478#D7C73F"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/engineering/ce
+	name = "chief engineer's Mk.II envirohelmet"
+	desc = "A stylish new iteration upon the original plasmaman containment helmet design for the Chief Engineer. This one doesn't smell as strongly of bird poo."
+	greyscale_colors = "#D7D7C4#D75600"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/cmo
+	name = "chief medical officer's Mk.II envirohelmet"
+	desc = "A sleek new helmet issued to the chief of the medical staff. Show off that big forehead of yours to all the squares in science."
+	greyscale_colors = "#6FABCE#E6E6E6"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/security/hos
+	name = "head of security's Mk.II envirosuit helmet"
+	desc = "A new variant of the head of security's classic reinforced envirohelmet. You'll still need it."
+	greyscale_colors = "#232A35#8A0400"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/rd
+	name = "research director's Mk.II envirosuit helmet"
+	desc = "A stylish new helmet issued to the director of the research staff. Show off that big forehead of yours to all the wimps in medical."
+	greyscale_colors = "#6F5828#A349A4"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/hop
+	name = "head of personnel's Mk.II envirosuit helmet"
+	desc = "An new envirosuit helmet made for the Head of Personnel, sprayed with Corgi pheromones."
+	greyscale_colors = "#005478#AA1916"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/gold
+	name = "designer's envirosuit helmet Mk.II"
+	desc = "A Plasmi-Deluxe envirosuit helmet with gold woven into the fabric. This one is the newest version."
+	greyscale_colors = "#C47D0C#C47D0C"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/commander
+	name = "CentCom commander Mk.II envirosuit helmet"
+	desc = "A special containment helmet designed for the Higher Central Command Staff. Not many of these exist, as CentCom does not usually employ plasmamen to higher staff positions due to their complications."
+	greyscale_colors = "#007F00#E1C709"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/official
+	name = "CentCom official Mk.II envirosuit helmet"
+	desc = "A special containment helmet designed for CentCom Staff. They sure do love their green."
+	greyscale_colors = "#099756#C0C0C0"
+
+/obj/item/clothing/head/helmet/space/plasmaman/mark2/intern
+	name = "CentCom intern envirosuit helmet"
+	desc = "A special containment helmet designed for CentCom Staff. You know, so any coffee spills don't kill the poor sod."
+	greyscale_colors = "#088756#313131"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 
 /obj/item/clothing/head/helmet/space/plasmaman/replacement/equipped(mob/living/carbon/user, slot)
 	..()
@@ -420,6 +593,7 @@
 	icon_state = "engineer_envirohelm"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 10, "fire" = 100, "acid" = 75, "stamina" = 0)
 
+<<<<<<< HEAD
 /obj/item/clothing/head/helmet/space/plasmaman/replacement/engineering/atmospherics
 	name = "atmospherics replacement envirosuit helmet"
 	desc = "A space-worthy helmet specially designed for atmos technician plasmamen, the usual purple stripes being replaced by engineering's blue."
@@ -458,6 +632,107 @@
 	item_state = "prototype_envirohelm"
 	actions_types = list()
 	smile_state = "prototype_smile"
+=======
+/obj/item/clothing/head/helmet/space/plasmaman/protective/engineering/atmospherics
+	name = "atmospherics protective envirosuit helmet"
+	desc = "A safer looking re-imagining of the classic space-worthy design, painted in classic atmosian pigments."
+	greyscale_colors = "#E8D700#0098CA"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/cargo
+	name = "cargo protective envirosuit helmet"
+	desc = "A braced plasmaman containment helmet design for cargo techs and quartermasters."
+	greyscale_colors = "#ADADAD#BB9042"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/mailman
+	name = "mailman Mk.II envirosuit helmet"
+	desc = "<i>'Right-on-time'</i> a braced mail plasmamen service head wear."
+	greyscale_colors = "#091544#e6c447"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/mining
+	name = "mining Mk.II envirosuit helmet"
+	desc = "A new styling of the classic khaki helmet given to plasmamen miners."
+	greyscale_colors = "#55524A#8A5AE1"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/chaplain
+	name = "chaplain's protective envirosuit helmet"
+	desc = "A braced plasmaman containment helmet design for only the most pious of plasmamen."
+	greyscale_colors = "#313131#A349A4"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/white
+	name = "white protective envirosuit helmet"
+	desc = "The generic white envirohelm wrapped in a bulky, possibly more protective shell."
+	greyscale_colors = "#E6E6E6#A349A4"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/botany
+	name = "botany protective envirosuit helmet"
+	desc = "A braced plasmaman containment helmet designed for botanists."
+	greyscale_colors = "#54911A#0650D7"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/janitor
+	name = "janitor's protective envirosuit helmet"
+	desc = "A bulkier variation on the janitor envirohelmet."
+	greyscale_colors = "#ADADAD#FCFF00"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/exploration
+	name = "mining protective envirosuit helmet"
+	desc = "A new plasmaman envirohelmet designed for the exploration crew, decked out in their iconic garish turquiose."
+	greyscale_colors = "#CFC7B8#0CD46C"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/command
+	name = "captain's protective envirosuit helmet"
+	desc = "A better protected helmet issued to the head of the command staff. This might help. Might."
+	greyscale_colors = "#005478#D7C73F"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/engineering/ce
+	name = "chief engineer's protective envirohelmet"
+	desc = "A braced plasmaman containment helmet designed for the Chief Engineer."
+	greyscale_colors = "#D7D7C3#D75600"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/cmo
+	name = "chief medical officer's protective envirohelmet"
+	desc = "A bulky new helmet issued to the chief of the medical staff."
+	greyscale_colors = "#6FABCE#E6E6E6"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/security/hos
+	name = "head of security's protective envirosuit helmet"
+	desc = "A better-armoured variant of the head of security's classic reinforced envirohelmet."
+	greyscale_colors = "#232A35#8A0400"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/rd
+	name = "research director's protective envirosuit helmet"
+	desc = "An encumbering new helmet issued to the director of the research staff."
+	greyscale_colors = "#6F5828#A349A4"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/hop
+	name = "head of personnel's protective envirosuit helmet"
+	desc = "An new, debatably safer envirosuit helmet made for the Head of Personnel."
+	greyscale_colors = "#005478#AA1916"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/gold
+	name = "designer's protective envirosuit helmet"
+	desc = "A Plasmi-Deluxe envirosuit helmet with gold woven into the fabric. This one is the newest version."
+	greyscale_colors = "#C47D0C#C47D0C"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/commander
+	name = "CentCom commander protective envirosuit helmet"
+	desc = "A special containment helmet designed for the Higher Central Command Staff. Not many of these exist, as CentCom does not usually employ plasmamen to higher staff positions due to their complications."
+	greyscale_colors = "#007F00#E1C709"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/official
+	name = "CentCom official protective envirosuit helmet"
+	desc = "A special containment helmet designed for CentCom Staff. They sure do love their green."
+	greyscale_colors = "#099756#C0C0C0"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/intern
+	name = "CentCom intern protective envirosuit helmet"
+	desc = "A special containment helmet designed for CentCom Staff. You know, so any coffee spills don't kill the poor sod."
+	greyscale_colors = "#088756#313131"
+
+/obj/item/clothing/head/helmet/space/plasmaman/protective/bartender
+	name = "white envirosuit helmet with top hat"
+	desc = "A special containment helmet designed for the bartenders, with a top-hat affixed to the top."
+	greyscale_colors = "#E6E6E6#A349A4"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 
 /obj/item/clothing/head/helmet/space/plasmaman/replacement/botany
 	name = "botany replacement envirosuit helmet"

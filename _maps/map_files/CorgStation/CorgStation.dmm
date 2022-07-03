@@ -258,8 +258,14 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
+=======
+/obj/machinery/flasher{
+	id = "aicore";
+	pixel_y = 36
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -444,6 +450,7 @@
 /obj/machinery/camera/autoname{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -453,9 +460,31 @@
 /obj/machinery/door/airlock/command/glass{
 	name = "Gravity Generator Area";
 	req_access_txt = "19; 61"
+=======
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/maintenance/starboard/central)
+"ack" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/open/floor/carpet/orange,
+/area/crew_quarters/heads/chief)
+"acm" = (
+/obj/docking_port/stationary{
+	dheight = 4;
+	dwidth = 4;
+	height = 9;
+	id = "aux_base_zone";
+	name = "aux base zone";
+	roundstart_template = /datum/map_template/shuttle/aux_base/default;
+	width = 9
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/engine/gravity_generator)
 "agx" = (
 /obj/machinery/door/firedoor,
@@ -463,6 +492,37 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes/line{
+=======
+/area/construction/mining/aux_base)
+"acp" = (
+/obj/structure/rack,
+/obj/item/pet_carrier,
+/turf/open/floor/wood,
+/area/crew_quarters/fitness/recreation)
+"acA" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/engine/atmos)
+"acC" = (
+/obj/structure/transit_tube/diagonal{
+	dir = 4
+	},
+/turf/open/space/basic,
+/area/space)
+"acD" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/item/kirbyplants/random,
+/turf/open/floor/plasteel,
+/area/security/brig)
+"acG" = (
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /obj/effect/turf_decal/delivery,
@@ -944,9 +1004,21 @@
 /area/science/research)
 "amj" = (
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/engine/engineering)
 "amp" = (
 /obj/effect/turf_decal/tile/brown{
+=======
+/area/bridge)
+"akM" = (
+/obj/machinery/atmospherics/components/binary/circulator/cold{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/engine/engine_room)
+"ald" = (
+/obj/effect/turf_decal/tile/green{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -1087,12 +1159,19 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/green,
 /obj/machinery/door/airlock/public/glass{
 	name = "Departures Lounge"
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/requests_console{
+	department = "Chapel";
+	pixel_y = 32
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
@@ -1127,12 +1206,24 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
 /area/ai_monitored/turret_protected/ai_upload)
 "apm" = (
 /obj/structure/rack,
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+=======
+/area/engine/engine_room)
+"api" = (
+/obj/machinery/atmospherics/pipe/simple/dark/visible{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/incinerator_atmos,
+/turf/open/floor/engine,
+/area/engine/atmospherics_engine)
+"apl" = (
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
@@ -1923,6 +2014,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel/white,
 /area/medical/chemistry/upper)
@@ -1930,6 +2022,14 @@
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Bar Maintenance";
 	req_access_txt = "25"
+=======
+/turf/open/floor/engine,
+/area/engine/engine_room)
+"azZ" = (
+/obj/machinery/flasher{
+	id = "aicore";
+	pixel_x = 26
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
@@ -2045,11 +2145,25 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
 "aDH" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 6
+=======
+/turf/open/floor/plasteel,
+/area/hallway/primary/starboard)
+"aBS" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/engine,
+/area/engine/engine_room)
+"aCa" = (
+/obj/machinery/atmospherics/components/binary/circulator{
+	dir = 4
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/engine,
 /area/engine/engine_room)
@@ -2774,6 +2888,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
@@ -2781,6 +2896,12 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/structure/window/reinforced/spawner{
 	dir = 1
+=======
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow,
+/obj/item/radio/intercom{
+	pixel_y = -28
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/dark,
@@ -3089,11 +3210,17 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/upper/secondary/exit/departure_lounge)
 "aOu" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
+=======
+/area/engine/atmos)
+"aJn" = (
+/obj/effect/turf_decal/tile/red,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
@@ -3212,6 +3339,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
@@ -3220,6 +3348,19 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
+=======
+/obj/machinery/door/airlock/command/glass{
+	name = "Head of Security";
+	req_access_txt = "58"
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/plating,
+/area/crew_quarters/heads/hos)
+"aKJ" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -3620,8 +3761,19 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 5
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red{
 	dir = 8
+=======
+/turf/open/floor/plating/airless,
+/area/science/test_area)
+"aOZ" = (
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/tile/red,
+/obj/item/book/manual/wiki/cooking_to_serve_man,
+/obj/item/reagent_containers/food/condiment/enzyme{
+	pixel_y = 5
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -3875,7 +4027,12 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral{
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral,
@@ -4323,7 +4480,21 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+=======
+/obj/effect/turf_decal/tile/blue,
+/obj/machinery/light,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/lobby)
+"aWt" = (
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"aWy" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow,
+/obj/structure/disposalpipe/segment{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -5128,11 +5299,23 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel,
 /area/science/shuttle)
 "blH" = (
 /obj/effect/turf_decal/tile/blue{
+=======
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plasteel/dark,
+/area/chapel/office)
+"biY" = (
+/obj/effect/turf_decal/tile/yellow,
+/obj/effect/turf_decal/tile/yellow{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue,
@@ -7406,11 +7589,36 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/quartermaster/storage)
 "bNb" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+=======
+/area/teleporter)
+"bOc" = (
+/obj/structure/lattice/catwalk,
+/turf/open/space/basic,
+/area/solar/starboard/aft)
+"bOd" = (
+/obj/machinery/door/window/eastleft{
+	dir = 2;
+	name = "Quarantine Pen A";
+	req_one_access_txt = "39"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"bOf" = (
+/turf/closed/wall,
+/area/hallway/secondary/exit)
+"bOl" = (
+/obj/effect/turf_decal/tile/brown{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -7445,8 +7653,28 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 5
+=======
+/turf/open/floor/plasteel/white,
+/area/crew_quarters/bar)
+"bOE" = (
+/obj/structure/lattice/catwalk,
+/turf/open/space/basic,
+/area/solar/port/fore)
+"bOW" = (
+/turf/closed/wall/r_wall,
+/area/crew_quarters/heads/hor)
+"bPb" = (
+/obj/structure/table/glass,
+/obj/item/extrapolator,
+/obj/machinery/requests_console{
+	department = "Medbay";
+	departmentType = 1;
+	name = "Medbay RC";
+	pixel_y = 29
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/carpet/cyan,
@@ -8326,6 +8554,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/purple,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
@@ -8333,6 +8562,31 @@
 "bXY" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/layer_manifold{
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/turf/open/floor/plasteel/dark,
+/area/security/checkpoint/medical)
+"ceK" = (
+/obj/structure/table/reinforced,
+/obj/item/clipboard,
+/obj/item/stack/package_wrap,
+/obj/item/stack/package_wrap,
+/obj/item/hand_labeler,
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/tile/brown{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/brown{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 8
 	},
 /turf/open/floor/plating,
@@ -8963,9 +9217,13 @@
 /obj/structure/window/reinforced/spawner{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/floor/plating,
 /area/ai_monitored/turret_protected/AIsatextAP)
 "cgc" = (
+=======
+/obj/effect/turf_decal/tile/red,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
@@ -9466,6 +9724,7 @@
 /obj/machinery/camera/autoname{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
@@ -9474,6 +9733,14 @@
 	dir = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/airalarm/directional/south,
+/turf/open/floor/plasteel/dark,
+/area/security/checkpoint/science)
+"cxQ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -9698,8 +9965,35 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
+=======
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/turf/open/floor/plating,
+/area/maintenance/department/science/central)
+"cBE" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor/window,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plating,
+/area/security/nuke_storage)
+"cBK" = (
+/obj/machinery/vending/boozeomat/all_access,
+/turf/open/floor/wood,
+/area/security/detectives_office)
+"cBT" = (
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/stripes/line{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -10775,6 +11069,7 @@
 /obj/machinery/power/apc/auto_name/west{
 	pixel_x = -24
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
@@ -10783,6 +11078,11 @@
 "cBO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/recreation/upper)
@@ -12005,6 +12305,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 5
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 5
 	},
@@ -12017,6 +12318,14 @@
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 4
+=======
+/turf/closed/wall,
+/area/quartermaster/storage)
+"dps" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 10
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 2
@@ -12586,6 +12895,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/primary/central)
 "cZz" = (
 /obj/effect/turf_decal/tile/brown,
@@ -12602,6 +12912,13 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+=======
+/area/hallway/primary/fore)
+"dyO" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
+	dir = 4
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
@@ -13189,6 +13506,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
@@ -13196,6 +13514,17 @@
 /area/hallway/secondary/service)
 "dgT" = (
 /obj/structure/chair/comfy/black{
+=======
+/obj/structure/sign/map/left{
+	pixel_x = 16;
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/dark,
+/area/hallway/primary/central)
+"dIr" = (
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/stripes/line{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/green,
@@ -14036,10 +14365,27 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/maintenance/starboard/aft)
 "dpL" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/effect/turf_decal/tile/green{
+=======
+/area/security/checkpoint/engineering)
+"dSU" = (
+/obj/structure/table,
+/obj/item/stack/package_wrap,
+/obj/item/stack/package_wrap,
+/obj/item/stack/package_wrap,
+/obj/item/stack/package_wrap,
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/obj/effect/spawner/lootdrop/glowstick,
+/obj/effect/spawner/lootdrop/glowstick,
+/obj/effect/spawner/lootdrop/glowstick,
+/obj/effect/turf_decal/tile/yellow{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/green{
@@ -14143,6 +14489,7 @@
 	pixel_x = 32
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/medical/morgue)
 "dqx" = (
 /obj/machinery/door/airlock/medical/glass{
@@ -14151,6 +14498,13 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
+=======
+/area/engine/atmos)
+"dUs" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
+	dir = 4
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -14363,8 +14717,16 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
+=======
+/obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/incinerator_atmos,
+/turf/open/floor/engine,
+/area/engine/atmospherics_engine)
+"dXz" = (
+/obj/effect/turf_decal/stripes/line{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
@@ -14433,8 +14795,17 @@
 /obj/structure/railing/corner{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 10
+=======
+/turf/open/floor/noslip/standard,
+/area/hallway/secondary/service)
+"dXR" = (
+/obj/machinery/door/airlock/medical{
+	id_tag = "QuarantineA";
+	name = "Quarantine Cell A"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
@@ -14657,11 +15028,15 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/table,
 /obj/machinery/light/small{
 	dir = 1
 	},
 /obj/machinery/airalarm/directional/north,
+=======
+/obj/machinery/power/apc/auto_name/east,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /turf/open/floor/plasteel,
 /area/janitor)
 "dwI" = (
@@ -16518,10 +16893,18 @@
 	dir = 6
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/secondary/law)
 "dUp" = (
 /obj/machinery/conveyor{
 	id = "recycling"
+=======
+/area/hallway/primary/fore)
+"eDR" = (
+/obj/machinery/flasher{
+	id = "aicore";
+	pixel_y = 26
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
@@ -16956,11 +17339,21 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/hor)
 "eap" = (
 /obj/machinery/light/small/broken{
 	dir = 8
+=======
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+"eLy" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable{
+	icon_state = "0-8"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
@@ -17746,9 +18139,34 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue,
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
+=======
+/obj/item/pen{
+	pixel_y = 4
+	},
+/obj/structure/table/wood,
+/turf/open/floor/wood,
+/area/crew_quarters/heads/hop)
+"eZw" = (
+/obj/machinery/chem_dispenser{
+	layer = 2.7
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/plasteel/white,
+/area/medical/chemistry)
+"eZD" = (
+/obj/effect/turf_decal/tile/red,
+/obj/item/radio/intercom{
+	pixel_y = -28
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/reagentgrinder{
+	pixel_x = -1;
+	pixel_y = 7
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
@@ -18538,6 +18956,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
@@ -18546,6 +18965,11 @@
 "esB" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/holopad{
+	pixel_y = 16
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -19698,12 +20122,25 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/quartermaster/storage)
 "eEt" = (
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "CloningDoor";
 	name = "Cloning Lab";
 	req_access_txt = "5; 68"
+=======
+/area/ai_monitored/turret_protected/aisat/foyer)
+"fId" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/turf/open/floor/plasteel,
+/area/hallway/secondary/command)
+"fIm" = (
+/obj/machinery/door/airlock/medical{
+	id_tag = "QuarantineB";
+	name = "Quarantine Cell B"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/mapping_helpers/airlock/unres,
 /obj/structure/cable/yellow{
@@ -19925,6 +20362,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/engine/engine_room)
 "eGH" = (
@@ -19932,6 +20370,32 @@
 /obj/machinery/suit_storage_unit/open,
 /obj/machinery/light/small{
 	dir = 1
+=======
+/turf/open/floor/plasteel,
+/area/security/warden)
+"fMj" = (
+/obj/effect/turf_decal/tile/red,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/turf/open/floor/plasteel,
+/area/security/brig)
+"fMn" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = 24
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
@@ -20159,11 +20623,20 @@
 /obj/item/radio/intercom{
 	pixel_x = 28
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/hallway/upper/primary/fore)
 "eIX" = (
 /obj/effect/turf_decal/caution{
 	dir = 8
+=======
+/turf/open/floor/plating,
+/area/maintenance/fore)
+"fPa" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Maintenance Hatch";
+	req_one_access_txt = "12,47"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -20956,6 +21429,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/security/main)
 "eSj" = (
@@ -20971,6 +21445,12 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
+=======
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"gbJ" = (
+/obj/machinery/power/apc/auto_name/east,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
@@ -21147,6 +21627,7 @@
 /obj/machinery/door/airlock/public/glass{
 	name = "Library"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/door/firedoor,
 /turf/open/floor/wood,
@@ -21157,6 +21638,15 @@
 "eVq" = (
 /obj/machinery/light/small{
 	dir = 8
+=======
+/turf/open/floor/plating,
+/area/maintenance/solars/port/aft)
+"gdm" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	external_pressure_bound = 140;
+	name = "killroom vent";
+	pressure_checks = 0
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -21316,8 +21806,23 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red{
 	dir = 4
+=======
+/turf/open/floor/plasteel/white,
+/area/crew_quarters/toilet)
+"gfM" = (
+/obj/structure/table,
+/obj/item/storage/box/monkeycubes{
+	layer = 3.1;
+	pixel_x = 2
+	},
+/obj/item/storage/box/monkeycubes{
+	layer = 3.1;
+	pixel_x = -4;
+	pixel_y = 8
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 9
@@ -22127,11 +22632,27 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/maintenance/disposal)
 "fgU" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
+=======
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "QMLoaddoor2";
+	name = "Cargo Offload";
+	pixel_x = 6;
+	pixel_y = -26
+	},
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "QMLoaddoor";
+	name = "Cargo Loading";
+	pixel_x = -5;
+	pixel_y = -26
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/stripes/corner,
 /obj/structure/ladder,
@@ -22334,9 +22855,22 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /obj/machinery/door/airlock/command{
 	name = "Research Director's Office";
 	req_access_txt = "30"
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 9
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
+"gwr" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/light_switch{
+	pixel_x = 26
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -22523,11 +23057,20 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 8
+=======
+/turf/open/floor/plating,
+/area/quartermaster/storage)
+"gyZ" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 10
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -22631,6 +23174,7 @@
 /obj/effect/turf_decal/caution{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/engine,
 /area/engine/engine_room)
 "flL" = (
@@ -22650,6 +23194,17 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 10
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/dark,
+/area/security/checkpoint/science)
+"gAV" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plating,
 /area/quartermaster/miningdock)
@@ -22842,6 +23397,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/medical/chemistry/upper)
 "fop" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -22852,6 +23408,21 @@
 "foq" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 6
+=======
+/area/hallway/secondary/exit/departure_lounge)
+"gEw" = (
+/obj/machinery/microwave{
+	desc = "Cooks and boils stuff, somehow.";
+	pixel_y = 5
+	},
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/tile/red,
+/turf/open/floor/plasteel/white,
+/area/crew_quarters/kitchen)
+"gEE" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 6
@@ -23914,11 +24485,22 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 10
+=======
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/turf/open/floor/plasteel/dark,
+/area/security/courtroom)
+"gSm" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 10
@@ -24989,6 +25571,13 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/red{
+<<<<<<< HEAD
+=======
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -25091,6 +25680,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/bridge)
 "fNk" = (
 /obj/structure/cable/yellow{
@@ -25098,6 +25688,16 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
+=======
+/area/engine/engineering)
+"hiQ" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/structure/disposalpipe/segment,
+/obj/item/radio/intercom{
+	pixel_x = 29;
+	pixel_y = -2
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -27776,6 +28376,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/engine/engineering)
 "gsj" = (
 /obj/machinery/camera/autoname,
@@ -27785,6 +28386,20 @@
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maintenance Hatch";
 	req_access_txt = "12"
+=======
+/area/hallway/primary/fore)
+"hWq" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/nitrous_output{
+	dir = 4
+	},
+/turf/open/floor/engine/n2o,
+/area/engine/atmos)
+"hWr" = (
+/obj/machinery/door/window/eastleft{
+	dir = 1;
+	name = "Testing Pen";
+	req_one_access_txt = "39"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -28631,11 +29246,17 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red{
 	dir = 2
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 4
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/light{
+	dir = 1
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 8
@@ -28662,6 +29283,7 @@
 	pixel_x = 12
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/janitor)
 "gCV" = (
 /turf/closed/wall,
@@ -28675,6 +29297,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+=======
+/area/hallway/primary/starboard)
+"igC" = (
+/obj/effect/turf_decal/tile/red,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/machinery/light{
 	dir = 4
 	},
@@ -28761,6 +29388,7 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/item/stack/conveyor/thirty,
 /obj/item/stack/conveyor/thirty,
 /obj/item/conveyor_switch_construct,
@@ -28775,6 +29403,9 @@
 	},
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/tile/brown,
+=======
+/obj/machinery/power/apc/auto_name/east,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "gDR" = (
@@ -28844,6 +29475,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
@@ -28854,6 +29486,19 @@
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
 	dir = 8
+=======
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/qm)
+"ihY" = (
+/turf/closed/wall/r_wall,
+/area/ai_monitored/storage/eva)
+"iim" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/newscaster/security_unit{
+	pixel_x = 32
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
@@ -29096,11 +29741,17 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
@@ -29737,6 +30388,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hydroponics)
 "gPe" = (
 /obj/effect/turf_decal/delivery,
@@ -29744,6 +30396,28 @@
 /area/security/brig)
 "gPf" = (
 /obj/effect/turf_decal/stripes/corner{
+=======
+/area/hallway/primary/starboard)
+"isl" = (
+/obj/structure/table/glass,
+/obj/item/stack/sheet/iron/fifty,
+/obj/item/stack/ducts/fifty,
+/obj/item/stack/ducts/fifty{
+	pixel_x = 2;
+	pixel_y = 5
+	},
+/obj/item/stack/package_wrap,
+/obj/item/stack/package_wrap,
+/turf/open/floor/plasteel/white,
+/area/medical/chemistry)
+"isn" = (
+/obj/machinery/holopad,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 8
 	},
 /turf/open/floor/plating,
@@ -30586,6 +31260,7 @@
 /obj/effect/turf_decal/tile/red,
 /obj/machinery/light,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/upper/primary/fore)
 "haD" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
@@ -30598,6 +31273,13 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
+=======
+/area/hallway/primary/fore)
+"iEC" = (
+/obj/effect/turf_decal/tile/red,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /turf/open/floor/plasteel,
 /area/security/brig)
 "haF" = (
@@ -30875,8 +31557,32 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/blue,
+<<<<<<< HEAD
 /obj/machinery/door/window/southleft{
 	name = "Cloning Shower"
+=======
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/lobby)
+"iKq" = (
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/effect/turf_decal/tile/green{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/hallway/secondary/service)
+"iKs" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Maintenance Hatch";
+	req_access_txt = "12"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/mirror{
 	pixel_y = 30
@@ -31377,7 +32083,38 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
+=======
+/turf/open/floor/plasteel/white,
+/area/science/xenobiology)
+"iTE" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/eastleft{
+	dir = 2;
+	name = "Quarantine Pen C";
+	req_one_access_txt = "39"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"iTO" = (
+/obj/machinery/holopad,
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/AIsatextAP)
+"iTT" = (
+/obj/machinery/atmospherics/pipe/manifold4w/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"iUk" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/toxin_output{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -32531,6 +33268,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/visible/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
 	dir = 4
 	},
@@ -32540,6 +33278,18 @@
 /area/crew_quarters/park)
 "hyo" = (
 /obj/effect/turf_decal/tile/green{
+=======
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/miningdock)
+"jjx" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor/window,
+/turf/open/floor/plating,
+/area/science/shuttle)
+"jjC" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/camera/autoname{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/green{
@@ -32886,12 +33636,30 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/sorting/mail/flip{
 	dir = 4;
 	sortType = 17
+=======
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"jrs" = (
+/obj/structure/bookcase,
+/turf/open/floor/carpet,
+/area/hallway/primary/fore)
+"jrz" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plasteel,
+/area/security/brig)
+"jrP" = (
+/obj/effect/turf_decal/tile/yellow{
+	dir = 1
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plating,
 /area/maintenance/upper/aft)
@@ -33606,6 +34374,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/hallway/upper/secondary/service)
 "hMu" = (
@@ -33620,6 +34389,15 @@
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/button/door{
+	id = "kitchenconveyor";
+	name = "Kitchen Belt Shutters";
+	pixel_x = -27;
+	pixel_y = -5;
+	req_access_txt = "28"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -34163,11 +34941,24 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red{
 	dir = 2
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 9
+=======
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/white,
+/area/science/misc_lab/range)
+"jIR" = (
+/obj/effect/turf_decal/tile/red,
+/turf/open/floor/plasteel/white,
+/area/crew_quarters/kitchen)
+"jIV" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/security/brig)
@@ -34964,6 +35755,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
@@ -34977,6 +35769,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+=======
+/obj/effect/turf_decal/tile/red,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
@@ -35240,11 +36035,23 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 1
+=======
+/obj/effect/turf_decal/tile/red,
+/turf/open/floor/plasteel/dark,
+/area/chapel/main/monastery)
+"jVV" = (
+/obj/structure/window/reinforced/spawner/west,
+/obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
+	dir = 4;
+	external_pressure_bound = 120;
+	name = "server vent"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/security/warden)
@@ -35617,10 +36424,18 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/machinery/airalarm/directional/south,
+=======
+/turf/open/floor/plasteel,
+/area/hallway/primary/fore)
+"kan" = (
+/obj/machinery/processor,
+/obj/effect/turf_decal/tile/red,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "ijH" = (
@@ -35848,8 +36663,24 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
+=======
+/turf/open/floor/plasteel,
+/area/maintenance/department/science)
+"kev" = (
+/turf/open/floor/plating/asteroid,
+/area/maintenance/port)
+"keI" = (
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/caution/red{
+	dir = 1;
+	pixel_y = -5
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
@@ -36123,10 +36954,25 @@
 /obj/machinery/camera/autoname{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+=======
+/turf/open/floor/plating/asteroid,
+/area/maintenance/port)
+"kjC" = (
+/obj/machinery/door/window{
+	dir = 8;
+	name = "AI Core Door";
+	req_access_txt = "16"
+	},
+/obj/machinery/flasher{
+	id = "aicore";
+	pixel_x = 5;
+	pixel_y = 26
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/hallway/upper/secondary/entry)
@@ -36329,8 +37175,19 @@
 /obj/machinery/light{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 6
+=======
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
+"klr" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/newscaster/security_unit{
+	pixel_x = 32
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/ai_monitored/turret_protected/aisat/foyer)
@@ -36658,6 +37515,21 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 10
 	},
+<<<<<<< HEAD
+=======
+/turf/open/space/basic,
+/area/space/nearstation)
+"krR" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor/window,
+/turf/open/floor/plating,
+/area/crew_quarters/fitness/recreation)
+"krU" = (
+/turf/closed/wall,
+/area/maintenance/starboard/secondary)
+"kse" = (
+/obj/effect/turf_decal/tile/red,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /turf/open/floor/plasteel/dark,
 /area/security/checkpoint/science)
 "ixg" = (
@@ -37231,11 +38103,17 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
@@ -37295,7 +38173,19 @@
 	name = "Maintenance Hatch";
 	req_access_txt = "12"
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
+=======
+/turf/open/floor/plasteel/dark,
+/area/chapel/main/monastery)
+"kAm" = (
+/obj/structure/table,
+/obj/item/stack/package_wrap,
+/obj/item/stack/package_wrap,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/effect/turf_decal/stripes/line{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -37358,10 +38248,22 @@
 	pixel_x = 1;
 	pixel_y = -25
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
 /obj/structure/disposalpipe/segment{
 	dir = 9
+=======
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/warehouse)
+"kBD" = (
+/obj/structure/transit_tube/diagonal/topleft,
+/turf/open/space/basic,
+/area/space)
+"kCs" = (
+/obj/machinery/sleeper{
+	dir = 4
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/hydroponics)
@@ -37755,8 +38657,22 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
+=======
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 32
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "hosoffice";
+	name = "Head of Security's Office Shutters";
+	pixel_x = -26
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 6
@@ -38968,7 +39884,21 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/stripes/corner{
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/turf/open/floor/plasteel/dark,
+/area/security/checkpoint/science)
+"kXc" = (
+/turf/open/floor/plasteel,
+/area/maintenance/starboard/central)
+"kXj" = (
+/obj/machinery/atmospherics/pipe/simple/orange/visible{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /obj/effect/turf_decal/stripes/corner,
@@ -39185,8 +40115,18 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+=======
+/turf/open/floor/plasteel,
+/area/security/brig)
+"lbc" = (
+/obj/machinery/power/apc{
+	areastring = "/area/engine/gravity_generator";
+	name = "Gravity Generator APC";
+	pixel_y = -24
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -39546,9 +40486,13 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/red,
+<<<<<<< HEAD
 /obj/structure/table/reinforced,
 /obj/item/clothing/suit/straight_jacket,
 /obj/item/clothing/mask/muzzle,
+=======
+/obj/machinery/airalarm/directional/north,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /turf/open/floor/plasteel/dark,
 /area/security/execution/education)
 "jjY" = (
@@ -41094,6 +42038,7 @@
 	},
 /obj/machinery/camera/autoname,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/engine/atmos)
 "jDe" = (
 /obj/structure/dresser,
@@ -41113,6 +42058,13 @@
 "jDD" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
+=======
+/area/hallway/primary/aft)
+"lwg" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -42364,6 +43316,7 @@
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
+<<<<<<< HEAD
 /area/science/research)
 "jSP" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -42374,10 +43327,29 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
+=======
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/crew_quarters/heads/chief)
+"lPZ" = (
+/obj/structure/table/glass,
+/obj/item/reagent_containers/syringe/antiviral{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/syringe/antiviral{
+	pixel_x = 5;
+	pixel_y = 10
+	},
+/obj/item/reagent_containers/syringe/antiviral{
+	pixel_x = 1;
+	pixel_y = 8
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
@@ -42395,6 +43367,23 @@
 "jSW" = (
 /obj/structure/sign/poster/official/obey{
 	pixel_y = 32
+=======
+/obj/item/reagent_containers/syringe/antiviral{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/item/reagent_containers/syringe/antiviral{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/storage/box/syringes{
+	pixel_x = 6;
+	pixel_y = 11
+	},
+/obj/item/storage/box/syringes{
+	pixel_x = -3;
+	pixel_y = 2
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/courtroom)
@@ -43163,6 +44152,7 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/structure/cable/white{
 	icon_state = "1-8"
 	},
@@ -43171,6 +44161,10 @@
 "kbL" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
 /obj/effect/turf_decal/tile/green{
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/green{
@@ -43668,6 +44662,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/upper/primary/fore)
 "kiP" = (
 /obj/machinery/camera/autoname{
@@ -43676,6 +44671,12 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
+=======
+/area/maintenance/starboard/central)
+"mmi" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer4,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/security/brig)
@@ -43774,8 +44775,17 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
+=======
+/turf/open/floor/plasteel/dark,
+/area/security/brig)
+"mnO" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Maintenance Hatch";
+	req_one_access_txt = "12,47"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -43797,12 +44807,21 @@
 /obj/structure/transit_tube_pod{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plating,
 /area/bridge)
 "kkq" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/item/radio/intercom,
+/turf/open/floor/plasteel/dark,
+/area/security/courtroom)
+"moF" = (
+/obj/effect/turf_decal/tile/red,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -43951,6 +44970,7 @@
 /obj/machinery/light_switch{
 	pixel_x = -25
 	},
+<<<<<<< HEAD
 /obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/dark,
 /area/security/main)
@@ -43959,6 +44979,20 @@
 	dir = 2
 	},
 /obj/machinery/camera/autoname{
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/plasteel/white,
+/area/crew_quarters/kitchen)
+"mrc" = (
+/obj/machinery/computer/security{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/yellow{
@@ -44015,11 +45049,27 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 10
+=======
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/kitchen)
+"mtx" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/turf/open/floor/plasteel,
+/area/hallway/secondary/exit)
+"mtA" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/structure/disposalpipe/segment,
+/obj/effect/landmark/start/security_officer,
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_x = 32
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/hallway/upper/secondary/service)
@@ -44074,10 +45124,28 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes/line{
+<<<<<<< HEAD
 	dir = 4
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
+=======
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/machinery/door/airlock/command/glass{
+	name = "Command Hall Access";
+	req_one_access_txt = "19;53";
+	security_level = 0
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/hallway/secondary/command)
+"mxc" = (
+/obj/effect/turf_decal/tile/red,
+/obj/structure/disposalpipe/segment{
+	dir = 6
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/security/armory)
@@ -44180,6 +45248,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 5
 	},
@@ -44191,6 +45260,18 @@
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maintenance Hatch";
 	req_access_txt = "63"
+=======
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
+"mAo" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/lobby)
+"mAr" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/newscaster{
+	pixel_x = 30
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "medbay_lockdown";
@@ -46217,6 +47298,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
@@ -46227,6 +47309,12 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/item/radio/intercom{
+	pixel_x = -29;
+	pixel_y = -29
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
@@ -46811,6 +47899,7 @@
 /obj/machinery/computer/bounty{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/button/door{
 	desc = "A remote control switch.";
 	id = "qmoffice";
@@ -46818,6 +47907,11 @@
 	normaldoorcontrol = 0;
 	pixel_x = 29;
 	pixel_y = 28
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
@@ -46857,6 +47951,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/bridge)
 "kXO" = (
@@ -46867,6 +47962,13 @@
 /area/engine/engine_room)
 "kXR" = (
 /obj/effect/turf_decal/stripes/line{
+=======
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 1
 	},
 /obj/machinery/computer/card,
@@ -47324,12 +48426,28 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/maintenance/disposal)
 "leL" = (
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/green{
 	dir = 8
+=======
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/grimy,
+/area/chapel/office)
+"nzM" = (
+/obj/structure/table/wood,
+/obj/item/folder/red,
+/obj/item/pen,
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "dorm1";
+	name = "Privacy Shutters";
+	pixel_x = -4;
+	pixel_y = -26
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -47716,6 +48834,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "lio" = (
@@ -47734,6 +48853,10 @@
 "liy" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -48193,8 +49316,17 @@
 /obj/machinery/light{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
+=======
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "comms";
+	name = "Communications Shutters";
+	pixel_x = 26;
+	pixel_y = -38
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/purple,
 /obj/machinery/requests_console{
@@ -48606,9 +49738,23 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+=======
+/turf/open/floor/plasteel/white,
+/area/science/research)
+"nRJ" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 16;
+	height = 15;
+	id = "exploration_home";
+	name = "Exploration Dock";
+	roundstart_template = /datum/map_template/shuttle/exploration/corg;
+	width = 23
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
@@ -49217,9 +50363,26 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/light_switch{
 	pixel_x = 1;
 	pixel_y = -25
+=======
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"oaU" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor/window,
+/turf/open/floor/plating,
+/area/quartermaster/exploration_prep)
+"obm" = (
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 1
@@ -49350,6 +50513,7 @@
 /obj/machinery/newscaster/security_unit{
 	pixel_y = 32
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/security/checkpoint/engineering)
 "lAx" = (
@@ -49361,6 +50525,15 @@
 /obj/machinery/power/apc/auto_name/north{
 	pixel_y = 24
 	},
+=======
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"ocE" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/power/apc/auto_name/east,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
@@ -50396,11 +51569,18 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red{
 	dir = 2
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/airalarm/directional/east,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/checkpoint/science)
@@ -51487,11 +52667,17 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 2
+=======
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
@@ -51706,8 +52892,18 @@
 /area/security/main)
 "mcl" = (
 /obj/structure/cable/yellow{
+<<<<<<< HEAD
 	icon_state = "4-8"
 	},
+=======
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/auto_name/east,
+/obj/item/seeds/tea,
+/turf/open/floor/plasteel,
+/area/security/prison)
+"oRG" = (
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -52192,12 +53388,66 @@
 /obj/structure/window/reinforced/spawner{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/window/reinforced/spawner,
 /turf/open/space/basic,
 /area/space)
 "mhS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 9
+=======
+/turf/open/floor/plasteel,
+/area/crew_quarters/heads/cmo)
+"pbA" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/hidden{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	pixel_y = 24
+	},
+/turf/open/floor/plasteel/dark/telecomms,
+/area/tcommsat/server)
+"pbI" = (
+/obj/structure/rack,
+/obj/item/storage/box/teargas{
+	pixel_x = 1;
+	pixel_y = -2
+	},
+/obj/item/storage/box/flashbangs,
+/obj/effect/turf_decal/delivery,
+/obj/item/storage/box/firingpins,
+/obj/item/gun/grenadelauncher,
+/turf/open/floor/plasteel,
+/area/ai_monitored/security/armory)
+"pbP" = (
+/obj/machinery/telecomms/server/presets/command,
+/turf/open/floor/circuit/telecomms/server,
+/area/tcommsat/server)
+"pbS" = (
+/obj/structure/table/glass,
+/obj/item/reagent_containers/syringe/antiviral{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/syringe/antiviral{
+	pixel_x = 5;
+	pixel_y = 10
+	},
+/obj/item/reagent_containers/syringe/antiviral{
+	pixel_x = 1;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/syringe/antiviral{
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/syringe/antiviral{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/item/reagent_containers/syringe/antiviral{
+	pixel_x = -2;
+	pixel_y = -1
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plating,
 /area/maintenance/upper/aft)
@@ -52415,7 +53665,26 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/light{
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel,
+/area/security/brig)
+"pfo" = (
+/obj/effect/turf_decal/tile/blue{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/blue{
@@ -52501,8 +53770,30 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
+=======
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/fitness/recreation)
+"pgG" = (
+/obj/machinery/nuclearbomb/beer,
+/turf/open/floor/plating,
+/area/maintenance/department/bridge)
+"phh" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/effect/spawner/lootdrop/glowstick/lit,
+/turf/open/floor/plating,
+/area/maintenance/port/central)
+"pho" = (
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/tile/red,
+/obj/item/book/manual/wiki/cooking_to_serve_man,
+/obj/item/reagent_containers/food/condiment/enzyme{
+	pixel_y = 5
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/purple,
 /obj/item/radio/intercom{
@@ -52754,6 +54045,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -52771,6 +54063,14 @@
 "moN" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
+=======
+/turf/open/floor/engine,
+/area/engine/engine_room)
+"pke" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plating,
@@ -53434,12 +54734,20 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 6
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 5
 	},
 /turf/open/floor/carpet/orange,
 /area/crew_quarters/heads/chief)
 "mxY" = (
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/food_cart,
+/turf/open/floor/plasteel/white,
+/area/crew_quarters/kitchen)
+"ptf" = (
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 1
 	},
@@ -53992,7 +55300,12 @@
 /obj/structure/chair/office/light{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/decal/cleanable/dirt/dust,
+=======
+/obj/structure/closet/secure_closet/personal/patient,
+/obj/machinery/power/apc/auto_name/east,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
@@ -54669,11 +55982,24 @@
 /obj/machinery/camera/autoname{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/floor/plating/asteroid,
 /area/maintenance/port)
 "mOO" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
+=======
+/obj/effect/landmark/start/cyborg,
+/turf/open/floor/plasteel/dark,
+/area/ai_monitored/turret_protected/aisat_interior)
+"pLJ" = (
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
+"pLK" = (
+/obj/machinery/flasher{
+	id = "aicore";
+	pixel_x = -26
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -54819,8 +56145,20 @@
 "mQt" = (
 /obj/structure/table/glass,
 /obj/effect/turf_decal/tile/green,
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
+=======
+/obj/effect/landmark/start/virologist,
+/obj/structure/chair/office/light,
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"pOL" = (
+/obj/machinery/door/window/brigdoor{
+	dir = 8;
+	name = "Telecommunications";
+	req_access_txt = "61"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/light,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
@@ -54836,8 +56174,33 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 10
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/medbay/aft)
+"pPU" = (
+/obj/machinery/door/window/northleft{
+	dir = 8;
+	name = "Heavy Containment Access";
+	req_access_txt = "55"
+	},
+/obj/machinery/door/window/northleft{
+	dir = 4;
+	name = "Heavy Containment Access";
+	req_access_txt = "55"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "xenobio";
+	name = "Blast Doors"
+	},
+/obj/machinery/atmospherics/pipe/simple/general/hidden{
+	dir = 4
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -54960,8 +56323,24 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
+=======
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
+"pRP" = (
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/corner,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 9
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/security/brig)
@@ -55160,8 +56539,17 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+=======
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "shower2a";
+	name = "Privacy Shutters";
+	pixel_x = 7;
+	pixel_y = -27
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plating,
 /area/maintenance/fore)
@@ -56639,6 +58027,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = -12;
@@ -56653,6 +58042,26 @@
 "noQ" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 8
+=======
+/turf/open/floor/plating,
+/area/maintenance/starboard/secondary)
+"qsE" = (
+/obj/structure/chair/office,
+/obj/effect/landmark/start/head_of_personnel,
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "hop";
+	name = "Privacy Shutters";
+	pixel_x = 27;
+	pixel_y = -26
+	},
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "hopqueue";
+	name = "Queue Shutters";
+	pixel_x = 27;
+	pixel_y = -37
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 2
@@ -56740,8 +58149,14 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/obj/machinery/door/window/eastright{
+	name = "Hydroponics Desk";
+	req_access_txt = "35"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/hallway/upper/primary/fore)
@@ -57768,6 +59183,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
@@ -57775,6 +59191,18 @@
 /area/vacant_room/office)
 "nDo" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
+=======
+/turf/open/floor/plasteel/white,
+/area/medical/genetics/cloning)
+"qKB" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/maintenance/starboard/secondary)
+"qKZ" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
@@ -58604,11 +60032,32 @@
 /obj/machinery/light{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/security/brig)
 "nNQ" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
+=======
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/item/toy/cards/deck,
+/turf/open/floor/plasteel/white,
+/area/security/prison)
+"qWV" = (
+/obj/structure/table/wood,
+/obj/item/folder/red,
+/obj/item/pen,
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "dorm2";
+	name = "Privacy Shutters";
+	pixel_x = -4;
+	pixel_y = -26
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -58728,12 +60177,18 @@
 /obj/machinery/vending/wardrobe/law_wardrobe{
 	pixel_x = -4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/red,
 /obj/machinery/light{
 	dir = 8
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/item/radio/intercom{
+	pixel_y = 24
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel/dark,
 /area/lawoffice)
@@ -58949,11 +60404,20 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/security/main)
 "nSb" = (
 /obj/structure/sign/poster/random{
 	pixel_x = -32
+=======
+/turf/open/floor/plating,
+/area/maintenance/department/crew_quarters/dorms)
+"rdy" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/camera/autoname{
+	dir = 8
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/camera{
 	c_tag = "Prison Arcade";
@@ -59178,6 +60642,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/construction/mining/aux_base)
 "nTN" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -59187,6 +60652,12 @@
 /obj/machinery/camera/autoname{
 	dir = 5;
 	network = list("aisat")
+=======
+/area/medical/sleeper)
+"rgg" = (
+/obj/effect/turf_decal/caution/red{
+	dir = 8
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel/techmaint{
 	initial_gas_mix = "TEMP=2.7"
@@ -60142,6 +61613,33 @@
 	},
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
+=======
+/area/hallway/primary/aft)
+"rup" = (
+/obj/structure/table/glass,
+/obj/item/reagent_containers/food/drinks/bottle/virusfood{
+	pixel_x = 2;
+	pixel_y = 12
+	},
+/obj/item/reagent_containers/food/drinks/bottle/virusfood{
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/glass/bottle/spaceacillin{
+	pixel_x = 9;
+	pixel_y = 12
+	},
+/obj/item/reagent_containers/glass/bottle/spaceacillin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/glass/bottle/spaceacillin{
+	pixel_x = 2;
+	pixel_y = -1
+	},
+/turf/open/floor/plasteel/white,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /area/medical/virology)
 "ofU" = (
 /obj/effect/turf_decal/tile/neutral{
@@ -60249,8 +61747,27 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
+<<<<<<< HEAD
 /obj/structure/closet/secure_closet/security/engine,
 /obj/effect/turf_decal/tile/red{
+=======
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"rwx" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/turf/open/floor/plasteel/white,
+/area/crew_quarters/kitchen)
+"rwB" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/computer/pandemic,
+/obj/effect/turf_decal/tile/green{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/red{
@@ -60374,6 +61891,7 @@
 	dir = 4;
 	name = "Pure to Ports"
 	},
+<<<<<<< HEAD
 /obj/machinery/light,
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/yellow{
@@ -60383,6 +61901,12 @@
 /area/engine/atmos)
 "oiN" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
+=======
+/turf/open/floor/plasteel/white,
+/area/security/prison)
+"rxk" = (
+/obj/machinery/power/apc/auto_name/east,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
@@ -61844,6 +63368,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/secondary/service)
 "oCb" = (
 /obj/effect/turf_decal/tile/blue{
@@ -61852,6 +63377,13 @@
 /obj/effect/turf_decal/tile/blue,
 /obj/machinery/light_switch{
 	pixel_x = 26
+=======
+/area/hallway/primary/starboard)
+"rTo" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel/dark,
@@ -62208,12 +63740,18 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/medical/chemistry/upper)
 "oGG" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maintenance Hatch";
 	req_access_txt = "49"
 	},
+=======
+/area/science/shuttle)
+"rZa" = (
+/obj/machinery/power/apc/auto_name/east,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
@@ -62529,6 +64067,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
@@ -62541,6 +64080,9 @@
 	id = "research_shutters";
 	name = "research shutters"
 	},
+=======
+/obj/machinery/power/apc/auto_name/east,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
@@ -63609,8 +65151,17 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
+=======
+/turf/open/floor/plating,
+/area/science/xenobiology)
+"swe" = (
+/obj/effect/turf_decal/caution/red{
+	dir = 1;
+	pixel_y = -5
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/royalblue,
@@ -64170,6 +65721,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -64180,6 +65732,12 @@
 "pfK" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/item/radio/intercom{
+	pixel_x = -29;
+	pixel_y = -29
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -64258,12 +65816,17 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "pgx" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+=======
+/obj/machinery/power/apc/auto_name/east,
+/obj/effect/turf_decal/tile/yellow,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
@@ -64514,10 +66077,36 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/white,
 /area/science/misc_lab/range)
 "piW" = (
 /obj/effect/turf_decal/tile/blue{
+=======
+/obj/item/flashlight/glowstick/red,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/plating,
+/area/maintenance/department/bridge)
+"sKS" = (
+/obj/machinery/holopad,
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "gateway";
+	name = "Gateway Shutters Control";
+	pixel_x = -28;
+	pixel_y = -26
+	},
+/turf/open/floor/plasteel/dark,
+/area/gateway)
+"sKW" = (
+/obj/machinery/door/airlock{
+	id_tag = "Dorm4";
+	name = "Chapel Cabin";
+	req_access_txt = "22"
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/blue{
@@ -65130,10 +66719,17 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/machinery/light,
+=======
+/turf/open/floor/plasteel,
+/area/hallway/primary/fore)
+"sTL" = (
+/obj/effect/turf_decal/tile/red,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
@@ -65554,11 +67150,19 @@
 	name = "Custodial Closet Shutters"
 	},
 /obj/machinery/button/door{
+<<<<<<< HEAD
 	id = "custodialshutters";
 	name = "Custodial Shutters";
 	pixel_x = 1;
 	pixel_y = 28;
 	req_access_txt = "26"
+=======
+	desc = "Welcome to your new life, employee.";
+	id = "deathdoor";
+	name = "Transfer Switch";
+	pixel_x = -6;
+	pixel_y = 27
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/janitor)
@@ -65718,9 +67322,18 @@
 	pixel_x = -3;
 	pixel_y = 6
 	},
+<<<<<<< HEAD
 /obj/structure/table/glass,
 /obj/structure/sign/poster/random{
 	pixel_y = -32
+=======
+/turf/closed/wall,
+/area/hallway/primary/fore)
+"teE" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -65930,6 +67543,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/newscaster{
 	pixel_x = 28
 	},
@@ -65938,6 +67552,15 @@
 "pBP" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
+=======
+/obj/effect/turf_decal/stripes/corner,
+/turf/open/floor/circuit,
+/area/ai_monitored/turret_protected/ai)
+"thj" = (
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -66655,8 +68278,23 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
+=======
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/mob/living/simple_animal/pet/hamster/vector,
+/obj/structure/bed/dogbed/vector,
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"tuP" = (
+/obj/machinery/door/airlock/virology/glass{
+	id_tag = "ViroB";
+	name = "Quarantine Cell B";
+	req_access_txt = "39"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -68270,12 +69908,19 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/primary/fore)
 "qdu" = (
 /turf/closed/wall,
 /area/maintenance/upper/fore)
 "qdw" = (
 /obj/effect/turf_decal/tile/neutral{
+=======
+/area/hallway/primary/central)
+"tMU" = (
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -68636,6 +70281,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/upper/primary/fore)
 "qhv" = (
 /obj/effect/turf_decal/stripes/line{
@@ -68652,6 +70298,14 @@
 "qhS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
+=======
+/area/storage/tools)
+"tSX" = (
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = 24
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/recreation/upper)
@@ -69339,6 +70993,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
 /area/security/main)
 "qpN" = (
 /turf/closed/wall,
@@ -69346,6 +71001,13 @@
 "qpZ" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
+=======
+/area/ai_monitored/security/armory)
+"ucE" = (
+/obj/effect/turf_decal/caution/red{
+	dir = 1;
+	pixel_y = -5
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -69562,6 +71224,7 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/crew_quarters/heads/cmo)
 "qso" = (
 /obj/docking_port/stationary{
@@ -69577,6 +71240,35 @@
 "qsP" = (
 /obj/machinery/hydroponics/constructable,
 /obj/effect/turf_decal/tile/green{
+=======
+/area/engine/atmos)
+"ufV" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/brigdoor/eastleft{
+	dir = 8;
+	req_access_txt = "1"
+	},
+/obj/machinery/door/window/westright{
+	dir = 4
+	},
+/obj/item/camera,
+/obj/item/camera_film,
+/turf/open/floor/plasteel/dark,
+/area/security/checkpoint/customs)
+"ufY" = (
+/obj/machinery/microwave{
+	desc = "Cooks and boils stuff, somehow.";
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/light,
+/turf/open/floor/plasteel/white,
+/area/crew_quarters/kitchen)
+"uga" = (
+/obj/machinery/light{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/green{
@@ -70147,8 +71839,23 @@
 /obj/machinery/camera/autoname{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 8
+=======
+/turf/open/floor/plating,
+/area/maintenance/department/science)
+"urg" = (
+/obj/machinery/power/supermatter_crystal/shard/engine{
+	moveable = 1
+	},
+/obj/machinery/mass_driver{
+	armor = list("melee"=10,"bullet"=10,"laser"=10,"energy"=0,"bomb"=0,"bio"=0,"rad"=0,"fire"=100,"acid"=70);
+	critical_machine = 1;
+	dir = 8;
+	id = "smeject";
+	name = "emergency supermatter ejection pad"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 8
@@ -70364,11 +72071,21 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
 /obj/machinery/power/apc/auto_name/north{
 	pixel_y = 24
+=======
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/hallway/secondary/service)
+"uuA" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
+	external_pressure_bound = 120;
+	name = "server vent"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
@@ -71718,8 +73435,17 @@
 	pixel_y = 1
 	},
 /obj/structure/window/reinforced{
+<<<<<<< HEAD
 	dir = 8;
 	pixel_y = 1
+=======
+	dir = 8
+	},
+/obj/machinery/door/window/eastleft{
+	dir = 2;
+	name = "Quarantine Pen B";
+	req_one_access_txt = "39"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/grass,
 /area/library)
@@ -72278,12 +74004,28 @@
 	pixel_x = -1;
 	pixel_y = 10
 	},
+<<<<<<< HEAD
 /obj/item/encryptionkey/headset_sci{
+=======
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "QMLoaddoor2";
+	name = "Cargo Offload";
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	pixel_x = 6;
 	pixel_y = 4
 	},
+<<<<<<< HEAD
 /obj/item/radio{
 	pixel_y = 2
+=======
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "QMLoaddoor";
+	name = "Cargo Loading";
+	pixel_x = -5;
+	pixel_y = 28
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
@@ -73555,11 +75297,53 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/dark,
 /area/maintenance/starboard/central)
 "row" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+=======
+/obj/machinery/airalarm/directional/north,
+/obj/machinery/camera/autoname,
+/turf/open/floor/plasteel,
+/area/hallway/secondary/exit/departure_lounge)
+"vvL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/fitness/recreation)
+"vvO" = (
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/lobby)
+"vvQ" = (
+/obj/structure/table,
+/obj/item/stack/package_wrap,
+/obj/item/stack/package_wrap{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/sorting)
+"vwc" = (
+/obj/effect/landmark/start/station_engineer,
+/obj/machinery/holopad,
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/plasteel,
+/area/engine/storage_shared)
+"vwz" = (
+/obj/structure/chair/office/light{
+	dir = 8
+	},
+/obj/effect/landmark/start/medical_doctor,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/lobby)
+"vwK" = (
+/obj/machinery/atmospherics/pipe/simple/green/visible{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -75370,9 +77154,15 @@
 /area/engine/engine_room)
 "rLX" = (
 /obj/structure/cable/yellow{
+<<<<<<< HEAD
 	icon_state = "4-8"
 	},
 /obj/effect/spawner/lootdrop/glowstick/lit,
+=======
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc/auto_name/east,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /turf/open/floor/plating,
 /area/maintenance/fore)
 "rMd" = (
@@ -75669,6 +77459,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/engine/storage)
 "rQD" = (
@@ -75679,6 +77470,10 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 4
 	},
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/airalarm/directional/south,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "rRe" = (
@@ -76049,6 +77844,7 @@
 	pixel_y = 6;
 	specialfunctions = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/button/door{
 	id = "cp_west_outer";
 	name = "Checkpoint Door Lock";
@@ -76063,6 +77859,11 @@
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 4
+=======
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/customs)
@@ -76519,9 +78320,18 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
+=======
+/turf/open/floor/plasteel,
+/area/security/brig)
+"woj" = (
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/stripes/corner,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /turf/open/floor/plasteel,
 /area/hallway/upper/secondary/entry)
 "sbI" = (
@@ -76660,6 +78470,7 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
@@ -76667,6 +78478,11 @@
 "sdv" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -76938,6 +78754,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/aft)
 "sgu" = (
@@ -76945,6 +78762,13 @@
 	pixel_x = -25
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
+=======
+/turf/open/space/basic,
+/area/space)
+"wrP" = (
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/stripes/corner{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -78210,11 +80034,17 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
@@ -78262,6 +80092,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/security/brig)
 "sAT" = (
@@ -78271,6 +80102,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
 	dir = 4
+=======
+/obj/effect/turf_decal/tile/red,
+/obj/item/radio/intercom{
+	pixel_x = -29;
+	pixel_y = -29
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -78733,8 +80570,23 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
+=======
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space/nearstation)
+"wRL" = (
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/caution/red{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	dir = 4
 	},
 /obj/item/kirbyplants/random,
@@ -79226,8 +81078,17 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 9
+=======
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "warehouse";
+	name = "Warehouse Shutters Control";
+	pixel_x = -28;
+	pixel_y = 6
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/main)
@@ -81414,8 +83275,17 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 2
 	},
+<<<<<<< HEAD
 /obj/machinery/power/apc/auto_name/east{
 	pixel_x = 24
+=======
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
+"xNl" = (
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Command Maintenance Hatch";
+	req_access_txt = "19"
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
@@ -81553,8 +83423,17 @@
 /obj/structure/railing/corner{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
+=======
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "shower1a";
+	name = "Privacy Shutters";
+	pixel_x = 7;
+	pixel_y = -27
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -81684,6 +83563,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/quartermaster/exploration_prep)
 "tor" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible,
@@ -81697,6 +83577,36 @@
 /area/hallway/secondary/law)
 "toz" = (
 /obj/effect/landmark/start/medical_doctor,
+=======
+/area/hallway/primary/fore)
+"xRL" = (
+/obj/machinery/camera/autoname{
+	dir = 5
+	},
+/obj/structure/table,
+/obj/item/dest_tagger,
+/obj/item/dest_tagger,
+/obj/item/stack/wrapping_paper,
+/obj/item/stack/wrapping_paper,
+/obj/item/radio/intercom{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/sorting)
+"xRO" = (
+/obj/structure/table,
+/obj/item/restraints/handcuffs{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/restraints/handcuffs{
+	pixel_y = 4
+	},
+/obj/item/restraints/handcuffs{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/aft)
 "toK" = (
@@ -82637,8 +84547,17 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /obj/machinery/light/small{
 	dir = 4
+=======
+/obj/machinery/button/door{
+	desc = "A remote control switch.";
+	id = "qmoffice";
+	name = "Quartermaster's Office Control";
+	pixel_x = 29;
+	pixel_y = 28
+>>>>>>> ae3da827fb... Ports Mail From /tg/ which was ported from Kiwi [TM Ready] (#6263)
 	},
 /turf/open/floor/plating,
 /area/maintenance/port)
