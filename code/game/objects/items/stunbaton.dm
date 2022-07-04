@@ -194,8 +194,21 @@
 
 /obj/item/melee/baton/emp_act(severity)
 	. = ..()
+<<<<<<< HEAD
 	if (!(. & EMP_PROTECT_SELF))
 		deductcharge(1000 / severity)
+=======
+	if (!(. & EMP_PROTECT_SELF) && !(obj_flags & OBJ_EMPED))
+		obj_flags |= OBJ_EMPED
+		update_icon()
+		addtimer(CALLBACK(src, .proc/emp_reset), rand(1, 200 / severity))
+		playsound(src, 'sound/machines/capacitor_discharge.ogg', 60, TRUE)
+
+/obj/item/melee/baton/proc/emp_reset()
+	obj_flags &= ~OBJ_EMPED
+	update_icon()
+	playsound(src, 'sound/machines/capacitor_charge.ogg', 100, TRUE)
+>>>>>>> d1ff08c282... EMP nerfs (#7029)
 
 //Makeshift stun baton. Replacement for stun gloves.
 /obj/item/melee/baton/cattleprod
