@@ -744,7 +744,11 @@
 	guns_left = 24
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/enchanted/arcane_barrage/blood
 	fire_sound = 'sound/magic/wand_teleport.ogg'
+<<<<<<< HEAD
 
+=======
+	weapon_weight = WEAPON_LIGHT
+>>>>>>> 8af8d96392... Fixes Blood Bolt Barrage (#7187)
 
 /obj/item/ammo_box/magazine/internal/boltaction/enchanted/arcane_barrage/blood
 	ammo_type = /obj/item/ammo_casing/magic/arcane_barrage/blood
