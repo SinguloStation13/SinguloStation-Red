@@ -35,7 +35,14 @@
 	new /obj/item/storage/photo_album/CE(src)
 	new /obj/item/card/id/departmental_budget/eng(src)
 	new /obj/item/storage/bag/construction(src)
+<<<<<<< HEAD
 	
+=======
+	new /obj/item/construction/rcd/loaded(src)
+	new /obj/item/storage/box/command_keys(src)
+	new /obj/item/rcd_ammo/large(src)
+
+>>>>>>> 9d3cc21a3c... Amplification module key, Debug Encryption Key (#7181)
 /obj/structure/closet/secure_closet/engineering_electrical
 	name = "electrical supplies locker"
 	req_access = list(ACCESS_ENGINE_EQUIP)

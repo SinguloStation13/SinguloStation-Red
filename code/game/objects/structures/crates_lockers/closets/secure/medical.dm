@@ -107,6 +107,11 @@
 	new /obj/item/reagent_containers/food/drinks/bottle/synthflesh(src)
 	new /obj/item/card/id/departmental_budget/med(src)
 	new /obj/item/extrapolator(src)
+<<<<<<< HEAD
+=======
+	new /obj/item/storage/box/command_keys(src)
+	new /obj/item/storage/lockbox/medal/med(src)
+>>>>>>> 9d3cc21a3c... Amplification module key, Debug Encryption Key (#7181)
 
 /obj/structure/closet/secure_closet/animal
 	name = "animal control"
