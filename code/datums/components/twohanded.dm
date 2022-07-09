@@ -17,7 +17,11 @@
 	var/attacksound = FALSE							/// Play sound on attack when wielded
 	var/require_twohands = FALSE					/// Does it have to be held in both hands
 	var/icon_wielded = FALSE						/// The icon that will be used when wielded
+<<<<<<< HEAD
 	var/obj/item/offhand/offhand_item = null		/// Reference to the offhand created for the item
+=======
+	var/obj/item/offhand/offhand_item		/// Reference to the offhand created for the item
+>>>>>>> b297b89b2e... Revert "Fixes chainsaws losing all force when dropped (#7119)" (#7239)
 	var/sharpened_increase = 0						/// The amount of increase recived from sharpening the item
 	var/unwield_on_swap								/// Allow swapping, unwield on swap
 	var/auto_wield									/// If true wielding will be performed when picked up
