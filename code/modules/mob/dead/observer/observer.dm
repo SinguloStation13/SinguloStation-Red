@@ -56,7 +56,11 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	var/deadchat_name
 	var/datum/orbit_menu/orbit_menu
 
+<<<<<<< HEAD
 /mob/dead/observer/Initialize()
+=======
+/mob/dead/observer/Initialize(mapload)
+>>>>>>> ffaed84913... Revert "Players who suicide or cryo are not elegible for Antagonist roles for 5 minutes (#7156)" (#7233)
 	set_invisibility(GLOB.observer_default_invisibility)
 
 	add_verb(list(
