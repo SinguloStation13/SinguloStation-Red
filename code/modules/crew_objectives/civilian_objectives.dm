@@ -283,7 +283,13 @@
 		if(istype(theID))
 			if(!(H.get_assignment() == "Assistant") && !(H.get_assignment() == "No id") && !(H.get_assignment() == "No job"))
 				return TRUE
+<<<<<<< HEAD
 	return FALSE
+=======
+			if(theID.hud_state != JOB_HUD_ASSISTANT) // non-assistant HUD counts too
+				return TRUE
+	return ..()
+>>>>>>> f55507eb3d... Hud icons are now based on ID card styles (+crew monitor, crew manifest are based on hud icons than job names + chameleon agent card QoL) (#7112)
 
 /datum/objective/crew/justicecrew
 	explanation_text = "Ensure there are no members of security in the prison wing when the shift ends."

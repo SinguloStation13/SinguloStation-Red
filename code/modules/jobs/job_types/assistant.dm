@@ -45,4 +45,12 @@ Assistant
 		if(H.jumpsuit_style == PREF_SUIT)
 			uniform = /obj/item/clothing/under/color/random
 		else
+<<<<<<< HEAD
 			uniform = /obj/item/clothing/under/skirt/color/random
+=======
+			uniform = /obj/item/clothing/under/color/jumpskirt/random
+
+/datum/outfit/job/assistant
+	name = "Assistant"
+	id = /obj/item/card/id/job/assistant
+>>>>>>> f55507eb3d... Hud icons are now based on ID card styles (+crew monitor, crew manifest are based on hud icons than job names + chameleon agent card QoL) (#7112)
