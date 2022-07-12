@@ -279,7 +279,14 @@
 	prof.socks = H.socks
 
 	if(H.wear_id?.GetID())
+<<<<<<< HEAD
 		prof.id_icon = "hud[ckey(H.wear_id.GetJobName())]"
+=======
+		var/obj/item/card/id/I = H.wear_id
+		if(istype(I))
+			prof.id_job_name = I.assignment
+			prof.id_hud_state = I.hud_state
+>>>>>>> c371fa856b... ling fake-flesh id card hotfix that shows grey hud icon (#7254)
 
 	var/list/slots = list("head", "wear_mask", "back", "wear_suit", "w_uniform", "shoes", "belt", "gloves", "glasses", "ears", "wear_id", "s_store")
 	for(var/slot in slots)
@@ -508,7 +515,12 @@
 	var/socks
 
 	/// ID HUD icon associated with the profile
+<<<<<<< HEAD
 	var/id_icon
+=======
+	var/id_job_name
+	var/id_hud_state
+>>>>>>> c371fa856b... ling fake-flesh id card hotfix that shows grey hud icon (#7254)
 
 /datum/changelingprofile/Destroy()
 	qdel(dna)
@@ -528,7 +540,12 @@
 	newprofile.underwear = underwear
 	newprofile.undershirt = undershirt
 	newprofile.socks = socks
+<<<<<<< HEAD
 	newprofile.id_icon = id_icon
+=======
+	newprofile.id_job_name = id_job_name
+	newprofile.id_hud_state = id_hud_state
+>>>>>>> c371fa856b... ling fake-flesh id card hotfix that shows grey hud icon (#7254)
 
 /datum/antagonist/changeling/xenobio
 	name = "Xenobio Changeling"
