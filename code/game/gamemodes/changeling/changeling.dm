@@ -134,9 +134,16 @@ GLOBAL_LIST_INIT(slot2type, list("head" = /obj/item/clothing/head/changeling, "w
 		C.item_color = chosen_prof.item_color_list[slot]
 		C.item_state = chosen_prof.item_state_list[slot]
 
+<<<<<<< HEAD
 		if(istype(C, /obj/item/changeling/id) && chosen_prof.id_icon)
 			var/obj/item/changeling/id/flesh_id = C
 			flesh_id.hud_icon = chosen_prof.id_icon
+=======
+		if(istype(C, /obj/item/card/id/changeling) && chosen_prof.id_job_name)
+			var/obj/item/card/id/changeling/flesh_id = C
+			flesh_id.assignment = chosen_prof.id_job_name
+			flesh_id.hud_state = chosen_prof.id_hud_state
+>>>>>>> c371fa856b... ling fake-flesh id card hotfix that shows grey hud icon (#7254)
 
 		if(equip)
 			user.equip_to_slot_or_del(C, GLOB.slot2slot[slot])
