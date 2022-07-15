@@ -161,12 +161,18 @@ GLOBAL_LIST_INIT(job_colors_pastel, list(
 			if(ishuman(target))
 				var/mob/living/carbon/human/H = target
 				if(H.wear_id?.GetID())
+<<<<<<< HEAD
 					var/obj/item/card/id/idcard = H.wear_id
 					var/datum/job/wearer_job = SSjob.GetJob(idcard.GetJobName())
 					if(wearer_job)
 						tgt_color = wearer_job.chat_color
 					else
 						tgt_color = GLOB.job_colors_pastel[idcard.GetJobName()]
+=======
+					var/obj/item/card/id/idcard = H.wear_id.GetID()
+					if(idcard)
+						tgt_color = get_chatcolor_by_hud(idcard.hud_state)
+>>>>>>> aa294928d4... fixes "Give custom job their own chat color + better revenant chat color (#7250)" (#7279)
 				else
 					tgt_color = COLOR_PERSON_UNKNOWN
 			else
