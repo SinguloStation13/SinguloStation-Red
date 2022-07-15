@@ -62,11 +62,18 @@ GLOBAL_LIST_INIT(freqtospan, list(
 		if(face_name)
 			namepart = "[H.get_face_name()]" //So "fake" speaking like in hallucinations does not give the speaker away if disguised
 		if(!radio_freq)
+<<<<<<< HEAD
 			if(H.wear_id)
 				var/datum/job/wearer_job = SSjob.GetJob(H.wear_id.GetJobName())
 				var/wearer_say_span
 				if(wearer_job)
 					wearer_say_span = wearer_job.say_span
+=======
+			if(H.wear_id?.GetID())
+				var/obj/item/card/id/idcard = H.wear_id.GetID()
+				if(idcard.hud_state == JOB_HUD_UNKNOWN)
+					spanpart2 = "<span class='name unassigned'>"
+>>>>>>> aa294928d4... fixes "Give custom job their own chat color + better revenant chat color (#7250)" (#7279)
 				else
 					switch(H.wear_id.GetJobName())
 						if("CentCom")
