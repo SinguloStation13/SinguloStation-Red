@@ -37,6 +37,19 @@
 
 #include "anchored_mobs.dm"
 #include "component_tests.dm"
+<<<<<<< HEAD
+=======
+#include "connect_loc.dm"
+#include "crafting_tests.dm"
+
+// Del the World.
+// This unit test creates and qdels almost every atom in the code, checking for errors with initialization and harddels on deletion.
+// It is disabled by default for now due to the large amount of consistent errors it produces. Run the "dm: find hard deletes" task to enable it.
+#ifdef REFERENCE_TRACKING_FAST
+#include "create_and_destroy.dm"
+#endif
+
+>>>>>>> aa5bde12f2... Adds a unit test to validate crafting categories (#7251)
 #include "dynamic_ruleset_sanity.dm"
 #include "reagent_id_typos.dm"
 #include "reagent_recipe_collisions.dm"
