@@ -279,7 +279,14 @@
 	prof.socks = H.socks
 
 	if(H.wear_id?.GetID())
+<<<<<<< HEAD
 		prof.id_icon = "hud[ckey(H.wear_id.GetJobName())]"
+=======
+		var/obj/item/card/id/I = H.wear_id.GetID()
+		if(istype(I))
+			prof.id_job_name = I.assignment
+			prof.id_hud_state = I.hud_state
+>>>>>>> 97db290594... Fixes changeling unknown grey hud (#7296)
 
 	var/list/slots = list("head", "wear_mask", "back", "wear_suit", "w_uniform", "shoes", "belt", "gloves", "glasses", "ears", "wear_id", "s_store")
 	for(var/slot in slots)
