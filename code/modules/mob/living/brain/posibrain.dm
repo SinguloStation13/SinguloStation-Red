@@ -100,7 +100,13 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 		return
 	if(brainmob.suiciding) //clear suicide status if the old occupant suicided.
 		brainmob.set_suicide(FALSE)
+<<<<<<< HEAD
 	transfer_personality(user)
+=======
+	var/ckey = user.ckey
+	if(transfer_personality(user))
+		GLOB.posi_key_list += ckey
+>>>>>>> b2cea25b15... Fixes a fix I made (#7295)
 
 /obj/item/mmi/posibrain/transfer_identity(mob/living/carbon/C)
 	name = "[initial(name)] ([C])"
