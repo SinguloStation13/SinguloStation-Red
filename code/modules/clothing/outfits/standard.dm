@@ -237,7 +237,7 @@
 	r_pocket = /obj/item/lighter
 	l_pocket = /obj/item/ammo_box/a357
 	back = /obj/item/storage/backpack/satchel/leather
-	id = /obj/item/card/id
+	id = /obj/item/card/id/centcom
 
 /datum/outfit/centcom/commander/plasmaman
 	name = "CentCom Commander Plasmaman"
@@ -275,7 +275,12 @@
 	belt = /obj/item/gun/energy/pulse/pistol/m1911
 	r_pocket = /obj/item/lighter
 	back = /obj/item/storage/backpack/satchel/leather
+<<<<<<< HEAD
 	id = /obj/item/card/id
+=======
+	id = /obj/item/card/id/centcom
+	r_hand = /obj/item/megaphone/command
+>>>>>>> ad3a573ac0... PDA is now automatically updated when it takes a card / ghost role spawns now have proper HUDs, card names (#7253)
 
 /datum/outfit/admiral/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
@@ -356,13 +361,13 @@
 	back = /obj/item/storage/backpack/satchel/leather
 	belt = /obj/item/gun/ballistic/revolver/mateba
 
-	id = /obj/item/card/id
+	id = /obj/item/card/id/silver
 
 /datum/outfit/soviet/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return
 
-	var/obj/item/card/id/W = H.wear_id
+	var/obj/item/card/id/silver/W = H.wear_id
 	W.icon_state = "centcom"
 	W.access = get_all_accesses()
 	W.access += get_centcom_access("Admiral")
@@ -418,3 +423,11 @@
 	ears = /obj/item/radio/headset/headset_srv
 
 
+/datum/outfit/joker/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	if(visualsOnly)
+		return
+
+	var/obj/item/card/id/I = H.wear_id
+	I.assignment = "Joker"
+	I.registered_name = H.real_name
+	I.update_label()
