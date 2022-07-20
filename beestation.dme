@@ -3311,6 +3311,11 @@
 #include "code\modules\tgui\states\human_adjacent.dm"
 #include "code\modules\tgui\states\inventory.dm"
 #include "code\modules\tgui\states\language_menu.dm"
+<<<<<<< HEAD
+=======
+#include "code\modules\tgui\states\never.dm"
+#include "code\modules\tgui\states\new_player.dm"
+>>>>>>> a2e484e4f0... [PORT]TGUI Sect menu (take 2) (#7197)
 #include "code\modules\tgui\states\not_incapacitated.dm"
 #include "code\modules\tgui\states\notcontained.dm"
 #include "code\modules\tgui\states\observer.dm"
