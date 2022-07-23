@@ -143,9 +143,6 @@
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/hunter)
-"RO" = (
-/turf/open/floor/mineral/titanium/blue,
-/area/shuttle/hunter)
 
 (1,1,1) = {"
 Pq
@@ -169,7 +166,7 @@ Pq
 Pq
 ku
 bY
-RO
+aa
 ak
 ku
 Pq
@@ -178,7 +175,7 @@ Pq
 hB
 ku
 bY
-RO
+aa
 ak
 ku
 hB
@@ -187,7 +184,7 @@ hB
 ku
 ku
 bY
-RO
+aa
 ak
 ku
 ku
@@ -196,8 +193,8 @@ ku
 Pq
 hJ
 ag
-RO
-RO
+aa
+aa
 hJ
 Pq
 "}
@@ -205,7 +202,7 @@ Pq
 Pq
 hJ
 ah
-RO
+aa
 aj
 hJ
 Pq
@@ -214,7 +211,7 @@ Pq
 Pq
 ku
 lp
-RO
+aa
 aj
 ku
 Pq
@@ -231,9 +228,9 @@ hB
 (10,1,1) = {"
 ku
 ku
-RO
+aa
 Rz
-RO
+aa
 ku
 ku
 "}
