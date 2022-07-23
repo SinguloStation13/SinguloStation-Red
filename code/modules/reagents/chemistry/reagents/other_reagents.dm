@@ -364,6 +364,10 @@
 	name = "Space Lube"
 	description = "Lubricant is a substance introduced between two moving surfaces to reduce the friction and wear between them. giggity."
 	color = "#009CA8" // rgb: 0, 156, 168
+<<<<<<< HEAD
+=======
+	chem_flags = CHEMICAL_RNG_GENERAL | CHEMICAL_RNG_FUN | CHEMICAL_RNG_BOTANY | CHEMICAL_GOAL_BOTANIST_HARVEST | CHEMICAL_GOAL_BARTENDER_SERVING
+>>>>>>> 70ae2ff728... replaces the bartender objective responsibility with cocktail (#6999)
 	taste_description = "cherry" // by popular demand
 	var/lube_kind = TURF_WET_LUBE ///What kind of slipperiness gets added to turfs.
 
@@ -1589,6 +1593,10 @@
 	description = "For those that need a more creative way to roll out a red carpet."
 	reagent_state = LIQUID
 	color = "#C8A5DC"
+<<<<<<< HEAD
+=======
+	chem_flags = CHEMICAL_GOAL_BARTENDER_SERVING // this is lame one to put random. at least good as bartender flavor.
+>>>>>>> 70ae2ff728... replaces the bartender objective responsibility with cocktail (#6999)
 	taste_description = "carpet" // Your tounge feels furry.
 
 /datum/reagent/carpet/reaction_turf(turf/T, reac_volume)
@@ -1712,6 +1720,10 @@
 	description = "A fairly innocuous chemical which can be used to improve the potency of various plant species."
 	reagent_state = LIQUID
 	color = "#60A584" // rgb: 96, 165, 132
+<<<<<<< HEAD
+=======
+	chem_flags = CHEMICAL_RNG_BOTANY | CHEMICAL_GOAL_BARTENDER_SERVING
+>>>>>>> 70ae2ff728... replaces the bartender objective responsibility with cocktail (#6999)
 	taste_description = "cool salt"
 	random_unrestricted = FALSE
 
