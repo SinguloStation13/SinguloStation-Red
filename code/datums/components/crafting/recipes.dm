@@ -975,4 +975,22 @@
 	reqs = list(/obj/item/paper = 1)
 	category = CAT_MISC
 	tools = list(TOOL_WIRECUTTER)
+<<<<<<< HEAD
 	
+=======
+
+/datum/crafting_recipe/basic_lasso
+	name= "Basic Lasso"
+	result = /obj/item/mob_lasso
+	time = 20
+	reqs = list(/obj/item/stack/sheet/leather = 5)
+	category = CAT_MISC
+
+/datum/crafting_recipe/primal_lasso
+	name= "Primal Lasso"
+	result = /obj/item/mob_lasso/primal
+	always_available = FALSE
+	time = 20
+	reqs = list(/obj/item/stack/sheet/animalhide/goliath_hide = 3)
+	category = CAT_PRIMAL
+>>>>>>> 4299ceac4e... Rideable Carps - Several types of Lassos (#7174)

@@ -2376,4 +2376,14 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	item = /obj/item/storage/box/syndie_kit/imp_deathrattle
 	cost = 4
 	surplus = 0
+<<<<<<< HEAD
 	include_modes = list(/datum/game_mode/nuclear)
+=======
+	purchasable_from = UPLINK_NUKE_OPS
+
+/datum/uplink_item/antag_lasso
+	name = "Mindslave Lasso"
+	desc = "A state of the art taming device.\n Use this device to tame almost any animal by lassoing and untying them.\n Tamed animals can be rode & commanded!"
+	item = /obj/item/mob_lasso/antag
+	cost = 3
+>>>>>>> 4299ceac4e... Rideable Carps - Several types of Lassos (#7174)
