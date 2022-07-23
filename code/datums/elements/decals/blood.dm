@@ -32,5 +32,5 @@
 
 	var/atom/A = source
 	override[EXAMINE_POSITION_ARTICLE] = A.gender == PLURAL? "some" : "a"
-	override[EXAMINE_POSITION_BEFORE] = " blood-stained "
+	override[EXAMINE_POSITION_BEFORE] = " <span class='warning'>blood-stained</span> "
 	return COMPONENT_EXNAME_CHANGED
