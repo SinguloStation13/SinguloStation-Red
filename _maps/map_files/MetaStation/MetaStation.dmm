@@ -82789,6 +82789,7 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/closed/wall,
 /area/crew_quarters/fitness/recreation)
 "qdT" = (
@@ -82796,6 +82797,12 @@
 	dir = 8
 	},
 /obj/machinery/computer/rdconsole/production{
+=======
+/turf/open/floor/plasteel/freezer,
+/area/crew_quarters/toilet/restrooms)
+"fXi" = (
+/obj/effect/turf_decal/tile/purple{
+>>>>>>> 2041a1375c... Meta Station: Replaces the door to Robotics with a glass version (#7349)
 	dir = 1
 	},
 /obj/effect/turf_decal/bot,
@@ -82827,11 +82834,23 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plating,
 /area/hallway/secondary/exit/departure_lounge)
 "qjB" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
+=======
+/obj/machinery/door/airlock/research/glass{
+	name = "Robotics Lab";
+	req_access_txt = "29"
+	},
+/turf/open/floor/plasteel,
+/area/science/robotics/lab)
+"fXm" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+>>>>>>> 2041a1375c... Meta Station: Replaces the door to Robotics with a glass version (#7349)
 	},
 /obj/structure/window/reinforced{
 	dir = 4
