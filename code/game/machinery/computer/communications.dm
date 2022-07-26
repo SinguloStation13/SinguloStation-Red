@@ -18,6 +18,7 @@
 	icon_keyboard = "tech_key"
 	req_access = list(ACCESS_HEADS)
 	circuit = /obj/item/circuitboard/computer/communications
+<<<<<<< HEAD
 	var/authenticated = 0
 	var/auth_id = "Unknown" //Who is currently logged in?
 	var/list/datum/comm_message/messages = list()
@@ -33,6 +34,31 @@
 	var/stat_msg2
 
 	light_color = LIGHT_COLOR_BLUE
+=======
+	light_color = LIGHT_COLOR_BLUE
+
+	/// Cooldown for important actions, such as messaging CentCom or other sectors
+	COOLDOWN_DECLARE(static/important_action_cooldown)
+
+	/// The current state of the UI
+	var/state = STATE_MESSAGES
+
+	/// The current state of the UI for AIs
+	var/cyborg_state = STATE_MESSAGES
+
+	/// The name of the user who logged in
+	var/authorize_name
+
+	/// The access that the card had on login
+	var/list/authorize_access
+
+	/// The messages this console has been sent
+	var/list/datum/comm_message/messages
+
+	/// How many times the alert level has been changed
+	/// Used to clear the modal to change alert level
+	var/alert_level_tick = 0
+>>>>>>> f8c484e9f8... [TG PORT] Gets our HoP console / ID console code up to date with TG (#7335)
 
 /obj/machinery/computer/communications/proc/checkCCcooldown()
 	var/obj/item/circuitboard/computer/communications/CM = circuit
