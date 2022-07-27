@@ -112,7 +112,7 @@
 		P.setPersonality(src)
 	forceMove(P)
 	card = P
-	job = "Personal AI"
+	job = JOB_NAME_PAI
 	signaler = new(src)
 	hostscan = new /obj/item/healthanalyzer(src)
 	if(!radio)
@@ -163,7 +163,13 @@
 /mob/living/silicon/pai/Login()
 	..()
 	var/datum/asset/notes_assets = get_asset_datum(/datum/asset/simple/pAI)
+<<<<<<< HEAD
 	notes_assets.send(client)
+=======
+	mind.assigned_role = JOB_NAME_PAI
+	if(!notes_assets.send(client))
+		return
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	client.perspective = EYE_PERSPECTIVE
 	if(holoform)
 		client.eye = src

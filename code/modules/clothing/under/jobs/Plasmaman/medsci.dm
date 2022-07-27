@@ -54,7 +54,7 @@
 	item_state = "rd_envirosuit"
 	item_color = "rd_envirosuit"
 
-/obj/item/clothing/under/plasmaman/emt
+/obj/item/clothing/under/plasmaman/paramedic
 	name = "paramedic plasma envirosuit"
 	desc = "A plasmaman envirosuit designed for emergency medical technicians."
 	icon_state = "emt_envirosuit"

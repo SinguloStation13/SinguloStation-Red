@@ -1,7 +1,7 @@
-/datum/job/hydro
-	title = "Botanist"
+/datum/job/botanist
+	title = JOB_NAME_BOTANIST
 	flag = BOTANIST
-	department_head = list("Head of Personnel")
+	department_head = list(JOB_NAME_HEADOFPERSONNEL)
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 3
@@ -17,14 +17,19 @@
 	paycheck = PAYCHECK_EASY
 	paycheck_department = ACCOUNT_SRV
 	display_order = JOB_DISPLAY_ORDER_BOTANIST
+<<<<<<< HEAD
 	departments = DEPARTMENT_SERVICE
+=======
+	departments = DEPARTMENT_BITFLAG_SERVICE
+	rpg_title = "Gardener"
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 
 	species_outfits = list(
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/botany
 	)
 /datum/outfit/job/botanist
-	name = "Botanist"
-	jobtype = /datum/job/hydro
+	name = JOB_NAME_BOTANIST
+	jobtype = /datum/job/botanist
 
 	id = /obj/item/card/id/job/serv
 	belt = /obj/item/pda/botanist

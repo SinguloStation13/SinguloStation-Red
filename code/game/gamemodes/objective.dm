@@ -118,9 +118,9 @@ GLOBAL_LIST_EMPTY(objectives)
 		var/datum/mind/O = I
 		if(O.late_joiner)
 			try_target_late_joiners = TRUE
-		if(O.assigned_role == "Exploration Crew")
+		if(O.assigned_role == JOB_NAME_EXPLORATIONCREW)
 			owner_is_exploration_crew = TRUE
-		if(O.assigned_role == "Shaft Miner")
+		if(O.assigned_role == JOB_NAME_SHAFTMINER)
 			owner_is_shaft_miner = TRUE
 	for(var/datum/mind/possible_target in get_crewmember_minds())
 		if(possible_target in owners)
@@ -137,14 +137,14 @@ GLOBAL_LIST_EMPTY(objectives)
 		if(possible_target in blacklist)
 			continue
 
-		if(possible_target.assigned_role == "Exploration Crew")
+		if(possible_target.assigned_role == JOB_NAME_EXPLORATIONCREW)
 			if(owner_is_exploration_crew)
 				prefered_targets += possible_target
 			else
 				//Reduced chance to get people off station
 				if(prob(70) && !owner_is_shaft_miner)
 					continue
-		else if(possible_target.assigned_role == "Shaft Miner")
+		else if(possible_target.assigned_role == JOB_NAME_SHAFTMINER)
 			if(owner_is_shaft_miner)
 				prefered_targets += possible_target
 			else

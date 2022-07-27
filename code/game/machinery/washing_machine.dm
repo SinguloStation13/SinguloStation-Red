@@ -1,3 +1,114 @@
+<<<<<<< HEAD
+=======
+//dye registry, add dye colors and their resulting output here if you want the sprite to change instead of just the color.
+GLOBAL_LIST_INIT(dye_registry, list(
+	DYE_REGISTRY_UNDER = list(
+		DYE_RED = /obj/item/clothing/under/color/red,
+		DYE_ORANGE = /obj/item/clothing/under/color/orange,
+		DYE_YELLOW = /obj/item/clothing/under/color/yellow,
+		DYE_GREEN = /obj/item/clothing/under/color/green,
+		DYE_BLUE = /obj/item/clothing/under/color/blue,
+		DYE_PURPLE = /obj/item/clothing/under/color/lightpurple,
+		DYE_BLACK = /obj/item/clothing/under/color/black,
+		DYE_WHITE = /obj/item/clothing/under/color/white,
+		DYE_RAINBOW = /obj/item/clothing/under/color/rainbow,
+		DYE_MIME = /obj/item/clothing/under/rank/civilian/mime,
+		DYE_CLOWN = /obj/item/clothing/under/rank/civilian/clown,
+		DYE_QM = /obj/item/clothing/under/rank/cargo/quartermaster,
+		DYE_LAW = /obj/item/clothing/under/suit/black,
+		DYE_CAPTAIN = /obj/item/clothing/under/rank/captain,
+		DYE_HOP = /obj/item/clothing/under/rank/civilian/head_of_personnel,
+		DYE_HOS = /obj/item/clothing/under/rank/security/head_of_security,
+		DYE_CE = /obj/item/clothing/under/rank/engineering/chief_engineer,
+		DYE_RD = /obj/item/clothing/under/rank/rnd/research_director,
+		DYE_CMO = /obj/item/clothing/under/rank/medical/chief_medical_officer,
+		DYE_REDCOAT = /obj/item/clothing/under/costume/redcoat
+	),
+	DYE_REGISTRY_JUMPSKIRT = list(
+		DYE_RED = /obj/item/clothing/under/color/jumpskirt/red,
+		DYE_ORANGE = /obj/item/clothing/under/color/jumpskirt/orange,
+		DYE_YELLOW = /obj/item/clothing/under/color/jumpskirt/yellow,
+		DYE_GREEN = /obj/item/clothing/under/color/jumpskirt/green,
+		DYE_BLUE = /obj/item/clothing/under/color/jumpskirt/blue,
+		DYE_PURPLE = /obj/item/clothing/under/color/jumpskirt/lightpurple,
+		DYE_BLACK = /obj/item/clothing/under/color/jumpskirt/black,
+		DYE_WHITE = /obj/item/clothing/under/color/jumpskirt/white,
+		DYE_RAINBOW = /obj/item/clothing/under/color/jumpskirt/rainbow
+	),
+	DYE_REGISTRY_GLOVES = list(
+		DYE_RED = /obj/item/clothing/gloves/color/red,
+		DYE_ORANGE = /obj/item/clothing/gloves/color/orange,
+		DYE_YELLOW = /obj/item/clothing/gloves/color/yellow,
+		DYE_GREEN = /obj/item/clothing/gloves/color/green,
+		DYE_BLUE = /obj/item/clothing/gloves/color/blue,
+		DYE_PURPLE = /obj/item/clothing/gloves/color/purple,
+		DYE_BLACK = /obj/item/clothing/gloves/color/black,
+		DYE_WHITE = /obj/item/clothing/gloves/color/white,
+		DYE_RAINBOW = /obj/item/clothing/gloves/color/rainbow,
+		DYE_MIME = /obj/item/clothing/gloves/color/white,
+		DYE_CLOWN = /obj/item/clothing/gloves/color/rainbow,
+		DYE_QM = /obj/item/clothing/gloves/color/brown,
+		DYE_CAPTAIN = /obj/item/clothing/gloves/color/captain,
+		DYE_HOP = /obj/item/clothing/gloves/color/grey,
+		DYE_HOS = /obj/item/clothing/gloves/color/black,
+		DYE_CE = /obj/item/clothing/gloves/color/black,
+		DYE_RD = /obj/item/clothing/gloves/color/grey,
+		DYE_CMO = /obj/item/clothing/gloves/color/latex/nitrile,
+		DYE_REDCOAT = /obj/item/clothing/gloves/color/white
+	),
+	DYE_REGISTRY_SNEAKERS = list(
+		DYE_RED = /obj/item/clothing/shoes/sneakers/red,
+		DYE_ORANGE = /obj/item/clothing/shoes/sneakers/orange,
+		DYE_YELLOW = /obj/item/clothing/shoes/sneakers/yellow,
+		DYE_GREEN = /obj/item/clothing/shoes/sneakers/green,
+		DYE_BLUE = /obj/item/clothing/shoes/sneakers/blue,
+		DYE_PURPLE = /obj/item/clothing/shoes/sneakers/purple,
+		DYE_BLACK = /obj/item/clothing/shoes/sneakers/black,
+		DYE_WHITE = /obj/item/clothing/shoes/sneakers/white,
+		DYE_RAINBOW = /obj/item/clothing/shoes/sneakers/rainbow,
+		DYE_MIME = /obj/item/clothing/shoes/sneakers/black,
+		DYE_QM = /obj/item/clothing/shoes/sneakers/brown,
+		DYE_CAPTAIN = /obj/item/clothing/shoes/sneakers/brown,
+		DYE_HOP = /obj/item/clothing/shoes/sneakers/brown,
+		DYE_CE = /obj/item/clothing/shoes/sneakers/brown,
+		DYE_RD = /obj/item/clothing/shoes/sneakers/brown,
+		DYE_CMO = /obj/item/clothing/shoes/sneakers/brown
+	),
+	DYE_REGISTRY_FANNYPACK = list(
+		DYE_RED = /obj/item/storage/belt/fannypack/red,
+		DYE_ORANGE = /obj/item/storage/belt/fannypack/orange,
+		DYE_YELLOW = /obj/item/storage/belt/fannypack/yellow,
+		DYE_GREEN = /obj/item/storage/belt/fannypack/green,
+		DYE_BLUE = /obj/item/storage/belt/fannypack/blue,
+		DYE_PURPLE = /obj/item/storage/belt/fannypack/purple,
+		DYE_BLACK = /obj/item/storage/belt/fannypack/black,
+		DYE_WHITE = /obj/item/storage/belt/fannypack/white
+	),
+	DYE_REGISTRY_BEDSHEET = list(
+		DYE_RED = /obj/item/bedsheet/red,
+		DYE_ORANGE = /obj/item/bedsheet/orange,
+		DYE_YELLOW = /obj/item/bedsheet/yellow,
+		DYE_GREEN = /obj/item/bedsheet/green,
+		DYE_BLUE = /obj/item/bedsheet/blue,
+		DYE_PURPLE = /obj/item/bedsheet/purple,
+		DYE_BLACK = /obj/item/bedsheet/black,
+		DYE_WHITE = /obj/item/bedsheet,
+		DYE_RAINBOW = /obj/item/bedsheet/rainbow,
+		DYE_MIME = /obj/item/bedsheet/mime,
+		DYE_CLOWN = /obj/item/bedsheet/clown,
+		DYE_QM = /obj/item/bedsheet/qm,
+		DYE_LAW = /obj/item/bedsheet/black,
+		DYE_CAPTAIN = /obj/item/bedsheet/captain,
+		DYE_HOP = /obj/item/bedsheet/hop,
+		DYE_HOS = /obj/item/bedsheet/hos,
+		DYE_CE = /obj/item/bedsheet/ce,
+		DYE_RD = /obj/item/bedsheet/rd,
+		DYE_CMO = /obj/item/bedsheet/cmo,
+		DYE_COSMIC = /obj/item/bedsheet/cosmos
+	)
+))
+
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 /obj/machinery/washing_machine
 	name = "washing machine"
 	desc = "Gets rid of those pesky bloodstains, or your money back!"

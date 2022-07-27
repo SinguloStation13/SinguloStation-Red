@@ -1,8 +1,8 @@
-/datum/job/hop
-	title = "Head of Personnel"
+/datum/job/head_of_personnel
+	title = JOB_NAME_HEADOFPERSONNEL
 	flag = HOP
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
-	department_head = list("Captain")
+	department_head = list(JOB_NAME_CAPTAIN)
 	department_flag = CIVILIAN
 	head_announce = list(RADIO_CHANNEL_SUPPLY, RADIO_CHANNEL_SERVICE)
 	faction = "Station"
@@ -17,7 +17,7 @@
 	exp_type = EXP_TYPE_COMMAND
 	exp_type_department = EXP_TYPE_COMMAND
 
-	outfit = /datum/outfit/job/hop
+	outfit = /datum/outfit/job/head_of_personnel
 
 	access = list(ACCESS_SEC_DOORS, ACCESS_COURT, ACCESS_WEAPONS,
 			            ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_CHANGE_IDS, ACCESS_AI_UPLOAD, ACCESS_EVA, ACCESS_HEADS,
@@ -37,23 +37,34 @@
 	paycheck_department = ACCOUNT_SRV
 
 	display_order = JOB_DISPLAY_ORDER_HEAD_OF_PERSONNEL
+<<<<<<< HEAD
 	departments = DEPARTMENT_COMMAND | DEPARTMENT_SERVICE
+=======
+	departments = DEPARTMENT_BITFLAG_COMMAND | DEPARTMENT_BITFLAG_SERVICE
+	rpg_title = "Guild Questgiver"
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 
 	species_outfits = list(
-		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/hop
+		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/head_of_personnel
 	)
 
-/datum/outfit/job/hop
-	name = "Head of Personnel"
-	jobtype = /datum/job/hop
+/datum/outfit/job/head_of_personnel
+	name = JOB_NAME_HEADOFPERSONNEL
+	jobtype = /datum/job/head_of_personnel
 
+<<<<<<< HEAD
 	id = /obj/item/card/id/silver
 	belt = /obj/item/pda/heads/hop
 	ears = /obj/item/radio/headset/heads/hop
+=======
+	id = /obj/item/card/id/job/head_of_personnel
+	belt = /obj/item/pda/heads/head_of_personnel
+	ears = /obj/item/radio/headset/heads/head_of_personnel
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	uniform = /obj/item/clothing/under/rank/civilian/head_of_personnel
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	head = /obj/item/clothing/head/hopcap
 	backpack_contents = list(/obj/item/storage/box/ids=1,\
 		/obj/item/melee/classic_baton/police/telescopic=1, /obj/item/modular_computer/tablet/preset/advanced = 1)
 
-	chameleon_extras = list(/obj/item/gun/energy/e_gun, /obj/item/stamp/hop)
+	chameleon_extras = list(/obj/item/gun/energy/e_gun, /obj/item/stamp/head_of_personnel)

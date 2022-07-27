@@ -17,7 +17,7 @@
 	user.visible_message("<span class='suicide'>[user] stamps 'VOID' on [user.p_their()] forehead, then promptly falls over, dead.</span>")
 	return (OXYLOSS)
 
-/obj/item/stamp/qm
+/obj/item/stamp/quartermaster
 	name = "quartermaster's rubber stamp"
 	icon_state = "stamp-qm"
 	item_color = "qm"
@@ -32,7 +32,7 @@
 	icon_state = "stamp-cap"
 	item_color = "captain"
 
-/obj/item/stamp/hop
+/obj/item/stamp/head_of_personnel
 	name = "head of personnel's rubber stamp"
 	icon_state = "stamp-hop"
 	item_color = "hop"
@@ -42,12 +42,12 @@
 	icon_state = "stamp-hos"
 	item_color = "hosred"
 
-/obj/item/stamp/ce
+/obj/item/stamp/chief_engineer
 	name = "chief engineer's rubber stamp"
 	icon_state = "stamp-ce"
 	item_color = "chief"
 
-/obj/item/stamp/rd
+/obj/item/stamp/research_director
 	name = "research director's rubber stamp"
 	icon_state = "stamp-rd"
 	item_color = "director"

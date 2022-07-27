@@ -1,7 +1,7 @@
 /datum/job/geneticist
-	title = "Geneticist"
+	title = JOB_NAME_GENETICIST
 	flag = GENETICIST
-	department_head = list("Chief Medical Officer", "Research Director")
+	department_head = list(JOB_NAME_CHIEFMEDICALOFFICER, JOB_NAME_RESEARCHDIRECTOR)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 2
@@ -20,16 +20,25 @@
 	paycheck_department = ACCOUNT_MED
 
 	display_order = JOB_DISPLAY_ORDER_GENETICIST
+<<<<<<< HEAD
 	departments = DEPARTMENT_MEDICAL
+=======
+	departments = DEPARTMENT_BITFLAG_MEDICAL
+	rpg_title = "Genemancer"
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 
 	species_outfits = list(
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/genetics
 	)
 /datum/outfit/job/geneticist
-	name = "Geneticist"
+	name = JOB_NAME_GENETICIST
 	jobtype = /datum/job/geneticist
 
+<<<<<<< HEAD
 	id = /obj/item/card/id/job/med
+=======
+	id = /obj/item/card/id/job/geneticist
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	belt = /obj/item/pda/geneticist
 	ears = /obj/item/radio/headset/headset_medsci
 	uniform = /obj/item/clothing/under/rank/medical/geneticist

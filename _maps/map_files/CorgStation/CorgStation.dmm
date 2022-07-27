@@ -4231,8 +4231,43 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
+=======
+/turf/open/floor/engine,
+/area/engine/engine_room)
+"aRa" = (
+/obj/structure/table/wood,
+/obj/item/paper_bin{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/item/stamp/head_of_personnel{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 7;
+	pixel_y = -25
+	},
+/obj/item/cartridge/hop{
+	pixel_x = 7;
+	pixel_y = 6
+	},
+/obj/item/pen{
+	pixel_x = 6;
+	pixel_y = 1
+	},
+/turf/open/floor/carpet/blue,
+/area/crew_quarters/heads/hop)
+"aRb" = (
+/obj/machinery/computer/crew,
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -7866,11 +7901,22 @@
 /obj/machinery/light{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/engine,
 /area/engine/engine_room)
 "bSL" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
+=======
+/turf/open/floor/plasteel/white,
+/area/science/xenobiology)
+"bNp" = (
+/obj/structure/table/reinforced,
+/obj/item/folder/yellow,
+/obj/item/stamp/quartermaster,
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/tile/brown{
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/red{
@@ -10298,6 +10344,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/dorms)
 "cxg" = (
@@ -10308,6 +10355,21 @@
 /area/hallway/primary/fore)
 "cxr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+=======
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"cDm" = (
+/obj/structure/table,
+/obj/item/paper_bin,
+/obj/item/pen/red,
+/obj/item/stamp/research_director,
+/obj/item/aicard,
+/turf/open/floor/plasteel/white,
+/area/crew_quarters/heads/hor)
+"cDp" = (
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
@@ -15040,12 +15102,19 @@
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
 	dir = 6
 	},
+<<<<<<< HEAD
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space/nearstation)
 "dAr" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+=======
+/obj/effect/landmark/start/paramedic,
+/obj/machinery/light_switch{
+	pixel_x = 1;
+	pixel_y = 28
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -23088,6 +23157,13 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/landmark/start/brig_physician,
+/turf/open/floor/plasteel/white,
+/area/security/brig)
+"gvN" = (
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 /turf/open/floor/plasteel,
 /area/science/shuttle)
 "frU" = (
@@ -26053,6 +26129,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
+<<<<<<< HEAD
 /turf/open/floor/carpet/green,
 /area/crew_quarters/bar)
 "fYa" = (
@@ -26060,6 +26137,11 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "medbay_lockdown";
 	name = "lockdown shutters"
+=======
+/obj/item/stamp/chief_engineer{
+	pixel_x = 5;
+	pixel_y = 8
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
@@ -27488,11 +27570,20 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel,
 /area/storage/tools)
 "goC" = (
 /obj/effect/turf_decal/tile/yellow{
+=======
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/landmark/start/paramedic,
+/turf/open/floor/plasteel/white,
+/area/medical/storage)
+"hHR" = (
+/obj/effect/turf_decal/tile/neutral{
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/yellow{
@@ -27815,8 +27906,24 @@
 /obj/structure/chair/office{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/light_switch{
 	pixel_x = 26
+=======
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/landmark/start/paramedic,
+/turf/open/floor/plasteel/white,
+/area/medical/storage)
+"hLT" = (
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/engine{
+	name = "Holodeck Projector Floor"
+	},
+/area/holodeck/rec_center)
+"hMi" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 8
@@ -31391,12 +31498,19 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/vacant_room/commissary)
 "hkK" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 9
+=======
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/landmark/start/paramedic,
+/obj/item/radio/intercom{
+	pixel_y = 24
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
@@ -45656,12 +45770,26 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/bridge)
 "kGd" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maintenance Hatch";
 	req_access_txt = "12"
+=======
+/turf/open/floor/circuit,
+/area/ai_monitored/turret_protected/ai)
+"mZc" = (
+/obj/machinery/holopad,
+/obj/effect/landmark/start/brig_physician,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/turf/open/floor/plasteel/white,
+/area/security/brig)
+"mZy" = (
+/obj/effect/turf_decal/plaque{
+	icon_state = "L1"
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -48617,7 +48745,18 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral{
+=======
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/landmark/start/paramedic,
+/turf/open/floor/plasteel/white,
+/area/medical/storage)
+"nQL" = (
+/obj/machinery/holopad,
+/obj/effect/turf_decal/tile/bar,
+/obj/effect/turf_decal/tile/bar{
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	dir = 1
 	},
 /obj/structure/cable/yellow{
@@ -54229,6 +54368,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/sign/map/left{
 	pixel_x = 16;
 	pixel_y = -32
@@ -54236,6 +54376,11 @@
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/central)
 "mIG" = (
+=======
+/area/chapel/main/monastery)
+"pxo" = (
+/obj/structure/closet/secure_closet/brig_physician,
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -66860,6 +67005,7 @@
 /obj/machinery/camera/autoname{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/hallway/secondary/service)
 "pNr" = (
@@ -66874,6 +67020,18 @@
 "pNt" = (
 /obj/machinery/atmospherics/components/binary/dp_vent_pump{
 	dir = 4
+=======
+/obj/effect/landmark/start/paramedic,
+/turf/open/floor/plasteel/white,
+/area/medical/storage)
+"tqu" = (
+/obj/machinery/rnd/production/protolathe/department/service,
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
+"tqE" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/brig)

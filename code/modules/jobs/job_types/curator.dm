@@ -1,7 +1,7 @@
 /datum/job/curator
-	title = "Curator"
+	title = JOB_NAME_CURATOR
 	flag = CURATOR
-	department_head = list("Head of Personnel")
+	department_head = list(JOB_NAME_HEADOFPERSONNEL)
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 1
@@ -18,13 +18,18 @@
 	paycheck_department = ACCOUNT_CIV
 
 	display_order = JOB_DISPLAY_ORDER_CURATOR
+<<<<<<< HEAD
 	departments = DEPARTMENT_SERVICE
+=======
+	departments = DEPARTMENT_BITFLAG_SERVICE
+	rpg_title = "Veteran Adventurer"
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 
 	species_outfits = list(
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/curator
 	)
 /datum/outfit/job/curator
-	name = "Curator"
+	name = JOB_NAME_CURATOR
 	jobtype = /datum/job/curator
 
 	id = /obj/item/card/id/job/chap

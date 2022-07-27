@@ -1,7 +1,7 @@
-/datum/job/cmo
-	title = "Chief Medical Officer"
+/datum/job/chief_medical_officer
+	title = JOB_NAME_CHIEFMEDICALOFFICER
 	flag = CMO_JF
-	department_head = list("Captain")
+	department_head = list(JOB_NAME_CAPTAIN)
 	department_flag = MEDSCI
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	head_announce = list(RADIO_CHANNEL_MEDICAL)
@@ -17,7 +17,7 @@
 	exp_type = EXP_TYPE_MEDICAL
 	exp_type_department = EXP_TYPE_MEDICAL
 
-	outfit = /datum/outfit/job/cmo
+	outfit = /datum/outfit/job/chief_medical_officer
 
 	access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_GENETICS, ACCESS_CLONING, ACCESS_APOTHECARY, ACCESS_HEADS, ACCESS_MINERAL_STOREROOM,
 			ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_CMO, ACCESS_SURGERY, ACCESS_RC_ANNOUNCE, ACCESS_MECH_MEDICAL,
@@ -29,18 +29,23 @@
 	paycheck_department = ACCOUNT_MED
 
 	display_order = JOB_DISPLAY_ORDER_CHIEF_MEDICAL_OFFICER
+<<<<<<< HEAD
 	departments = DEPARTMENT_MEDICAL | DEPARTMENT_COMMAND
+=======
+	departments = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_COMMAND
+	rpg_title = "High Cleric"
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 
 	species_outfits = list(
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/cmo
 	)
 
-/datum/outfit/job/cmo
-	name = "Chief Medical Officer"
-	jobtype = /datum/job/cmo
+/datum/outfit/job/chief_medical_officer
+	name = JOB_NAME_CHIEFMEDICALOFFICER
+	jobtype = /datum/job/chief_medical_officer
 
-	id = /obj/item/card/id/job/cmo
-	belt = /obj/item/pda/heads/cmo
+	id = /obj/item/card/id/job/chief_medical_officer
+	belt = /obj/item/pda/heads/chief_medical_officer
 	l_pocket = /obj/item/pinpointer/crew
 	ears = /obj/item/radio/headset/heads/cmo
 	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer
@@ -56,7 +61,7 @@
 
 	chameleon_extras = list(/obj/item/gun/syringe, /obj/item/stamp/cmo)
 
-/datum/outfit/job/cmo/hardsuit
+/datum/outfit/job/chief_medical_officer/hardsuit
 	name = "Chief Medical Officer (Hardsuit)"
 
 	mask = /obj/item/clothing/mask/breath

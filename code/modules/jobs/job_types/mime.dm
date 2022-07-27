@@ -1,7 +1,7 @@
 /datum/job/mime
-	title = "Mime"
+	title = JOB_NAME_MIME
 	flag = MIME
-	department_head = list("Head of Personnel")
+	department_head = list(JOB_NAME_HEADOFPERSONNEL)
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 1
@@ -18,7 +18,12 @@
 	paycheck_department = ACCOUNT_SRV
 
 	display_order = JOB_DISPLAY_ORDER_MIME
+<<<<<<< HEAD
 	departments = DEPARTMENT_SERVICE
+=======
+	departments = DEPARTMENT_BITFLAG_SERVICE
+	rpg_title = "Fool"
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 
 	species_outfits = list(
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/mime
@@ -29,7 +34,7 @@
 	H.apply_pref_name("mime", M.client)
 
 /datum/outfit/job/mime
-	name = "Mime"
+	name = JOB_NAME_MIME
 	jobtype = /datum/job/mime
 
 	id = /obj/item/card/id/job/mime

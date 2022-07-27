@@ -2802,6 +2802,15 @@
 	crate_name = "Bicycle Crate"
 	crate_type = /obj/structure/closet/crate/large
 
+<<<<<<< HEAD
+=======
+/datum/supply_pack/misc/bicycle/generate(atom/A, datum/bank_account/paying_account)
+	. = ..()
+	for(var/client/C as() in GLOB.clients)
+		if(C?.mob.mind.assigned_role == JOB_NAME_QUARTERMASTER || C?.mob.mind.assigned_role == JOB_NAME_CARGOTECHNICIAN)
+			C?.give_award(/datum/award/achievement/misc/bike, C?.mob)
+
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 /datum/supply_pack/misc/bigband
 	name = "Big Band Instrument Collection"
 	desc = "Get your sad station movin' and groovin' with this fine collection! Contains nine different instruments!"
