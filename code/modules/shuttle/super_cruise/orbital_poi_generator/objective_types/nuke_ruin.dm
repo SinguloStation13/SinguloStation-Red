@@ -4,9 +4,14 @@
 	//The blackbox required to recover.
 	var/obj/machinery/nuclearbomb/decomission/nuclear_bomb
 	var/obj/item/disk/nuclear/decommission/nuclear_disk
+<<<<<<< HEAD
 	//Relatively easy mission.
 	min_payout = 80000
 	max_payout = 400000
+=======
+	min_payout = 6000
+	max_payout = 25000
+>>>>>>> 304bb94194... Minor supercruise fixes and objective payout changes. (#7355)
 
 /datum/orbital_objective/nuclear_bomb/generate_objective_stuff(turf/chosen_turf)
 	generated = TRUE
