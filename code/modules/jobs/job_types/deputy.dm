@@ -1,7 +1,7 @@
 /datum/job/deputy
-	title = "Deputy"
+	title = JOB_NAME_DEPUTY
 	flag = DEPUTY
-	department_head = list("Head of Security")
+	department_head = list(JOB_NAME_HEADOFSECURITY)
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 0
@@ -22,10 +22,10 @@
 	mind_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
 
 	display_order = JOB_DISPLAY_ORDER_DEPUTY  //see code/__DEFINES/jobs.dm
-	departments = DEPARTMENT_SECURITY
+	departments = DEPARTMENT_BITFLAG_SECURITY
 
 /datum/outfit/job/deputy
-	name = "Deputy"
+	name = JOB_NAME_DEPUTY
 	jobtype = /datum/job/deputy
 
 	belt = /obj/item/storage/belt/security/deputy
@@ -45,5 +45,10 @@
 /obj/item/card/id/pass/deputy
 	name = "deputy promotion card"
 	desc = "A small card, that when used on an ID, will grant basic security access, and the job title of 'Deputy.'"
+<<<<<<< HEAD
 	assignment = "Deputy"
 	access = list(ACCESS_SEC_DOORS, ACCESS_MAINT_TUNNELS, ACCESS_COURT, ACCESS_BRIG, ACCESS_WEAPONS)
+=======
+	assignment = JOB_NAME_DEPUTY
+	access = list(ACCESS_SEC_DOORS, ACCESS_MAINT_TUNNELS, ACCESS_COURT, ACCESS_BRIG, ACCESS_WEAPONS)
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)

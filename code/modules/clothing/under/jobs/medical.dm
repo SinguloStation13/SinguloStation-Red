@@ -55,7 +55,7 @@
 	can_adjust = FALSE
 	fitted = FEMALE_UNIFORM_TOP
 
-/obj/item/clothing/under/rank/medical/emt
+/obj/item/clothing/under/rank/medical/paramedic
 	name = "paramedic's jumpsuit"
 	desc = "A standard jumpsuit used by paramedics onboard space stations. It's made of a special fiber that gives special protection against biohazards."
 	icon_state = "emt"
@@ -64,7 +64,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 10, "rad" = 0, "fire" = 0, "acid" = 0, "stamina" = 0)
 	can_adjust = FALSE
 
-/obj/item/clothing/under/rank/medical/emt/skirt
+/obj/item/clothing/under/rank/medical/paramedic/skirt
 	name = "paramedic's jumpskirt"
 	desc = "It's made of a special fiber that provides minor protection against biohazards. It has a dark blue cross on the chest denoting that the wearer is a trained paramedic."
 	icon_state = "emt_skirt"

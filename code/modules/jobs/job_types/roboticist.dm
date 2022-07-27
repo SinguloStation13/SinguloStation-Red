@@ -1,7 +1,7 @@
 /datum/job/roboticist
-	title = "Roboticist"
+	title = JOB_NAME_ROBOTICIST
 	flag = ROBOTICIST
-	department_head = list("Research Director")
+	department_head = list(JOB_NAME_RESEARCHDIRECTOR)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 2
@@ -22,14 +22,19 @@
 	paycheck_department = ACCOUNT_SCI
 
 	display_order = JOB_DISPLAY_ORDER_ROBOTICIST
+<<<<<<< HEAD
 	departments = DEPARTMENT_SCIENCE
+=======
+	departments = DEPARTMENT_BITFLAG_SCIENCE
+	rpg_title = "Golemancer"
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 
 	species_outfits = list(
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/robotics
 	)
 
 /datum/outfit/job/roboticist
-	name = "Roboticist"
+	name = JOB_NAME_ROBOTICIST
 	jobtype = /datum/job/roboticist
 
 	id = /obj/item/card/id/job/sci

@@ -28,14 +28,19 @@
 /obj/item/clothing/gloves/color/yellow/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_GLOVES)
-		if(user.mind?.assigned_role == "Assistant")
+		if(user.mind?.assigned_role == JOB_NAME_ASSISTANT)
 			SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "assistant_insulated_gloves", /datum/mood_event/assistant_insulated_gloves)
 		if(user.mind?.assigned_role in GLOB.security_positions)
 			SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "sec_insulated_gloves", /datum/mood_event/sec_insulated_gloves)
 
 /obj/item/clothing/gloves/color/yellow/dropped(mob/user)
+<<<<<<< HEAD
 	. = ..()
 	if(user.mind?.assigned_role == "Assistant")
+=======
+	..()
+	if(user.mind?.assigned_role == JOB_NAME_ASSISTANT)
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 		SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "assistant_insulated_gloves")
 	if(user.mind?.assigned_role in GLOB.security_positions)
 		SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "sec_insulated_gloves")

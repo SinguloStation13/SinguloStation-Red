@@ -1,7 +1,7 @@
 /datum/job/chaplain
-	title = "Chaplain"
+	title = JOB_NAME_CHAPLAIN
 	flag = CHAPLAIN
-	department_head = list("Head of Personnel")
+	department_head = list(JOB_NAME_HEADOFPERSONNEL)
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 1
@@ -19,7 +19,12 @@
 	paycheck_department = ACCOUNT_CIV
 
 	display_order = JOB_DISPLAY_ORDER_CHAPLAIN
+<<<<<<< HEAD
 	departments = DEPARTMENT_SERVICE
+=======
+	departments = DEPARTMENT_BITFLAG_SERVICE
+	rpg_title = "Paladin"
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 
 	species_outfits = list(
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/chaplain
@@ -114,10 +119,10 @@
 	SSblackbox.record_feedback("text", "religion_deity", 1, "[new_deity]", 1)
 
 /datum/outfit/job/chaplain
-	name = "Chaplain"
+	name = JOB_NAME_CHAPLAIN
 	jobtype = /datum/job/chaplain
 
-	id = /obj/item/card/id/job/chap
+	id = /obj/item/card/id/job/chaplain
 	belt = /obj/item/pda/chaplain
 	ears = /obj/item/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/civilian/chaplain

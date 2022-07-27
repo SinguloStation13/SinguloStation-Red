@@ -1,5 +1,5 @@
 /datum/job/captain
-	title = "Captain"
+	title = JOB_NAME_CAPTAIN
 	flag = CAPTAIN
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list("CentCom")
@@ -26,7 +26,12 @@
 	mind_traits = list(TRAIT_DISK_VERIFIER)
 
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN
+<<<<<<< HEAD
 	departments = DEPARTMENT_COMMAND
+=======
+	departments = DEPARTMENT_BITFLAG_COMMAND
+	rpg_title = "Star Duke"
+>>>>>>> e128c6cae9... Modernize job strings into DEFINES (#7093)
 
 	species_outfits = list(
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/command
@@ -39,7 +44,7 @@
 	SSticker.OnRoundstart(CALLBACK(GLOBAL_PROC, .proc/minor_announce, "Captain [H.real_name] on deck!"))
 
 /datum/outfit/job/captain
-	name = "Captain"
+	name = JOB_NAME_CAPTAIN
 	jobtype = /datum/job/captain
 
 	id = /obj/item/card/id/gold
