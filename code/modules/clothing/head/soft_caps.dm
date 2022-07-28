@@ -131,5 +131,17 @@
 	name = "EMT cap"
 	desc = "It's a baseball hat with a dark turquoise color and a reflective cross on the top."
 	icon_state = "emtsoft"
+<<<<<<< HEAD
 	item_color = "emt"
 	dog_fashion = null
+=======
+	soft_color = "emt"
+
+/obj/item/clothing/head/soft/cargo
+	name = "cargo cap"
+	desc = "It's a baseball hat in a tasteless yellow colour."
+	icon_state = "cargosoft"
+	soft_color = "cargo"
+
+	dog_fashion = /datum/dog_fashion/head/cargo_tech
+>>>>>>> 83f45e6e04... Fixes cargo cap flipping (#7391)
