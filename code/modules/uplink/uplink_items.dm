@@ -125,6 +125,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	var/refundable = FALSE
 	var/surplus = 100 // Chance of being included in the surplus crate.
 	var/cant_discount = FALSE
+	var/murderbone_type = FALSE
 	var/limited_stock = -1 //Setting this above zero limits how many times this item can be bought by the same traitor in a round, -1 is unlimited
 	var/list/include_modes = list() // Game modes to allow this item in.
 	var/list/exclude_modes = list() // Game modes to disallow this item from.
@@ -811,8 +812,13 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 			On death, these nodules take control of the dead body, causing limited revivification, \
 			along with slurred speech, aggression, and the ability to infect others with this agent."
 	item = /obj/item/storage/box/syndie_kit/romerol
-	cost = 25
+	cost = 20
 	cant_discount = TRUE
+<<<<<<< HEAD
+=======
+	murderbone_type = TRUE
+	surplus = 0
+>>>>>>> 47b43500a0... His Grace / Romerol is only purchasable upon murderbone objective (#7118)
 
 /datum/uplink_item/stealthy_weapons/sleepy_pen
 	name = "Sleepy Pen"
@@ -2135,8 +2141,14 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	To activate His Grace, simply unlatch Him."
 	item = /obj/item/his_grace
 	cost = 20
+<<<<<<< HEAD
 	restricted_roles = list("Chaplain")
 	surplus = 5 //Very low chance to get it in a surplus crate even without being the chaplain
+=======
+	restricted_roles = list(JOB_NAME_CHAPLAIN)
+	murderbone_type = TRUE
+	surplus = 0
+>>>>>>> 47b43500a0... His Grace / Romerol is only purchasable upon murderbone objective (#7118)
 
 /datum/uplink_item/role_restricted/cultconstructkit
 	name = "Cult Construct Kit"
