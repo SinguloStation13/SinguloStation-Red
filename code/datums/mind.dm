@@ -41,8 +41,11 @@
 	var/assigned_role
 	var/special_role
 	var/list/restricted_roles = list()
+<<<<<<< HEAD
 	var/list/datum/objective/objectives = list()
 
+=======
+>>>>>>> 47b43500a0... His Grace / Romerol is only purchasable upon murderbone objective (#7118)
 	var/list/spell_list = list() // Wizard mode & "Give Spell" badmin button.
 
 	var/linglink
@@ -585,6 +588,12 @@
 	for(var/datum/antagonist/A in antag_datums)
 		all_objectives |= A.objectives
 	return all_objectives
+
+/datum/mind/proc/is_murderbone()
+	for(var/datum/objective/O as() in get_all_objectives())
+		if(O.murderbone_flag)
+			return TRUE
+	return FALSE
 
 /datum/mind/proc/announce_objectives()
 	var/obj_count = 1

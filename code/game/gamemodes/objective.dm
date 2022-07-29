@@ -11,6 +11,11 @@ GLOBAL_LIST_EMPTY(objectives)
 	var/target_amount = 0				//If they are focused on a particular number. Steal objectives have their own counter.
 	var/completed = 0					//currently only used for custom objectives.
 	var/martyr_compatible = 0			//If the objective is compatible with martyr objective, i.e. if you can still do it while dead.
+<<<<<<< HEAD
+=======
+	var/optional = FALSE				//Whether the objective should show up as optional in the roundend screen
+	var/murderbone_flag = FALSE			//Used to check if obj owner can buy murderbone stuff
+>>>>>>> 47b43500a0... His Grace / Romerol is only purchasable upon murderbone objective (#7118)
 
 /datum/objective/New(var/text)
 	GLOB.objectives += src
@@ -372,6 +377,7 @@ GLOBAL_LIST_EMPTY(objectives)
 	martyr_compatible = FALSE //Technically you won't get both anyway.
 	/// Overrides the hijack speed of any antagonist datum it is on ONLY, no other datums are impacted.
 	var/hijack_speed_override = 1
+	murderbone_flag = TRUE
 
 /datum/objective/hijack/check_completion() // Requires all owners to escape.
 	if(SSshuttle.emergency.mode != SHUTTLE_ENDGAME)
@@ -387,6 +393,7 @@ GLOBAL_LIST_EMPTY(objectives)
 	explanation_text = "Slaughter all loyalist crew aboard the shuttle. You, and any likeminded individuals, must be the only remaining people on the shuttle."
 	team_explanation_text = "Slaughter all loyalist crew aboard the shuttle. You, and any likeminded individuals, must be the only remaining people on the shuttle. Leave no team member behind."
 	martyr_compatible = FALSE
+	murderbone_flag = TRUE
 
 /datum/objective/elimination/check_completion()
 	if(SSshuttle.emergency.mode != SHUTTLE_ENDGAME)
@@ -414,6 +421,7 @@ GLOBAL_LIST_EMPTY(objectives)
 	name = "no organics on shuttle"
 	explanation_text = "Do not allow any organic lifeforms to escape on the shuttle alive."
 	martyr_compatible = 1
+	murderbone_flag = TRUE
 
 /datum/objective/block/check_completion()
 	if(SSshuttle.emergency.mode != SHUTTLE_ENDGAME)
@@ -558,6 +566,7 @@ GLOBAL_LIST_EMPTY(objectives)
 /datum/objective/martyr
 	name = "martyr"
 	explanation_text = "Die a glorious death."
+	murderbone_flag = TRUE
 
 /datum/objective/martyr/check_completion()
 	var/list/datum/mind/owners = get_owners()
@@ -572,6 +581,7 @@ GLOBAL_LIST_EMPTY(objectives)
 	name = "nuclear"
 	explanation_text = "Destroy the station with a nuclear device."
 	martyr_compatible = 1
+	murderbone_flag = TRUE
 
 /datum/objective/nuclear/check_completion()
 	if(SSticker && SSticker.mode && SSticker.mode.station_was_nuked)
@@ -976,6 +986,10 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 /datum/objective/custom
 	name = "custom"
 
+/datum/objective/custom/plus_murderbone
+	name = "custom (+murderbone pass)"
+	murderbone_flag = TRUE
+
 /datum/objective/custom/admin_edit(mob/admin)
 	var/expl = stripped_input(admin, "Custom objective:", "Objective", explanation_text)
 	if(expl)
@@ -1000,7 +1014,8 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 		/datum/objective/nuclear,
 		/datum/objective/capture,
 		/datum/objective/absorb,
-		/datum/objective/custom
+		/datum/objective/custom,
+		/datum/objective/custom/plus_murderbone
 	),/proc/cmp_typepaths_asc)
 
 	for(var/T in allowed_types)
