@@ -53,9 +53,6 @@
 #define HALLUCINATION_RANGE(P) (min(7, round(P ** 0.25)))
 
 
-#define GRAVITATIONAL_ANOMALY "gravitational_anomaly"
-#define FLUX_ANOMALY "flux_anomaly"
-#define PYRO_ANOMALY "pyro_anomaly"
 
 //If integrity percent remaining is less than these values, the monitor sets off the relevant alarm.
 #define SUPERMATTER_DELAM_PERCENT 5
@@ -165,7 +162,26 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	/// cooldown tracker for accent sounds,
 	var/last_accent_sound = 0
 
+<<<<<<< HEAD
 /obj/machinery/power/supermatter_crystal/Initialize()
+=======
+	//For making hugbox supermatters
+	///Disables all methods of taking damage
+	var/takes_damage = TRUE
+	///Disables the production of gas, and pretty much any handling of it we do.
+	var/produces_gas = TRUE
+	///Disables power changes
+	var/power_changes = TRUE
+	///Disables the sm's proccessing totally.
+	var/processes = TRUE
+	///Timer id for the disengage_field proc timer
+	var/disengage_field_timer = null
+
+	///Can the crystal trigger the station wide anomaly spawn?
+	var/anomaly_event = TRUE
+
+/obj/machinery/power/supermatter_crystal/Initialize(mapload)
+>>>>>>> 2f45a1b786... [PORT] The roundstart SM Crystal delamination now spawns anomalies across the station + New Anomalies + Anomaly Code improvements (#6857)
 	. = ..()
 	uid = gl_uid++
 	SSair.atmos_air_machinery += src
@@ -181,7 +197,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 		GLOB.main_supermatter_engine = src
 
 	AddElement(/datum/element/bsa_blocker)
-	RegisterSignal(src, COMSIG_ATOM_BSA_BEAM, .proc/call_explode)
+	RegisterSignal(src, COMSIG_ATOM_BSA_BEAM, .proc/call_delamination_event)
 
 	soundloop = new(list(src), TRUE)
 
@@ -198,10 +214,9 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 
 /obj/machinery/power/supermatter_crystal/examine(mob/user)
 	. = ..()
-	if (istype(user, /mob/living/carbon))
-		var/mob/living/carbon/C = user
-		if (!istype(C.glasses, /obj/item/clothing/glasses/meson) && (get_dist(user, src) < HALLUCINATION_RANGE(power)))
-			. += "<span class='danger'>You get headaches just from looking at it.</span>"
+	var/immune = HAS_TRAIT(user, TRAIT_MADNESS_IMMUNE) || HAS_TRAIT(user.mind, TRAIT_MADNESS_IMMUNE)
+	if (!isliving(user) && !immune && (get_dist(user, src) < HALLUCINATION_RANGE(power)))
+		. += "<span class='danger'>You get headaches just from looking at it.</span>"
 
 #define CRITICAL_TEMPERATURE 10000
 
@@ -277,27 +292,15 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 		radio.talk_into(src, speaking, common_channel)
 		sleep(10)
 
-	explode()
+	delamination_event()
 
-/obj/machinery/power/supermatter_crystal/proc/explode()
-	for(var/mob in GLOB.alive_mob_list)
-		var/mob/living/L = mob
-		if(istype(L) && L.get_virtual_z_level() == get_virtual_z_level())
-			if(ishuman(mob))
-				//Hilariously enough, running into a closet should make you get hit the hardest.
-				var/mob/living/carbon/human/H = mob
-				H.hallucination += max(50, min(300, DETONATION_HALLUCINATION * sqrt(1 / (get_dist(mob, src) + 1)) ) )
-			var/rads = DETONATION_RADS * sqrt( 1 / (get_dist(L, src) + 1) )
-			L.rad_act(rads)
+/obj/machinery/power/supermatter_crystal/proc/delamination_event()
+	var/can_spawn_anomalies = is_station_level(loc.z) && is_main_engine && anomaly_event
+	new /datum/supermatter_delamination(power, combined_gas, get_turf(src), explosion_power, gasmix_power_ratio, can_spawn_anomalies)
 
-	var/turf/T = get_turf(src)
-	for(var/mob/M in GLOB.player_list)
-		if(M.get_virtual_z_level() == get_virtual_z_level())
-			SEND_SOUND(M, 'sound/magic/charge.ogg')
-			to_chat(M, "<span class='boldannounce'>You feel reality distort for a moment...</span>")
-			SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "delam", /datum/mood_event/delam)
-	if(combined_gas > MOLE_PENALTY_THRESHOLD)
+	if(combined_gas > MOLE_PENALTY_THRESHOLD) // kept as /datum does not inherit /investigate_log()
 		investigate_log("has collapsed into a singularity.", INVESTIGATE_ENGINES)
+<<<<<<< HEAD
 		if(T)
 			var/obj/singularity/S = new(T)
 			S.energy = 800
@@ -309,12 +312,18 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 			investigate_log("has spawned additional energy balls.", INVESTIGATE_ENGINES)
 			new /obj/singularity/energy_ball(T, power)
 		qdel(src)
+=======
+	else if(power > POWER_PENALTY_THRESHOLD)
+		investigate_log("has spawned additional energy balls.", INVESTIGATE_ENGINES)
+
+	qdel(src)
+>>>>>>> 2f45a1b786... [PORT] The roundstart SM Crystal delamination now spawns anomalies across the station + New Anomalies + Anomaly Code improvements (#6857)
 
 //this is here to eat arguments
-/obj/machinery/power/supermatter_crystal/proc/call_explode()
+/obj/machinery/power/supermatter_crystal/proc/call_delamination_event()
 	SIGNAL_HANDLER
 
-	explode()
+	delamination_event()
 
 /obj/machinery/power/supermatter_crystal/process_atmos()
 	var/turf/T = loc
@@ -457,7 +466,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 			air_update_turf()
 
 	for(var/mob/living/carbon/human/l in viewers(HALLUCINATION_RANGE(power), src)) // If they can see it without mesons on.  Bad on them.
-		if(!istype(l.glasses, /obj/item/clothing/glasses/meson))
+		if(!HAS_TRAIT(l.mind, TRAIT_MADNESS_IMMUNE))
 			var/D = sqrt(1 / max(1, get_dist(l, src)))
 			l.hallucination += power * config_hallucination_power * D
 			l.hallucination = CLAMP(0, 200, l.hallucination)
@@ -487,11 +496,13 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 		if(prob(15) && power > POWER_PENALTY_THRESHOLD)
 			supermatter_pull(src, power/750)
 		if(prob(5))
-			supermatter_anomaly_gen(src, FLUX_ANOMALY, rand(5, 10))
+			supermatter_anomaly_gen(src, ANOMALY_FLUX, rand(5, 10))
+		if(prob(5))
+			supermatter_anomaly_gen(src, ANOMALY_HALLUCINATION, rand(5, 10))
 		if(power > SEVERE_POWER_PENALTY_THRESHOLD && prob(5) || prob(1))
-			supermatter_anomaly_gen(src, GRAVITATIONAL_ANOMALY, rand(5, 10))
+			supermatter_anomaly_gen(src, ANOMALY_GRAVITATIONAL, rand(5, 10))
 		if(power > SEVERE_POWER_PENALTY_THRESHOLD && prob(2) || prob(0.3) && power > POWER_PENALTY_THRESHOLD)
-			supermatter_anomaly_gen(src, PYRO_ANOMALY, rand(5, 10))
+			supermatter_anomaly_gen(src, ANOMALY_PYRO, rand(5, 10))
 
 	if(damage > warning_point) // while the core is still damaged and it's still worth noting its status
 		if((REALTIMEOFDAY - lastwarning) / 10 >= WARNING_DELAY)
@@ -761,6 +772,7 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 	explosion_power = 12
 	layer = ABOVE_MOB_LAYER
 	moveable = TRUE
+	anomaly_event = FALSE
 
 /obj/machinery/power/supermatter_crystal/shard/engine
 	name = "anchored supermatter shard"
@@ -801,17 +813,25 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 			step_towards(P,center)
 			step_towards(P,center)
 
-/obj/machinery/power/supermatter_crystal/proc/supermatter_anomaly_gen(turf/anomalycenter, type = FLUX_ANOMALY, anomalyrange = 5)
-	var/turf/L = pick(RANGE_TURFS(anomalyrange, anomalycenter) - anomalycenter)
-	if(L)
-		switch(type)
-			if(FLUX_ANOMALY)
-				var/obj/effect/anomaly/flux/A = new(L, 300)
-				A.explosive = FALSE
-			if(GRAVITATIONAL_ANOMALY)
-				new /obj/effect/anomaly/grav(L, 250)
-			if(PYRO_ANOMALY)
-				new /obj/effect/anomaly/pyro(L, 200)
+/proc/supermatter_anomaly_gen(turf/anomalycenter, type = ANOMALY_FLUX, anomalyrange = 5, has_weak_lifespan = TRUE)
+	var/turf/local_turf = pick(RANGE_TURFS(anomalyrange, anomalycenter) - anomalycenter)
+	if(!local_turf)
+		return
+
+	switch(type)
+		if(ANOMALY_DELIMBER)
+			new /obj/effect/anomaly/delimber(local_turf, null)
+		if(ANOMALY_FLUX)
+			var/explosive = has_weak_lifespan ? ANOMALY_FLUX_NO_EXPLOSION : ANOMALY_FLUX_LOW_EXPLOSIVE
+			new /obj/effect/anomaly/flux(local_turf, has_weak_lifespan ? rand(250, 300) : null, TRUE, explosive)
+		if(ANOMALY_GRAVITATIONAL)
+			new /obj/effect/anomaly/grav(local_turf, has_weak_lifespan ? rand(200, 300) : null)
+		if(ANOMALY_HALLUCINATION)
+			new /obj/effect/anomaly/hallucination(local_turf, has_weak_lifespan ? rand(150, 250) : null)
+		if(ANOMALY_PYRO)
+			new /obj/effect/anomaly/pyro(local_turf, has_weak_lifespan ? rand(150, 250) : null)
+		if(ANOMALY_VORTEX)
+			new /obj/effect/anomaly/bhole(local_turf, 20)
 
 /obj/machinery/power/supermatter_crystal/proc/supermatter_zap(atom/zapstart, range = 3, power)
 	. = zapstart.dir
@@ -882,6 +902,3 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 			supermatter_zap(target_structure, 5, power / 1.5)
 
 #undef HALLUCINATION_RANGE
-#undef GRAVITATIONAL_ANOMALY
-#undef FLUX_ANOMALY
-#undef PYRO_ANOMALY
