@@ -161,7 +161,11 @@
 	var/list/old = hearing_mobs.Copy()
 	hearing_mobs.len = 0
 	var/turf/source = get_turf(parent)
+<<<<<<< HEAD
 	for(var/mob/M in get_hearers_in_view(instrument_range, source))
+=======
+	for(var/mob/M in get_hearers_in_view(instrument_range, source, SEE_INVISIBLE_MAXIMUM))
+>>>>>>> fec19d6152... Rework hearing for INVISIBILITY_MAXIMUM mobs (#7462)
 		hearing_mobs[M] = get_dist(M, source)
 	var/list/exited = old - hearing_mobs
 	for(var/i in exited)
