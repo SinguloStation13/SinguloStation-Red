@@ -4,6 +4,7 @@
 	//- floor_tile is now a path, and not a tile obj
 	name = "floor"
 	icon = 'icons/turf/floors.dmi'
+	var/base_icon_state = "floor"
 	baseturfs = /turf/open/floor/plating
 
 	footstep = FOOTSTEP_FLOOR
@@ -11,18 +12,18 @@
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
-	var/icon_regular_floor = "floor" //used to remember what icon the tile should have by default
-	var/icon_plating = "plating"
 	thermal_conductivity = 0.04
 	heat_capacity = 10000
 	intact = 1
+	tiled_dirt = TRUE
+
+	var/icon_plating = "plating"
 	var/broken = 0
 	var/burnt = 0
 	var/floor_tile = null //tile that this floor drops
 	var/list/broken_states
 	var/list/burnt_states
 
-	tiled_dirt = TRUE
 
 /turf/open/floor/Initialize(mapload)
 
@@ -36,6 +37,7 @@
 	if(!burnt && burnt_states && (icon_state in burnt_states))
 		burnt = TRUE
 	. = ..()
+<<<<<<< HEAD
 	//This is so damaged or burnt tiles or platings don't get remembered as the default tile
 	var/static/list/icons_to_ignore_at_floor_init = list("foam_plating", "plating","light_on","light_on_flicker1","light_on_flicker2",
 					"light_on_clicker3","light_on_clicker4","light_on_clicker5",
@@ -54,6 +56,8 @@
 		icon_regular_floor = "floor"
 	else
 		icon_regular_floor = icon_state
+=======
+>>>>>>> 81e8dc7577... [TG PORT] New titanium tile sprite and titanium tile reskinning (#7318)
 	if(mapload && prob(33))
 		MakeDirty()
 	if(is_station_level(z))
@@ -150,10 +154,8 @@
 		return ..() //fucking turfs switch the fucking src of the fucking running procs
 	if(!ispath(path, /turf/open/floor))
 		return ..()
-	var/old_icon = icon_regular_floor
 	var/old_dir = dir
 	var/turf/open/floor/W = ..()
-	W.icon_regular_floor = old_icon
 	W.setDir(old_dir)
 	W.update_icon()
 	return W
