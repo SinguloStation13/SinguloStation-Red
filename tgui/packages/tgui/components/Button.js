@@ -33,6 +33,7 @@ export const Button = props => {
     children,
     onclick,
     onClick,
+    verticalAlignContent,
     ...rest
   } = props;
   const hasContent = !!(content || children);
@@ -57,6 +58,10 @@ export const Button = props => {
         ellipsis && 'Button--ellipsis',
         circular && 'Button--circular',
         compact && 'Button--compact',
+        iconPosition && 'Button--iconPosition--' + iconPosition,
+        verticalAlignContent && "Button--flex",
+        (verticalAlignContent && fluid) && "Button--flex--fluid",
+        verticalAlignContent && 'Button--verticalAlignContent--' + verticalAlignContent,
         (color && typeof color === 'string')
           ? 'Button--color--' + color
           : 'Button--color--default',
@@ -85,6 +90,7 @@ export const Button = props => {
           return;
         }
       }}
+<<<<<<< HEAD
       {...rest}>
       {icon && (
         <Icon
@@ -95,6 +101,29 @@ export const Button = props => {
       {content}
       {children}
     </Box>
+=======
+      {...computeBoxProps(rest)}>
+      <div className="Button__content">
+        {icon && iconPosition !== 'right' && (
+          <Icon
+            name={icon}
+            rotation={iconRotation}
+            spin={iconSpin}
+          />
+        )}
+        {content}
+        {children}
+        {icon && iconPosition === 'right' && (
+          <Icon
+            name={icon}
+            color={iconColor}
+            rotation={iconRotation}
+            spin={iconSpin}
+          />
+        )}
+      </div>
+    </div>
+>>>>>>> 08a0052005... [TG PORT] Improved decal painters, new tile sprayers + QoL (#7319)
   );
 
   if (tooltip) {
