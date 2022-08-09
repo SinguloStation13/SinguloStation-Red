@@ -49,10 +49,17 @@
 	var/auto_pickup = 1 	// true if auto-pickup at beacon
 	var/report_delivery = 1 // true if bot will announce an arrival to a location.
 
+<<<<<<< HEAD
 	var/obj/item/stock_parts/cell/cell
 	var/bloodiness = 0
 	///The amount of steps we should take until we rest for a time.
 	var/num_steps = 0
+=======
+	var/obj/item/stock_parts/cell/cell /// Internal Powercell
+	var/bloodiness = 0 ///If we've run over a mob, how many tiles will we leave tracks on while moving
+	var/num_steps = 0 ///The amount of steps we should take until we rest for a time.
+	var/network_id = NETWORK_BOTS_CARGO
+>>>>>>> 2abb090528... redo (#7104)
 
 /mob/living/simple_animal/bot/mulebot/Initialize()
 	. = ..()
@@ -66,10 +73,22 @@
 	mulebot_count += 1
 	set_id(suffix || id || "#[mulebot_count]")
 	suffix = null
+<<<<<<< HEAD
 
 /mob/living/simple_animal/bot/mulebot/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/ntnet_interface)
+=======
+	var/datum/component/riding/D = LoadComponent(/datum/component/riding)
+	D.set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(0, 12), TEXT_SOUTH = list(0, 12), TEXT_EAST = list(0, 12), TEXT_WEST = list(0, 12)))
+	D.ride_check_rider_incapacitated = TRUE //so mobs fall off when the vehicle is shot.
+	D.set_vehicle_dir_layer(SOUTH, layer) //vehicles default to ABOVE_MOB_LAYER while moving, let's make sure that doesn't happen while a mob is riding us.
+	D.set_vehicle_dir_layer(NORTH, layer)
+	D.set_vehicle_dir_layer(EAST, layer)
+	D.set_vehicle_dir_layer(WEST, layer)
+	if(network_id)
+		AddComponent(/datum/component/ntnet_interface, network_id)
+>>>>>>> 2abb090528... redo (#7104)
 
 /mob/living/simple_animal/bot/mulebot/Destroy()
 	unload(0)
