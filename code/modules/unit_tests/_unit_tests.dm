@@ -42,6 +42,13 @@
 #include "reagent_recipe_collisions.dm"
 #include "spawn_humans.dm"
 #include "species_whitelists.dm"
+<<<<<<< HEAD
+=======
+#include "greyscale_config.dm"
+#include "metabolizing.dm"
+#include "ntnetwork_tests.dm"
+#include "projectiles.dm"
+>>>>>>> 2abb090528... redo (#7104)
 #include "subsystem_init.dm"
 #include "subsystem_metric_sanity.dm"
 #include "tgui_create_message.dm"
