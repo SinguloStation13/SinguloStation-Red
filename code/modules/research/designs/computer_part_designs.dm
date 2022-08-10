@@ -288,4 +288,17 @@
 	build_path = /obj/item/disk/antivirus/tier4
 	category = list("Computer Parts")
 	lathe_time_factor = 0.2
+<<<<<<< HEAD
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_MEDICAL
+=======
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_MEDICAL
+
+/datum/design/sensorpackage
+	name = "Sensor Package"
+	id = "sensorpackage"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 200, /datum/material/glass = 100, /datum/material/gold = 50, /datum/material/silver = 50)
+	build_path = /obj/item/computer_hardware/sensorpackage
+	category = list("Computer Parts")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+>>>>>>> a8acbd296e... [TG PORT] Gets our Modular PCs (mostly) up to date with TG + small runtime fix (#7338)
