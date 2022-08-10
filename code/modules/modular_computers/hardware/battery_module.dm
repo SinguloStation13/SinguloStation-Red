@@ -16,11 +16,18 @@
 	QDEL_NULL(battery)
 	return ..()
 
+<<<<<<< HEAD
 ///What happens when the battery is removed (or deleted) from the module, through try_eject() or not.
 /obj/item/computer_hardware/battery/Exited(atom/A, atom/newloc)
 	if(A == battery)
 		try_eject(0, null, TRUE)
 	return ..()
+=======
+/obj/item/computer_hardware/battery/handle_atom_del(atom/A)
+	if(A == battery)
+		try_eject(forced = TRUE)
+	. = ..()
+>>>>>>> a8acbd296e... [TG PORT] Gets our Modular PCs (mostly) up to date with TG + small runtime fix (#7338)
 
 /obj/item/computer_hardware/battery/try_insert(obj/item/I, mob/living/user = null)
 	if(!holder)
@@ -46,7 +53,7 @@
 	return TRUE
 
 
-/obj/item/computer_hardware/battery/try_eject(slot=0, mob/living/user = null, forced = 0)
+/obj/item/computer_hardware/battery/try_eject(mob/living/user = null, forced = FALSE)
 	if(!battery)
 		to_chat(user, "<span class='warning'>There is no power cell connected to \the [src].</span>")
 		return FALSE
