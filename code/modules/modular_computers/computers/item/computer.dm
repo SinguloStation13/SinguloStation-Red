@@ -46,7 +46,7 @@
 	var/light_on = FALSE						//If that light is enabled
 	var/comp_light_luminosity = 3				//The brightness of that light
 	var/comp_light_color			//The color of that light
-
+	light_on = FALSE // override behavior from atom so flashlight button is not marked as ON
 
 /obj/item/modular_computer/Initialize()
 	. = ..()
