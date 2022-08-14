@@ -43273,12 +43273,19 @@
 /turf/open/floor/plasteel,
 /area/engine/storage_shared)
 "bzl" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/rnd/production/circuit_imprinter,
+=======
+>>>>>>> 24c39f385f... Engineering Once Again Gets Generic Circuit Imprinters (#7410)
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/rnd/production/circuit_imprinter,
+>>>>>>> 24c39f385f... Engineering Once Again Gets Generic Circuit Imprinters (#7410)
 /turf/open/floor/plasteel,
 /area/engine/storage_shared)
 "bzm" = (

@@ -36996,6 +36996,10 @@
 	},
 /obj/machinery/rnd/production/circuit_imprinter,
 /obj/effect/turf_decal/bot,
+<<<<<<< HEAD
+=======
+/obj/machinery/rnd/production/circuit_imprinter,
+>>>>>>> 24c39f385f... Engineering Once Again Gets Generic Circuit Imprinters (#7410)
 /turf/open/floor/plasteel/dark/corner,
 /area/engine/storage_shared)
 "bvf" = (
