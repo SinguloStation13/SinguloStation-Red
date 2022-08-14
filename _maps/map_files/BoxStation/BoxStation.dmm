@@ -35571,6 +35571,10 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
+=======
+/obj/machinery/rnd/production/circuit_imprinter,
+>>>>>>> 24c39f385f... Engineering Once Again Gets Generic Circuit Imprinters (#7410)
 /turf/open/floor/plasteel/checker,
 /area/engine/break_room)
 "cax" = (
@@ -45666,6 +45670,37 @@
 	dir = 8
 	},
 /area/maintenance/starboard)
+<<<<<<< HEAD
+=======
+"dnD" = (
+/obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/radiation,
+/obj/effect/turf_decal/bot,
+/obj/machinery/camera{
+	c_tag = "Incinerator";
+	network = list("ss13","turbine")
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/disposal/incinerator)
+"dod" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/morgue)
+"doD" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+>>>>>>> 24c39f385f... Engineering Once Again Gets Generic Circuit Imprinters (#7410)
 "doR" = (
 /obj/machinery/door/airlock/research{
 	name = "Xenobiology Lab";
