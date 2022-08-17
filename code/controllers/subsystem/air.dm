@@ -471,8 +471,14 @@ SUBSYSTEM_DEF(air)
 /datum/controller/subsystem/air/proc/setup_template_machinery(list/atmos_machines)
 	if(!initialized) // yogs - fixes randomized bars
 		return // yogs
+<<<<<<< HEAD
 	for(var/A in atmos_machines)
 		var/obj/machinery/atmospherics/AM = A
+=======
+	var/obj/machinery/atmospherics/AM
+	for(var/A in 1 to atmos_machines.len)
+		AM = atmos_machines[A]
+>>>>>>> fd944d79da... Restores missing atmosinit() in setup_template_machinery() (#7511)
 		AM.atmosinit()
 		CHECK_TICK
 
