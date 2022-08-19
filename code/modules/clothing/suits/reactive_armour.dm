@@ -213,6 +213,7 @@
 	desc = "If you can't beat the memes, embrace them."
 	var/tele_range = 10
 
+<<<<<<< HEAD
 /obj/item/clothing/suit/armor/reactive/table/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	if(!active)
 		return FALSE
@@ -244,6 +245,84 @@
 		reactivearmor_cooldown = world.time + reactivearmor_cooldown_duration
 		return TRUE
 	return FALSE
+=======
+/obj/item/clothing/suit/armor/reactive/table/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", damage = 0, attack_type = MELEE_ATTACK)
+	owner.visible_message("<span class='danger'>The reactive teleport system flings [owner] clear of [attack_text] and slams [owner.p_them()] into a fabricated table!</span>")
+	owner.visible_message("<font color='red' size='3'>[owner] GOES ON THE TABLE!!!</font>")
+	owner.Paralyze(40)
+	SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "table", /datum/mood_event/table)
+	do_teleport(teleatom = owner, destination = get_turf(owner), no_effects = TRUE, precision = tele_range, channel = TELEPORT_CHANNEL_BLUESPACE)
+	new /obj/structure/table(get_turf(owner))
+	return TRUE
+
+/obj/item/clothing/suit/armor/reactive/table/emp_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", damage = 0, attack_type = MELEE_ATTACK)
+	owner.visible_message("<span class='danger'>The reactive teleport system flings [owner] clear of [attack_text] and slams [owner.p_them()] into a fabricated glass table!</span>")
+	owner.visible_message("<font color='red' size='3'>[owner] GOES ON THE TABLE!!!</font>")
+	SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "table", /datum/mood_event/table)
+	do_teleport(teleatom = owner, destination = get_turf(owner), no_effects = TRUE, precision = tele_range, channel = TELEPORT_CHANNEL_BLUESPACE)
+	var/obj/structure/table/glass/table = new(get_turf(owner))
+	table.table_shatter(owner)
+	return TRUE
+
+//Hallucinating
+
+/obj/item/clothing/suit/armor/reactive/hallucinating
+	name = "reactive hallucinating armor"
+	desc = "An experimental suit of armor with sensitive detectors hooked up to the mind of the wearer, sending mind pulses that causes hallucinations around you."
+	cooldown_message = "<span class='warning'>The connection is currently out of sync... Recalibrating.</span>"
+	emp_message = "<span class='warning'>You feel the backsurge of a mind pulse.</span>"
+	var/effect_range = 3
+
+/obj/item/clothing/suit/armor/reactive/hallucinating/dropped(mob/user)
+	..()
+	if(istype(user))
+		REMOVE_TRAIT(user, TRAIT_MADNESS_IMMUNE, "reactive_hallucinating_armor")
+
+/obj/item/clothing/suit/armor/reactive/hallucinating/equipped(mob/user, slot)
+	..()
+	if(slot_flags & slot) //Was equipped to a valid slot for this item?
+		ADD_TRAIT(user, TRAIT_MADNESS_IMMUNE, "reactive_hallucinating_armor")
+
+/obj/item/clothing/suit/armor/reactive/hallucinating/cooldown_activation(mob/living/carbon/human/owner)
+	var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
+	sparks.set_up(1, 1, src)
+	sparks.start()
+	..()
+
+/obj/item/clothing/suit/armor/reactive/hallucinating/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	owner.visible_message("<span class='danger'>[src] blocks [attack_text], sending out mental pulses!</span>")
+	var/turf/location = get_turf(owner)
+	if(location)
+		hallucination_pulse(location, effect_range, strength = 25)
+	return TRUE
+
+/obj/item/clothing/suit/armor/reactive/hallucinating/emp_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	owner.visible_message("<span class='danger'>[src] blocks [attack_text], but pulls a massive charge of mental energy into [owner] from the surrounding environment!</span>")
+	owner.hallucination += 25
+	owner.hallucination = clamp(owner.hallucination, 0, 150)
+	return TRUE
+
+//Delimbering
+
+/obj/item/clothing/suit/armor/reactive/delimbering
+	name = "reactive delimbering armor"
+	desc = "An experimental suit of armor with sensitive detectors hooked up to a biohazard release valve. It scrambles the bodies of those around."
+	cooldown_message = "<span class='danger'>The connection is currently out of sync... Recalibrating.</span>"
+	emp_message = "<span class='warning'>You feel the armor squirm.</span>"
+	///Range of the effect.
+	var/range = 4
+
+/obj/item/clothing/suit/armor/reactive/delimbering/cooldown_activation(mob/living/carbon/human/owner)
+	var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
+	sparks.set_up(1, 1, src)
+	sparks.start()
+	return ..()
+
+/obj/item/clothing/suit/armor/reactive/delimbering/reactive_activation(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	owner.visible_message("<span class='danger'>[src] blocks [attack_text], biohazard body scramble released!</span>")
+	delimber_pulse(owner, range, FALSE, TRUE)
+	return TRUE
+>>>>>>> c2dad831d6... Revises a few delimber anomaly features (#7529)
 
 /obj/item/clothing/suit/armor/reactive/table/emp_act()
 	return
