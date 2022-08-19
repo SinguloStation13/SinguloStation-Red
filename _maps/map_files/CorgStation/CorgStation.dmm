@@ -3558,8 +3558,20 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
+=======
+/obj/item/stamp/cmo{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/heads/cmo)
+"aLL" = (
+/obj/machinery/ai_slipper{
+	uses = 10
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/department/science)
@@ -4292,6 +4304,14 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/table/reinforced,
+/obj/item/clothing/gloves/color/fyellow,
+/obj/item/wirecutters,
+/obj/item/clipboard,
+/obj/item/stack/cable_coil/red,
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 /turf/open/floor/plasteel/dark,
 /area/ai_monitored/turret_protected/ai)
 "bbd" = (
@@ -5751,9 +5771,20 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/table/glass,
 /obj/machinery/light{
 	dir = 1
+=======
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/westleft{
+	base_state = "right";
+	dir = 1;
+	icon_state = "right";
+	name = "Cargo Window";
+	pixel_y = 1;
+	req_access_txt = "31"
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	},
 /obj/item/book/manual/wiki/grenades{
 	pixel_y = 3
@@ -7215,7 +7246,24 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/light{
+=======
+/turf/open/floor/plasteel/white,
+/area/science/xenobiology)
+"bNp" = (
+/obj/structure/table/reinforced,
+/obj/item/folder/yellow{
+	pixel_y = 3;
+	pixel_x = -4
+	},
+/obj/effect/turf_decal/tile/brown,
+/obj/item/stamp/quartermaster{
+	pixel_y = -2;
+	pixel_x = 6
+	},
+/obj/effect/turf_decal/tile/brown{
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	dir = 1
 	},
 /obj/item/radio/intercom{
@@ -7256,8 +7304,26 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
+=======
+/obj/item/stamp{
+	pixel_x = 8;
+	pixel_y = 10
+	},
+/obj/item/stamp/denied{
+	pixel_x = 9;
+	pixel_y = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/qm)
+"bNB" = (
+/obj/structure/chair/stool,
+/obj/effect/landmark/start/scientist,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	},
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
@@ -9803,10 +9869,37 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+<<<<<<< HEAD
 "cpI" = (
 /obj/structure/bookcase/random/fiction,
 /obj/machinery/camera/autoname{
 	dir = 1
+=======
+"cDm" = (
+/obj/structure/table,
+/obj/item/paper_bin{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/obj/item/pen/red{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/aicard{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/stamp/research_director{
+	pixel_x = 9;
+	pixel_y = 2
+	},
+/turf/open/floor/plasteel/white,
+/area/crew_quarters/heads/hor)
+"cDp" = (
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12340,12 +12433,21 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 6
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
 "cWF" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/dark/visible{
 	dir = 9
+=======
+/obj/item/folder/yellow{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	},
 /obj/machinery/meter,
 /turf/open/openspace,
@@ -15257,8 +15359,23 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/techmaint{
 	initial_gas_mix = "TEMP=2.7"
+=======
+/obj/effect/turf_decal/tile/neutral,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/item/stamp/hos{
+	pixel_x = 13;
+	pixel_y = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/heads/hos)
+"enz" = (
+/obj/machinery/door/airlock/external{
+	name = "Transport Airlock"
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	},
 /area/space/nearstation)
 "dDC" = (
@@ -27550,6 +27667,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/primary/starboard)
 "gpi" = (
 /obj/machinery/vending/tool,
@@ -27557,6 +27675,24 @@
 /obj/machinery/camera/autoname,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
+=======
+/area/hallway/secondary/service)
+"hVd" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/ecto_sniffer{
+	pixel_y = -3
+	},
+/turf/open/floor/plasteel/dark,
+/area/science/robotics/lab)
+"hVn" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -35055,6 +35191,7 @@
 /turf/open/floor/plasteel/techmaint{
 	initial_gas_mix = "TEMP=2.7"
 	},
+<<<<<<< HEAD
 /area/space/nearstation)
 "idH" = (
 /obj/effect/decal/cleanable/blood/footprints{
@@ -35086,6 +35223,19 @@
 	pixel_y = -32
 	},
 /obj/effect/turf_decal/tile/green{
+=======
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/door/firedoor,
+/turf/open/floor/plating,
+/area/construction/mining/aux_base)
+"jXu" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/quartermaster/office)
+"jXv" = (
+/obj/structure/chair/comfy/black{
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
@@ -38505,6 +38655,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/camera/autoname{
 	dir = 8
@@ -38517,6 +38668,18 @@
 	dir = 4;
 	name = "Chemistry Desk";
 	req_access_txt = "5; 33"
+=======
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/storage)
+"kYB" = (
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	pixel_x = 29;
+	pixel_y = -2
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/white,
@@ -43005,6 +43168,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/structure/window/reinforced/spawner{
 	dir = 4
 	},
@@ -43019,6 +43183,13 @@
 /area/crew_quarters/dorms)
 "kag" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
+=======
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
+"mdf" = (
+/obj/effect/turf_decal/tile/green{
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -44682,7 +44853,17 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
+=======
+/obj/machinery/computer/cargo{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/office)
+"mFB" = (
+/obj/effect/turf_decal/stripes/line{
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -50116,6 +50297,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/siphon/atmos/air_output{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/open/floor/engine/air,
 /area/engine/atmos)
 "lJv" = (
@@ -50125,6 +50307,13 @@
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
+=======
+/turf/open/floor/carpet/royalblue,
+/area/crew_quarters/heads/captain/private)
+"ojz" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -58573,10 +58762,22 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/bar)
 "nNr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+=======
+/turf/open/floor/plasteel/white,
+/area/science/xenobiology)
+"qGQ" = (
+/obj/structure/cable/yellow,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/quartermaster/office)
+"qHh" = (
+/obj/effect/turf_decal/tile/yellow{
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	dir = 4
 	},
 /turf/open/floor/noslip/standard,
@@ -65894,6 +66095,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/science/mixing)
 "pAD" = (
@@ -65907,6 +66109,20 @@
 	req_one_access_txt = "47"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
+=======
+/obj/machinery/computer/bounty{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/office)
+"sRB" = (
+/obj/machinery/suit_storage_unit,
+/obj/effect/turf_decal/stripes/box,
+/turf/open/floor/plating,
+/area/maintenance/fore)
+"sRC" = (
+/obj/effect/turf_decal/tile/blue{
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/line,
@@ -67861,7 +68077,17 @@
 /obj/machinery/door/airlock/public/glass{
 	name = "Funeral Parlour"
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/stripes/line{
+=======
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 2
+	},
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/office)
+"tyX" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -71971,6 +72197,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
+<<<<<<< HEAD
 /obj/machinery/vending/modularpc,
 /turf/open/floor/plasteel,
 /area/storage/tools)
@@ -71978,6 +72205,24 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "atmos";
 	name = "Atmospherics Lockdown"
+=======
+/turf/open/floor/wood,
+/area/crew_quarters/dorms)
+"uIp" = (
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/office)
+"uIs" = (
+/obj/machinery/door/airlock/highsecurity{
+	name = "Gravity Generator Room";
+	req_access_txt = "19;23"
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	},
 /obj/effect/turf_decal/delivery,
 /obj/machinery/door/firedoor,
@@ -83755,8 +84000,17 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/obj/structure/filingcabinet/chestdrawer,
+/turf/open/floor/wood,
+/area/crew_quarters/heads/hop)
+"ybQ" = (
+/obj/effect/turf_decal/tile/purple{
+	dir = 1
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/surgery)
@@ -84049,10 +84303,30 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/primary/fore)
 "tQY" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+=======
+/area/hallway/primary/aft)
+"yfw" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 4
+	},
+/obj/structure/chair/office{
+	dir = 8
+	},
+/obj/effect/landmark/start/cargo_technician,
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/office)
+"yfC" = (
+/turf/open/floor/circuit/green,
+/area/hallway/secondary/entry)
+"yfX" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 	},
 /obj/machinery/door/airlock/research{
 	name = "Nanite Lab";
@@ -204884,6 +205158,7 @@ czn
 czn
 czn
 "}
+<<<<<<< HEAD
 (144,1,2) = {"
 czn
 czn
@@ -205140,6 +205415,264 @@ czn
 czn
 czn
 czn
+=======
+(131,1,1) = {"
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+uLw
+lNs
+kDB
+fgq
+kMU
+rKn
+rKn
+rKn
+nzl
+fyZ
+tPO
+xYZ
+bTr
+rKn
+rKn
+cLa
+eya
+nzl
+duO
+nVR
+nOZ
+alS
+dPZ
+bHp
+xud
+mcA
+alS
+rMP
+rMP
+rMP
+rMP
+rMP
+rMP
+alS
+jwo
+kwb
+ffv
+oyv
+sNc
+eYT
+lju
+nNo
+qIg
+aMT
+amz
+aMT
+aMT
+anT
+anT
+anT
+anT
+anT
+anT
+anT
+anT
+anT
+anT
+fyx
+anT
+anT
+alZ
+ayh
+axb
+afo
+uHP
+lVc
+ssm
+aRL
+atA
+yki
+pfN
+bIG
+jKM
+tSv
+pzb
+tuK
+xZp
+oGx
+oYC
+oGx
+riH
+wNE
+mwV
+hVG
+mea
+qux
+ofD
+iRX
+npE
+frV
+pkM
+pJu
+iQx
+skb
+hVd
+skb
+dLC
+pkM
+aPI
+qLz
+hzU
+fKx
+fKx
+fKx
+hzU
+mkW
+kkW
+gWk
+tUh
+qlq
+alR
+xZC
+wDt
+wDt
+wDt
+wDt
+wDt
+wDt
+wDt
+wDt
+wDt
+xZC
+alR
+kyw
+wDt
+jSf
+mLO
+sYI
+hzU
+hzU
+hzU
+hzU
+hzU
+hzU
+fuh
+hyl
+fuh
+fuh
+djf
+bPC
+jJx
+gXr
+hgw
+nkW
+iaw
+fuh
+fuh
+fuh
+fuh
+fuh
+fhO
+tOL
+mUT
+rUv
+xfz
+fzC
+fhO
+rdA
+rdA
+rdA
+rdA
+vSC
+rdA
+rdA
+rdA
+ybY
+blK
+kWo
+qXE
+iRP
+yeI
+jnS
+wEp
+ewj
+tck
+hlE
+xXa
+aMT
+anT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 "}
 (145,1,2) = {"
 czn
@@ -209510,6 +210043,7 @@ czn
 czn
 czn
 "}
+<<<<<<< HEAD
 (162,1,2) = {"
 czn
 czn
@@ -210280,6 +210814,778 @@ czn
 czn
 czn
 czn
+=======
+(161,1,1) = {"
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+anT
+kiV
+anT
+anT
+qBt
+anT
+anT
+uKT
+rFP
+cpy
+mhR
+uKT
+fbV
+uKT
+anT
+anT
+kPc
+oGB
+vER
+wxj
+sGR
+fAR
+oRA
+qKw
+lIp
+oQc
+fqQ
+tOj
+sBL
+iZn
+tcU
+oRA
+aMT
+aMT
+aMT
+duF
+iFr
+kFE
+wFK
+aMT
+wFK
+jWm
+duF
+duF
+fOv
+fOv
+cfP
+ubx
+nsY
+brR
+txB
+yma
+ubx
+ivK
+ivK
+ivK
+nzt
+vnF
+qdx
+chA
+sDz
+qGQ
+duj
+jzg
+sRy
+mFu
+jXu
+inT
+kKW
+fOs
+bJv
+wSu
+gur
+eTp
+dXf
+wSu
+pcy
+eDc
+soN
+obm
+jPJ
+xSV
+fSH
+vEU
+ifE
+tON
+ngi
+iMn
+pKi
+jen
+ndt
+dxf
+xys
+rDi
+rDi
+dRC
+pLJ
+pLJ
+uax
+pLJ
+pLJ
+kfy
+gbM
+pTS
+vzu
+nRN
+ecf
+pTS
+lhZ
+pLJ
+vDg
+vDg
+vDg
+pXw
+mql
+sGC
+kfy
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+fSL
+fSL
+mEi
+mEi
+fSL
+anT
+anT
+anT
+anT
+dGg
+xqd
+qhU
+aMT
+dGg
+xqd
+qhU
+aMT
+dGg
+xqd
+qhU
+aMT
+anT
+aMT
+kiV
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+"}
+(162,1,1) = {"
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+kiV
+aMT
+aMT
+qBt
+qBt
+qBt
+uKT
+rFP
+rwF
+mhR
+uKT
+arP
+uKT
+aMT
+aMT
+kPc
+fAD
+oEw
+vdd
+xdX
+hbW
+oRA
+oqi
+esn
+tFP
+gvB
+mRY
+eRD
+vAS
+heu
+aFG
+anT
+anT
+anT
+duF
+duF
+xzF
+wFK
+anT
+wFK
+asI
+duF
+aMT
+fOv
+cwf
+cfP
+ubx
+uga
+kDo
+pEy
+clW
+ubx
+ivK
+cUA
+lTv
+wQU
+vnF
+uGY
+bIo
+cog
+ftE
+aVQ
+bfS
+yfw
+atC
+bqW
+tbA
+jwt
+vsm
+cwe
+wSu
+nVC
+lgV
+qqC
+iDv
+loe
+kxf
+hLD
+vFT
+pfo
+pDB
+mUI
+hXj
+nBc
+jDe
+bGz
+jDe
+jDe
+axo
+ndt
+uyh
+kfy
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+kfy
+kRs
+pLJ
+kfy
+gbM
+pLJ
+cnl
+kjG
+kfy
+ijO
+nbg
+pLJ
+wRG
+wRG
+wRG
+qiq
+mql
+ukF
+kfy
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+lOJ
+aMT
+anT
+aMT
+aMT
+aMT
+anT
+qiD
+aMT
+dGg
+xqd
+qhU
+aMT
+dGg
+xqd
+qhU
+aMT
+dGg
+xqd
+qhU
+anT
+anT
+anT
+kiV
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+"}
+(163,1,1) = {"
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+qBt
+uKT
+nXG
+ePD
+mhR
+uKT
+duF
+duF
+hmy
+hmy
+hmy
+wvO
+vnX
+duF
+fCF
+kZp
+oRA
+lhD
+lfy
+tTA
+hjd
+xtB
+shR
+iSk
+oKz
+aFG
+aMT
+aMT
+aMT
+aMT
+aMT
+lrA
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+fOv
+ivK
+trr
+ubx
+sVv
+oKx
+qdv
+wNR
+ubx
+ivK
+nzt
+ivK
+ivK
+vnF
+gOJ
+fyd
+nrr
+ftE
+kNa
+ikJ
+cjv
+uIp
+blL
+tbA
+lqJ
+cVB
+cwe
+wSu
+dWL
+uFW
+dms
+wSu
+ttB
+ojQ
+yco
+gOi
+opp
+fyI
+qlx
+nYo
+koA
+tSD
+lgu
+frF
+pCn
+inN
+weB
+egU
+mVi
+mVi
+mVi
+mVi
+mVi
+mVi
+mVi
+mVi
+mVi
+mVi
+iCW
+nqu
+pLJ
+pLJ
+qyH
+pTS
+bnA
+pLJ
+odo
+wRG
+wRG
+xOu
+mql
+pLJ
+kfy
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+lOJ
+anT
+anT
+anT
+anT
+anT
+anT
+anT
+anT
+dGg
+xqd
+qhU
+aMT
+dGg
+xqd
+qhU
+aMT
+dGg
+xqd
+qhU
+aMT
+aMT
+aMT
+kiV
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+>>>>>>> 7f00948d41... Corg Bureacracy Update (+ Robo Ghost Sniffer) (#7527)
 "}
 (165,1,2) = {"
 czn
