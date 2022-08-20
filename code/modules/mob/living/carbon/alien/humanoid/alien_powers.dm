@@ -121,6 +121,7 @@ Doesn't work on other aliens/AI.*/
 	if(!M)
 		return 0
 	var/amount = input("Amount:", "Transfer Plasma to [M]") as num
+<<<<<<< HEAD
 	if (amount)
 		amount = min(abs(round(amount)), user.getPlasma())
 		if (get_dist(user,M) <= 1)
@@ -131,6 +132,21 @@ Doesn't work on other aliens/AI.*/
 		else
 			to_chat(user, "<span class='noticealien'>You need to be closer!</span>")
 	return
+=======
+	amount = min(abs(round(amount)), user.getPlasma())
+	if(!amount)
+		return FALSE
+
+	if(!user.Adjacent(M))
+		to_chat(user, "<span class='noticealien'>You need to be closer!</span>")
+		return FALSE
+
+	M.adjustPlasma(amount)
+	user.adjustPlasma(-amount)
+	to_chat(M, "<span class='noticealien'>[user] has transferred [amount] plasma to you.</span>")
+	to_chat(user, "<span class='noticealien'>You transfer [amount] plasma to [M]</span>")
+	return TRUE
+>>>>>>> f6639e1d4d... Fixes alien plasma transfer (#7535)
 
 /obj/effect/proc_holder/alien/acid
 	name = "Corrosive Acid"
