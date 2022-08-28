@@ -49,7 +49,11 @@
 	// Makes the trap visible, and starts the cooldown until it's
 	// able to be triggered again.
 	visible_message(flare_message)
+<<<<<<< HEAD
 	if(sparks)
+=======
+	if(sparks && MC_RUNNING())
+>>>>>>> 0700bc30e4... Brings our MC up to date with TG (#7285)
 		spark_system.start()
 	alpha = 200
 	last_trigger = world.time
