@@ -94,6 +94,20 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	//The component to add when swimming
 	var/swimming_component = /datum/component/swimming
 
+<<<<<<< HEAD
+=======
+	//K-Limbs. If a species doesn't have their own limb types. Do not override this, use the K-Limbs overrides at the top of the species datum.
+	var/obj/item/bodypart/species_chest = /obj/item/bodypart/chest
+	var/obj/item/bodypart/species_head = /obj/item/bodypart/head
+	var/obj/item/bodypart/species_l_arm = /obj/item/bodypart/l_arm
+	var/obj/item/bodypart/species_r_arm = /obj/item/bodypart/r_arm
+	var/obj/item/bodypart/species_r_leg = /obj/item/bodypart/r_leg
+	var/obj/item/bodypart/species_l_leg = /obj/item/bodypart/l_leg
+
+	/// if false, having no tongue makes you unable to speak
+	var/speak_no_tongue = TRUE
+
+>>>>>>> 844b84f3bb... IPC loses ability to talk with no tongue/voicebox (#7495)
 ///////////
 // PROCS //
 ///////////
