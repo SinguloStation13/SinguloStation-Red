@@ -60,7 +60,11 @@
 		// FIXME: These flags are now pointless and have no effect
 		handle_whitespace = TRUE,
 		trailing_newline = TRUE)
+<<<<<<< HEAD
 	if(Master.current_runlevel == RUNLEVEL_INIT || !SSchat?.initialized)
+=======
+	if(isnull(Master) || !SSchat?.initialized || !MC_RUNNING(SSchat.init_stage))
+>>>>>>> 0700bc30e4... Brings our MC up to date with TG (#7285)
 		to_chat_immediate(target, html, type, text)
 		return
 	if(!target || (!html && !text))
