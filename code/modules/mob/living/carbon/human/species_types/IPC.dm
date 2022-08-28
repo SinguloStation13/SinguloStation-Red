@@ -42,6 +42,8 @@
 	special_step_sounds = list('sound/effects/servostep.ogg')
 
 	var/datum/action/innate/change_screen/change_screen
+	
+	speak_no_tongue = FALSE  // who stole my soundblaster?! (-candy/etherware)
 
 /datum/species/ipc/random_name(unique)
 	var/ipc_name = "[pick(GLOB.posibrain_names)]-[rand(100, 999)]"
