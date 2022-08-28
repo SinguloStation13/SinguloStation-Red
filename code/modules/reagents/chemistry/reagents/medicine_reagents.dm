@@ -270,7 +270,7 @@
 
 /datum/reagent/medicine/oxandrolone
 	name = "Oxandrolone"
-	description = "Stimulates the healing of severe burns. Extremely rapidly heals severe burns and slowly heals minor ones. Overdose will worsen existing burns."
+	description = "Stimulates the healing of severe burns. Overdosing will double the effectiveness of healing the burns while also dealing toxin and liver damage"
 	reagent_state = LIQUID
 	color = "#f7ffa5"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
@@ -559,7 +559,7 @@
 
 /datum/reagent/medicine/sal_acid
 	name = "Salicyclic Acid"
-	description = "Stimulates the healing of severe bruises. Extremely rapidly heals severe bruising and slowly heals minor ones. Overdose will worsen existing bruising."
+	description = "Stimulates the healing of severe bruises. Overdosing will double the effectiveness of healing the bruises while also dealing toxin and liver damage."
 	reagent_state = LIQUID
 	color = "#D2D2D2"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
@@ -574,7 +574,7 @@
 	. = 1
 
 /datum/reagent/medicine/sal_acid/overdose_process(mob/living/M)
-	M.adjustFireLoss(-3*REM, 0)
+	M.adjustBruteLoss(-3*REM, 0)
 	M.adjustToxLoss(3*REM, 0)
 	M.adjustOrganLoss(ORGAN_SLOT_LIVER, 2)
 	..()
