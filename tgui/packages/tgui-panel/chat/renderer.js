@@ -231,7 +231,11 @@ class ChatRenderer {
     }
   }
 
+<<<<<<< HEAD
   setHighlight(text, color) {
+=======
+  setHighlight(text, color, matchWord, matchCase, highlightSelf) {
+>>>>>>> ed9a36dbd4... make self highlighting for chat a setting (#7520)
     if (!text || !color) {
       this.highlightRegex = null;
       this.highlightColor = null;
@@ -255,6 +259,7 @@ class ChatRenderer {
     }
     this.highlightRegex = new RegExp('(' + lines.join('|') + ')', 'gi');
     this.highlightColor = color;
+    this.highlightSelf = highlightSelf;
   }
 
   setHighContrast(newValue) {
@@ -376,7 +381,8 @@ class ChatRenderer {
           logger.error('Error: message is missing text payload', message);
         }
         // Highlight text
-        if (!message.avoidHighlighting && this.highlightRegex) {
+        if ((!message.avoidHighlighting || this.highlightSelf)
+        && this.highlightRegex) {
           const highlighted = highlightNode(node,
             this.highlightRegex,
             text => (
