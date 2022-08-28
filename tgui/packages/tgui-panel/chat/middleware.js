@@ -118,7 +118,14 @@ export const chatMiddleware = store => {
       const settings = selectSettings(store.getState());
       chatRenderer.setHighlight(
         settings.highlightText,
+<<<<<<< HEAD
         settings.highlightColor);
+=======
+        settings.highlightColor,
+        settings.matchWord,
+        settings.matchCase,
+        settings.highlightSelf);
+>>>>>>> ed9a36dbd4... make self highlighting for chat a setting (#7520)
       chatRenderer.setHighContrast(
         settings.highContrast,
       );

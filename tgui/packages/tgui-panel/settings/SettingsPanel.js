@@ -182,6 +182,12 @@ export const SettingsHighlight = (props, context) => {
   const {
     highlightText,
     highlightColor,
+<<<<<<< HEAD
+=======
+    matchWord,
+    matchCase,
+    highlightSelf,
+>>>>>>> ed9a36dbd4... make self highlighting for chat a setting (#7520)
   } = useSelector(context, selectSettings);
   const dispatch = useDispatch(context);
   return (
@@ -213,6 +219,32 @@ export const SettingsHighlight = (props, context) => {
           onChange={(e, value) => dispatch(updateSettings({
             highlightText: value,
           }))} />
+<<<<<<< HEAD
+=======
+        <Button.Checkbox
+          checked={matchWord}
+          tooltipPosition="bottom-start"
+          tooltip="Not compatible with punctuation."
+          onClick={() => dispatch(updateSettings({
+            matchWord: !matchWord,
+          }))}>
+          Match word
+        </Button.Checkbox>
+        <Button.Checkbox
+          checked={matchCase}
+          onClick={() => dispatch(updateSettings({
+            matchCase: !matchCase,
+          }))}>
+          Match case
+        </Button.Checkbox>
+        <Button.Checkbox
+          checked={highlightSelf}
+          onClick={() => dispatch(updateSettings({
+            highlightSelf: !highlightSelf,
+          }))}>
+          Highlight own Messages
+        </Button.Checkbox>
+>>>>>>> ed9a36dbd4... make self highlighting for chat a setting (#7520)
       </Box>
       <Divider />
       <Box>

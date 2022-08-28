@@ -18,6 +18,12 @@ const initialState = {
   highlightText: '',
   highlightColor: '#ffdd44',
   highContrast: false,
+<<<<<<< HEAD
+=======
+  matchWord: false,
+  matchCase: false,
+  highlightSelf: false,
+>>>>>>> ed9a36dbd4... make self highlighting for chat a setting (#7520)
   view: {
     visible: false,
     activeTab: SETTINGS_TABS[0].id,
