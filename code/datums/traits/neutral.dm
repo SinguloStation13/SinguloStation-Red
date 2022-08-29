@@ -104,5 +104,18 @@
 		quirk_holder.playsound_local(quirk_holder, 'sound/ambience/ambidet1.ogg', 50, FALSE)
 
 /datum/quirk/monochromatic/remove()
+<<<<<<< HEAD
 	if(quirk_holder)
 		quirk_holder.remove_client_colour(/datum/client_colour/monochrome)
+=======
+	quirk_holder.remove_client_colour(/datum/client_colour/monochrome)
+
+/datum/quirk/mute
+	name = "Mute"
+	desc = "You are unable to speak."
+	value = 0
+	mob_trait = TRAIT_MUTE
+	gain_text = "<span class='danger'>You feel unable to talk.</span>"
+	lose_text = "<span class='notice'>You feel able to talk again.</span>"
+	medical_record_text = "Patient is unable to speak."
+>>>>>>> 4de1ed201f... moves the code for the give action to the proper file (#7555)
