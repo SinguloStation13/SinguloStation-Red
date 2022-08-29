@@ -1065,6 +1065,13 @@
 #include "code\game\objects\items\circuitboards\circuitboard.dm"
 #include "code\game\objects\items\circuitboards\computer_circuitboards.dm"
 #include "code\game\objects\items\circuitboards\machine_circuitboards.dm"
+<<<<<<< HEAD
+=======
+#include "code\game\objects\items\colorizers\clothing.dm"
+#include "code\game\objects\items\colorizers\colorizer.dm"
+#include "code\game\objects\items\colorizers\mobs.dm"
+#include "code\game\objects\items\colorizers\items.dm"
+>>>>>>> 89e5eced6e... Transparent PDA colorizer for the BeeCoin store (#7553)
 #include "code\game\objects\items\devices\aicard.dm"
 #include "code\game\objects\items\devices\anomaly_neutralizer.dm"
 #include "code\game\objects\items\devices\antivirus.dm"
