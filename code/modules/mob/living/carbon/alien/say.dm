@@ -1,9 +1,13 @@
 /mob/living/proc/alien_talk(message, shown_name = real_name)
+<<<<<<< HEAD
 	src.log_talk(message, LOG_SAY)
+=======
+>>>>>>> 920eaecd58... Mind-to-mind communication now capitalizes and punctuates (#7505)
 	message = trim(message)
 	if(!message)
 		return
-
+	message = treat_message_min(message)
+	log_talk(message, LOG_SAY)
 	var/message_a = say_quote(message)
 	var/rendered = "<i><span class='alien'>Hivemind, <span class='name'>[shown_name]</span> <span class='message'>[message_a]</span></span></i>"
 	for(var/mob/S in GLOB.player_list)
