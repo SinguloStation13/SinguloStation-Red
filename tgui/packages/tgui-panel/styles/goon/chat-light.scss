@@ -466,7 +466,17 @@ h1.alert, h2.alert		{color: #000000;}
 
 //Job Colours
 //Make sure you add to replacementNodes in renderer.js
+<<<<<<< HEAD
 .unknown {color: #313131}
+=======
+// ----------
+// command
+.rawcommand {color: #7584ad}
+.captain {color: #d8aa53}
+.actingcaptain {color: #cfa962}
+// Service
+.rawservice {color: #6ec959}
+>>>>>>> 8882cbe551... Change chat colour of custom command (#7381)
 .assistant {color: #a1a1a1}
 .atmospherictechnician {color: #d4a07d}
 .bartender {color: #71a073}
