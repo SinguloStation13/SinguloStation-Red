@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 #define SENSORS_UPDATE_PERIOD 100 //How often the sensor data updates.
+=======
+/// How often the sensor data updates.
+#define SENSORS_UPDATE_PERIOD 1 MINUTES
+
+/// The job sorting ID associated with otherwise unknown jobs
+#define UNKNOWN_JOB_ID	81
+>>>>>>> abf767f537... Balances crew monitor (#7369)
 
 /obj/machinery/computer/crew
 	name = "crew monitoring console"
