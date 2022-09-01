@@ -32,11 +32,15 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
+<<<<<<< HEAD:_maps/shuttles/exploration_delta.dmm
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/exploration)
 "g" = (
 /obj/effect/turf_decal/bot,
 /obj/item/storage/toolbox/mechanical,
+=======
+/obj/structure/chair/fancy/shuttle,
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547):_maps/shuttles/exploration/exploration_delta.dmm
 /turf/open/floor/mineral/titanium,
 /area/shuttle/exploration)
 "h" = (
@@ -131,8 +135,17 @@
 /obj/machinery/computer/objective,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/exploration)
+<<<<<<< HEAD:_maps/shuttles/exploration_delta.dmm
 "A" = (
 /obj/effect/turf_decal/stripes/line{
+=======
+"sE" = (
+/obj/machinery/computer/shuttle_flight/custom_shuttle/exploration,
+/turf/open/floor/mineral/plastitanium,
+/area/shuttle/exploration)
+"sT" = (
+/obj/structure/chair/fancy/shuttle{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547):_maps/shuttles/exploration/exploration_delta.dmm
 	dir = 1
 	},
 /obj/structure/cable/yellow{
@@ -154,7 +167,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/structure/chair/comfy/shuttle{
+/obj/structure/chair/fancy/shuttle{
 	dir = 1
 	},
 /turf/open/floor/mineral/titanium,
@@ -165,9 +178,38 @@
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/exploration)
+<<<<<<< HEAD:_maps/shuttles/exploration_delta.dmm
 "F" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
+=======
+"BF" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/chair/fancy/shuttle,
+/turf/open/floor/mineral/titanium,
+/area/shuttle/exploration)
+"CU" = (
+/obj/machinery/atmospherics/components/unary/plasma_refiner{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/exploration)
+"Dl" = (
+/obj/effect/spawner/structure/window/shuttle,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plating,
+/area/shuttle/exploration)
+"DM" = (
+/obj/machinery/door/airlock/shuttle,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/mineral/titanium,
+/area/shuttle/exploration)
+"GH" = (
+/obj/machinery/atmospherics/pipe/manifold/purple/visible{
+	dir = 1
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547):_maps/shuttles/exploration/exploration_delta.dmm
 	},
 /turf/open/floor/mineral/titanium,
 /area/shuttle/exploration)
@@ -193,14 +235,30 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/exploration)
+<<<<<<< HEAD:_maps/shuttles/exploration_delta.dmm
 "I" = (
 /obj/machinery/door/airlock/shuttle,
+=======
+"IQ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
+/obj/structure/chair/fancy/shuttle,
+/turf/open/floor/mineral/titanium,
+/area/shuttle/exploration)
+"IS" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on,
+/turf/open/floor/mineral/titanium,
+/area/shuttle/exploration)
+"KU" = (
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547):_maps/shuttles/exploration/exploration_delta.dmm
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/exploration)
+<<<<<<< HEAD:_maps/shuttles/exploration_delta.dmm
 "J" = (
 /obj/structure/closet/crate,
 /obj/item/circuitboard/computer/exploration_shuttle,
@@ -209,6 +267,16 @@
 /obj/item/mining_scanner,
 /obj/item/radio/headset/headset_exploration,
 /obj/item/radio/headset/headset_exploration,
+=======
+"Nx" = (
+/obj/structure/chair/fancy/shuttle{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	frequency = 1453;
+	pixel_y = -30
+	},
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547):_maps/shuttles/exploration/exploration_delta.dmm
 /obj/machinery/light/small{
 	dir = 8
 	},

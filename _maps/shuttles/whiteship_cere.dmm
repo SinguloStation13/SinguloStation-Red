@@ -376,7 +376,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
 "aW" = (
-/obj/structure/chair/comfy/black,
+/obj/structure/chair/fancy/shuttle,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -412,6 +412,27 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/mineral/titanium/blue,
 /area/shuttle/abandoned)
+<<<<<<< HEAD:_maps/shuttles/whiteship_cere.dmm
+=======
+"bV" = (
+/obj/machinery/door/airlock/titanium{
+	name = "mech bay external airlock"
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/docking_port/mobile{
+	dir = 2;
+	dwidth = 8;
+	dynamic_id = 1;
+	height = 16;
+	id = "whiteship";
+	launch_status = 0;
+	name = "NT Recovery White-Ship";
+	port_direction = 8;
+	width = 16
+	},
+/turf/open/floor/plating,
+/area/shuttle/abandoned)
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547):_maps/shuttles/whiteship/whiteship_cere.dmm
 
 (1,1,1) = {"
 aa

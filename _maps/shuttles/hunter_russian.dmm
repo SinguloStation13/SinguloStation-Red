@@ -13,7 +13,10 @@
 /area/shuttle/hunter)
 "d" = (
 /obj/structure/shuttle/engine/heater{
+<<<<<<< HEAD:_maps/shuttles/hunter_russian.dmm
 	icon_state = "heater";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547):_maps/shuttles/hunter/hunter_russian.dmm
 	dir = 8
 	},
 /obj/structure/window/reinforced{
@@ -83,7 +86,10 @@
 /area/shuttle/hunter)
 "r" = (
 /obj/effect/turf_decal/arrows{
+<<<<<<< HEAD:_maps/shuttles/hunter_russian.dmm
 	icon_state = "arrows";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547):_maps/shuttles/hunter/hunter_russian.dmm
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium/red,
@@ -124,7 +130,10 @@
 /area/shuttle/hunter)
 "z" = (
 /obj/structure/chair{
+<<<<<<< HEAD:_maps/shuttles/hunter_russian.dmm
 	icon_state = "chair";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547):_maps/shuttles/hunter/hunter_russian.dmm
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium/red,
@@ -188,7 +197,6 @@
 /obj/machinery/door/airlock/security/glass,
 /obj/structure/fans/tiny,
 /obj/docking_port/stationary{
-	dir = 1;
 	dwidth = 11;
 	height = 16;
 	id = "pirateship_home";
@@ -197,7 +205,6 @@
 	},
 /obj/docking_port/mobile{
 	dheight = 3;
-	dir = 1;
 	dwidth = 3;
 	height = 13;
 	id = "huntership";
@@ -216,9 +223,7 @@
 /area/shuttle/hunter)
 "N" = (
 /obj/machinery/suit_storage_unit/standard_unit,
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/hunter)
 "Q" = (

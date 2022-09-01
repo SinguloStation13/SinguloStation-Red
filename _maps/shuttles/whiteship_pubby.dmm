@@ -42,7 +42,7 @@
 /turf/open/floor/plating/abductor,
 /area/shuttle/abandoned)
 "i" = (
-/obj/structure/chair/comfy/shuttle,
+/obj/structure/chair/fancy/shuttle,
 /turf/open/floor/plating/abductor,
 /area/shuttle/abandoned)
 "j" = (
@@ -65,7 +65,7 @@
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned)
 "l" = (
-/obj/structure/chair/comfy/shuttle{
+/obj/structure/chair/fancy/shuttle{
 	dir = 4
 	},
 /turf/open/floor/plating/abductor,
@@ -75,7 +75,7 @@
 /turf/open/floor/plating/abductor,
 /area/shuttle/abandoned)
 "n" = (
-/obj/structure/chair/comfy/shuttle{
+/obj/structure/chair/fancy/shuttle{
 	dir = 8
 	},
 /turf/open/floor/plating/abductor,
@@ -110,7 +110,7 @@
 /turf/open/floor/plating/abductor,
 /area/shuttle/abandoned)
 "q" = (
-/obj/structure/chair/comfy/shuttle{
+/obj/structure/chair/fancy/shuttle{
 	dir = 1
 	},
 /turf/open/floor/plating/abductor,
@@ -128,6 +128,26 @@
 /obj/structure/shuttle/engine/propulsion/burst,
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/abandoned)
+<<<<<<< HEAD:_maps/shuttles/whiteship_pubby.dmm
+=======
+"v" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Shuttle Airlock"
+	},
+/obj/docking_port/mobile{
+	dir = 8;
+	dwidth = 4;
+	dynamic_id = 1;
+	height = 9;
+	id = "whiteship";
+	launch_status = 0;
+	name = "White Ship";
+	port_direction = 4;
+	width = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/shuttle/abandoned)
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547):_maps/shuttles/whiteship/whiteship_pubby.dmm
 
 (1,1,1) = {"
 a

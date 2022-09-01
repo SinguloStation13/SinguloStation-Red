@@ -975,4 +975,42 @@
 	reqs = list(/obj/item/paper = 1)
 	category = CAT_MISC
 	tools = list(TOOL_WIRECUTTER)
+<<<<<<< HEAD
 	
+=======
+
+/datum/crafting_recipe/basic_lasso
+	name= "Basic Lasso"
+	result = /obj/item/mob_lasso
+	time = 20
+	reqs = list(/obj/item/stack/sheet/leather = 5)
+	category = CAT_MISC
+
+/datum/crafting_recipe/primal_lasso
+	name= "Primal Lasso"
+	result = /obj/item/mob_lasso/primal
+	always_available = FALSE
+	time = 20
+	reqs = list(/obj/item/stack/sheet/animalhide/goliath_hide = 3)
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/foldable
+	name = "Foldable Chair"
+	result = /obj/item/chair/foldable
+	time = 40
+	reqs = list(/obj/item/stack/rods = 2,
+				/obj/item/stack/sheet/plastic = 1
+				)
+	tools = list(TOOL_WRENCH, TOOL_WIRECUTTER)
+	category = CAT_MISC
+
+/datum/crafting_recipe/chair_fancy
+	name = "Fancy Chair"
+	result = /obj/item/chair/fancy
+	time = 60
+	reqs = list(/obj/item/stack/rods = 2,
+				/obj/item/chair = 1
+				)
+	tools = list(TOOL_WRENCH, TOOL_WIRECUTTER)
+	category = CAT_MISC
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
