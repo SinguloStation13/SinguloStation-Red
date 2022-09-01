@@ -13,6 +13,7 @@
 	var/change_position_cooldown = 30
 	//Jobs you cannot open new positions for
 	var/list/blacklisted = list(
+<<<<<<< HEAD
 		"AI",
 		"Assistant",
 		"Cyborg",
@@ -23,6 +24,19 @@
 		"Research Director",
 		"Chief Medical Officer",
 		"Deputy")
+=======
+		JOB_NAME_AI,
+		JOB_NAME_ASSISTANT,
+		JOB_NAME_CYBORG,
+		JOB_NAME_CAPTAIN,
+		JOB_NAME_HEADOFPERSONNEL,
+		JOB_NAME_HEADOFSECURITY,
+		JOB_NAME_CHIEFENGINEER,
+		JOB_NAME_RESEARCHDIRECTOR,
+		JOB_NAME_CHIEFMEDICALOFFICER,
+		JOB_NAME_BRIGPHYSICIAN,
+		JOB_NAME_DEPUTY)
+>>>>>>> e561c55e4b... ModPC Update V2 (#7551)
 
 	//The scaling factor of max total positions in relation to the total amount of people on board the station in %
 	var/max_relative_positions = 30 //30%: Seems reasonable, limit of 6 @ 20 players
@@ -90,8 +104,6 @@
 			playsound(computer, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
 			return TRUE
 		if("PRG_priority")
-			if(length(SSjob.prioritized_jobs) >= 5)
-				return
 			var/priority_target = params["target"]
 			var/datum/job/j = SSjob.GetJob(priority_target)
 			if(!j)
@@ -101,7 +113,10 @@
 			if(j in SSjob.prioritized_jobs)
 				SSjob.prioritized_jobs -= j
 			else
-				SSjob.prioritized_jobs += j
+				if(length(SSjob.prioritized_jobs) < 5)
+					SSjob.prioritized_jobs += j
+				else
+					computer.say("Error: CentCom employment protocols restrict prioritising more than 5 jobs.")
 			playsound(computer, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
 			return TRUE
 

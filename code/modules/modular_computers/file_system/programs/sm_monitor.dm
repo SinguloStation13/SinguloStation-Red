@@ -75,11 +75,13 @@
 		data["SM_power"] = active.power
 		data["SM_ambienttemp"] = air.return_temperature()
 		data["SM_ambientpressure"] = air.return_pressure()
-		//data["SM_EPR"] = round((air.total_moles / air.group_multiplier) / 23.1, 0.01)
+		data["SM_bad_moles_amount"] = MOLE_PENALTY_THRESHOLD / active.gasefficency
+		data["SM_moles"] = 0
+
 		var/list/gasdata = list()
 
-
 		if(air.total_moles())
+			data["SM_moles"] = air.total_moles()
 			for(var/gasid in air.get_gases())
 				gasdata.Add(list(list(
 				"name"= GLOB.gas_data.names[gasid],

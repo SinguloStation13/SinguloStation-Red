@@ -27,9 +27,19 @@
 	if(roundstart_signaller)
 		sigdev = new
 		sigdev.code = roundstart_signaller_code
+<<<<<<< HEAD
 		sigdev.frequency = roundstart_signaller_freq
 		if(isopenturf(loc))
 			hide(TRUE)
+=======
+		sigdev.set_frequency(roundstart_signaller_freq)
+	if(isopenturf(loc))
+		hide(TRUE)
+	var/static/list/loc_connections = list(
+		COMSIG_ATOM_ENTERED = .proc/on_entered,
+	)
+	AddElement(/datum/element/connect_loc, loc_connections)
+>>>>>>> e561c55e4b... ModPC Update V2 (#7551)
 
 /obj/item/pressure_plate/Crossed(atom/movable/AM)
 	. = ..()

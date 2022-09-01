@@ -479,7 +479,11 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 			if (authenticated == 2)
 				var/t1 = href_list["assign_target"]
 				if(t1 == "Custom")
+<<<<<<< HEAD
 					var/newJob = reject_bad_text(input("Enter a custom job assignment.", "Assignment", modify ? modify.assignment : "Unassigned"), MAX_NAME_LEN)
+=======
+					var/newJob = reject_bad_text(stripped_input("Enter a custom job assignment.", "Assignment", inserted_modify_id ? inserted_modify_id.assignment : "Unassigned"), MAX_NAME_LEN)
+>>>>>>> e561c55e4b... ModPC Update V2 (#7551)
 					if(newJob)
 						t1 = newJob
 						log_id("[key_name(usr)] changed [modify] assignment to [newJob] using [scan] at [AREACOORD(usr)].")
@@ -520,6 +524,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 				to_chat(usr, "<span class='error'>You are not authorized to demote this position.</span>")
 		if ("reg")
 			if (authenticated)
+<<<<<<< HEAD
 				var/t2 = modify
 				if ((authenticated && modify == t2 && (in_range(src, usr) || issilicon(usr)) && isturf(loc)))
 					var/newName = reject_bad_name(href_list["reg"])
@@ -527,6 +532,20 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 						log_id("[key_name(usr)] changed [modify] name to '[newName]', using [scan] at [AREACOORD(usr)].")
 						modify.registered_name = newName
 						playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
+=======
+				var/t2 = inserted_modify_id
+				if ((authenticated && inserted_modify_id == t2 && (in_range(src, usr) || issilicon(usr)) && isturf(loc)))
+					// Sanitize the name first. We're not using the full sanitize_name proc as ID cards can have a wider variety of things on them that
+					// would not pass as a formal character name, but would still be valid on an ID card created by a player.
+					var/new_name = sanitize(href_list["reg"])
+					// However, we are going to reject bad names overall including names with invalid characters in them, while allowing numbers.
+					new_name = reject_bad_name(new_name, allow_numbers = TRUE)
+
+					if(new_name)
+						log_id("[key_name(usr)] changed [inserted_modify_id] name to '[new_name]', using [inserted_scan_id] at [AREACOORD(usr)].")
+						inserted_modify_id.registered_name = new_name
+						playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
+>>>>>>> e561c55e4b... ModPC Update V2 (#7551)
 					else
 						to_chat(usr, "<span class='error'>Invalid name entered.</span>")
 						updateUsrDialog()

@@ -2,6 +2,7 @@
 //Please do not bother them with bugs from this port, however, as it has been modified quite a bit.
 //Modifications include removing the world-ending full supermatter variation, and leaving only the shard.
 
+<<<<<<< HEAD
 #define SUPERMATTER_MAXIMUM_ENERGY 1e6
 
 #define PLASMA_HEAT_PENALTY 15     // Higher == Bigger heat and waste penalty from having the crystal surrounded by this gas. Negative numbers reduce penalty.
@@ -68,6 +69,8 @@
 ///to prevent accent sounds from layering
 #define SUPERMATTER_ACCENT_SOUND_MIN_COOLDOWN 2 SECONDS
 
+=======
+>>>>>>> e561c55e4b... ModPC Update V2 (#7551)
 GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 
 /obj/machinery/power/supermatter_crystal
