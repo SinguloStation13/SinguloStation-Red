@@ -129,9 +129,16 @@
 	desc = "A sect oriented around technology."
 	convert_opener = "May you find peace in a metal shell, acolyte.<br>Bibles now recharge cyborgs and heal robotic limbs if targeted, but they do not heal organic limbs. You can now sacrifice cells, with favor depending on their charge."
 	alignment = ALIGNMENT_NEUT
+<<<<<<< HEAD
 	desired_items = list(/obj/item/stock_parts/cell)
 	rites_list = list(/datum/religion_rites/synthconversion)
 	altar_icon_state = "convertaltar-blue"
+=======
+	desired_items = list(/obj/item/stock_parts/cell = "with battery charge")
+	rites_list = list(/datum/religion_rites/synthconversion, /datum/religion_rites/machine_blessing, /datum/religion_rites/machine_implantation)
+	altar_icon_state = "convertaltar-blue"
+	max_favor = 5000
+>>>>>>> fe254f7a6a... Tweaks to Technophile Sect (#7327)
 
 /datum/religion_sect/technophile/sect_bless(mob/living/L, mob/living/user)
 	if(iscyborg(L))
@@ -185,8 +192,13 @@
 	if(the_cell.charge < 3000)
 		to_chat(L,"<span class='notice'>[GLOB.deity] does not accept pity amounts of power.</span>")
 		return
+<<<<<<< HEAD
 	adjust_favor(round(the_cell.charge/3000), L)
 	to_chat(L, "<span class='notice'>You offer [the_cell]'s power to [GLOB.deity], pleasing them.</span>")
+=======
+	adjust_favor(round(the_cell.charge/100), chap)
+	to_chat(chap, "<span class='notice'>You offer [the_cell]'s power to [GLOB.deity], pleasing them.</span>")
+>>>>>>> fe254f7a6a... Tweaks to Technophile Sect (#7327)
 	qdel(I)
 	return TRUE
 
