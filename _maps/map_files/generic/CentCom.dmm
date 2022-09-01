@@ -824,8 +824,7 @@
 "ja" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom";
-	opacity = 1
+	name = "CentCom"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -918,7 +917,6 @@
 /area/centcom/control)
 "jk" = (
 /obj/machinery/door/poddoor{
-	density = 1;
 	id = "XCCQMLoaddoor2";
 	name = "Supply Dock Loading Door"
 	},
@@ -933,9 +931,7 @@
 /area/centcom/supply)
 "jl" = (
 /obj/structure/plasticflaps,
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "XCCQMLoad2"
@@ -944,13 +940,10 @@
 /area/centcom/supply)
 "jm" = (
 /obj/machinery/door/poddoor{
-	density = 1;
 	id = "XCCQMLoaddoor2";
 	name = "Supply Dock Loading Door"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "XCCQMLoad2"
@@ -1036,7 +1029,6 @@
 	pixel_y = -5
 	},
 /obj/machinery/button/door/indestructible{
-	dir = 2;
 	id = "XCCQMLoaddoor2";
 	layer = 4;
 	name = "Loading Doors";
@@ -1105,7 +1097,6 @@
 /area/centcom/control)
 "jI" = (
 /obj/machinery/door/poddoor{
-	density = 1;
 	id = "XCCQMLoaddoor";
 	name = "Supply Dock Loading Door"
 	},
@@ -1124,14 +1115,11 @@
 	dir = 8;
 	id = "XCCQMLoad"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/supply)
 "jK" = (
 /obj/machinery/door/poddoor{
-	density = 1;
 	id = "XCCQMLoaddoor";
 	name = "Supply Dock Loading Door"
 	},
@@ -1139,9 +1127,7 @@
 	dir = 8;
 	id = "XCCQMLoad"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/supply)
 "jL" = (
@@ -1443,7 +1429,6 @@
 /area/centcom/control)
 "ki" = (
 /obj/docking_port/stationary{
-	dir = 1;
 	dwidth = 25;
 	height = 50;
 	id = "emergency_syndicate";
@@ -1571,7 +1556,7 @@
 /turf/open/floor/plasteel/grimy,
 /area/centcom/control)
 "kA" = (
-/obj/structure/chair/comfy/brown,
+/obj/structure/chair/fancy/comfy,
 /turf/open/floor/plasteel/grimy,
 /area/centcom/control)
 "kB" = (
@@ -1629,9 +1614,8 @@
 /turf/open/floor/plasteel/grimy,
 /area/centcom/control)
 "kG" = (
-/obj/structure/chair/comfy/brown{
-	color = "#596479";
-	dir = 2
+/obj/structure/chair/fancy/comfy{
+	color = "#596479"
 	},
 /turf/open/floor/plasteel/grimy,
 /area/centcom/control)
@@ -1785,19 +1769,14 @@
 "kZ" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/control)
 "la" = (
 /obj/machinery/door/window/brigdoor{
 	base_state = "rightsecure";
-	dir = 2;
-	icon_state = "leftsecure";
 	name = "CentCom Stand";
 	req_access_txt = "109"
 	},
@@ -1833,8 +1812,6 @@
 	},
 /obj/machinery/door/window/brigdoor{
 	base_state = "rightsecure";
-	dir = 2;
-	icon_state = "leftsecure";
 	name = "CentCom Stand";
 	req_access_txt = "109"
 	},
@@ -1852,8 +1829,6 @@
 "lf" = (
 /obj/machinery/door/window/brigdoor{
 	base_state = "rightsecure";
-	dir = 2;
-	icon_state = "leftsecure";
 	name = "CentCom Stand";
 	req_access_txt = "109"
 	},
@@ -1965,7 +1940,7 @@
 /turf/open/floor/plasteel,
 /area/centcom/control)
 "lw" = (
-/obj/structure/chair/comfy/brown{
+/obj/structure/chair/fancy/comfy{
 	buildstackamount = 0;
 	dir = 1
 	},
@@ -2061,12 +2036,9 @@
 "lJ" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Shuttle Control Office";
-	opacity = 1;
 	req_access_txt = "109"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/supply)
 "lK" = (
@@ -2074,9 +2046,7 @@
 	name = "CentCom Supply";
 	req_access_txt = "106"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/supply)
 "lL" = (
@@ -2159,7 +2129,6 @@
 "lT" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -2629,9 +2598,7 @@
 /area/centcom/control)
 "mR" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/control)
 "mS" = (
@@ -3131,7 +3098,7 @@
 /turf/open/floor/plasteel/grimy,
 /area/centcom/control)
 "nO" = (
-/obj/structure/chair/comfy/black{
+/obj/structure/chair/fancy/comfy{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -3163,8 +3130,6 @@
 "nQ" = (
 /obj/machinery/door/window/brigdoor{
 	base_state = "rightsecure";
-	dir = 2;
-	icon_state = "leftsecure";
 	name = "CentCom Stand";
 	req_access_txt = "109"
 	},
@@ -3187,8 +3152,6 @@
 "nR" = (
 /obj/machinery/door/window/brigdoor{
 	base_state = "rightsecure";
-	dir = 2;
-	icon_state = "leftsecure";
 	name = "CentCom Stand";
 	req_access_txt = "109"
 	},
@@ -3639,7 +3602,7 @@
 /turf/open/floor/wood,
 /area/centcom/ferry)
 "oC" = (
-/obj/structure/chair/comfy/brown{
+/obj/structure/chair/fancy/comfy{
 	dir = 4
 	},
 /turf/open/floor/plasteel/grimy,
@@ -3647,12 +3610,6 @@
 "oD" = (
 /obj/structure/table/wood,
 /obj/item/storage/fancy/donut_box,
-/turf/open/floor/plasteel/grimy,
-/area/centcom/ferry)
-"oE" = (
-/obj/structure/chair/comfy/black{
-	dir = 8
-	},
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "oF" = (
@@ -3671,7 +3628,7 @@
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "oH" = (
-/obj/structure/chair/comfy/brown{
+/obj/structure/chair/fancy/comfy{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -3688,7 +3645,6 @@
 "oJ" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Administrative Office";
-	opacity = 1;
 	req_access_txt = "109"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -3707,7 +3663,7 @@
 /turf/open/floor/plasteel/dark,
 /area/centcom/ferry)
 "oK" = (
-/obj/structure/chair/comfy/brown{
+/obj/structure/chair/fancy/comfy{
 	color = "#596479";
 	dir = 1
 	},
@@ -3885,7 +3841,7 @@
 /turf/open/floor/wood,
 /area/centcom/ferry)
 "oZ" = (
-/obj/structure/chair/comfy/black{
+/obj/structure/chair/fancy/comfy{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -3915,7 +3871,7 @@
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "pb" = (
-/obj/structure/chair/comfy/brown{
+/obj/structure/chair/fancy/comfy{
 	dir = 8
 	},
 /turf/open/floor/plasteel/grimy,
@@ -4046,7 +4002,7 @@
 /turf/open/floor/plasteel/dark,
 /area/centcom/control)
 "po" = (
-/obj/structure/chair/comfy/brown{
+/obj/structure/chair/fancy/comfy{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -4062,7 +4018,7 @@
 /turf/open/floor/plasteel/dark,
 /area/centcom/control)
 "pp" = (
-/obj/structure/chair/comfy/black{
+/obj/structure/chair/fancy/comfy{
 	dir = 1
 	},
 /obj/machinery/light,
@@ -4277,7 +4233,6 @@
 "pF" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Auxillary Dock";
-	opacity = 1;
 	req_access_txt = ""
 	},
 /turf/open/floor/plating,
@@ -4464,9 +4419,7 @@
 /area/centcom/supplypod/loading/ert)
 "pY" = (
 /obj/machinery/washing_machine,
-/turf/open/floor/plasteel/freezer{
-	dir = 2
-	},
+/turf/open/floor/plasteel/freezer,
 /area/syndicate_mothership/control)
 "pZ" = (
 /obj/effect/turf_decal/tile/bar,
@@ -4900,20 +4853,15 @@
 	pixel_x = 28
 	},
 /obj/item/mop,
-/turf/open/floor/plasteel/freezer{
-	dir = 2
-	},
+/turf/open/floor/plasteel/freezer,
 /area/syndicate_mothership/control)
 "qQ" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Administrative Office";
-	opacity = 1;
 	req_access_txt = "109"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/ferry)
 "qR" = (
@@ -4923,23 +4871,17 @@
 "qS" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plasteel,
 /area/centcom/supply)
 "qT" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom";
-	opacity = 1
+	name = "CentCom"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plasteel,
 /area/centcom/control)
@@ -5023,14 +4965,10 @@
 /obj/structure/urinal{
 	pixel_y = 28
 	},
-/turf/open/floor/plasteel/freezer{
-	dir = 2
-	},
+/turf/open/floor/plasteel/freezer,
 /area/syndicate_mothership/control)
 "ri" = (
-/turf/open/floor/plasteel/freezer{
-	dir = 2
-	},
+/turf/open/floor/plasteel/freezer,
 /area/syndicate_mothership/control)
 "rj" = (
 /obj/structure/mirror{
@@ -5040,9 +4978,7 @@
 	dir = 4;
 	pixel_x = 11
 	},
-/turf/open/floor/plasteel/freezer{
-	dir = 2
-	},
+/turf/open/floor/plasteel/freezer,
 /area/syndicate_mothership/control)
 "rk" = (
 /obj/structure/table/reinforced,
@@ -5622,7 +5558,6 @@
 /obj/effect/turf_decal/tile/bar,
 /obj/machinery/door/airlock/centcom{
 	name = "Restroom";
-	opacity = 1;
 	req_access_txt = "150"
 	},
 /turf/open/floor/plasteel,
@@ -5645,9 +5580,7 @@
 	name = "Tactical Toilet";
 	opacity = 1
 	},
-/turf/open/floor/plasteel/freezer{
-	dir = 2
-	},
+/turf/open/floor/plasteel/freezer,
 /area/syndicate_mothership/control)
 "sk" = (
 /turf/open/floor/plating/airless,
@@ -5656,16 +5589,8 @@
 /obj/effect/turf_decal/stripes/corner,
 /turf/open/floor/plating/airless,
 /area/syndicate_mothership/control)
-"sm" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
-/turf/open/floor/plating/airless,
-/area/syndicate_mothership/control)
 "sn" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -5754,7 +5679,7 @@
 /turf/open/floor/plasteel/dark,
 /area/centcom/ferry)
 "sx" = (
-/obj/structure/chair/comfy/black,
+/obj/structure/chair/fancy/comfy,
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -32
 	},
@@ -5767,7 +5692,7 @@
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "sy" = (
-/obj/structure/chair/comfy/black,
+/obj/structure/chair/fancy/comfy,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
@@ -5979,7 +5904,6 @@
 "sL" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -6625,7 +6549,7 @@
 /turf/open/floor/plasteel/dark,
 /area/centcom/ferry)
 "up" = (
-/obj/structure/chair/comfy/black{
+/obj/structure/chair/fancy/comfy{
 	dir = 1
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -6634,7 +6558,7 @@
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "uq" = (
-/obj/structure/chair/comfy/black{
+/obj/structure/chair/fancy/comfy{
 	dir = 1
 	},
 /turf/open/floor/plasteel/grimy,
@@ -6819,12 +6743,9 @@
 "uO" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Shuttle Control Office";
-	opacity = 1;
 	req_access_txt = "109"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/ferry)
 "uP" = (
@@ -7179,12 +7100,9 @@
 "vF" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Administrative Office";
-	opacity = 1;
 	req_access_txt = "109"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/ferry)
 "vG" = (
@@ -7570,7 +7488,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -7637,7 +7554,6 @@
 "wC" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Customs";
-	opacity = 1;
 	req_access_txt = "109"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -7669,9 +7585,8 @@
 /turf/open/floor/plasteel/dark,
 /area/centcom/control)
 "wE" = (
-/obj/structure/chair/comfy/brown{
-	color = "#596479";
-	dir = 2
+/obj/structure/chair/fancy/comfy{
+	color = "#596479"
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -7723,8 +7638,7 @@
 "wJ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom";
-	opacity = 1
+	name = "CentCom"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -7806,7 +7720,6 @@
 "wY" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Equipment Room";
-	opacity = 1;
 	req_access_txt = "150"
 	},
 /obj/effect/turf_decal/tile/bar,
@@ -8065,7 +7978,6 @@
 /area/syndicate_mothership/control)
 "xN" = (
 /obj/docking_port/stationary{
-	dir = 1;
 	dwidth = 3;
 	height = 7;
 	name = "escape pod loader";
@@ -8215,7 +8127,6 @@
 "yj" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -8257,12 +8168,9 @@
 "yr" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Briefing Room";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/ferry)
 "ys" = (
@@ -8481,8 +8389,7 @@
 "yU" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom";
-	opacity = 1
+	name = "CentCom"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -8672,7 +8579,6 @@
 "zj" = (
 /obj/structure/closet/secure_closet/ertCom,
 /obj/structure/sign/directions/command{
-	dir = 2;
 	pixel_y = 24
 	},
 /obj/effect/turf_decal/stripes/line,
@@ -8682,9 +8588,7 @@
 /obj/machinery/door/airlock/medical/glass{
 	name = "Infirmary"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/control)
 "zl" = (
@@ -9716,12 +9620,9 @@
 "BM" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/evac)
 "BN" = (
@@ -10034,7 +9935,6 @@
 	icon_state = "plant-22"
 	},
 /obj/machinery/power/apc{
-	dir = 2;
 	name = "Briefing Room APC";
 	pixel_y = -24
 	},
@@ -10992,12 +10892,9 @@
 /area/wizard_station)
 "Eg" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Thunderdome Booth";
-	opacity = 1
+	name = "Thunderdome Booth"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/control)
 "Eh" = (
@@ -11012,8 +10909,7 @@
 /area/wizard_station)
 "Ej" = (
 /obj/vehicle/ridden/scooter/skateboard{
-	dir = 4;
-	icon_state = "skateboard"
+	dir = 4
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/light/small,
@@ -11052,9 +10948,7 @@
 /area/tdome/tdomeobserve)
 "Eq" = (
 /obj/machinery/door/airlock/external,
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/tdome/tdomeobserve)
 "Er" = (
@@ -11154,12 +11048,9 @@
 "EB" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plasteel,
 /area/tdome/tdomeobserve)
@@ -11172,9 +11063,7 @@
 /turf/open/floor/engine/cult,
 /area/wizard_station)
 "ED" = (
-/obj/machinery/vending/boozeomat{
-	req_access_txt = "0"
-	},
+/obj/machinery/vending/boozeomat,
 /turf/closed/indestructible{
 	icon = 'icons/turf/walls/wood_wall.dmi';
 	icon_state = "wood";
@@ -11508,7 +11397,6 @@
 "Fr" = (
 /obj/machinery/door/window/brigdoor{
 	base_state = "rightsecure";
-	dir = 2;
 	icon_state = "rightsecure";
 	name = "Thunderdome Booth";
 	req_access_txt = "109"
@@ -11648,8 +11536,7 @@
 /area/tdome/tdomeobserve)
 "FK" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Thunderdome Backstage";
-	opacity = 1
+	name = "Thunderdome Backstage"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -11906,9 +11793,7 @@
 /area/tdome/tdomeobserve)
 "Gv" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/tdome/tdomeobserve)
 "Gw" = (
@@ -11918,12 +11803,9 @@
 "Gx" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Thunderdome";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/tdome/tdomeobserve)
 "Gy" = (
@@ -12710,12 +12592,9 @@
 "HS" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Thunderdome Locker Room";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/tdome/tdomeobserve)
 "HT" = (
@@ -13063,12 +12942,9 @@
 "Ix" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Thunderdome Administration";
-	opacity = 1;
 	req_access_txt = "102"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plasteel,
 /area/tdome/tdomeadmin)
@@ -13228,9 +13104,7 @@
 /area/tdome/tdomeadmin)
 "IS" = (
 /obj/machinery/door/firedoor,
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/tdome/tdomeadmin)
 "IT" = (
@@ -13623,7 +13497,7 @@
 /area/tdome/tdomeadmin)
 "JQ" = (
 /obj/effect/landmark/thunderdome/admin,
-/obj/structure/chair/comfy/black{
+/obj/structure/chair/fancy/comfy{
 	dir = 1
 	},
 /turf/open/floor/plasteel/grimy,
@@ -13751,7 +13625,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/obj/structure/chair/comfy/brown{
+/obj/structure/chair/fancy/comfy{
 	color = "#66b266";
 	dir = 1
 	},
@@ -13782,7 +13656,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
 	name = "Thunderdome Administration";
-	opacity = 1;
 	req_access_txt = "102"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -14114,7 +13987,25 @@
 	},
 /turf/open/floor/plating/airless,
 /area/centcom/evac)
+<<<<<<< HEAD
 "KL" = (
+=======
+"KM" = (
+/obj/effect/spawner/structure/window/shuttle,
+/turf/open/floor/plating,
+/area/centcom/evac)
+"KN" = (
+/obj/docking_port/stationary{
+	dwidth = 2;
+	height = 7;
+	id = "pod_away";
+	name = "recovery ship";
+	width = 5
+	},
+/turf/open/space/basic,
+/area/space)
+"KP" = (
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /obj/docking_port/stationary{
 	dir = 1;
 	dwidth = 1;
@@ -14156,8 +14047,17 @@
 /turf/open/floor/plating,
 /area/centcom/evac)
 "KR" = (
+<<<<<<< HEAD
 /obj/machinery/light/small{
 	dir = 4
+=======
+/obj/docking_port/stationary{
+	dwidth = 1;
+	height = 4;
+	id = "pod4_away";
+	name = "recovery ship";
+	width = 3
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plating,
 /area/centcom/evac)
@@ -14183,6 +14083,7 @@
 	pixel_x = -2;
 	pixel_y = 4
 	},
+<<<<<<< HEAD
 /obj/item/storage/firstaid/toxin,
 /turf/open/floor/mineral/titanium/blue,
 /area/centcom/evac)
@@ -14195,6 +14096,10 @@
 	},
 /turf/open/floor/mineral/titanium/blue,
 /area/centcom/evac)
+=======
+/turf/open/space/basic,
+/area/space)
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 "KY" = (
 /obj/structure/table,
 /obj/item/storage/firstaid/regular{
@@ -14222,6 +14127,7 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/centcom/evac)
 "Lc" = (
+<<<<<<< HEAD
 /obj/machinery/light{
 	dir = 4
 	},
@@ -14245,6 +14151,11 @@
 "Lg" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/mineral/plastitanium/red,
+=======
+/obj/machinery/door/airlock/titanium,
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /area/centcom/evac)
 "Lh" = (
 /obj/machinery/sleeper{
@@ -14390,9 +14301,14 @@
 /turf/open/floor/mineral/titanium/blue,
 /area/centcom/evac)
 "LF" = (
+<<<<<<< HEAD
 /obj/structure/chair{
 	dir = 4;
 	name = "Prosecution"
+=======
+/obj/structure/chair/fancy/comfy{
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/mineral/titanium,
 /area/centcom/evac)
@@ -14799,12 +14715,9 @@
 "Nk" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Thunderdome";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
@@ -14848,9 +14761,7 @@
 /area/ctf)
 "Nv" = (
 /obj/structure/table,
-/turf/open/floor/plasteel/cafeteria{
-	dir = 2
-	},
+/turf/open/floor/plasteel/cafeteria,
 /area/centcom/holding)
 "Nw" = (
 /obj/machinery/recharge_station,
@@ -14900,12 +14811,9 @@
 "NG" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
@@ -14945,12 +14853,9 @@
 /area/centcom/holding)
 "NU" = (
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom";
-	opacity = 1
+	name = "CentCom"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
@@ -14975,8 +14880,7 @@
 "Oj" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
-	name = "CentCom";
-	opacity = 1
+	name = "CentCom"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -15073,7 +14977,7 @@
 /turf/open/floor/wood,
 /area/centcom/holding)
 "Pj" = (
-/obj/structure/chair/comfy/brown{
+/obj/structure/chair/fancy/comfy{
 	color = "#596479";
 	dir = 4
 	},
@@ -15613,9 +15517,7 @@
 	pixel_x = -3;
 	pixel_y = 6
 	},
-/turf/open/floor/plasteel/cafeteria{
-	dir = 2
-	},
+/turf/open/floor/plasteel/cafeteria,
 /area/centcom/holding)
 "SH" = (
 /obj/structure/closet/secure_closet/personal,
@@ -15920,12 +15822,9 @@
 "Un" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Thunderdome";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plasteel,
 /area/tdome/tdomeobserve)
@@ -15984,7 +15883,6 @@
 "UO" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -16106,7 +16004,6 @@
 "Wc" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -16125,9 +16022,7 @@
 	brightness = 3;
 	dir = 8
 	},
-/turf/open/floor/plasteel/freezer{
-	dir = 2
-	},
+/turf/open/floor/plasteel/freezer,
 /area/syndicate_mothership/control)
 "Wl" = (
 /obj/structure/barricade/security/ctf,
@@ -16168,12 +16063,9 @@
 "WJ" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Thunderdome Administration";
-	opacity = 1;
 	req_access_txt = "102"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
@@ -16188,7 +16080,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -16213,21 +16104,13 @@
 /turf/open/floor/grass,
 /area/centcom/holding)
 "Xe" = (
-/obj/machinery/vending/autodrobe{
-	req_access_txt = "0"
-	},
+/obj/machinery/vending/autodrobe,
 /turf/open/floor/wood,
 /area/centcom/holding)
 "Xh" = (
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/four)
 "Xk" = (
-/turf/open/floor/wood,
-/area/centcom/holding)
-"Xn" = (
-/obj/machinery/door/airlock/wood{
-	req_one_access_txt = "0"
-	},
 /turf/open/floor/wood,
 /area/centcom/holding)
 "Xo" = (
@@ -16247,12 +16130,9 @@
 "Xt" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plasteel,
 /area/centcom/control)
@@ -16380,12 +16260,9 @@
 "Yt" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
@@ -16569,7 +16446,6 @@
 "ZJ" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -16617,12 +16493,9 @@
 "ZX" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Security";
-	opacity = 1;
 	req_access_txt = "101"
 	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
+/obj/effect/turf_decal/stripes/line,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
@@ -38128,7 +38001,7 @@ hl
 hh
 hh
 ku
-sm
+so
 sk
 sk
 sk
@@ -38642,7 +38515,7 @@ hl
 hh
 hh
 ku
-sm
+so
 sk
 sk
 sk
@@ -38899,7 +38772,7 @@ hl
 hh
 hh
 ku
-sm
+so
 sk
 sk
 sk
@@ -42265,7 +42138,7 @@ Nd
 Xk
 Yo
 Xk
-Xn
+XL
 Xk
 Xk
 Tn
@@ -51301,6 +51174,7 @@ aa
 aa
 aa
 aa
+<<<<<<< HEAD
 aa
 aa
 aa
@@ -51311,6 +51185,18 @@ aa
 aa
 aa
 aa
+=======
+LA
+KK
+LF
+LF
+LF
+LF
+LO
+cH
+er
+LA
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 aa
 aa
 aa
@@ -54313,7 +54199,7 @@ ni
 nA
 mD
 oj
-oE
+pb
 pb
 pJ
 qe

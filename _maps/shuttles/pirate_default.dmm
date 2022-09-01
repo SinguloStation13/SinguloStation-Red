@@ -67,7 +67,7 @@
 /turf/template_noop,
 /area/template_noop)
 "ag" = (
-/obj/structure/chair/comfy/shuttle{
+/obj/structure/chair/fancy/shuttle{
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
@@ -153,7 +153,7 @@
 /turf/open/floor/plasteel/dark,
 /area/shuttle/pirate)
 "an" = (
-/obj/structure/chair/comfy/shuttle{
+/obj/structure/chair/fancy/shuttle{
 	dir = 4
 	},
 /obj/machinery/button/door{
@@ -1010,6 +1010,55 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/pod/dark,
 /area/shuttle/pirate)
+<<<<<<< HEAD:_maps/shuttles/pirate_default.dmm
+=======
+"jm" = (
+/obj/machinery/door/airlock/external/glass{
+	id_tag = "piratestarboardexternal";
+	req_access_txt = "180"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/obj/docking_port/mobile/pirate{
+	dwidth = 11;
+	height = 16;
+	launch_status = 0;
+	movement_force = list("KNOCKDOWN" = 0, "THROW" = 0);
+	name = "Pirate Ship";
+	port_direction = 2;
+	width = 17
+	},
+/obj/docking_port/stationary{
+	dwidth = 11;
+	height = 16;
+	id = "pirateship_home";
+	name = "Deep Space";
+	width = 17
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
+/area/shuttle/pirate)
+"jZ" = (
+/obj/machinery/door/airlock/hatch{
+	id_tag = "piratebridgebolt";
+	name = "Bridge";
+	req_access_txt = "180"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/shuttle/pirate)
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547):_maps/shuttles/pirate/pirate_default.dmm
 "km" = (
 /obj/machinery/atmospherics/components/unary/tank/air,
 /obj/effect/turf_decal/bot,
@@ -1042,6 +1091,38 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/shuttle/pirate)
+<<<<<<< HEAD:_maps/shuttles/pirate_default.dmm
+=======
+"oS" = (
+/obj/structure/chair/fancy/shuttle{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/shuttle/pirate)
+"qL" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/door/airlock{
+	name = "Crew Cabin";
+	req_access_txt = "180"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/shuttle/pirate)
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547):_maps/shuttles/pirate/pirate_default.dmm
 "vB" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9

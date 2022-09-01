@@ -1667,6 +1667,7 @@
 	},
 /obj/structure/cable/yellow,
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
 /area/medical/surgery/aux)
 "axN" = (
 /obj/effect/turf_decal/stripes/line,
@@ -1681,6 +1682,11 @@
 /area/science/lab)
 "ayi" = (
 /obj/effect/turf_decal/tile/blue{
+=======
+/area/security/nuke_storage)
+"arI" = (
+/obj/structure/chair/fancy/comfy{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue{
@@ -1828,9 +1834,23 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/secondary/service)
 "aAo" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+=======
+/area/ai_monitored/turret_protected/aisat/foyer)
+"atF" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/obj/machinery/vending/tool,
+/turf/open/floor/plasteel/dark,
+/area/engine/storage_shared)
+"atG" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /turf/open/floor/plating,
@@ -1852,11 +1872,27 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/hallway/upper/primary/fore)
 "aAz" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
+=======
+/turf/open/floor/plasteel/dark,
+/area/engine/engine_smes)
+"atP" = (
+/obj/effect/landmark/start/assistant,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/structure/chair/stool/bar{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
+"atQ" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -1963,12 +1999,21 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/secondary/exit)
 "aBY" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/science/misc_lab/range)
 "aCb" = (
+=======
+/area/quartermaster/storage)
+"avg" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+	},
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
@@ -2438,8 +2483,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engine_room)
+<<<<<<< HEAD
 "aGU" = (
 /obj/effect/turf_decal/stripes/line{
+=======
+"aAY" = (
+/obj/structure/chair/fancy/shuttle{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
@@ -3475,8 +3525,16 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 8
+=======
+/turf/open/floor/engine,
+/area/engine/engine_room)
+"aHr" = (
+/obj/structure/chair/fancy/shuttle{
+	dir = 1
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plating,
 /area/maintenance/solars/port/fore)
@@ -4641,10 +4699,17 @@
 /obj/machinery/door/window/eastleft,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/quartermaster/storage)
 "beM" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
+=======
+/area/hallway/primary/aft)
+"aVo" = (
+/obj/structure/chair/fancy/shuttle{
+	dir = 1
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/light_switch{
 	pixel_x = 26
@@ -5412,7 +5477,11 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/purple{
+=======
+/obj/structure/chair/fancy/comfy{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
@@ -5443,6 +5512,22 @@
 /area/crew_quarters/heads/hop)
 "bqm" = (
 /obj/effect/turf_decal/tile/red{
+<<<<<<< HEAD
+=======
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/turf/open/floor/plasteel/dark,
+/area/security/execution/education)
+"bgy" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666"
+	},
+/turf/open/floor/plating/asteroid,
+/area/maintenance/starboard/secondary)
+"bgF" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/red,
@@ -6165,8 +6250,16 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue,
 /obj/structure/disposalpipe/segment{
+=======
+/turf/open/floor/plasteel/dark,
+/area/security/brig)
+"brg" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
@@ -6184,22 +6277,101 @@
 	},
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/bridge)
 "bAZ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
 /obj/effect/turf_decal/stripes/line{
+=======
+/area/hallway/secondary/exit)
+"bri" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/hallway/secondary/exit/departure_lounge)
+"brm" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/binary/dp_vent_pump/layer2,
+/turf/open/floor/plasteel/dark,
+/area/engine/atmos)
+"brt" = (
+/obj/structure/dresser,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 5
+	},
+/turf/open/floor/carpet/purple,
+/area/crew_quarters/theatre)
+"brJ" = (
+/obj/machinery/atmospherics/pipe/simple/green/visible,
+/obj/structure/lattice/catwalk,
+/turf/open/space/basic,
+/area/space/nearstation)
+"brN" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/maintenance/solars/starboard/aft)
+"brR" = (
+/obj/effect/landmark/start/detective,
+/obj/structure/chair/fancy/comfy{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/security/detectives_office)
+"brS" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"bsa" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
 /area/ai_monitored/security/armory)
 "bBe" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
+=======
+/area/crew_quarters/dorms)
+"bse" = (
+/obj/structure/chair/fancy/sofa/old/left,
+/obj/effect/landmark/start/assistant,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
+"bsg" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/visible,
+/obj/structure/table/reinforced,
+/obj/item/analyzer,
+/obj/item/paper/fluff{
+	info = "We built this so you didn't have to. Made with love.";
+	name = "overseer's note"
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -6588,11 +6760,19 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "bFf" = (
 /obj/effect/turf_decal/tile/yellow{
+=======
+/turf/open/floor/plasteel/white,
+/area/crew_quarters/kitchen)
+"byW" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/yellow{
@@ -6735,7 +6915,25 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/green{
+=======
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
+"bAp" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666"
+	},
+/obj/effect/landmark/start/librarian,
+/turf/open/floor/carpet/green,
+/area/library)
+"bAQ" = (
+/obj/effect/turf_decal/tile/red{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/green,
@@ -7362,6 +7560,7 @@
 	},
 /obj/machinery/vendor/exploration,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/quartermaster/exploration_prep)
 "bME" = (
 /turf/open/floor/plasteel,
@@ -7370,6 +7569,13 @@
 /obj/machinery/photocopier{
 	pixel_x = -2;
 	pixel_y = -3
+=======
+/area/engine/atmos)
+"bIF" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -7621,6 +7827,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/security/main)
 "bPl" = (
@@ -7628,6 +7835,9 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral{
+=======
+/obj/structure/chair/fancy/comfy{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -9176,6 +9386,7 @@
 /obj/effect/turf_decal/tile/green,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/upper/primary/fore)
 "cjh" = (
 /obj/effect/turf_decal/tile/blue,
@@ -9185,6 +9396,24 @@
 /obj/machinery/airalarm/directional/east,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+=======
+/area/hallway/secondary/service)
+"ciD" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/machinery/requests_console{
+	department = "Medical Lobby";
+	pixel_y = 32
+	},
+/obj/structure/chair/fancy/comfy{
+	buildstackamount = 0;
+	color = "#742925"
+	},
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/aft)
 "cjm" = (
@@ -10629,10 +10858,18 @@
 	req_access_txt = "29"
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/science/robotics/lab)
 "cAc" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
+=======
+/area/janitor)
+"cGT" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 1
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -12093,10 +12330,28 @@
 /obj/machinery/light{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "cTE" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+=======
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
+"dfD" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/visible,
+/turf/open/floor/plating,
+/area/hallway/secondary/entry)
+"dfQ" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/green{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/green,
@@ -13653,7 +13908,14 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/brown{
+=======
+/turf/open/floor/plasteel,
+/area/medical/medbay/lobby)
+"dFb" = (
+/obj/structure/chair/fancy/comfy{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/structure/cable/yellow{
@@ -13704,6 +13966,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/office)
 "dmq" = (
@@ -13713,6 +13976,14 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
+=======
+/turf/open/floor/plasteel,
+/area/hallway/primary/fore)
+"dFq" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	pixel_y = 5
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
@@ -14088,10 +14359,25 @@
 /area/library)
 "dpZ" = (
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/space/nearstation)
 "dqe" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 9
+=======
+/area/security/checkpoint/supply)
+"dLB" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+	},
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/open/floor/grass,
+/area/hallway/primary/fore)
+"dLC" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/green{
 	dir = 1
@@ -15169,9 +15455,18 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+=======
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
+"dZj" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
@@ -16231,7 +16526,15 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/yellow{
+=======
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
+"epK" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/layer_manifold{
@@ -16399,12 +16702,26 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/upper/secondary/entry)
 "dSU" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/beer/light{
 	pixel_x = -5;
 	pixel_y = 7
+=======
+/area/engine/atmos)
+"etf" = (
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/qm)
+"etp" = (
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/tile/brown{
+	dir = 1
+	},
+/obj/structure/chair/fancy/comfy{
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/item/reagent_containers/food/drinks/beer{
 	pixel_x = 5;
@@ -16606,7 +16923,22 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+=======
+/turf/open/floor/plasteel,
+/area/hallway/secondary/exit)
+"evW" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666"
+	},
+/turf/open/floor/wood,
+/area/maintenance/port)
+"evX" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor/window,
+/obj/structure/disposalpipe/segment{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/structure/cable/yellow{
@@ -17128,12 +17460,20 @@
 	dir = 10
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/science/robotics/lab)
 "edp" = (
 /obj/structure/table/wood,
 /obj/item/instrument/violin,
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
+=======
+/area/crew_quarters/heads/cmo)
+"eDP" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel/grimy,
 /area/chapel/office)
@@ -17202,8 +17542,20 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
+=======
+/turf/open/floor/plasteel/dark,
+/area/hallway/primary/central)
+"eEV" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666"
+	},
+/obj/effect/landmark/start/head_of_security,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/computer/cargo/request,
 /turf/open/floor/plasteel/white,
@@ -18455,10 +18807,20 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
+<<<<<<< HEAD
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
 "erE" = (
 /obj/effect/turf_decal/tile/yellow{
+=======
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/turf/open/floor/plasteel/dark,
+/area/hallway/secondary/command)
+"fam" = (
+/obj/structure/chair/fancy/bench/pew/left{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/yellow,
@@ -18630,10 +18992,22 @@
 	pixel_y = 4
 	},
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/crew_quarters/fitness/recreation/upper)
 "eto" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
+=======
+/area/ai_monitored/turret_protected/aisat/foyer)
+"fdE" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/plating,
+/area/medical/genetics/cloning)
+"fdJ" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -18965,7 +19339,14 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/yellow{
+=======
+/turf/open/floor/plasteel/grimy,
+/area/chapel/office)
+"fjU" = (
+/obj/structure/chair/fancy/comfy{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/yellow,
@@ -20197,9 +20578,18 @@
 	id = "commissaryshutter";
 	name = "Vacant Commissary Shutter"
 	},
+<<<<<<< HEAD
 /obj/item/paper_bin{
 	pixel_x = -2;
 	pixel_y = 4
+=======
+/turf/open/floor/plasteel/white,
+/area/security/brig)
+"fAN" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/item/pen,
 /turf/open/floor/plasteel,
@@ -21298,8 +21688,13 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+=======
+/obj/structure/chair/fancy/sofa/old/right{
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -23783,8 +24178,29 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
+=======
+/obj/effect/landmark/start/scientist,
+/turf/open/floor/plasteel/white,
+/area/science/research)
+"gEF" = (
+/obj/effect/landmark/start/assistant,
+/obj/structure/disposalpipe/segment,
+/obj/structure/chair/stool/bar{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
+"gEK" = (
+/obj/machinery/door/airlock/research{
+	autoclose = 0;
+	frequency = 1449;
+	id_tag = "xeno_airlock_interior";
+	name = "Xenobiology Lab Internal Airlock";
+	req_access_txt = "55"
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 1
@@ -24324,9 +24740,16 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/primary/central)
 "fGr" = (
 /obj/effect/turf_decal/tile/brown{
+=======
+/area/hallway/secondary/entry)
+"gMF" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/brown{
@@ -25535,12 +25958,19 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/junction,
 /turf/open/floor/plating,
 /area/maintenance/port/central)
 "fRV" = (
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
+=======
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/lobby)
+"hgo" = (
+/obj/structure/chair/fancy/sofa/old/corner/concave{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes/line,
@@ -25844,9 +26274,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/hydroponics)
+<<<<<<< HEAD
 "fVu" = (
 /obj/structure/window/reinforced/spawner{
 	dir = 4
+=======
+"hjd" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/structure/window/reinforced/spawner{
 	dir = 1
@@ -26348,10 +26785,17 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/green{
+=======
+/turf/open/floor/carpet/orange,
+/area/crew_quarters/heads/chief)
+"hqt" = (
+/obj/structure/chair/fancy/comfy{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/green,
@@ -28611,9 +29055,15 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 10
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/freezer,
 /area/medical/virology)
 "gCB" = (
+=======
+/turf/open/floor/plasteel,
+/area/storage/tools)
+"hZC" = (
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
@@ -28621,6 +29071,16 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
+=======
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/structure/chair/fancy/comfy{
+	buildstackamount = 0;
+	color = "#742925"
+	},
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
 "gCG" = (
@@ -29796,8 +30256,17 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 5
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/warehouse)
+"irJ" = (
+/obj/structure/chair/fancy/sofa/old{
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel,
 /area/hallway/upper/primary/port)
@@ -30459,10 +30928,34 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
 /area/engine/storage)
 "gZH" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
+=======
+/area/bridge)
+"iCO" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Cargo Maintenance";
+	req_access_txt = "31"
+	},
+/turf/open/floor/plating,
+/area/quartermaster/storage)
+"iCW" = (
+/obj/machinery/computer/security/qm,
+/turf/open/floor/plasteel,
+/area/maintenance/starboard/aft)
+"iCY" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/holopad,
 /turf/open/floor/plasteel/dark,
@@ -31079,12 +31572,24 @@
 /obj/machinery/light{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/security/courtroom)
 "hgh" = (
 /obj/structure/lattice/catwalk,
 /obj/item/radio/intercom{
 	pixel_y = 24
+=======
+/obj/effect/turf_decal/tile/purple,
+/turf/open/floor/plasteel/white,
+/area/science/xenobiology)
+"iPc" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666"
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 1
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -31212,6 +31717,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/hydroponics)
 "his" = (
@@ -31222,6 +31728,19 @@
 /obj/effect/turf_decal/bot{
 	dir = 1
 	},
+=======
+/turf/open/floor/plasteel/dark,
+/area/gateway)
+"iRh" = (
+/turf/closed/wall/r_wall,
+/area/crew_quarters/heads/hos)
+"iRm" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/hidden,
+/obj/machinery/telecomms/processor/preset_four,
+/turf/open/floor/circuit/telecomms/server,
+/area/tcommsat/server)
+"iRw" = (
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
@@ -31229,7 +31748,17 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue{
+=======
+/obj/structure/chair/fancy/sofa/old{
+	dir = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/lobby)
+"iRC" = (
+/obj/effect/turf_decal/tile/green{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/structure/disposalpipe/trunk{
@@ -31878,10 +32407,24 @@
 	icon_state = "0-4"
 	},
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/maintenance/solars/port/fore)
 "hqn" = (
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
+=======
+/area/hydroponics/garden)
+"iZW" = (
+/obj/machinery/atmospherics/components/unary/outlet_injector/atmos/air_input,
+/turf/open/floor/engine/air,
+/area/engine/atmos)
+"iZX" = (
+/obj/effect/landmark/start/assistant,
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
+	dir = 8
+	},
+/obj/structure/chair/fancy/sofa/old/right{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/green{
@@ -32027,6 +32570,21 @@
 	pixel_y = -32
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
+=======
+/area/medical/cryo)
+"jcB" = (
+/obj/structure/transit_tube,
+/turf/open/space/basic,
+/area/space)
+"jcG" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+	},
+/obj/structure/flora/ausbushes/brflowers,
+/turf/open/floor/grass,
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /area/hallway/primary/fore)
 "hrj" = (
 /obj/effect/turf_decal/tile/neutral,
@@ -32141,8 +32699,19 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
+=======
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
+"jeA" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -32315,6 +32884,10 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/chair/fancy/comfy,
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /turf/open/floor/plasteel,
 /area/hallway/secondary/command)
 "huM" = (
@@ -32875,10 +33448,17 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ai_monitored/storage/eva)
 "hCD" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+=======
+/area/engine/atmos)
+"jtQ" = (
+/obj/structure/chair/fancy/comfy{
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -34178,7 +34758,31 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+=======
+/obj/structure/chair/fancy/comfy,
+/turf/open/floor/plasteel,
+/area/crew_quarters/heads/cmo)
+"jKw" = (
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2,
+/turf/open/floor/plasteel/dark,
+/area/security/execution/education)
+"jKI" = (
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /turf/open/floor/engine,
@@ -34528,6 +35132,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/engine/engine_room)
 "hYu" = (
 /obj/machinery/portable_atmospherics/scrubber,
@@ -34536,6 +35141,15 @@
 "hYB" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 8
+=======
+/area/science/mixing)
+"jPT" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666"
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 1
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
@@ -34958,7 +35572,11 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/yellow{
+=======
+/obj/structure/chair/fancy/sofa/old/left{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/yellow{
@@ -35023,6 +35641,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/door/firedoor,
+<<<<<<< HEAD
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
 /area/medical/sleeper)
@@ -35031,6 +35650,18 @@
 /obj/machinery/microwave{
 	pixel_x = -3;
 	pixel_y = 6
+=======
+/turf/open/floor/plating,
+/area/construction/mining/aux_base)
+"jXu" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/quartermaster/office)
+"jXv" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
@@ -35609,9 +36240,15 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/hos)
+<<<<<<< HEAD
 "ijD" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
+=======
+"kgT" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/blue{
@@ -36646,7 +37283,19 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red{
+=======
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple,
+/obj/structure/lattice/catwalk,
+/turf/open/space/basic,
+/area/space/nearstation)
+"kve" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666"
+	},
+/obj/effect/turf_decal/tile/green{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/structure/cable/yellow{
@@ -38569,6 +39218,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/crew_quarters/bar)
 "iXj" = (
 /obj/structure/cable/yellow{
@@ -38577,6 +39227,12 @@
 /obj/item/radio/intercom{
 	pixel_x = 29;
 	pixel_y = -2
+=======
+/area/medical/storage)
+"kZa" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/structure/closet/crate,
 /obj/effect/spawner/lootdrop/maintenance/two,
@@ -38593,6 +39249,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+/obj/structure/chair/fancy/sofa/old/right,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "iXq" = (
@@ -39136,11 +39793,20 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
 "jfq" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+=======
+/obj/structure/chair/fancy/sofa/old/left{
+	dir = 8
+	},
+/obj/effect/landmark/start/assistant,
+/obj/structure/window/reinforced/spawner{
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -39450,8 +40116,16 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 6
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 6
+=======
+/turf/open/floor/plasteel,
+/area/security/courtroom)
+"lix" = (
+/obj/structure/chair/fancy/sofa/old/left{
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel,
 /area/hallway/upper/secondary/entry)
@@ -40125,12 +40799,25 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel,
 /area/hallway/upper/secondary/service)
 "jrL" = (
 /obj/structure/railing{
 	dir = 4
+=======
+/turf/open/floor/plating,
+/area/science/misc_lab/range)
+"lsi" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
+/turf/open/floor/plating,
+/area/maintenance/starboard/secondary)
+"lsC" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/openspace,
 /area/quartermaster/exploration_prep)
@@ -42612,11 +43299,17 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/hallway/upper/secondary/entry)
 "jVI" = (
 /obj/machinery/light_switch{
 	pixel_x = -25
+=======
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 1
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/fitness/recreation/upper)
@@ -43173,7 +43866,15 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/green{
+=======
+/turf/open/floor/plasteel,
+/area/maintenance/starboard/aft)
+"mes" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -43327,12 +44028,20 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/closet/secure_closet/miner,
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/miningdock)
 "kea" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
+=======
+/turf/open/floor/plasteel,
+/area/hallway/secondary/exit)
+"mgp" = (
+/obj/structure/chair/fancy/bench/pew/right{
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel,
 /area/medical/morgue)
@@ -44080,11 +44789,21 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
 /area/ai_monitored/security/armory)
 "knp" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Security Checkpoint";
 	req_access_txt = "1"
+=======
+/area/maintenance/starboard/secondary)
+"mvn" = (
+/turf/open/floor/carpet/orange,
+/area/crew_quarters/heads/chief)
+"mvC" = (
+/obj/structure/chair/fancy/sofa/old/left{
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -45018,9 +45737,22 @@
 /turf/open/floor/plasteel/techmaint{
 	initial_gas_mix = "TEMP=2.7"
 	},
+<<<<<<< HEAD
 /area/space/nearstation)
 "kyb" = (
 /obj/effect/turf_decal/tile/green{
+=======
+/turf/open/floor/plasteel/white,
+/area/science/explab)
+"mOG" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor/window,
+/turf/open/floor/plating,
+/area/security/courtroom)
+"mOO" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/green{
@@ -45157,6 +45889,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/secondary/exit)
 "kzI" = (
 /obj/effect/landmark/event_spawn,
@@ -45171,6 +45904,16 @@
 "kzL" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 1
+=======
+/area/security/prison)
+"mQn" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 9
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/crude,
@@ -45594,12 +46337,22 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/quartermaster/exploration_prep)
 "kFu" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
+=======
+/turf/open/floor/plasteel/white,
+/area/science/research)
+"mUT" = (
+/obj/structure/chair/fancy/sofa/old/right,
+/obj/effect/landmark/start/assistant,
+/obj/machinery/camera/autoname{
+	dir = 5
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "virology";
@@ -46075,8 +46828,24 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/science/shuttle)
 "kLr" = (
+=======
+/area/quartermaster/storage)
+"ndt" = (
+/turf/closed/wall,
+/area/medical/storage)
+"ndE" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/maintenance/port)
+"ndL" = (
+/obj/effect/turf_decal/tile/green,
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
@@ -46270,9 +47039,25 @@
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
+<<<<<<< HEAD
 /turf/open/openspace,
 /area/hallway/upper/secondary/entry)
 "kOE" = (
+=======
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/turf/open/floor/plating,
+/area/maintenance/starboard/aft)
+"ngu" = (
+/obj/structure/table/reinforced,
+/obj/item/beacon,
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"ngv" = (
+/turf/closed/wall/r_wall,
+/area/science/nanite)
+"ngI" = (
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
@@ -46285,6 +47070,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/chair/fancy/sofa/old,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/lobby)
 "kOQ" = (
@@ -46472,8 +47258,16 @@
 /obj/structure/chair/sofa/right{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/landmark/start/assistant,
 /obj/structure/window/reinforced/spawner{
+=======
+/turf/open/floor/plasteel,
+/area/hallway/primary/central)
+"nkQ" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
@@ -47090,10 +47884,17 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
 /area/medical/virology)
 "lbj" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+=======
+/area/bridge)
+"nsY" = (
+/obj/structure/chair/fancy/comfy{
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -47289,6 +48090,12 @@
 	dir = 4
 	},
 /obj/machinery/light{
+<<<<<<< HEAD
+=======
+	dir = 4
+	},
+/obj/structure/chair/fancy/comfy{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
@@ -48349,8 +49156,17 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/stairs/medium{
 	dir = 1
+=======
+/turf/open/floor/plasteel,
+/area/storage/tools)
+"nIZ" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /area/hallway/secondary/service)
 "lpb" = (
@@ -48496,9 +49312,16 @@
 	dir = 9
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/upper/secondary/service)
 "lqw" = (
 /obj/effect/turf_decal/stripes/line{
+=======
+/area/science/mixing)
+"nLm" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes/line{
@@ -49251,11 +50074,20 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
 "lzA" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+=======
+/turf/open/floor/plasteel,
+/area/ai_monitored/turret_protected/aisat/foyer)
+"nXF" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -49428,12 +50260,24 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
 /obj/machinery/portable_atmospherics/pump,
 /obj/effect/turf_decal/bot,
 /obj/item/radio/intercom{
 	pixel_x = -28;
 	pixel_y = -2
+=======
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
+"obn" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
@@ -50335,7 +51179,14 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+=======
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 1
+	},
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /turf/open/floor/plasteel/dark,
 /area/security/execution/education)
 "lLi" = (
@@ -51590,7 +52441,15 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/visible/layer1{
+=======
+/obj/machinery/door/firedoor,
+/turf/open/floor/carpet/royalblue,
+/area/crew_quarters/heads/captain/private)
+"oKh" = (
+/obj/structure/chair/fancy/sofa/old/right{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/dark/visible{
@@ -52328,9 +53187,19 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
+<<<<<<< HEAD
 "mjl" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 6
+=======
+"oSQ" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/navbeacon{
 	codes_txt = "patrol;next_patrol=hall4";
@@ -52976,8 +53845,20 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
+=======
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2,
+/obj/machinery/door/airlock/external{
+	req_access_txt = "24"
+	},
+/turf/open/floor/plasteel,
+/area/engine/engine_room)
+"pda" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -53783,8 +54664,19 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
+<<<<<<< HEAD
 "mDo" = (
 /obj/effect/turf_decal/tile/neutral{
+=======
+"ply" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 1
+	},
+/turf/closed/wall/r_wall,
+/area/science/mixing)
+"plC" = (
+/obj/structure/chair/fancy/sofa/old/right{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -54223,8 +55115,30 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 5
+=======
+/obj/effect/landmark/start/security_officer,
+/turf/open/floor/plasteel,
+/area/security/brig)
+"prW" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/blue,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/chair/fancy/sofa/old/right{
+	dir = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/lobby)
+"pss" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -54349,6 +55263,7 @@
 /obj/machinery/door/airlock{
 	name = "Unisex Washroom"
 	},
+<<<<<<< HEAD
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/toilet)
@@ -54372,6 +55287,14 @@
 "mLc" = (
 /obj/structure/chair/comfy/black{
 	dir = 8
+=======
+/turf/open/floor/wood,
+/area/crew_quarters/fitness/recreation)
+"puk" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	pixel_y = 5
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/green{
 	dir = 4
@@ -54402,6 +55325,7 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
 /area/engine/atmos)
 "mLp" = (
 /turf/open/openspace,
@@ -54417,6 +55341,15 @@
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
+=======
+/area/science/robotics/lab)
+"puu" = (
+/obj/structure/chair/fancy/brass,
+/obj/item/toy/plush/plushvar,
+/obj/item/paper/fluff{
+	info = "We built this so you didn't have to. Made with love.";
+	name = "overseer's note"
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
@@ -54646,11 +55579,18 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/upper/secondary/service)
 "mOy" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 1
+=======
+/area/quartermaster/storage)
+"pxc" = (
+/obj/structure/chair/fancy/bench/pew/left{
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -55259,7 +56199,21 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/railing{
+=======
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/yellow,
+/turf/open/floor/plasteel,
+/area/medical/chemistry)
+"pJd" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666"
+	},
+/obj/effect/turf_decal/tile/green{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/structure/lattice/catwalk,
@@ -56161,9 +57115,24 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/green,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 8
+=======
+/obj/machinery/door/airlock/external/glass{
+	name = "Escape Pod Alpha"
+	},
+/obj/machinery/atmospherics/pipe/layer_manifold{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/maintenance/department/chapel/monastery)
+"pXw" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
@@ -56375,10 +57344,18 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/chapel/monastery)
 "nkL" = (
 /obj/machinery/light{
+=======
+/turf/open/floor/carpet,
+/area/security/prison)
+"qcn" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/machinery/suit_storage_unit/hos,
@@ -56785,11 +57762,18 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/engine/atmos)
 "nqE" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
+=======
+/area/hallway/primary/aft)
+"qhk" = (
+/obj/structure/chair/fancy/comfy{
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -57336,11 +58320,21 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/science/shuttle)
 "nxC" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
+=======
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel/dark,
+/area/maintenance/department/chapel/monastery)
+"qqq" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
@@ -57691,7 +58685,17 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral{
+=======
+/obj/machinery/holopad,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plasteel,
+/area/engine/storage)
+"qvT" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
@@ -58434,7 +59438,18 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/chair/sofa/left{
+=======
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plasteel/white,
+/area/crew_quarters/kitchen)
+"qLu" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/landmark/start/assistant,
@@ -59308,7 +60323,11 @@
 /obj/structure/railing{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral{
+=======
+/obj/structure/chair/fancy/comfy{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral{
@@ -59700,13 +60719,31 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/closet/secure_closet/miner,
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/miningdock)
+"rjt" = (
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+=======
+/obj/structure/chair/fancy/comfy{
+	buildstackamount = 0;
+	color = "#742925"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/lobby)
+"rjA" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/structure/sink{
@@ -61454,7 +62491,18 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/red{
+=======
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
+"rQV" = (
+/obj/structure/chair/fancy/comfy,
+/turf/open/floor/wood,
+/area/hallway/primary/fore)
+"rQX" = (
+/obj/effect/turf_decal/loading_area{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/red,
@@ -61967,7 +63015,16 @@
 /obj/machinery/camera/autoname{
 	dir = 10
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+=======
+/obj/item/clothing/under/dress/skirt/purple,
+/obj/item/clothing/under/suit/black,
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/fitness/recreation)
+"rVB" = (
+/obj/structure/chair/fancy/bench/pew/right{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /turf/open/floor/engine,
@@ -63174,8 +64231,18 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue,
 /obj/machinery/light{
+=======
+/turf/open/floor/plating,
+/area/tcommsat/relay)
+"snn" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666"
+	},
+/obj/effect/turf_decal/tile/green{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
@@ -63752,8 +64819,24 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
+=======
+/turf/open/floor/plasteel,
+/area/engine/engineering)
+"svy" = (
+/obj/effect/landmark/start/assistant,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/structure/chair/stool/bar{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
+"svB" = (
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -63828,12 +64911,21 @@
 /obj/effect/turf_decal/tile{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/structure/chair/comfy/brown,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/cmo)
 "pbQ" = (
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
+=======
+/obj/effect/turf_decal/tile/green,
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
+"swh" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/brown{
@@ -64385,11 +65477,19 @@
 /obj/structure/railing{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
 "phC" = (
 /obj/machinery/light/small/broken{
 	dir = 1
+=======
+/turf/open/floor/plasteel,
+/area/hallway/primary/aft)
+"sFB" = (
+/obj/structure/chair/fancy/bench/pew/left{
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
@@ -64495,7 +65595,14 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
+=======
+/turf/open/floor/plasteel,
+/area/hallway/secondary/service)
+"sGg" = (
+/obj/effect/turf_decal/tile/blue{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -64511,6 +65618,13 @@
 /obj/machinery/light_switch{
 	pixel_x = 26
 	},
+<<<<<<< HEAD
+=======
+/obj/structure/chair/fancy/sofa/old/left,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/lobby)
+"sGn" = (
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
@@ -67751,12 +68865,18 @@
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space/nearstation)
+<<<<<<< HEAD
 "pWK" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
+=======
+"tHi" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
@@ -67766,7 +68886,18 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/yellow{
+=======
+/obj/structure/chair/fancy/sofa/old/left{
+	dir = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/lobby)
+"tHj" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/yellow{
@@ -67894,8 +69025,15 @@
 	name = "Chemistry Lab";
 	req_access_txt = "5; 33"
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
+=======
+/turf/open/floor/plasteel/dark,
+/area/security/warden)
+"tII" = (
+/obj/structure/chair/fancy/sofa/old/left{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/structure/cable/yellow{
@@ -68625,7 +69763,50 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral,
+=======
+/turf/open/floor/circuit,
+/area/science/robotics)
+"tUq" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666"
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/central)
+"tUv" = (
+/obj/machinery/atmospherics/pipe/manifold/green/visible,
+/obj/item/pipe_dispenser,
+/turf/open/floor/engine,
+/area/engine/engine_room)
+"tUy" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "packageSort2"
+	},
+/obj/structure/plasticflaps,
+/turf/open/floor/plating,
+/area/quartermaster/sorting)
+"tUH" = (
+/obj/machinery/light_switch{
+	pixel_x = 1;
+	pixel_y = -25
+	},
+/turf/open/floor/grass,
+/area/hydroponics/garden)
+"tUJ" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
+	dir = 1
+	},
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space/nearstation)
+"tUL" = (
+/obj/effect/landmark/blobstart,
+/turf/open/floor/wood,
+/area/maintenance/port)
+"tVc" = (
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
@@ -69112,7 +70293,17 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/brown{
+=======
+/turf/open/floor/plasteel,
+/area/medical/morgue)
+"udt" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/chair/fancy/sofa/old/right{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/brown{
@@ -70875,6 +72066,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
+<<<<<<< HEAD
 /area/chapel/main/monastery)
 "qFZ" = (
 /obj/structure/flora/ausbushes/stalkybush,
@@ -70882,6 +72074,12 @@
 /area/crew_quarters/park)
 "qGf" = (
 /obj/machinery/light/small{
+=======
+/area/ai_monitored/turret_protected/aisat_interior)
+"uEi" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -70966,8 +72164,13 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
+=======
+/obj/structure/chair/fancy/comfy{
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel,
 /area/teleporter)
@@ -72162,8 +73365,17 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
+=======
+/turf/open/floor/plasteel/dark,
+/area/maintenance/department/chapel/monastery)
+"uYo" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 1
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = -2;
@@ -72874,8 +74086,17 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/structure/disposalpipe/segment{
 	dir = 4
+=======
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/aft)
+"vqf" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 1
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel,
 /area/hallway/upper/primary/fore)
@@ -73428,11 +74649,23 @@
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
+<<<<<<< HEAD
 /obj/effect/spawner/lootdrop/glowstick/lit,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/aft)
 "rmM" = (
 /obj/effect/turf_decal/tile/green{
+=======
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/holopad,
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
+"vvy" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/green,
@@ -73902,7 +75135,19 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/green/visible{
+=======
+/turf/open/floor/plating,
+/area/science/shuttle)
+"vCC" = (
+/obj/structure/closet/crate,
+/turf/open/floor/plating,
+/area/maintenance/department/bridge)
+"vDg" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
@@ -74407,7 +75652,15 @@
 /obj/machinery/atmospherics/pipe/simple/supply/visible/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
+=======
+/turf/open/floor/plasteel/dark,
+/area/engine/gravity_generator)
+"vIT" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/structure/lattice/catwalk,
@@ -76189,6 +77442,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/hallway/primary/central)
 "rXT" = (
 /turf/open/floor/circuit,
@@ -76196,6 +77450,13 @@
 "rYc" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+=======
+/area/ai_monitored/turret_protected/aisat/foyer)
+"wjg" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
@@ -77182,9 +78443,42 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/security/brig)
 "skq" = (
 /obj/machinery/holopad,
+=======
+/area/maintenance/department/bridge)
+"wuM" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+	},
+/obj/effect/landmark/start/lawyer,
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/lawoffice)
+"wuW" = (
+/obj/effect/turf_decal/tile/purple,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/science/research)
+"wvu" = (
+/obj/machinery/door/airlock/mining{
+	name = "Quartermaster's Office";
+	req_access_txt = "41"
+	},
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
@@ -77571,14 +78865,28 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/maintenance/upper/aft)
 "sqe" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
+=======
+/area/engine/atmos)
+"wAe" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/hidden,
+/obj/machinery/telecomms/processor/preset_two,
+/turf/open/floor/circuit/telecomms/server,
+/area/tcommsat/server)
+"wAw" = (
+/obj/item/radio/intercom{
+	pixel_x = 29;
+	pixel_y = -2
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
@@ -77586,6 +78894,15 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
+=======
+/obj/structure/bed/double,
+/obj/item/bedsheet/captain/double,
+/obj/effect/landmark/start/captain,
+/turf/open/floor/carpet/royalblue,
+/area/crew_quarters/heads/captain/private)
+"wAx" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
@@ -78511,12 +79828,21 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "sCn" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+=======
+/turf/open/floor/plasteel/dark,
+/area/quartermaster/office)
+"wLX" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 4
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -79331,7 +80657,23 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/yellow{
+=======
+/obj/machinery/door/firedoor,
+/turf/open/floor/carpet/purple,
+/area/crew_quarters/theatre)
+"xci" = (
+/obj/effect/landmark/start/assistant,
+/obj/structure/chair/stool/bar{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
+"xco" = (
+/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/turf_decal/tile/brown{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue{
@@ -79571,7 +80913,17 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/stripes/line{
+=======
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/plasteel,
+/area/science/storage)
+"xfz" = (
+/obj/effect/landmark/start/assistant,
+/obj/machinery/airalarm/directional/west,
+/obj/structure/chair/fancy/sofa/old/left{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /turf/open/floor/plasteel,
@@ -80220,12 +81572,21 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel/white,
 /area/medical/chemistry)
 "sXQ" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
+=======
+/turf/open/floor/plasteel/dark,
+/area/maintenance/disposal)
+"xtB" = (
+/obj/structure/chair/fancy/comfy{
+	color = "#666666";
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -80451,7 +81812,14 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+=======
+/turf/open/floor/plasteel,
+/area/hallway/primary/fore)
+"xwj" = (
+/obj/effect/turf_decal/tile/blue{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
@@ -80468,7 +81836,22 @@
 	dir = 8;
 	req_access_txt = "1"
 	},
+<<<<<<< HEAD
 /obj/machinery/door/window{
+=======
+/obj/structure/chair/fancy/comfy{
+	buildstackamount = 0;
+	color = "#742925"
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/lobby)
+"xwH" = (
+/obj/machinery/atmospherics/pipe/manifold4w/purple/visible,
+/turf/open/floor/plasteel,
+/area/engine/atmos)
+"xwJ" = (
+/obj/effect/turf_decal/tile/yellow{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
@@ -81478,8 +82861,17 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
+=======
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/quartermaster/storage)
+"xGu" = (
+/obj/structure/chair/fancy/bench/pew/right{
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment{
@@ -82195,10 +83587,14 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
+<<<<<<< HEAD
 /turf/open/floor/plating,
 /area/medical/virology)
 "tvZ" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
+=======
+/obj/structure/chair/fancy/sofa/old/right{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /turf/open/floor/wood,
@@ -82347,10 +83743,35 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
 	dir = 8
+=======
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/fore)
+"xUr" = (
+/obj/structure/chair/fancy/shuttle{
+	dir = 1
+	},
+/obj/machinery/button/door{
+	id = "bridgewindows";
+	name = "Bridge View Blast doors";
+	pixel_x = 26;
+	pixel_y = 7;
+	req_access_txt = "19"
+	},
+/obj/machinery/button/door{
+	id = "bridgedoors";
+	name = "Bridge Access Blast doors";
+	pixel_x = 38;
+	pixel_y = 7;
+	req_access_txt = "19"
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -208225,6 +209646,7 @@ czn
 czn
 czn
 "}
+<<<<<<< HEAD
 (157,1,2) = {"
 czn
 czn
@@ -208481,6 +209903,264 @@ czn
 czn
 czn
 czn
+=======
+(153,1,1) = {"
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+kiV
+aMT
+aMT
+aMT
+aMT
+qBt
+anT
+vyE
+aOw
+lxK
+bnn
+oAz
+ued
+tCd
+tCd
+bjN
+kDU
+ryY
+fTB
+aYb
+ylA
+fQW
+gvn
+tkG
+vGc
+vgb
+ksE
+ksE
+ksE
+ksE
+ksE
+vgb
+aMT
+ams
+aMT
+anT
+aMT
+anT
+aMT
+aMT
+fub
+aMT
+tTo
+gIX
+nus
+vPu
+pqJ
+nbn
+tTo
+sDM
+gyw
+cSS
+dHi
+xFa
+foZ
+uWc
+sRa
+xyq
+ret
+dwd
+hzZ
+cxY
+cxY
+cxY
+cxY
+cxY
+tUH
+rPk
+oJw
+sqh
+nnp
+iDL
+wur
+qac
+vvO
+prW
+iDL
+sGg
+hFG
+aWs
+iDL
+eia
+urw
+iDL
+pjy
+jLX
+jdP
+wro
+wyV
+wCZ
+lTy
+lGr
+rus
+jqf
+mef
+sbX
+ohH
+vAy
+vAQ
+cnH
+iQU
+sKS
+iaM
+uyh
+pLJ
+pLJ
+sbX
+fLK
+kfy
+pLJ
+pLJ
+pLJ
+pLJ
+pLJ
+jbn
+pLJ
+sag
+kfy
+bsR
+hzy
+avI
+aeV
+aeV
+aeV
+aeV
+aeV
+aeV
+aeV
+aeV
+aeV
+aXM
+uyh
+lOJ
+aMT
+aMT
+anT
+aMT
+dGg
+vkA
+qhU
+aMT
+dGg
+vkA
+qhU
+aMT
+dGg
+vkA
+qhU
+aMT
+aMT
+aMT
+kiV
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+aMT
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 "}
 (158,1,2) = {"
 czn

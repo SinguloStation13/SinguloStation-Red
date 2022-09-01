@@ -4,7 +4,7 @@
 /turf/open/floor/plasteel/dark,
 /area/tdome/arena)
 "b" = (
-/obj/structure/chair/sofa/corner{
+/obj/structure/chair/fancy/sofa/old/corner/concave{
 	color = "#c45c57";
 	dir = 1;
 	icon_state = "sofacorner"
@@ -12,13 +12,13 @@
 /turf/open/floor/wood,
 /area/tdome/arena)
 "c" = (
-/obj/structure/chair/sofa{
+/obj/structure/chair/fancy/sofa/old{
 	color = "#c45c57"
 	},
 /turf/open/floor/wood,
 /area/tdome/arena)
 "d" = (
-/obj/structure/chair/sofa/left{
+/obj/structure/chair/fancy/sofa/old/left{
 	color = "#c45c57"
 	},
 /turf/open/floor/wood,
@@ -28,14 +28,13 @@
 /turf/open/floor/plasteel/dark,
 /area/tdome/arena)
 "f" = (
-/obj/structure/chair/sofa/right{
-	color = "#c45c57";
-	dir = 2
+/obj/structure/chair/fancy/sofa/old/right{
+	color = "#c45c57"
 	},
 /turf/open/floor/wood,
 /area/tdome/arena)
 "g" = (
-/obj/structure/chair/sofa/left{
+/obj/structure/chair/fancy/sofa/old/left{
 	color = "#c45c57"
 	},
 /turf/open/floor/wood{
@@ -43,29 +42,33 @@
 	},
 /area/tdome/arena)
 "h" = (
-/obj/structure/chair/sofa/corner{
-	color = "#c45c57";
-	dir = 2;
-	icon_state = "sofacorner"
+/obj/structure/chair/fancy/sofa/old/corner/concave{
+	color = "#c45c57"
 	},
 /turf/open/floor/wood,
 /area/tdome/arena)
 "i" = (
 /obj/effect/turf_decal/trimline/neutral/filled/corner{
+<<<<<<< HEAD
 	icon_state = "trimline_corner_fill";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
 /area/tdome/arena)
 "j" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
+<<<<<<< HEAD
 	icon_state = "trimline_fill";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 6
 	},
 /turf/open/floor/plasteel/dark,
 /area/tdome/arena)
 "k" = (
-/obj/structure/chair/sofa/right{
+/obj/structure/chair/fancy/sofa/old/right{
 	color = "#c45c57";
 	dir = 4
 	},
@@ -76,7 +79,10 @@
 "l" = (
 /obj/effect/turf_decal/trimline/neutral/filled/corner,
 /obj/effect/turf_decal/trimline/neutral/filled/corner{
+<<<<<<< HEAD
 	icon_state = "trimline_corner_fill";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
@@ -85,10 +91,16 @@
 /turf/open/floor/plasteel/stairs,
 /area/tdome/arena)
 "n" = (
+<<<<<<< HEAD
 /obj/structure/chair/sofa/left{
 	icon_state = "sofaend_left";
 	dir = 8;
 	color = "#c45c57"
+=======
+/obj/structure/chair/fancy/sofa/old/left{
+	color = "#c45c57";
+	dir = 8
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/wood{
 	icon_state = "wood-broken7"
@@ -96,7 +108,10 @@
 /area/tdome/arena)
 "o" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
+<<<<<<< HEAD
 	icon_state = "trimline_fill";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 10
 	},
 /turf/open/floor/plasteel/dark,
@@ -104,11 +119,13 @@
 "p" = (
 /obj/structure/fluff/railing{
 	density = 0;
-	dir = 9;
-	icon_state = "railing"
+	dir = 9
 	},
 /obj/effect/turf_decal/trimline/neutral/filled/line{
+<<<<<<< HEAD
 	icon_state = "trimline_fill";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 9
 	},
 /obj/effect/turf_decal/tile/neutral,
@@ -127,11 +144,13 @@
 "q" = (
 /obj/structure/fluff/railing{
 	density = 0;
-	dir = 1;
-	icon_state = "railing"
+	dir = 1
 	},
 /obj/effect/turf_decal/trimline/neutral/filled/line{
+<<<<<<< HEAD
 	icon_state = "trimline_fill";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral,
@@ -144,7 +163,10 @@
 /area/tdome/arena)
 "r" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
+<<<<<<< HEAD
 	icon_state = "trimline_fill";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral,
@@ -153,10 +175,10 @@
 "s" = (
 /obj/structure/fluff/railing{
 	density = 0;
-	dir = 5;
-	icon_state = "railing"
+	dir = 5
 	},
 /obj/effect/turf_decal/trimline/neutral/filled/line{
+<<<<<<< HEAD
 	icon_state = "trimline_fill";
 	dir = 5
 	},
@@ -169,23 +191,36 @@
 	alpha = 0;
 	dir = 4;
 	icon_state = "plasmarwindow"
+=======
+	dir = 5
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	},
 /turf/open/floor/plasteel/dark,
 /area/tdome/arena)
 "t" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
+<<<<<<< HEAD
 	icon_state = "trimline_fill";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/tdome/arena)
 "u" = (
+<<<<<<< HEAD
 /obj/structure/fluff/railing/corner{
 	icon_state = "railing_corner";
 	dir = 1
 	},
 /obj/effect/turf_decal/trimline/neutral/filled/corner{
 	icon_state = "trimline_corner_fill";
+=======
+/obj/structure/railing/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/neutral/filled/corner{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral,
@@ -199,12 +234,19 @@
 /turf/open/floor/plasteel/dark,
 /area/tdome/arena)
 "w" = (
+<<<<<<< HEAD
 /obj/structure/fluff/railing/corner{
 	icon_state = "railing_corner";
 	dir = 4
 	},
 /obj/effect/turf_decal/trimline/neutral/filled/corner{
 	icon_state = "trimline_corner_fill";
+=======
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/neutral/filled/corner{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral,
@@ -247,18 +289,27 @@
 /area/tdome/arena)
 "E" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
+<<<<<<< HEAD
 	icon_state = "trimline_fill";
 	dir = 8
 	},
 /obj/effect/turf_decal/trimline/neutral/filled/line{
 	icon_state = "trimline_fill";
+=======
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/neutral/filled/line{
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/tdome/arena)
 "F" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line{
+<<<<<<< HEAD
 	icon_state = "trimline_fill";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,

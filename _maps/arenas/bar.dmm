@@ -103,7 +103,10 @@
 	},
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/stripes/line{
+<<<<<<< HEAD
 	icon_state = "warningline";
+=======
+>>>>>>> 9a035f9365... [MDB IGNORE] The chair desouling and restructuring update (alongside some other changes) (#7547)
 	dir = 8
 	},
 /turf/open/floor/plasteel,
@@ -114,8 +117,7 @@
 	},
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/stripes/line{
-	dir = 4;
-	icon_state = "warningline"
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/tdome/arena)
@@ -133,7 +135,9 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/bar,
-/obj/structure/chair/stool/bar,
+/obj/structure/chair/stool/bar{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/tdome/arena)
 "o" = (
