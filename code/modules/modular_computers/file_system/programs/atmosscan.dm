@@ -18,13 +18,22 @@
 		var/pressure = environment.return_pressure()
 		var/total_moles = environment.total_moles()
 		data["AirPressure"] = round(pressure,0.1)
-		data["AirTemp"] = round(environment.return_temperature()-T0C)
+		data["AirTempC"] = round(environment.return_temperature() - T0C)
+		data["AirTempK"] = round(environment.return_temperature())
 		if (total_moles)
 			for(var/id in environment.get_gases())
 				var/gas_level = environment.get_moles(id)/total_moles
 				if(gas_level > 0)
 					airlist += list(list("name" = "[GLOB.gas_data.names[id]]", "percentage" = round(gas_level*100, 0.01)))
 		data["AirData"] = airlist
+<<<<<<< HEAD
+=======
+	else
+		data["AirPressure"] = 0
+		data["AirTempC"] = 0
+		data["AirTempK"] = 0
+		data["AirData"] = list(list())
+>>>>>>> e561c55e4b... ModPC Update V2 (#7551)
 	return data
 
 /datum/computer_file/program/atmosscan/ui_act(action, list/params)

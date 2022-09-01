@@ -73,7 +73,13 @@ const Program = (props, context) => {
     downloadcompletion,
     downloading,
     downloadname,
+<<<<<<< HEAD
     downloadsize,
+=======
+    downloadcompletion,
+    emagged,
+    id_inserted,
+>>>>>>> e561c55e4b... ModPC Update V2 (#7551)
   } = data;
   const disk_free = disk_size - disk_used;
   return (
@@ -93,6 +99,7 @@ const Program = (props, context) => {
               maxValue={downloadsize}
               value={downloadcompletion} />
           ) || (
+<<<<<<< HEAD
             <Button
               fluid
               icon="download"
@@ -101,6 +108,37 @@ const Program = (props, context) => {
               onClick={() => act('PRG_downloadfile', {
                 filename: program.filename,
               })} />
+=======
+            (!program.installed
+              && program.compatible
+              && program.access
+              && program.size < disk_free) && (
+              <Button
+                bold
+                icon="download"
+                content="Download"
+                disabled={downloading}
+                tooltipPosition="left"
+                tooltip={!!downloading && ('Awaiting download completion...')}
+                onClick={() => act('PRG_downloadfile', {
+                  filename: program.filename,
+                })} />
+            ) || (
+              <Button
+                bold
+                icon={program.installed ? 'check' : 'times'}
+                color={
+                  program.installed ? 'good'
+                    : !program.compatible ? 'bad' : null
+                }
+                disabled={!program.installed && program.compatible}
+                content={
+                  program.installed ? 'Installed'
+                    : !program.compatible ? 'Incompatible'
+                      : !program.access ? (id_inserted ? 'No Access' : "Insert ID") : 'No Space'
+                } />
+            )
+>>>>>>> e561c55e4b... ModPC Update V2 (#7551)
           )}
         </Flex.Item>
       </Flex>

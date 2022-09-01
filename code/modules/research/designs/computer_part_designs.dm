@@ -288,4 +288,26 @@
 	build_path = /obj/item/disk/antivirus/tier4
 	category = list("Computer Parts")
 	lathe_time_factor = 0.2
+<<<<<<< HEAD
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_MEDICAL
+=======
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_MEDICAL
+
+/datum/design/sensorpackage
+	name = "Sensor Package"
+	id = "sensorpackage"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 200, /datum/material/glass = 100, /datum/material/gold = 50, /datum/material/silver = 50)
+	build_path = /obj/item/computer_hardware/sensorpackage
+	category = list("Computer Parts")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+
+/datum/design/signaler_part
+	name = "Integrated Signaler"
+	id = "signalpart"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 400, /datum/material/glass = 100)
+	build_path = /obj/item/computer_hardware/radio_card
+	category = list("Computer Parts")
+	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
+>>>>>>> e561c55e4b... ModPC Update V2 (#7551)
