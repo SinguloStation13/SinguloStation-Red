@@ -148,9 +148,17 @@
 	outfit = /datum/outfit/job/gimmick/celebrity
 	access = list(ACCESS_MAINT_TUNNELS) //Assistants with shitloads of money, what could go wrong?
 	minimal_access = list(ACCESS_MAINT_TUNNELS)
+<<<<<<< HEAD
 	gimmick = TRUE
 	paycheck = PAYCHECK_VIP //our power is being fucking rich
 	chat_color = "#ebc96b"
+=======
+	paycheck = PAYCHECK_VIP  //our power is being fucking rich
+	paycheck_department = ACCOUNT_VIP //budget will never dry
+
+	departments = DEPARTMENT_BITFLAG_SERVICE // might need to be changed
+	rpg_title = "Master of Patronage"
+>>>>>>> 2ee586c7bc... VIP gets their own department budget than the civilian budget, and gets paid from it. (+department account lock feature) (#7330)
 
 	species_outfits = list(
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/vip

@@ -721,6 +721,86 @@ update_label("John Doe", "Clowny")
 	department_ID = ACCOUNT_SEC
 	department_name = ACCOUNT_SEC_NAME
 	icon_state = "budget_sec"
+<<<<<<< HEAD
+=======
+	hud_state = JOB_HUD_RAWSECURITY
+
+// This will never be spawned, but should be trackable by admins anyway.
+/obj/item/card/id/departmental_budget/vip
+	department_ID = ACCOUNT_VIP
+	department_name = ACCOUNT_VIP_NAME
+	icon_state = "budget"
+	hud_state = JOB_HUD_VIP
+
+/// Job Specific ID Cards///
+// These should have default job name and hud state, etc, because chameleon card needs such information
+// ---- Command ----
+/obj/item/card/id/job/captain
+	name = "Job card (Com) - Captain"
+	icon_state = "captain"
+	assignment = JOB_NAME_CAPTAIN
+	hud_state = JOB_HUD_CAPTAIN
+
+/obj/item/card/id/job/rawcommand
+	name = "Job card (Com) - Custom"
+	icon_state = JOB_HUD_RAWCOMMAND
+	hud_state = JOB_HUD_RAWCOMMAND
+
+// ---- Service ----
+/obj/item/card/id/job/assistant
+	name = "Job card (Serv) - Assistant"
+	icon_state = "id"
+	assignment = JOB_NAME_ASSISTANT
+	hud_state = JOB_HUD_ASSISTANT
+
+/obj/item/card/id/job/head_of_personnel
+	name = "Job card (Serv) - HoP"
+	icon_state = "hop"
+	assignment = JOB_NAME_HEADOFPERSONNEL
+	hud_state = JOB_HUD_HEADOFPERSONNEL
+
+/obj/item/card/id/job/botanist
+	name = "Job card (Serv) - Botanist"
+	icon_state = "serv"
+	assignment = JOB_NAME_BOTANIST
+	hud_state = JOB_HUD_BOTANIST
+
+/obj/item/card/id/job/cook
+	name = "Job card (Serv) - Cook"
+	icon_state = "serv"
+	assignment = JOB_NAME_COOK
+	hud_state = JOB_HUD_COOK
+
+/obj/item/card/id/job/bartender
+	name = "Job card (Serv) - Bartender"
+	icon_state = "serv"
+	assignment = JOB_NAME_BARTENDER
+	hud_state = JOB_HUD_BARTENDER
+
+/obj/item/card/id/job/barber
+	name = "Job card (Serv) - Barber"
+	icon_state = "serv"
+	assignment = JOB_NAME_BARBER
+	hud_state = JOB_HUD_BARBER
+
+/obj/item/card/id/job/stage_magician
+	name = "Job card (Serv) - Magician"
+	icon_state = "serv"
+	assignment = JOB_NAME_STAGEMAGICIAN
+	hud_state = JOB_HUD_STAGEMAGICIAN
+
+/obj/item/card/id/job/curator
+	name = "Job card (Serv) - Curator"
+	icon_state = "chap"
+	assignment = JOB_NAME_CURATOR
+	hud_state = JOB_HUD_CURATOR
+
+/obj/item/card/id/job/chaplain
+	name = "Job card (Serv) - Chaplain"
+	icon_state = "chap"
+	assignment = JOB_NAME_CHAPLAIN
+	hud_state = JOB_HUD_CHAPLAIN
+>>>>>>> 2ee586c7bc... VIP gets their own department budget than the civilian budget, and gets paid from it. (+department account lock feature) (#7330)
 
 ///Job Specific ID Cards///
 

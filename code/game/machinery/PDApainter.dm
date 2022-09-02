@@ -220,7 +220,19 @@
 					return
 				if(!storedid)//is the ID still there?
 					return
+<<<<<<< HEAD
 				storedid.icon_state = id_icons[newidskin]
+=======
+				storedid.icon_state = get_cardstyle_by_jobname(newidskin)
+				storedid.hud_state = get_hud_by_jobname(newidskin)
+
+				// QoL to correct the system behavior
+				if(storedid.registered_account)
+					if(!storedid.registered_account.department_locked)
+						storedid.registered_account.account_department = get_department_by_hud(storedid.hud_state) // your true department by your hud icon color
+				GLOB.data_core.manifest_modify(storedid.registered_name, storedid.assignment, storedid.hud_state) // update crew manifest
+				// There are the same code lines in `card.dm`
+>>>>>>> 2ee586c7bc... VIP gets their own department budget than the civilian budget, and gets paid from it. (+department account lock feature) (#7330)
 				ejectid()
 		else
 			to_chat(user, "<span class='notice'>[src] is empty.</span>")
