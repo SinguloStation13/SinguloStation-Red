@@ -1,3 +1,4 @@
+#define DEPARTMENT_LOCKED_JOBS list("VIP", "Captain", "Head of Security")
 #define DUMPTIME 3000
 
 /datum/bank_account
@@ -14,6 +15,7 @@
 	var/welfare = FALSE
 	var/being_dumped = FALSE //pink levels are rising
 	var/withdrawDelay = 0
+	var/department_locked = FALSE //TRUE locks from changing `account_department` into something else. used for VIP, Captain, and HoS. Those jobs don't need to change paycheck department.
 
 /datum/bank_account/New(newname, job)
 	if(add_to_accounts)
@@ -22,6 +24,12 @@
 	account_job = job
 	account_id = rand(111111,999999)
 	paycheck_amount = account_job.paycheck
+<<<<<<< HEAD
+=======
+	account_department = account_job.paycheck_department
+	if(account_job.title in DEPARTMENT_LOCKED_JOBS)
+		department_locked = TRUE
+>>>>>>> 2ee586c7bc... VIP gets their own department budget than the civilian budget, and gets paid from it. (+department account lock feature) (#7330)
 
 /datum/bank_account/Destroy()
 	if(add_to_accounts)
@@ -116,7 +124,17 @@
 /datum/bank_account/department/New(dep_id, budget)
 	department_id = dep_id
 	account_balance = budget
-	account_holder = SSeconomy.department_accounts[dep_id]
+	var/list/total_department_list = SSeconomy.department_accounts+SSeconomy.nonstation_accounts
+
+	account_holder = total_department_list[dep_id]
+
 	SSeconomy.generated_accounts += src
 
+/datum/bank_account/proc/is_nonstation_account() // returns TRUE if the budget account is not Station department. i.e.) medical budget, security budget: FALSE / `nonstation_accounts` like VIP one: TRUE
+	for(var/each in SSeconomy.nonstation_accounts)
+		if(account_holder == SSeconomy.nonstation_accounts[each])
+			return TRUE
+	return FALSE
+
 #undef DUMPTIME
+#undef DEPARTMENT_LOCKED_JOBS
