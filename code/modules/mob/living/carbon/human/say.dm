@@ -1,6 +1,16 @@
 /mob/living/carbon/human/say_mod(input, list/message_mods = list())
+<<<<<<< HEAD
 	verb_say = dna.species.say_mod
 	if(slurring)
+=======
+	var/obj/item/organ/tongue/T = getorganslot(ORGAN_SLOT_TONGUE)
+	if(T)
+		verb_say = pick(T.say_mod)
+		verb_ask = pick(T.ask_mod)
+		verb_yell = pick(T.yell_mod)
+		verb_exclaim = pick(T.exclaim_mod)
+	if(slurring || !T)
+>>>>>>> 4dca1e6173... Adjusts oozelings to use slime speaking verbs (#7482)
 		return "slurs"
 	else
 		. = ..()
