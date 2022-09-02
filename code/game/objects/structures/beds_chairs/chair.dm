@@ -71,9 +71,17 @@
 	qdel(src)
 
 /obj/structure/chair/attackby(obj/item/W, mob/user, params)
+<<<<<<< HEAD
 	if(W.tool_behaviour == TOOL_WRENCH && !(flags_1&NODECONSTRUCT_1))
 		W.play_tool_sound(src)
 		deconstruct()
+=======
+	if(W.tool_behaviour == TOOL_WRENCH && !(flags_1 & NODECONSTRUCT_1))
+		to_chat(user, "<span class='notice'>You start deconstructing [src]...</span>")
+		if(W.use_tool(src, user, 30, volume=50))
+			playsound(src.loc, 'sound/items/deconstruct.ogg', 50, 1)
+			deconstruct(TRUE, 1)
+>>>>>>> 94c6a7a7ee... Fix for Corporate Benches and Chair deconstruction + Time to build for chairs (#7594)
 	else if(istype(W, /obj/item/assembly/shock_kit))
 		if(!user.temporarilyRemoveItemFromInventory(W))
 			return
