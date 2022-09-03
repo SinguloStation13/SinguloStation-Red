@@ -10,6 +10,7 @@
 	max_integrity = 200
 	integrity_failure = 25
 	var/obj/item/showpiece = null
+<<<<<<< HEAD
 	var/obj/item/showpiece_type = null //This allows for showpieces that can only hold items if they're the same istype as this.
 	var/alert = TRUE
 	var/open = FALSE
@@ -18,6 +19,24 @@
 	var/obj/item/electronics/airlock/electronics
 	var/start_showpiece_type = null //add type for items on display
 	var/list/start_showpieces = list() //Takes sublists in the form of list("type" = /obj/item/bikehorn, "trophy_message" = "henk")
+=======
+	///This allows for showpieces that can only hold items if they're the same istype as this.
+	var/obj/item/showpiece_type = null
+	var/alert = TRUE
+	var/open = FALSE
+	var/openable = TRUE
+	///Is the case made of glass? Should it sound like that when it is being whacked?
+	var/shatter = TRUE
+	///If the case should be completely locked out at green alert, for cases containing equipment intended to be accessed only by antagonists or after threat level is raised
+	var/security_level_locked = SEC_LEVEL_GREEN
+	///If we have a custom glass overlay to use.
+	var/custom_glass_overlay = FALSE
+	var/obj/item/electronics/airlock/electronics
+	///add type for items on display
+	var/start_showpiece_type = null
+	///Takes sublists in the form of list("type" = /obj/item/bikehorn, "trophy_message" = "henk")
+	var/list/start_showpieces = list()
+>>>>>>> ac769b62cf... Make icon2base64 calls use frame=1 (#7596)
 	var/trophy_message = ""
 	var/glass_fix = TRUE
 
@@ -116,8 +135,13 @@
 
 /obj/structure/displaycase/attackby(obj/item/W, mob/user, params)
 	if(W.GetID() && !broken && openable)
+<<<<<<< HEAD
 		if(allowed(user))
 			to_chat(user,  "<span class='notice'>You [open ? "close":"open"] [src].</span>")
+=======
+		if(open)	//You do not require access to close a case, only to open it.
+			to_chat(user,  "<span class='notice'>You close [src].</span>")
+>>>>>>> ac769b62cf... Make icon2base64 calls use frame=1 (#7596)
 			toggle_lock(user)
 		else
 			to_chat(user,  "<span class='alert'>Access denied.</span>")
@@ -420,7 +444,7 @@
 	data["product_icon"] = null
 	if(showpiece)
 		data["product_name"] = capitalize(showpiece.name)
-		var/base64 = icon2base64(icon(showpiece.icon, showpiece.icon_state))
+		var/base64 = icon2base64(icon(showpiece.icon, showpiece.icon_state, frame=1))
 		data["product_icon"] = base64
 	data["registered"] = register
 	data["product_cost"] = sale_price
