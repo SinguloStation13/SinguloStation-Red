@@ -59,6 +59,8 @@
 			var/obj/item/card/id/ID = computer.GetID()
 			if(!ID)
 				return
+			if(R.stat == DEAD) //Dead borgs will listen to you no longer
+				to_chat(usr, "<span class='warn'>Error -- Could not open a connection to unit:[R]</span>")
 			var/message = stripped_input(usr, message = "Enter message to be sent to remote cyborg.", title = "Send Message")
 			if(!message)
 				return
@@ -67,3 +69,4 @@
 			if(R.connected_ai)
 				to_chat(R.connected_ai, "<br><br><span class='notice'>Message from [ID.registered_name] to [R] -- \"[message]\"</span><br>")
 				SEND_SOUND(R.connected_ai, 'sound/machines/twobeep_high.ogg')
+			R.logevent("Message from [ID] -- \"[message]\"")

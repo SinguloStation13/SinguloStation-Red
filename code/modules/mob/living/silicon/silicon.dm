@@ -34,7 +34,8 @@
 	var/hackedcheck[1]
 	var/devillawcheck[5]
 
-	var/sensors_on = 0
+	/// Are our siliconHUDs on? TRUE for yes, FALSE for no.
+	var/sensors_on = TRUE
 	var/med_hud = DATA_HUD_MEDICAL_ADVANCED //Determines the med hud to use
 	var/sec_hud = DATA_HUD_SECURITY_ADVANCED //Determines the sec hud to use
 	var/d_hud = DATA_HUD_DIAGNOSTIC_BASIC //Determines the diag hud to use
@@ -57,6 +58,18 @@
 		diag_hud.add_to_hud(src)
 	diag_hud_set_status()
 	diag_hud_set_health()
+<<<<<<< HEAD
+=======
+	add_sensors()
+	create_access_card(default_access_list)
+	default_access_list = null
+
+/mob/living/silicon/proc/create_access_card(list/access_list)
+	if(!internal_id_card)
+		internal_id_card = new()
+		internal_id_card.name = "[src] internal access"
+	internal_id_card.access |= access_list
+>>>>>>> 4f2ddd1916... [TG PORT] Removes Robot Commands and replaces it with an integrated control tablet program + silicons start with HUD on (#7351)
 
 /mob/living/silicon/med_hud_set_health()
 	return //we use a different hud
