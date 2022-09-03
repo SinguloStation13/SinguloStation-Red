@@ -101,6 +101,14 @@
 
 #define STATUS_EFFECT_IPC_EMP /datum/status_effect/ipc/emp //EMP'd IPC
 
+<<<<<<< HEAD
+=======
+#define STATUS_EFFECT_SLIMEGRUB /datum/status_effect/slimegrub //infected slime
+
+#define STATUS_EFFECT_AMOK /datum/status_effect/amok //Makes the target automatically strike out at adjecent non-heretics.
+
+#define STATUS_EFFECT_CLOUDSTRUCK /datum/status_effect/cloudstruck //blinds and applies an overlay.
+>>>>>>> 11a361a3c0... [TG PORT] Replaces rust wave with entropic plume (#7489)
 //---------//
 // NEUTRAL //
 //---------//
