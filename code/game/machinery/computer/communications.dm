@@ -431,10 +431,60 @@
 		to_chat(user, "<span class='boldannounce'>Unable to establish a connection</span>: \black You're too far away from the station!")
 		return
 
+<<<<<<< HEAD
 	var/dat = ""
 	if(SSshuttle.emergency.mode == SHUTTLE_CALL)
 		var/timeleft = SSshuttle.emergency.timeLeft()
 		dat += "<B>Emergency shuttle</B>\n<BR>\nETA: [timeleft / 60 % 60]:[add_leading(num2text(timeleft % 60), 2, "0")]"
+=======
+	switch (action)
+		if ("answerMessage")
+			if (!authenticated(usr))
+				return
+			var/answer_key = params["answer"]
+			var/message_index = text2num(params["message"])
+			if (!answer_key || !message_index || message_index < 1)
+				return
+			var/datum/comm_message/message = messages[message_index]
+			if (!(answer_key in message.possible_answers) || message.answered)
+				return
+			message.answered = answer_key
+			message.answer_callback.InvokeAsync()
+			. = TRUE
+		if ("callShuttle")
+			if (!authenticated(usr))
+				return
+			var/reason = trim(params["reason"], MAX_MESSAGE_LEN)
+			if (length(reason) < CALL_SHUTTLE_REASON_LENGTH)
+				return
+			SSshuttle.requestEvac(usr, reason)
+			post_status("shuttle")
+			. = TRUE
+		if ("changeSecurityLevel")
+			if (!authenticated_as_silicon_or_captain(usr))
+				return
+
+			// Check if they have
+			if (!issilicon(usr))
+				var/obj/item/held_item = usr.get_active_held_item()
+				var/obj/item/card/id/id_card = held_item?.GetID()
+				if (!istype(id_card))
+					to_chat(usr, "<span class='warning'>You need to swipe your ID!</span>")
+					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
+					return
+				if (!(ACCESS_CAPTAIN in id_card.access))
+					to_chat(usr, "<span class='warning'>You are not authorized to do this!</span>")
+					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
+					return
+
+			var/new_sec_level = seclevel2num(params["newSecurityLevel"])
+			if (new_sec_level != SEC_LEVEL_GREEN && new_sec_level != SEC_LEVEL_BLUE)
+				return
+			if (GLOB.security_level == new_sec_level)
+				return
+
+			set_security_level(new_sec_level)
+>>>>>>> cd56f3f974... Fix spawning multiple pirate ships and refactor comms console answer keys (#7608)
 
 
 	var/datum/browser/popup = new(user, "communications", "Communications Console", 400, 500)

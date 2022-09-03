@@ -37,12 +37,28 @@
 		payoff = max(payoff_min, FLOOR(D.account_balance * 0.80, 1000))
 	threat.title = "Business proposition"
 	threat.content = "This is [ship_name]. Pay up [payoff] credits or you'll walk the plank."
+<<<<<<< HEAD
 	threat.possible_answers = list("We'll pay.","No way.")
 	threat.answer_callback = CALLBACK(src,.proc/answered)
 	SScommunications.send_message(threat,unique = TRUE)
 
 /datum/round_event/pirates/proc/answered()
 	if(threat && threat.answered == 1)
+=======
+	threat.possible_answers = list(
+		PIRATE_RESPONSE_PAY = "We'll pay.",
+		PIRATE_RESPONSE_NO_PAY = "No way.",
+	)
+	threat.answer_callback = CALLBACK(GLOBAL_PROC, .proc/pirates_answered, threat, payoff, ship_name, initial_send_time, response_max_time)
+	addtimer(CALLBACK(GLOBAL_PROC, .proc/spawn_pirates, threat, FALSE), response_max_time)
+	SScommunications.send_message(threat,unique = TRUE)
+
+/proc/pirates_answered(datum/comm_message/threat, payoff, ship_name, initial_send_time, response_max_time)
+	if(world.time > initial_send_time + response_max_time)
+		priority_announce("Too late to beg for mercy!",sender_override = ship_name)
+		return
+	if(threat?.answered)
+>>>>>>> cd56f3f974... Fix spawning multiple pirate ships and refactor comms console answer keys (#7608)
 		var/datum/bank_account/D = SSeconomy.get_dep_account(ACCOUNT_CAR)
 		if(D)
 			if(D.adjust_money(-payoff))
@@ -51,6 +67,7 @@
 				return
 			else
 				priority_announce("Trying to cheat us? You'll regret this!", sound = SSstation.announcer.get_rand_alert_sound(), sender_override = ship_name)
+<<<<<<< HEAD
 	if(!shuttle_spawned)
 		spawn_shuttle()
 	else
@@ -65,6 +82,13 @@
 
 /datum/round_event/pirates/proc/spawn_shuttle()
 	shuttle_spawned = TRUE
+=======
+				spawn_pirates(threat, TRUE)
+
+/proc/spawn_pirates(datum/comm_message/threat, skip_answer_check)
+	if(!skip_answer_check && threat?.answered == PIRATE_RESPONSE_NO_PAY)
+		return
+>>>>>>> cd56f3f974... Fix spawning multiple pirate ships and refactor comms console answer keys (#7608)
 
 	var/list/candidates = pollGhostCandidates("Do you wish to be considered for pirate crew?", ROLE_TRAITOR)
 	shuffle_inplace(candidates)
