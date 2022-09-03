@@ -229,9 +229,18 @@
 /turf/closed/wall/r_wall/rust_heretic_act()
 	if(prob(50))
 		return
+<<<<<<< HEAD
 	if(prob(70))
 		new /obj/effect/temp_visual/glowing_rune(src)
 	ChangeTurf(/turf/closed/wall/r_wall/rust)
+=======
+	if(HAS_TRAIT(src, TRAIT_RUSTY))
+		ScrapeAway()
+		return
+	if(prob(70))
+		new /obj/effect/temp_visual/glowing_rune(src)
+	return ..()
+>>>>>>> 11a361a3c0... [TG PORT] Replaces rust wave with entropic plume (#7489)
 
 /turf/closed/wall/r_wall/syndicate
 	name = "hull"
