@@ -84,11 +84,30 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 			Recover()
 			qdel(Master)
 		else
+<<<<<<< HEAD
 			var/list/subsytem_types = subtypesof(/datum/controller/subsystem)
 			sortTim(subsytem_types, /proc/cmp_subsystem_init)
 			for(var/I in subsytem_types)
 				_subsystems += new I
 		Master = src
+=======
+			//Code used for first master on game boot or if existing master got deleted
+			Master = src
+			var/list/subsystem_types = subtypesof(/datum/controller/subsystem)
+			sortTim(subsystem_types, /proc/cmp_subsystem_init)
+			//Find any abandoned subsystem from the previous master (if there was any)
+			var/list/existing_subsystems = list()
+			for(var/global_var in global.vars)
+				if (istype(global.vars[global_var], /datum/controller/subsystem))
+					existing_subsystems += global.vars[global_var]
+			//Either init a new SS or if an existing one was found use that
+			for(var/I in subsystem_types)
+				var/ss_idx = existing_subsystems.Find(I)
+				if (ss_idx)
+					_subsystems += existing_subsystems[ss_idx]
+				else
+					_subsystems += new I
+>>>>>>> bdeb199b49... Revert "Brings our MC up to date with TG (#7285)" (#7597)
 
 	if(!GLOB)
 		new /datum/controller/global_vars
@@ -192,7 +211,11 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	// Initialize subsystems.
 	current_ticklimit = CONFIG_GET(number/tick_limit_mc_init)
 	for (var/datum/controller/subsystem/SS in subsystems)
+<<<<<<< HEAD
 		if (SS.flags & SS_NO_INIT)
+=======
+		if (SS.flags & SS_NO_INIT || SS.initialized) //Don't init SSs with the correspondig flag or if they already are initialzized
+>>>>>>> bdeb199b49... Revert "Brings our MC up to date with TG (#7285)" (#7597)
 			continue
 		SS.Initialize(REALTIMEOFDAY)
 		CHECK_TICK

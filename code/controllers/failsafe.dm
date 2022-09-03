@@ -92,6 +92,61 @@ GLOBAL_REAL(Failsafe, /datum/controller/failsafe)
 			defcon = 5
 			sleep(initial(processing_interval))
 
+<<<<<<< HEAD
+=======
+//Emergency loop used when Master got deleted or the main loop exited while Defcon == 0
+//Loop is driven externally so runtimes only cancel the current recovery attempt
+/datum/controller/failsafe/proc/emergency_loop()
+	//The code in this proc should be kept as simple as possible, anything complicated like to_chat might rely on master existing and runtime
+	//The goal should always be to get a new Master up and running before anything else
+	. = -1
+	switch (defcon) //The lower defcon goes the harder we try to fix the MC
+		if (2 to 3) //Try to normally recreate the MC two times
+			. = Recreate_MC()
+		if (1) //Delete the old MC first so we don't transfer any info, in case that caused any issues
+			del(Master)
+			. = Recreate_MC()
+
+	if (. == 1) //We were able to create a new master
+		to_chat_immediate(world, "<span class='boldannounce'>Master Controller failure detected. Attempting recovery.</span>\n<span class='danger'>Things may freeze up for a minute or two (or break entirely).</span>")
+		master_iteration = 0
+		SSticker.Recover() //Recover the ticket system so the Masters runlevel gets set
+		Master.Initialize(10, FALSE, TRUE) //Need to manually start the MC, normally world.new would do this
+		to_chat(GLOB.admins, "<span class='adminnotice'>Failsafe recovered MC while in emergency state [defcon_pretty()]</span>")
+	else
+		log_game("FailSafe: Failsafe in emergency state and was unable to recreate MC while in defcon state [defcon_pretty()].")
+		message_admins("<span class='boldannounce'>Failsafe in emergency state and master down, trying to recreate MC while in defcon level [defcon_pretty()] failed.</span>")
+
+///Recreate all SSs which will still cause data survive due to Recover(), the new Master will then find and take them from global.vars
+/proc/recover_all_SS_and_recreate_master()
+	del(Master)
+	var/list/subsytem_types = subtypesof(/datum/controller/subsystem)
+	sortTim(subsytem_types, /proc/cmp_subsystem_init)
+	for(var/I in subsytem_types)
+		new I
+	. = Recreate_MC()
+	if (. == 1) //We were able to create a new master
+		SSticker.Recover() //Recover the ticket system so the Masters runlevel gets set
+		Master.Initialize(10, FALSE, TRUE) //Need to manually start the MC, normally world.new would do this
+		to_chat(GLOB.admins, "<span class='adminnotice'>MC successfully recreated after recovering all subsystems!</span>")
+	else
+		message_admins("<span class='boldannounce'>Failed to create new MC!</span>")
+
+///Delete all existing SS to basically start over
+/proc/delete_all_SS_and_recreate_master()
+	del(Master)
+	for(var/global_var in global.vars)
+		if (istype(global.vars[global_var], /datum/controller/subsystem))
+			del(global.vars[global_var])
+	. = Recreate_MC()
+	if (. == 1) //We were able to create a new master
+		SSticker.Recover() //Recover the ticket system so the Masters runlevel gets set
+		Master.Initialize(10, FALSE, TRUE) //Need to manually start the MC, normally world.new would do this
+		to_chat(GLOB.admins, "<span class='adminnotice'>MC successfully recreated after deleting and recreating all subsystems!</span>")
+	else
+		message_admins("<span class='boldannounce'>Failed to create new MC!</span>")
+
+>>>>>>> bdeb199b49... Revert "Brings our MC up to date with TG (#7285)" (#7597)
 /datum/controller/failsafe/proc/defcon_pretty()
 	return defcon
 
