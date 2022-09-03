@@ -2666,6 +2666,11 @@
 #include "code\modules\modular_computers\file_system\programs\arcade.dm"
 #include "code\modules\modular_computers\file_system\programs\atmosscan.dm"
 #include "code\modules\modular_computers\file_system\programs\borg_monitor.dm"
+<<<<<<< HEAD
+=======
+#include "code\modules\modular_computers\file_system\programs\borg_self_monitor.dm"
+#include "code\modules\modular_computers\file_system\programs\budgetordering.dm"
+>>>>>>> 4f2ddd1916... [TG PORT] Removes Robot Commands and replaces it with an integrated control tablet program + silicons start with HUD on (#7351)
 #include "code\modules\modular_computers\file_system\programs\card.dm"
 #include "code\modules\modular_computers\file_system\programs\cargobounty.dm"
 #include "code\modules\modular_computers\file_system\programs\configurator.dm"

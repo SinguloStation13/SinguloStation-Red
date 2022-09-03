@@ -53,6 +53,38 @@
 /obj/item/modular_computer/ui_data(mob/user)
 	var/list/data = get_header_data()
 	data["device_theme"] = device_theme
+<<<<<<< HEAD
+=======
+
+	data["login"] = list()
+	var/obj/item/computer_hardware/card_slot/cardholder = all_components[MC_CARD]
+	data["cardholder"] = FALSE
+	if(cardholder)
+		data["cardholder"] = TRUE
+		var/obj/item/card/id/stored_card = cardholder.GetID()
+		if(stored_card)
+			var/stored_name = stored_card.registered_name
+			var/stored_title = stored_card.assignment
+			if(!stored_name)
+				stored_name = "Unknown"
+			if(!stored_title)
+				stored_title = "Unknown"
+			data["login"] = list(
+				IDName = stored_name,
+				IDJob = stored_title,
+			)
+
+	data["removable_media"] = list()
+	if(all_components[MC_SDD])
+		data["removable_media"] += "removable storage disk"
+	var/obj/item/computer_hardware/ai_slot/intelliholder = all_components[MC_AI]
+	if(intelliholder?.stored_card)
+		data["removable_media"] += "intelliCard"
+	var/obj/item/computer_hardware/card_slot/secondarycardholder = all_components[MC_CARD2]
+	if(secondarycardholder?.stored_card)
+		data["removable_media"] += "secondary RFID card"
+
+>>>>>>> 4f2ddd1916... [TG PORT] Removes Robot Commands and replaces it with an integrated control tablet program + silicons start with HUD on (#7351)
 	data["programs"] = list()
 	var/obj/item/computer_hardware/hard_drive/hard_drive = all_components[MC_HDD]
 	for(var/datum/computer_file/program/P in hard_drive.stored_files)
