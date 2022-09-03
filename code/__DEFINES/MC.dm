@@ -80,6 +80,17 @@
 }\
 /datum/controller/subsystem/timer/##X
 
+<<<<<<< HEAD
+=======
+#define MOVEMENT_SUBSYSTEM_DEF(X) GLOBAL_REAL(SS##X, /datum/controller/subsystem/movement/##X);\
+/datum/controller/subsystem/movement/##X/New(){\
+	NEW_SS_GLOBAL(SS##X);\
+	PreInit();\
+	ss_id="movement_[#X]";\
+}\
+/datum/controller/subsystem/movement/##X
+
+>>>>>>> bdeb199b49... Revert "Brings our MC up to date with TG (#7285)" (#7597)
 #define PROCESSING_SUBSYSTEM_DEF(X) GLOBAL_REAL(SS##X, /datum/controller/subsystem/processing/##X);\
 /datum/controller/subsystem/processing/##X/New(){\
     NEW_SS_GLOBAL(SS##X);\
