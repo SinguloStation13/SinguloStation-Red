@@ -677,7 +677,11 @@
 	M.adjustToxLoss(-0.5, 0)
 	M.adjustOxyLoss(-0.5, 0)
 	if(M.nutrition && (M.nutrition - 2 > 0))
+<<<<<<< HEAD
 		if(M.mind?.assigned_role != "Medical Doctor") //Drains the nutrition of the holder. Not medical doctors though, since it's the Doctor's Delight!
+=======
+		if(M.mind && !HAS_TRAIT(M.mind, TRAIT_MEDICAL_METABOLISM)) //Drains the nutrition of the holder. Not medical staff though, since it's the Doctor's Delight!
+>>>>>>> cd2fb95722... main (#7562)
 			M.adjust_nutrition(-2)
 	..()
 	. = 1
