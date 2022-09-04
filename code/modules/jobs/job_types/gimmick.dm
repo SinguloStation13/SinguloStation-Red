@@ -123,9 +123,19 @@
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MEDICAL)
 	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_MEDICAL)
 	paycheck = PAYCHECK_EASY
+<<<<<<< HEAD
 	gimmick = TRUE
 	chat_color = "#a2dfdc"
 	departments = DEPARTMENT_MEDICAL
+=======
+	departments = DEPARTMENT_BITFLAG_MEDICAL
+	mind_traits = list(TRAIT_MEDICAL_METABOLISM)
+
+	paycheck_department = ACCOUNT_MED
+	rpg_title = "Enchanter"
+
+	mind_traits = list(TRAIT_MADNESS_IMMUNE)
+>>>>>>> cd2fb95722... main (#7562)
 
 	species_outfits = list(
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman
