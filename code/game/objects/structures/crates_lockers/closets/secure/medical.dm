@@ -107,6 +107,12 @@
 	new /obj/item/reagent_containers/food/drinks/bottle/synthflesh(src)
 	new /obj/item/card/id/departmental_budget/med(src)
 	new /obj/item/extrapolator(src)
+<<<<<<< HEAD
+=======
+	new /obj/item/storage/box/command_keys(src)
+	new /obj/item/storage/lockbox/medal/med(src)
+	new /obj/item/storage/box/radiokey/med(src)
+>>>>>>> 8b722667a7... Heads of staff (and qm) get a box of radio keys for their department (#7426)
 
 /obj/structure/closet/secure_closet/animal
 	name = "animal control"
