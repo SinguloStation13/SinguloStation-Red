@@ -39,6 +39,7 @@
 	for(var/B in GLOB.bots_list)
 		var/mob/living/simple_animal/bot/Bot = B
 		if(!Bot.on || Bot.get_virtual_z_level() != zlevel || Bot.remote_disabled) //Only non-emagged bots on the same Z-level are detected!
+<<<<<<< HEAD
 			continue //Also, the PDA must have access to the bot type.
 		var/list/newbot = list("name" = Bot.name, "mode" = Bot.get_mode_ui(), "model" = Bot.model, "locat" = get_area(Bot), "bot_ref" = REF(Bot), "mule_check" = FALSE)
 		if(Bot.bot_type == MULE_BOT)
@@ -48,6 +49,35 @@
 				data["load"] = MULE.load.name
 			newbot["mule_check"] = TRUE
 		botlist += list(newbot)
+=======
+			continue
+		else if(computer) //Also, the inserted ID must have access to the bot type
+			var/obj/item/card/id/id_card = card_slot ? card_slot.stored_card : null
+			if(!id_card && !Bot.bot_core.allowed(current_user))
+				continue
+			else if(id_card && !Bot.bot_core.check_access(id_card))
+				continue
+		if(Bot.get_virtual_z_level() in SSmapping.levels_by_trait(ZTRAIT_STATION))
+			if(zlevel in SSmapping.levels_by_trait(ZTRAIT_STATION))
+				var/list/newbot = list("name" = Bot.name, "mode" = Bot.get_mode_ui(), "model" = Bot.model, "locat" = get_area(Bot), "bot_ref" = REF(Bot), "mule_check" = FALSE)
+				if(Bot.bot_type == MULE_BOT)
+					var/mob/living/simple_animal/bot/mulebot/MULE = Bot
+					mulelist += list(list("name" = MULE.name, "dest" = MULE.destination, "power" = MULE.cell ? MULE.cell.percent() : 0, "home" = MULE.home_destination, "autoReturn" = MULE.auto_return, "autoPickup" = MULE.auto_pickup, "reportDelivery" = MULE.report_delivery, "mule_ref" = REF(MULE)))
+					if(MULE.load)
+						data["load"] = MULE.load.name
+					newbot["mule_check"] = TRUE
+				botlist += list(newbot)
+		else if (Bot.get_virtual_z_level() == zlevel)
+			if(!(zlevel in SSmapping.levels_by_trait(ZTRAIT_STATION)))
+				var/list/newbot = list("name" = Bot.name, "mode" = Bot.get_mode_ui(), "model" = Bot.model, "locat" = get_area(Bot), "bot_ref" = REF(Bot), "mule_check" = FALSE)
+				if(Bot.bot_type == MULE_BOT)
+					var/mob/living/simple_animal/bot/mulebot/MULE = Bot
+					mulelist += list(list("name" = MULE.name, "dest" = MULE.destination, "power" = MULE.cell ? MULE.cell.percent() : 0, "home" = MULE.home_destination, "autoReturn" = MULE.auto_return, "autoPickup" = MULE.auto_pickup, "reportDelivery" = MULE.report_delivery, "mule_ref" = REF(MULE)))
+					if(MULE.load)
+						data["load"] = MULE.load.name
+					newbot["mule_check"] = TRUE
+				botlist += list(newbot)
+>>>>>>> 197e63bb5e... [PORT] Bot Multi-Z Movement  (#7587)
 
 	data["bots"] = botlist
 	data["mules"] = mulelist

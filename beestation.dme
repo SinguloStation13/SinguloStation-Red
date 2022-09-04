@@ -34,6 +34,11 @@
 #include "code\__DEFINES\atom_hud.dm"
 #include "code\__DEFINES\balloon_alert.dm"
 #include "code\__DEFINES\bitfields.dm"
+<<<<<<< HEAD
+=======
+#include "code\__DEFINES\bodyparts.dm"
+#include "code\__DEFINES\bot_defines.dm"
+>>>>>>> 197e63bb5e... [PORT] Bot Multi-Z Movement  (#7587)
 #include "code\__DEFINES\callbacks.dm"
 #include "code\__DEFINES\cargo.dm"
 #include "code\__DEFINES\chat.dm"
@@ -1196,6 +1201,7 @@
 #include "code\game\objects\structures\artstuff.dm"
 #include "code\game\objects\structures\barsigns.dm"
 #include "code\game\objects\structures\bedsheet_bin.dm"
+#include "code\game\objects\structures\bot_elevator.dm"
 #include "code\game\objects\structures\catwalk.dm"
 #include "code\game\objects\structures\destructible_structures.dm"
 #include "code\game\objects\structures\displaycase.dm"
