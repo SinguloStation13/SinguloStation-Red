@@ -32,7 +32,11 @@
 	new /obj/item/circuitboard/machine/techfab/department/science(src)
 	new /obj/item/storage/photo_album/RD(src)
 	new /obj/item/card/id/departmental_budget/sci(src)
+<<<<<<< HEAD
 
 	if(CONFIG_GET(number/roundstart_bluespace_miners))
 		for(var/i in 1 to CONFIG_GET(number/roundstart_bluespace_miners))
 			new /obj/item/circuitboard/machine/bluespace_miner(src)
+=======
+	new /obj/item/storage/box/radiokey/sci(src)
+>>>>>>> 8b722667a7... Heads of staff (and qm) get a box of radio keys for their department (#7426)

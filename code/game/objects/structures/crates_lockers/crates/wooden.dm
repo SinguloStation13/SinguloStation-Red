@@ -20,4 +20,9 @@
 	new /obj/item/pneumatic_cannon/pie(src)
 	new /obj/item/reagent_containers/food/snacks/pie/cream(src)
 	new /obj/item/storage/crayons(src)
+<<<<<<< HEAD
 	new /obj/item/soundsynth(src)
+=======
+	new /obj/item/soundsynth(src)
+	new /obj/item/storage/box/radiokey/clown(src)
+>>>>>>> 8b722667a7... Heads of staff (and qm) get a box of radio keys for their department (#7426)
